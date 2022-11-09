@@ -1,0 +1,25 @@
+.section {
+  @include flex($flex-direction: column, $gap: var(--spacer-lg));
+  @include space(var(--spacer-xl), padding, vertical);
+
+  .h-5 {
+    text-transform: uppercase;
+  }
+
+  &__headers {
+    @include flex($flex-direction: column, $gap: var(--spacer-sm));
+  }
+  
+  &__desc-accent {
+    color: var(--color-primary);
+  }
+}
+
+/* ====================   IMPORTS   ==================== */
+
+@import '1-hero';
+@import '2-services';
+@import '3-about';
+@import '4-portfolio';
+@import '5-partners';
+@import '6-blog';

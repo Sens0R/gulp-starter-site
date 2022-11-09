@@ -1,0 +1,136 @@
+@import 'swiper/swiper.scss';
+
+/* ====================   GLOBAL STYLES   ==================== */
+
+.swiper {
+  @include box(100%, 100%);
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+// pagination
+
+.swiper-pagination {
+  @include flex($justify-content: center, $align-items: center);
+
+  > * {
+    @include flex($justify-content: center, $align-items: center);
+    @include box(1.5rem, 1.5rem);
+  }
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    //background: lighten($color-secondary, 70%);
+    border-radius: 50%;
+    @include box(0.5rem, 0.5rem);
+  }
+}
+
+.swiper-pagination-bullet-active {
+  &:before {
+    content: '';
+    background: var(--color-primary);
+    border-radius: 50%;
+    @include box(0.75rem, 0.75rem);
+  }
+}
+
+// navigation buttons
+
+.swiper-btn {
+  z-index: 15;
+  @include box(2.5rem, 2.5rem);
+  @include media-breakpoint-up(md) {
+    @include box(3.5rem, 3.5rem);
+  }
+}
+
+/* ====================   SHOP   ==================== */
+
+.arrow-icon-shop {
+  @include box(0.75rem, 0.75rem);
+  fill: var(--color-secondary);
+  @include media-breakpoint-up(md) {
+    @include box(1rem, 1rem);
+  }
+}
+
+.swiper-btn--left-shop,
+.swiper-btn--right-shop {
+  @include flex($justify-content: center, $align-items: center);
+  background: var(--color-primary);
+}
+
+/* ====================   TESTIMONIALS   ==================== */
+
+.arrow-icon-testimonials {
+  @include box(1.5rem, 1.5rem);
+  //fill: $color-gray;
+}
+
+.swiper-btn--left-testimonials,
+.swiper-btn--right-testimonials {
+  display: none;
+  border-radius: 50%;
+  @include media-breakpoint-up(md) {
+    @include box(4.5rem, 4.5rem);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .swiper-btn--left-testimonials,
+  .swiper-btn--right-testimonials {
+    @include flex($justify-content: center, $align-items: center);
+    position: absolute;
+  }
+
+  .swiper-btn--left-testimonials {
+    top: 40%;
+    left: 0;
+    translate: 0 -40%;
+  }
+
+  .swiper-btn--right-testimonials {
+    @include flex($justify-content: center, $align-items: center);
+    position: absolute;
+    top: 40%;
+    right: 0;
+    translate: 0 -40%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .swiper-btn--left-testimonials {
+    left: 10%;
+  }
+
+  .swiper-btn--right-testimonials {
+    right: 10%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .swiper-btn--left-testimonials {
+    left: 20%;
+  }
+
+  .swiper-btn--right-testimonials {
+    right: 20%;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .swiper-btn--left-testimonials {
+    left: 25%;
+  }
+
+  .swiper-btn--right-testimonials {
+    right: 25%;
+  }
+}

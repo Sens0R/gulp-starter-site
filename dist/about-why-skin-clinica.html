@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="The Owl description goes here" />
+
+  <link rel="preload" href="fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="preload" href="fonts/GeneralSans-Semibold.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="preload" href="fonts/GeneralSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="shortcut icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <link rel="stylesheet" href="css/style.min.css" />
+  <script defer src="js/app.min.js"></script>
+
+  <title>The Owl IT services</title>
+</head>
+
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="header-sticky-wrapper">
+    <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
+
+<a aria-label="The Owl home. The Owl logo." class="logo col-auto justify-content-start logo-hover" href="index.html">
+  <svg aria-hidden="true" class="logo-icon">
+    <use href="images/icons/sprite-multi.svg#logo" />
+  </svg>
+</a>
+
+<!-- ====================   PHONE   ==================== -->
+
+<div class="phone col-auto">
+  <svg aria-hidden="true" class="phone__icon">
+    <use href="images/icons/sprite-mono.svg#phone" />
+  </svg>
+  <a href="tel:1800843695" class="phone__link" data-tooltip aria-label="Make a phone call"> 1800&nbsp;843&nbsp;695 </a>
+</div>
+
+<!-- ====================   NAVIGATION   ==================== -->
+
+<nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
+  <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
+    <span class="nav-toggler__text nav-toggler__text_close">close menu</span>
+  </button>
+
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input-mobile">Search</label>
+
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input-mobile"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+
+  <ul class="nav-menu">
+    <li data-nav-page class="nav-menu__item">
+      <a href="about.html" class="nav-menu__link">About</a>
+    </li>
+
+    <li data-dropdown="hover" class="nav-menu__item dropdown col-auto">
+      <div class="dropdown__controls">
+        <a href="services.html" class="nav-menu__link dropdown__link">Services</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
+          <svg aria-hidden="true" class="dropdown__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div data-dropdown-content class="dropdown__content">
+        <ul class="dropdown-list">
+          <li class="dropdown-list__item">
+            <a href="tabs.html" class="dropdown-list__link">Tabs</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="dropdowns.html" class="dropdown-list__link">Dropdowns</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="#" class="dropdown-list__link">Accordion</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="#" class="dropdown-list__link">Lorem, ipsum dolor.</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="portfolio.html" class="nav-menu__link">Portfolio</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="blog.html" class="nav-menu__link">Blog</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="contact.html" class="nav-menu__link">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="social">
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+</nav>
+
+<!-- ====================   SEARCH   ==================== -->
+
+<div class="col-auto col-md col-xl-2 col-xxl-3 nav-search-container">
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input">Search</label>
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button
+      data-tooltip="bottom-right"
+      aria-label="Submit search"
+      class="nav-search__btn nav-search__btn_search"
+      type="submit"
+    >
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+</div>
+
+<!-- ====================   NAV-TOGGLER   ==================== -->
+
+<button
+  class="nav-toggler nav-toggler_open col-auto"
+  data-tooltip="bottom-right"
+  data-hamburger-btn="open"
+  type="button"
+>
+  <svg aria-hidden="true" class="nav-toggler__icon">
+    <use href="images/icons/sprite-mono.svg#hamburger" />
+  </svg>
+  <span class="nav-toggler__text nav-toggler__text_open">menu</span>
+</button>
+</header>
+    </div>
+    <div class="body-wrapper">
+    <main id="main-content" tabindex="-1">
+   
+    
+
+
+<main>
+  <div class="page-banner">
+    <picture>
+      <source sizes="100vw" type="image/avif" srcset="
+          images/about-page/page-banner-about-320.avif   320w,
+          images/about-page/page-banner-about-640.avif   640w,
+          images/about-page/page-banner-about-960.avif   960w,
+          images/about-page/page-banner-about-1280.avif 1280w,
+          images/about-page/page-banner-about-1920.avif 1920w,
+          images/about-page/page-banner-about-2560.avif 2560w
+        ">
+      <source sizes="100vw" type="image/webp" srcset="
+          images/about-page/page-banner-about-320.webp   320w,
+          images/about-page/page-banner-about-640.webp   640w,
+          images/about-page/page-banner-about-960.webp   960w,
+          images/about-page/page-banner-about-1280.webp 1280w,
+          images/about-page/page-banner-about-1920.webp 1920w,
+          images/about-page/page-banner-about-2560.webp 2560w
+        ">
+      <source sizes="100vw" type="image/jpeg" srcset="
+          images/about-page/page-banner-about-320.jpg   320w,
+          images/about-page/page-banner-about-640.jpg   640w,
+          images/about-page/page-banner-about-960.jpg   960w,
+          images/about-page/page-banner-about-1280.jpg 1280w,
+          images/about-page/page-banner-about-1920.jpg 1920w,
+          images/about-page/page-banner-about-2560.jpg 2560w
+        ">
+      <img draggable="false" class="page-banner-img" src="images/page-banner-about-960.jpg" alt="" width="2560"
+        height="2560">
+    </picture>
+    <h1 class="page-header">Why Us?</h1>
+  </div>
+
+  <div class="container-fluid container-md section about">
+    <div class="row">
+      <div class="col-12 col-lg-8 why-skin-clinica">
+        <h2 class="about__header why-skin-clinica__header">
+          Why <span class="color-accent-light">Skin Clinica</span>
+        </h2>
+        <p>
+          We have so many skin care products and ingredients available to us
+          from around the world these days that it has become all too confusing.
+          Skin care is no longer just skin care.
+        </p>
+        <p>
+          We now have botanical, cosmeceutical, customised, dermaceutical,
+          luxury, natural, organic and vegan skin care categories, as well as
+          our regular skin care categories.
+        </p>
+
+        <p>
+          Skin Clinica is here to help you make
+          sense of it all. We hope that, by sharing our knowledge through our
+          <a href="skin-intelligence.html" class="text-link">Skin Intelligence</a> and <a href="blog.html"
+            class="text-link">Blog articles</a>, you will be able to put together
+          the best skin care routine to tackle your skin concerns. We want you
+          to better understand skin care ingredients so that you can be
+          confident in choosing skin care products that deliver results based on
+          science and actives, not marketing claims. With us, you can learn
+          which ingredients to look for and which ones to avoid so that you are
+          not unknowingly harming your skin. And it certainly is not as simple
+          as choosing natural instead of synthetically created skin care
+          products!
+        </p>
+        <p>
+          The simple old days of just using DOVE Beauty Cream Bar to cleanse and
+          a few dabs of thick NIVEA Crème to moisturise are long passed. And no
+          longer is a Vitamin C serum just a Vitamin C serum or a Vitamin A
+          cream just a Vitamin A cream – there are so many types, so many
+          formulations, so many derivatives that it is a complex and confusing.
+          One top brand will claim its Vitamin C derivative at 1% is better than
+          another top brand’s at 10% L-Ascorbic Acid. Should I use Glycolic Acid
+          every day? Are Human Growth Factors safe? Do peptides actually
+          penetrate? How do I combine them? We see this complexity and confusion
+          play out across so many areas of skin care, across brands, across
+          formulas, across ingredients.
+        </p>
+        <picture>
+          <source type="image/avif" sizes="(min-width: 768px) 50vw, 100vw" srcset="
+              images/about-page/why-skin-clinica-320.avif   320w,
+              images/about-page/why-skin-clinica-640.avif   640w,
+              images/about-page/why-skin-clinica-960.avif   960w,
+              images/about-page/why-skin-clinica-1280.avif 1280w,
+              images/about-page/why-skin-clinica-1920.avif 1920w,
+              images/about-page/why-skin-clinica-2560.avif 2560w
+            ">
+          <source type="image/webp" sizes="(min-width: 768px) 50vw, 100vw" srcset="
+              images/about-page/why-skin-clinica-320.webp   320w,
+              images/about-page/why-skin-clinica-640.webp   640w,
+              images/about-page/why-skin-clinica-960.webp   960w,
+              images/about-page/why-skin-clinica-1280.webp 1280w,
+              images/about-page/why-skin-clinica-1920.webp 1920w,
+              images/about-page/why-skin-clinica-2560.webp 2560w
+            ">
+          <source type="image/jpeg" sizes="(min-width: 768px) 50vw, 100vw" srcset="
+              images/about-page/why-skin-clinica-320.jpg   320w,
+              images/about-page/why-skin-clinica-640.jpg   640w,
+              images/about-page/why-skin-clinica-960.jpg   960w,
+              images/about-page/why-skin-clinica-1280.jpg 1280w,
+              images/about-page/why-skin-clinica-1920.jpg 1920w,
+              images/about-page/why-skin-clinica-2560.jpg 2560w
+            ">
+          <img draggable="false" height="2560" width="2560" class="about-why-skin-clinica-img"
+            src="images/about-page/why-skin-clinica-960.jpg" alt="">
+        </picture>
+        <p>
+          There are so many different recommendations on what products and
+          ingredients to use, even among aestheticians and dermatologists, that
+          it can all seem bewildering. Marketing claims and consumer
+          satisfaction trials make it all the harder still, always skating on
+          the edge of truth. And that is why we created
+          <span class="fw-bold">Skin Clinica</span>.
+        </p>
+        <p>
+          We have all benefited from the tremendous shift in skin care
+          ingredients and technologies, but this has the more more and more
+          complex skin care routines that go with this are leaving many
+          floundering in trying to make sense of it all. So you are not alone in
+          being frustrated and unable to put it all together into one consistent
+          and effective skin care routine.
+        </p>
+        <p>
+          Look at something that should be simple and straightforward:
+          sunscreen. It is anything but that. We slather it over our faces,
+          hands and bodies – just as we are told to – without knowing that
+          chemical sunscreens are full of, well, chemicals, many of which can
+          create free radicals, cause DNA damage and trigger endocrine and
+          hormone disruption. Not only are many unsafe for us, they are unsafe
+          for coral reefs and marine life.
+        </p>
+        <p>
+          Unfortunately, many companies prefer not to declare all the
+          ingredients, on the grounds they are not required to by law. Take note
+          of how many big brand companies avoid telling you what is in their
+          sunscreen. We believe in consumer transparency, so it is sad, at best,
+          that a consumer is not told at the point of sale that their favourite
+          so-called ‘sensitive’ sunscreen has a chemical that is banned in some
+          countries, or has Denatured Alcohol as its second ingredient or even
+          reacts, for example, with your topically applied Vitamin C.
+        </p>
+        <p>
+          Use our <a href="skin-intelligence.html" class="text-link">Skin Intelligence</a> to
+          confidently develop your skin care routine, choose the right products
+          and tackle your skin concerns.
+        </p>
+      </div>
+      <div class="col-12 col-lg-8 confusion-and-frustration">
+        <h2 class="about__header why-skin-clinica__header">
+          Confusion And Frustration In Skin Care
+        </h2>
+        <p>We hear you! It is frustrating.</p>
+        <ul>
+          <li>
+            Should I use a Vitamin C serum in the morning for protection or in
+            the evening for repair? What form of Vitamin C is best for collagen
+            stimulation? Can I combine Vitamin C and Retinol?
+          </li>
+          <li>
+            My skin is prone to acne, but when I use the products recommended my
+            skin becomes sensitised, dehydrated and flaky.
+          </li>
+          <li>
+            I have sensitive skin with broken capillaries and want to introduce
+            more active products, but fear my skin will flare up. I feel stuck.
+          </li>
+          <li>
+            My friends use Retinol and swear by it. I’m 25 and don’t want to
+            look old, should I start using it now?
+          </li>
+          <li>
+            I have been using Hyaluronic Acid for my dry and dehydrated skin,
+            but it now feels tighter and drier than ever. Should I stop using it
+            or try another brand?
+          </li>
+        </ul>
+        <p>
+          With more and more actives and correctives in skin care products on
+          the market, we are seeing the emergence of the Wild West, especially
+          when they are overused or combined in the wrong way. Some products
+          have ingredients so novel that they can slip through existing
+          regulatory frameworks, such as happened with Human Growth Factors.
+        </p>
+        <p>
+          Many people are not appreciating the strength of some new generation
+          products and using them in a chaotic rather than planned way, without
+          any advice. And the result can be disastrous for their skin.
+        </p>
+        <p>
+          We are also seeing some poor formulations being put out by brands to
+          ride the wave of the latest crazy fad. They use their great marketing
+          power to hype up their undeserved products through social media
+          influencers and referral schemes. Yet some other better and cheaper
+          brands get lost in all those Selfie poses.
+        </p>
+        <p>
+          If you would like indepth information on tackling your skin concerns
+          and a customised skin care routine, see our
+          <a href="skin-care-packages.html" class="text-link">Skin Care Packages</a>
+          page.
+        </p>
+      </div>
+    </div>
+    <div class="section-btn">
+      <a href="about-company-founder.html" class="btn">Our Founder</a>
+    </div>
+  </div>
+</main>
+
+</main>
+<footer class="footer">
+  <div class="container-fluid container-xxl footer-container">
+  <nav aria-label="Footer" class="footer-nav">
+    <div class="row row-cols-sm-2 row-cols-lg-4">
+      <div class="col-12 footer-nav__column">
+        <ul class="footer-nav__list">
+          <li>
+            <a class="logo-hover" href="index.html" aria-label="The Owl home. The Owl logo.">
+              <svg aria-hidden="true" class="logo-icon">
+                <use href="images/icons/sprite-multi.svg#logo"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <div class="footer-socials"><ul class="social">
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Services</h2>
+
+        <ul class="footer-nav__list">
+          <li><a class="footer-nav__link" href="about.html">Cloud Solutions</a></li>
+          <li><a class="footer-nav__link" href="faq.html">Your Local IT Help desk</a></li>
+          <li><a class="footer-nav__link" href="blog.html">Disaster Recovery</a></li>
+          <li><a class="footer-nav__link" href="contact.html">Systems Security</a></li>
+          <li><a class="footer-nav__link" href="blog.html">Hardware Procurement</a></li>
+          <li><a class="footer-nav__link" href="contact.html">Phones and Internet</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Company</h2>
+
+        <ul class="footer-nav__list">
+          <li><a class="footer-nav__link" href="about.html">About</a></li>
+          <li>
+            <a class="footer-nav__link" href="portfolio.html">Portfolio</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="blog.html">Blog</a>
+          </li>
+          <li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          <li>
+            <a class="footer-nav__link" href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li><a class="footer-nav__link" href="therms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Contact</h2>
+
+        <ul class="footer-nav__list">
+          <li>
+            <div class="h-5">Phone</div>
+            <a href="tel:1800843695" class="footer-nav__link ps-0" aria-label="Make a phone call">1800&nbsp;843&nbsp;695</a>
+          </li>
+
+          <li>
+            <div class="h-5">Address</div>
+            <a class="footer-nav__link ps-0" aria-label="Open Google Map" href="https://goo.gl/maps/cWDnimrLcYismybL7" target="_blank"
+              >Suite 6, Level 13, 350 Collins Street, Melbourne VIC 3000</a
+            >
+          </li>
+
+          <li class="footer-nav__btn">
+            <a class="btn" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="copyright">
+    <p>© 2022 Owl IT Services</p>
+    <p>Website by SGD</p>
+  </div>
+</div>
+
+</footer>
+
+</body>
+</div>
+</html>

@@ -1,0 +1,17 @@
+.backdrop {
+  @include fixed(top 0 left 0);
+  @include box(100vw, 100vh);
+  z-index: var(--z-hamburger-backdrop);
+  background: rgba(0 0 0 / 0.5);
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}

@@ -1,0 +1,111 @@
+@@include('html/parts/header-part.html',{})
+
+<div class="page-banner">
+  <picture>
+    <source
+      sizes="100vw"
+      type="image/avif"
+      srcset="
+        images/page-banner-contact-320.avif   320w,
+        images/page-banner-contact-640.avif   640w,
+        images/page-banner-contact-960.avif   960w,
+        images/page-banner-contact-1280.avif 1280w,
+        images/page-banner-contact-1920.avif 1920w,
+        images/page-banner-contact-2560.avif 2560w
+      "
+    />
+    <source
+      sizes="100vw"
+      type="image/webp"
+      srcset="
+        images/page-banner-contact-320.webp   320w,
+        images/page-banner-contact-640.webp   640w,
+        images/page-banner-contact-960.webp   960w,
+        images/page-banner-contact-1280.webp 1280w,
+        images/page-banner-contact-1920.webp 1920w,
+        images/page-banner-contact-2560.webp 2560w
+      "
+    />
+    <source
+      sizes="100vw"
+      type="image/jpeg"
+      srcset="
+        images/page-banner-contact-320.jpg   320w,
+        images/page-banner-contact-640.jpg   640w,
+        images/page-banner-contact-960.jpg   960w,
+        images/page-banner-contact-1280.jpg 1280w,
+        images/page-banner-contact-1920.jpg 1920w,
+        images/page-banner-contact-2560.jpg 2560w
+      "
+    />
+    <img
+      draggable="false"
+      class="page-banner-img"
+      src="images/page-banner-contact-960.jpg"
+      alt=""
+      width="2560"
+      height="2560"
+    />
+  </picture>
+  <h1 class="page-header">Contact Us</h1>
+</div>
+
+<div class="container-fluid container-lg contact">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4 contact-col">
+      <h2 class="about__header">We'd love to hear from you</h2>
+
+      <ul class="contact__list">
+        <li class="contact__item">
+          <p class="contact__list-header">Email</p>
+          <a class="contact__link" href="mailto:service@skinclinica.com.au" target="_blank"
+            >service@skinclinica.com.au</a
+          >
+        </li>
+
+        <li class="contact__item">
+          <p class="contact__list-header">Phone</p>
+          <a href="tel:+61251347278" class="contact__link">61&nbsp;2&nbsp;5134&nbsp;7278</a>
+        </li>
+
+        <li class="contact__item">
+          <p class="contact__list-header">Social</p>
+          <div class="contact__social">@@include('html/components/social.html',{})</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 contact-col">
+      <h2 class="about__header">Contact form</h2>
+
+      <form class="contact-form">
+        <div class="contact__item">
+          <label for="contacts-name" class="contact__list-header">Name</label>
+          <input autocomplete="off" id="contacts-name" type="text" name="name" class="contact-form__input" />
+        </div>
+
+        <div class="contact__item">
+          <label for="contacts-email" class="contact__list-header">Email address <span>(required)</span></label>
+          <input id="contacts-email" type="email" name="email" class="contact-form__input" required />
+        </div>
+
+        <div class="contact__item">
+          <label for="conctacts-message" class="contact__list-header">Your message <span>(required)</span></label>
+          <textarea
+            id="conctacts-message"
+            name="message"
+            rows="4"
+            cols="50"
+            class="contact-form__input"
+            placeholder="Enter your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+@@include('html/parts/footer-part.html',{})

@@ -1,0 +1,128 @@
+.disable-select {
+  user-select: none;
+}
+
+.color-light {
+  color: var(--color-light);
+}
+
+.color-dark {
+  color: var(--color-dark);
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.color-secondary {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.fs-italic {
+  font-style: italic;
+}
+
+.fs-normal {
+  font-style: normal;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.fw-semibold {
+  font-weight: var(--fw-semibold);
+}
+
+.fw-medium {
+  font-weight: var(--fw-medium);
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  @include visually-hidden();
+}
+
+.link-space {
+  @include link-space();
+
+  &-none {
+    position: auto;
+    content: none;
+  }
+}
+
+.stop-transition {
+  transition: none !important;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+/* ====================   ARROWS   ==================== */
+
+.arrow {
+  &-right-icon {
+    rotate: -90deg;
+  }
+
+  &-left-icon {
+    rotate: 90deg;
+  }
+
+  &-top-icon {
+    rotate: -180deg;
+  }
+}
+
+/* ====================   POSITION   ==================== */
+
+.position {
+  &-static {
+    position: static;
+  }
+
+  &-relative {
+    position: relative;
+  }
+
+  &-absolute {
+    position: absolute;
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  &-sticky {
+    position: sticky;
+  }
+}
+
+
+
+

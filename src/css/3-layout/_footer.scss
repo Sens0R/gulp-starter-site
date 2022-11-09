@@ -1,0 +1,69 @@
+.footer {
+  @include space(var(--spacer-xl), padding, top);
+}
+
+.footer-nav {
+  @include space(var(--spacer-xl), padding, bottom);
+
+  .h-5 {
+    @include space(var(--spacer-sm), padding, top);
+    font-size: var(--fs-0);
+  }
+
+  .row {
+    row-gap: var(--spacer-xl);
+  }
+
+  &__column {
+    @include flex($flex-direction: column);
+  }
+
+  &__list {
+    height: 100%;
+    @include flex($flex-direction: column);
+  }
+
+  &__header {
+    @include space(var(--spacer), margin, bottom);
+    font-size: var(--fs-5);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+  }
+
+  &__link {
+    @include flex($justify-content: center, $flex-direction: column);
+    @include space(0.75rem, padding, vertical);
+    font-size: var(--fs-0);
+    font-weight: var(--fw-medium);
+    transition: padding-left var(--transition);
+
+    @include hover {
+      color: var(--color-secondary-dark);
+      padding-left: 1rem;
+      
+    }
+
+    &:focus-visible {
+      color: var(--color-secondary);
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    margin-top: auto;
+    @include space(0.75rem, padding, vertical);
+  }
+
+  .logo-icon {
+    height: 8rem;
+    width: 12.5rem;
+  }
+}
+
+.copyright {
+  @include flex($justify-content: space-between, $align-items: center);
+  @include space(var(--spacer-lg), padding, bottom);
+  color: var(--color-secondary-gray);
+  font-size: var(--fs-6);
+}

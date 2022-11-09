@@ -1,0 +1,30 @@
+.nav-menu {
+  @include space(var(--spacer-sm), margin, vertical);
+  width: 100%;
+  margin: 0;
+
+  &__link {
+    @include space(var(--spacer-sm), padding, vertical);
+    @include space(var(--spacer-sm), padding, right);
+    font-weight: var(--fw-medium);
+    transition: var(--transition);
+
+    @include hover {
+      color: var(--color-secondary);
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      color: var(--color-secondary);
+      text-decoration: underline 2px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include flex($flex-wrap: wrap, $justify-content: center, $align-items: center);
+
+    &__link {
+      @include space(var(--spacer-sm), padding, horizontal);
+    }
+  }
+}

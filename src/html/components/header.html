@@ -1,0 +1,126 @@
+<!-- ====================   LOGO   ==================== -->
+
+<a aria-label="The Owl home. The Owl logo." class="logo col-auto justify-content-start logo-hover" href="index.html">
+  <svg aria-hidden="true" class="logo-icon">
+    <use href="images/icons/sprite-multi.svg#logo" />
+  </svg>
+</a>
+
+<!-- ====================   PHONE   ==================== -->
+
+<div class="phone col-auto">
+  <svg aria-hidden="true" class="phone__icon">
+    <use href="images/icons/sprite-mono.svg#phone" />
+  </svg>
+  <a href="tel:1800843695" class="phone__link" data-tooltip aria-label="Make a phone call"> 1800&nbsp;843&nbsp;695 </a>
+</div>
+
+<!-- ====================   NAVIGATION   ==================== -->
+
+<nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
+  <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
+    <span class="nav-toggler__text nav-toggler__text_close">close menu</span>
+  </button>
+
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input-mobile">Search</label>
+
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input-mobile"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+
+  <ul class="nav-menu">
+    <li data-nav-page class="nav-menu__item">
+      <a href="about.html" class="nav-menu__link">About</a>
+    </li>
+
+    <li data-dropdown="hover" class="nav-menu__item dropdown col-auto">
+      <div class="dropdown__controls">
+        <a href="services.html" class="nav-menu__link dropdown__link">Services</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
+          <svg aria-hidden="true" class="dropdown__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </div>
+      <div data-dropdown-content class="dropdown__content">
+        <ul class="dropdown-list">
+          <li class="dropdown-list__item">
+            <a href="tabs.html" class="dropdown-list__link">Tabs</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="dropdowns.html" class="dropdown-list__link">Dropdowns</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="accordions.html" class="dropdown-list__link">Accordions</a>
+          </li>
+          <li class="dropdown-list__item">
+            <a href="dialogs.html" class="dropdown-list__link">Dialogs</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="portfolio.html" class="nav-menu__link">Portfolio</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="blog.html" class="nav-menu__link">Blog</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="contact.html" class="nav-menu__link">Contact</a>
+    </li>
+  </ul>
+
+  @@include('social.html',{})
+</nav>
+
+<!-- ====================   SEARCH   ==================== -->
+
+<div class="col-auto col-md col-xl-2 col-xxl-3 nav-search-container">
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input">Search</label>
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button
+      data-tooltip="bottom-right"
+      aria-label="Submit search"
+      class="nav-search__btn nav-search__btn_search"
+      type="submit"
+    >
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+</div>
+
+<!-- ====================   NAV-TOGGLER   ==================== -->
+
+<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-btn="open" type="button">
+  <svg aria-hidden="true" class="nav-toggler__icon">
+    <use href="images/icons/sprite-mono.svg#hamburger" />
+  </svg>
+  <span class="nav-toggler__text nav-toggler__text_open">menu</span>
+</button>

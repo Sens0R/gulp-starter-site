@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="description"
+    content="Skin Clinica is your one stop online shop for skin care routines and natural products. We have skincare for all skin types. Free shipping available!"
+  />
+
+  <link
+    rel="preload"
+    href="fonts/DMSans-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <link
+    rel="preload"
+    href="fonts/DMSans-Bold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <script defer src='https://www.google.com/recaptcha/api.js'></script>
+  <link rel="shortcut icon" type="image/svg+xml" href="images/icons/favicon.svg"/> 
+  <link rel="stylesheet" href="css/style.min.css" />
+  <script defer src="js/app.min.js"></script>
+
+  <title>Skin Clinica</title>
+</head>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="above-header-content-wrapper">
+        <p class="notification">
+          Free Shipping On All Us Orders Over $50 + 2 Free Samples 🎁
+          <a href="#" class="notification__link">Shop now</a>
+        </p>
+      </div>
+    <header class="header">
+      <div class="header-relative-wrapper">
+  <div class="container-fluid container-lg">
+    <div class="row nav-belt">
+      <!-- ====================   LOGO   ==================== -->
+
+      <div class="logo col-auto justify-content-start">
+        <a class="logo-header" href="index.html" aria-label="Skin clinica">
+          <svg class="logo-header-icon hvr-icon">
+            <use href="images/icons/sprite-multi.svg#logo-header"></use>
+          </svg>
+          <div class="logo-text">skin clinica</div>
+        </a>
+      </div>
+
+      <!-- ====================   SEARCH   ==================== -->
+
+      <div class="col gx-0">
+        <div class="container-fluid mobile-search">
+          <div class="nav-search">
+            <div class="nav-search-input-wrapper">
+              <input
+                type="search"
+                class="nav-search-input text-sm"
+                placeholder="Search"
+              />
+              <div class="nav-search-buttons">
+                <button class="nav-search-buttons__search" aria-label="Search">
+                  <svg class="nav-search-buttons__search-icon hvr-icon">
+                    <use href="images/icons/sprite-mono.svg#search"></use>
+                  </svg>
+                </button>
+
+                <button
+                  class="d-lg-none nav-search-buttons__close"
+                  type="button"
+                  aria-label="Close search"
+                >
+                  <svg class="nav-search-buttons__close-icon hvr-icon">
+                    <use
+                      href="images/icons/sprite-mono.svg#toggler-closed"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================   TOOLS   ==================== -->
+
+      <div class="col-auto d-flex tools">
+        <div class="nav-tools">
+          <button
+            class="rounded-icon d-lg-none nav-search-buttons__open"
+            type="button"
+            aria-label="Search"
+          >
+            <svg class="icon-rounded hvr-icon">
+              <use href="images/icons/sprite-mono.svg#search"></use>
+            </svg>
+          </button>
+
+          <a href="#" class="rounded-icon" aria-label="Account">
+            <svg class="icon-rounded hvr-icon">
+              <use href="images/icons/sprite-mono.svg#account"></use>
+            </svg>
+            <p class="nav-tools__name">Account</p>
+          </a>
+
+          <a href="#" class="rounded-icon" aria-label="Wishlist">
+            <svg class="icon-rounded hvr-icon">
+              <use href="images/icons/sprite-mono.svg#wishlist"></use>
+            </svg>
+            <p class="nav-tools__name">Wishlist</p>
+          </a>
+
+          <a href="#" class="rounded-icon" aria-label="Shopping cart">
+            <svg class="icon-rounded hvr-icon">
+              <use href="images/icons/sprite-mono.svg#cart"></use>
+            </svg>
+            <p class="nav-tools__name">Cart (0)</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- ====================   NAV-TOGGLER   ==================== -->
+      <div class="nav-toggler-group col-auto">
+        <button
+          class="nav-toggler nav-toggler--open _active"
+          type="button"
+          aria-label="Open navigation menu"
+        >
+          <svg class="nav-toggler-icon hvr-icon">
+            <use href="images/icons/sprite-mono.svg#toggler-open"></use>
+          </svg>
+          <div class="nav-toggler__text">menu</div>
+        </button>
+        <button
+          class="nav-toggler nav-toggler--close"
+          type="button"
+          aria-label="Close navigation menu"
+        >
+          <svg class="nav-toggler-icon hvr-icon">
+            <use href="images/icons/sprite-mono.svg#toggler-closed"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- ====================   NAVIGATION   ==================== -->
+
+    <nav role="navigation" aria-label="main-menu" class="navigation container-fluid px-lg-0">
+      <div class="nav-body"><ul class="nav-menu nav-menu--main">
+  <li data-dropdown data-nav-page class="nav-menu__item nav-menu-dropdown">
+    <a href="shop.html" class="nav-menu__link nav-menu-dropdown__link">Shop</a>
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Shop"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <p class="dropdown-content__list-header" role="header">
+            Shop by Category
+          </p>
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Beauty</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Body</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin Concern</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin Type</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <p class="dropdown-content__list-header" role="header">Face Care</p>
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Eye Care</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Face Oils</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Toners</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Masques</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <p class="dropdown-content__list-header" role="header">Skin Care</p>
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Moisturisers</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Sun Care</a>
+            </li>
+
+            <li>
+              <a href="#" class="dropdown-content__link">Exfoliators</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Serums</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <p class="dropdown-content__list-header" role="header">
+            Accessories & Gifts
+          </p>
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Accessories</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Sets & Gifts</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin Care Packages</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Gift Cards</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li data-dropdown data-nav-page class="nav-menu__item nav-menu-dropdown">
+    <a
+      href="skin-intelligence.html"
+      class="nav-menu__link nav-menu-dropdown__link"
+      >Skin Intelligence</a
+    >
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Skin Intelligence"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content dropdown-left" data-dropdown-content>
+      <div class="dropdown-content">
+        <div class="col-6 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Truth in Skin Care</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Healthy Skin</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link"
+                >Sunscreen Ingredients</a
+              >
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link"
+                >Fragrance in skin care</a
+              >
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Essential Oils</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">The Skin Barrier</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin Concerns</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link"
+                >Skin Care Ingredients</a
+              >
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Hero Ingredients</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin’s Youth Layer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li data-dropdown data-nav-page class="nav-menu__item nav-menu-dropdown">
+    <a
+      href="skin-care-packages.html"
+      class="nav-menu__link nav-menu-dropdown__link"
+      >Skin Care Packages</a
+    >
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Skin Care Packages"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        <ul class="dropdown-content__list">
+          <li>
+            <a href="#" class="dropdown-content__link"
+              >Skin Care Consultation Complete</a
+            >
+          </li>
+          <li>
+            <a href="#" class="dropdown-content__link"
+              >Skin Care Protocol Keratosis Pilaris</a
+            >
+          </li>
+          <li>
+            <a href="#" class="dropdown-content__link">Skin Care Essentials</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown-content__link">Skin Care Basics</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li data-dropdown data-nav-page class="nav-menu__item nav-menu-dropdown">
+    <a href="brands.html" class="nav-menu__link nav-menu-dropdown__link"
+      >Brands</a
+    >
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Brands"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content dropdown-left" data-dropdown-content>
+      <div class="dropdown-content">
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Alpha-H</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Aurelia London</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">BioBare</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Bloc</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">ByEcom</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">By Wishtrend</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Colorscience</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Comfort Zone</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">COSRX</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Dr. G</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Missha</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Necessaire</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Oskia</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Pestle & Mortar</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Primera</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">I’m From</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Klairs</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Krave</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 dropdown-content__column">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Laneige</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Medik8</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Serum Factory</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Shu Uemura</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Skin Juice</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<hr class="d-lg-none my-lg" />
+<ul class="nav-menu nav-menu--secondary">
+  <li data-dropdown data-nav-page class="nav-menu__item nav-menu-dropdown">
+    <a href="about.html" class="nav-menu__link nav-menu-dropdown__link"
+      >About</a
+    >
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for About"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        <ul class="dropdown-content__list">
+          <li>
+            <a href="about-why-skin-clinica.html" class="dropdown-content__link"
+              >Why Skin Clinica</a
+            >
+          </li>
+          <li>
+            <a href="about-company-founder.html" class="dropdown-content__link"
+              >About Our Founder</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+
+  <!-- ====================   COMPLEX CLICK   ==================== -->
+
+  <li data-dropdown="click" class="nav-menu__item nav-menu-dropdown">
+    <a href="about.html" class="nav-menu__link nav-menu-dropdown__link"
+      >Link + btn click</a
+    >
+    <button
+      class="nav-menu-dropdown__btn"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Click"
+    >
+      <svg class="dropdown-btn-icon nav-menu-dropdown__btn-icon hvr-icon">
+        <use href="images/icons/sprite-mono.svg#arrow-down"></use>
+      </svg>
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        
+          <ul class="dropdown-content__list">
+            <li>
+              <a
+                href="about-why-skin-clinica.html"
+                class="dropdown-content__link"
+                >Why Skin Clinica</a
+              >
+            </li>
+            <li>
+              <a
+                href="about-company-founder.html"
+                class="dropdown-content__link"
+                >About Our Founder</a
+              >
+            </li>
+          </ul>
+        
+      </div>
+    </div>
+  </li>
+
+  <!-- ====================   SINGLE   ==================== -->
+
+  <li data-dropdown class="nav-menu__item nav-menu-dropdown">
+    <button
+      class="nav-menu__link"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Single"
+    >
+      Only btn hover
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        <ul class="dropdown-content__list">
+          <li>
+            <a href="about-why-skin-clinica.html" class="dropdown-content__link"
+              >Why Skin Clinica</a
+            >
+          </li>
+          <li>
+            <a href="about-company-founder.html" class="dropdown-content__link"
+              >About Our Founder</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+
+  <!-- ====================   SINGLE CLICK   ==================== -->
+
+  <li data-dropdown="click" class="nav-menu__item nav-menu-dropdown">
+    <button
+      class="nav-menu__link"
+      data-dropdown-btn
+      aria-label="Dropdown menu for Single"
+    >
+      Only btn click
+    </button>
+
+    <div class="nav-menu-dropdown__content" data-dropdown-content>
+      <div class="dropdown-content">
+        <ul class="dropdown-content__list">
+          <li>
+            <a href="about-why-skin-clinica.html" class="dropdown-content__link"
+              >Why Skin Clinica</a
+            >
+          </li>
+          <li>
+            <a href="about-company-founder.html" class="dropdown-content__link"
+              >About Our Founder</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+
+  <!-- ====================   SINGLE CLICK END   ==================== -->
+  <li data-nav-page class="nav-menu__item">
+    <a href="faq.html" class="nav-menu__link">Faq</a>
+  </li>
+  <li data-nav-page class="nav-menu__item">
+    <a href="blog.html" class="nav-menu__link">Blog</a>
+  </li>
+  <li data-nav-page class="nav-menu__item">
+    <a href="contact.html" class="nav-menu__link">Contact</a>
+  </li>
+</ul>
+<hr class="d-lg-none my-lg" />
+</div>
+      <div class="nav-mobile-socials">
+        <ul class="social-icons">
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Facebook">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Instagram">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Linkedin">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Twitter">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Pinterest">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--pinterest"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Gmail">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--gmail"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+      </div>
+      <!--    <p style="background: red">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsum
+      quos laborum assumenda harum fugit inventore, error dicta sapiente
+      iste. Necessitatibus fugiat recusandae, vel nesciunt perferendis sunt,
+      sapiente neque debitis, repellendus harum excepturi quam hic
+      obcaecati. Consequatur laborum rem, maiores officia veritatis
+      assumenda iusto libero, soluta minus dolorum corrupti fugit. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis
+      delectus aut deleniti quos ut nulla, provident error atque hic. Ea
+      suscipit enim similique veritatis molestiae incidunt quidem animi,
+      harum necessitatibus, id ratione odio doloribus laudantium accusantium
+      fuga blanditiis sapiente et nisi nam saepe illum consequuntur
+      praesentium porro cupiditate? Laudantium.
+    </p>
+    <p style="background: rgb(115, 255, 0)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsum
+      quos laborum assumenda harum fugit inventore, error dicta sapiente
+      iste. Necessitatibus fugiat recusandae, vel nesciunt perferendis sunt,
+      sapiente neque debitis, repellendus harum excepturi quam hic
+      obcaecati. Consequatur laborum rem, maiores officia veritatis
+      assumenda iusto libero, soluta minus dolorum corrupti fugit. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis
+      delectus aut deleniti quos ut nulla, provident error atque hic. Ea
+      suscipit enim similique veritatis molestiae incidunt quidem animi,
+      harum necessitatibus, id ratione odio doloribus laudantium accusantium
+      fuga blanditiis sapiente et nisi nam saepe illum consequuntur
+      praesentium porro cupiditate? Laudantium.
+    </p>
+    <p style="background: rgb(0, 4, 255)">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsum
+      quos laborum assumenda harum fugit inventore, error dicta sapiente
+      iste. Necessitatibus fugiat recusandae, vel nesciunt perferendis sunt,
+      sapiente neque debitis, repellendus harum excepturi quam hic
+      obcaecati. Consequatur laborum rem, maiores officia veritatis
+      assumenda iusto libero, soluta minus dolorum corrupti fugit. Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Laboriosam debitis
+      delectus aut deleniti quos ut nulla, provident error atque hic. Ea
+      suscipit enim similique veritatis molestiae incidunt quidem animi,
+      harum necessitatibus, id ratione odio doloribus laudantium accusantium
+      fuga blanditiis sapiente et nisi nam saepe illum consequuntur
+      praesentium porro cupiditate? Laudantium.
+      <span style="color: white">END</span>
+    </p> -->
+    </nav>
+  </div>
+</div>
+
+    </header>
+ 
+   
+  
+
+
+
+<main>
+  <div class="page-banner">
+    <picture>
+      <source
+        type="image/avif"
+        srcset="
+          images/page-banner-faq-320.avif   320w,
+          images/page-banner-faq-640.avif   640w,
+          images/page-banner-faq-960.avif   960w,
+          images/page-banner-faq-1280.avif 1280w,
+          images/page-banner-faq-1920.avif 1920w,
+          images/page-banner-faq-2560.avif 2560w
+        "
+      />
+      <source
+        type="image/webp"
+        srcset="
+          images/page-banner-faq-320.webp   320w,
+          images/page-banner-faq-640.webp   640w,
+          images/page-banner-faq-960.webp   960w,
+          images/page-banner-faq-1280.webp 1280w,
+          images/page-banner-faq-1920.webp 1920w,
+          images/page-banner-faq-2560.webp 2560w
+        "
+      />
+      <source
+        type="image/jpeg"
+        srcset="
+          images/page-banner-faq-320.jpg   320w,
+          images/page-banner-faq-640.jpg   640w,
+          images/page-banner-faq-960.jpg   960w,
+          images/page-banner-faq-1280.jpg 1280w,
+          images/page-banner-faq-1920.jpg 1920w,
+          images/page-banner-faq-2560.jpg 2560w
+        "
+      />
+      <img
+        draggable="false"
+        class="page-banner-img"
+        src="images/page-banner-faq-960.jpg"
+        alt="page-banner-img"
+        width="2560"
+        height="2560"
+      />
+    </picture>
+    <h1 class="page-header">Skin Intelligence</h1>
+  </div>
+  <div class="section container-fluid skin-intelligence">
+    
+  </div>
+</main>
+
+        <footer class="footer">
+           <div class="footer-background">
+  <picture>
+    <source
+      type="image/avif"
+      sizes="100vw"
+      srcset="
+        images/footer-bg-320.avif   320w,
+        images/footer-bg-640.avif   640w,
+        images/footer-bg-960.avif   960w,
+        images/footer-bg-1280.avif 1280w,
+        images/footer-bg-1920.avif 1920w,
+        images/footer-bg-2560.avif 2560w
+      "
+    />
+    <source
+      type="image/webp"
+      sizes="100vw"
+      srcset="
+        images/footer-bg-320.webp   320w,
+        images/footer-bg-640.webp   640w,
+        images/footer-bg-960.webp   960w,
+        images/footer-bg-1280.webp 1280w,
+        images/footer-bg-1920.webp 1920w,
+        images/footer-bg-2560.webp 2560w
+      "
+    />
+    <source
+      type="image/jpeg"
+      sizes="100vw"
+      srcset="
+        images/footer-bg-320.jpg   320w,
+        images/footer-bg-640.jpg   640w,
+        images/footer-bg-960.jpg   960w,
+        images/footer-bg-1280.jpg 1280w,
+        images/footer-bg-1920.jpg 1920w,
+        images/footer-bg-2560.jpg 2560w
+      "
+    />
+    <img
+      draggable="false"
+      class="footer-bg"
+      src="images/footer-bg-960.jpg"
+      alt="footer-bg"
+      width="2560"
+      height="2560"
+    />
+  </picture>
+</div>
+
+<div class="container-fluid container-lg footer-container">
+  <div class="mailing-list text-center">
+    <h2>Join our mailing list</h2>
+    <p>
+      Sign up to be the first to receive special news and updates from Skin
+      Clinica.
+    </p>
+
+    <div class="row mailing-form">
+      <div class="col-12 col-sm-6 d-flex col-md-auto mailing-form__item">
+        <input
+          placeholder="Full name"
+          class="mailing-form__input"
+          type="text"
+        />
+      </div>
+      <div class="col-12 col-sm-6 d-flex col-md-auto mailing-form__item">
+        <input placeholder="Email" class="mailing-form__input" type="text" />
+      </div>
+      <div class="col-12 col-md-auto mailing-form__item mailing-form__button">
+        <button class="btn-light">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <nav role="navigation" aria-label="Footer" class="footer-nav-main">
+    <div class="footer-logo">
+      <a href="index.html" aria-label="Skin clinica" class="logo-footer">
+        <svg class="logo-footer-icon hvr-icon">
+          <use href="images/icons/sprite-multi.svg#logo-footer"></use>
+        </svg>
+        <div class="logo-text-footer">skin clinica</div>
+      </a>
+      <div class="footer-phone">
+        <p class="footer-nav__header">Phone</p>
+        <a href="tel:+61 2 5134 7278" class="footer-phone__link"
+          >61 2 5134 7278</a
+        >
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="row">
+        <div class="col-7 col-sm-6 col-md-auto footer-nav__col">
+          <p class="footer-nav__header">Company</p>
+          <ul class="footer-nav__list">
+            <li><a class="footer-nav__link" href="about.html">About</a></li>
+            <li><a class="footer-nav__link" href="faq.html">FAQ</a></li>
+            <li><a class="footer-nav__link" href="blog.html">Blog</a></li>
+            <li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-7 col-sm-6 col-md-auto footer-nav__col">
+          <p class="footer-nav__header">Menu</p>
+          <ul class="footer-nav__list">
+            <li><a class="footer-nav__link" href="#">Shop</a></li>
+            <li>
+              <a class="footer-nav__link" href="#">Skin Intelligence</a>
+            </li>
+            <li>
+              <a class="footer-nav__link" href="#">Skin Care Package</a>
+            </li>
+            <li><a class="footer-nav__link" href="#">Brands</a></li>
+          </ul>
+        </div>
+
+        <div class="col-7 col-sm-6 col-md-auto footer-nav__col">
+          <p class="footer-nav__header">Customer support</p>
+          <ul class="footer-nav__list">
+            <li>
+              <a class="footer-nav__link" href="#">Why Buy From Us</a>
+            </li>
+            <li><a class="footer-nav__link" href="#">Shipping</a></li>
+            <li><a class="footer-nav__link" href="#">Returns</a></li>
+            <li>
+              <a class="footer-nav__link" href="#">Terms & Conditions</a>
+            </li>
+            <li>
+              <a class="footer-nav__link" href="#">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-socials"><ul class="social-icons">
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Facebook">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Instagram">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Linkedin">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Twitter">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Pinterest">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--pinterest"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-icons__item">
+    <a href="#" class="rounded-icon" aria-label="Gmail">
+      <svg class="icon-rounded hvr-icon">
+        <use href="images/icons/sprite-mono.svg#socials--gmail"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+  </nav>
+
+  <p class="copyright">
+    © ALL CONTENT IS THE COPYRIGHT OF SKIN CLINICA. ALL RIGHTS RESERVED
+  </p>
+</div>
+
+        </footer>
+      </div>
+    </body>
+  </html>

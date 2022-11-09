@@ -1,0 +1,70 @@
+{
+  "name": "the-owl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "dev-reset": "gulp devReset",
+    "build": "gulp build --build",
+    "zip": "gulp deployZIP --build",
+    "ftp": "gulp deployFTP --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sens0R/the-owl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sens0R/the-owl/issues"
+  },
+  "homepage": "https://github.com/Sens0R/the-owl#readme",
+  "devDependencies": {
+    "@popperjs/core": "latest",
+    "bootstrap": "latest",
+    "browser-sync": "latest",
+    "del": "latest",
+    "fs-extra": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "latest",
+    "gulp-if": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-purgecss": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-sass": "latest",
+    "gulp-sharp-responsive": "latest",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-ttf2woff": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-util": "latest",
+    "gulp-version-number": "latest",
+    "gulp-webp": "latest",
+    "gulp-webp-css": "latest",
+    "gulp-webpcss": "latest",
+    "gulp-zip": "latest",
+    "headroom.js": "latest",
+    "install": "latest",
+    "lodash": "latest",
+    "npm": "latest",
+    "rename": "latest",
+    "sass": "latest",
+    "scroll-lock": "^2.1.5",
+    "swiper": "latest",
+    "vinyl-ftp": "latest",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "particles.js": "latest"
+  }
+}

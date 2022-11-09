@@ -1,0 +1,113 @@
+$spacers-map: (
+  '': var(--spacer),
+  '-sm': var(--spacer-sm),
+  '-lg': var(--spacer-lg),
+  '-xl': var(--spacer-xl),
+);
+
+@each $spacer-key, $spacer-value in $spacers-map {
+  // gutters (flex-gap)
+  .g {
+    &#{$spacer-key} {
+      @include flex($flex-wrap: wrap, $gap: $spacer-value);
+    }
+
+    &x#{$spacer-key} {
+      @include flex($flex-wrap: wrap, $column-gap: $spacer-value);
+    }
+
+    &y#{$spacer-key} {
+      @include flex($flex-wrap: wrap, $row-gap: $spacer-value);
+    }
+  }
+
+  // spacers - padding
+  .p {
+    &#{$spacer-key} {
+      padding: $spacer-value;
+    }
+
+    &x {
+      &#{$spacer-key} {
+        padding-left: $spacer-value;
+        padding-right: $spacer-value;
+      }
+    }
+
+    &y {
+      &#{$spacer-key} {
+        padding-top: $spacer-value;
+        padding-bottom: $spacer-value;
+      }
+    }
+
+    &l {
+      &#{$spacer-key} {
+        padding-left: $spacer-value;
+      }
+    }
+
+    &r {
+      &#{$spacer-key} {
+        padding-right: $spacer-value;
+      }
+    }
+
+    &t {
+      &#{$spacer-key} {
+        padding-bottom: $spacer-value;
+      }
+    }
+
+    &b {
+      &#{$spacer-key} {
+        padding-bottom: $spacer-value;
+      }
+    }
+  }
+
+  // spacers - margins
+  .m {
+    &#{$spacer-key} {
+      margin: $spacer-value;
+    }
+
+    &x {
+      &#{$spacer-key} {
+        margin-left: $spacer-value;
+        margin-right: $spacer-value;
+      }
+    }
+
+    &y {
+      &#{$spacer-key} {
+        margin-top: $spacer-value;
+        margin-bottom: $spacer-value;
+      }
+    }
+
+    &l {
+      &#{$spacer-key} {
+        margin-left: $spacer-value;
+      }
+    }
+
+    &r {
+      &#{$spacer-key} {
+        margin-right: $spacer-value;
+      }
+    }
+
+    &t {
+      &#{$spacer-key} {
+        margin-bottom: $spacer-value;
+      }
+    }
+
+    &b {
+      &#{$spacer-key} {
+        margin-bottom: $spacer-value;
+      }
+    }
+  }
+}

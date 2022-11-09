@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="The Owl description goes here" />
+
+  <link rel="preload" href="fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="preload" href="fonts/GeneralSans-Semibold.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="preload" href="fonts/GeneralSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+  <link rel="shortcut icon" type="image/svg+xml" href="images/icons/favicon.svg" />
+
+  <link rel="stylesheet" href="css/style.min.css" />
+  <script defer src="js/app.min.js"></script>
+
+  <title>The Owl IT services</title>
+</head>
+
+
+<body>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="header-sticky-wrapper">
+    <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
+
+<a aria-label="The Owl home. The Owl logo." class="logo col-auto justify-content-start logo-hover" href="index.html">
+  <svg aria-hidden="true" class="logo-icon">
+    <use href="images/icons/sprite-multi.svg#logo" />
+  </svg>
+</a>
+
+<!-- ====================   PHONE   ==================== -->
+
+<div class="phone col-auto">
+  <svg aria-hidden="true" class="phone__icon">
+    <use href="images/icons/sprite-mono.svg#phone" />
+  </svg>
+  <a href="tel:1800843695" class="phone__link" data-tooltip aria-label="Make a phone call"> 1800&nbsp;843&nbsp;695 </a>
+</div>
+
+<!-- ====================   NAVIGATION   ==================== -->
+
+<nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
+  <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
+    <span class="nav-toggler__text nav-toggler__text_close">close menu</span>
+  </button>
+
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input-mobile">Search</label>
+
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input-mobile"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+
+  <ul class="nav-menu">
+    <li data-nav-page class="nav-menu__item">
+      <a href="about.html" class="nav-menu__link">About</a>
+    </li>
+
+    <li data-dropdown data-nav-page class="nav-menu__item dropdown">
+      <a href="services.html" class="nav-menu__link dropdown__link">Services</a>
+      <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
+        <svg aria-hidden="true" class="dropdown__icon">
+          <use href="images/icons/sprite-mono.svg#arrow"></use>
+        </svg>
+      </button>
+
+      <div class="dropdown__content">
+        <div class="dropdown-content">
+          <ul class="dropdown-content__list">
+            <li>
+              <a href="#" class="dropdown-content__link">Lorem, ipsum dolor.</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Lorem, ipsum.</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Lorem ipsum dolor sit.</a>
+            </li>
+            <li>
+              <a href="#" class="dropdown-content__link">Lorem, ipsum dolor.</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="portfolio.html" class="nav-menu__link">Portfolio</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="blog.html" class="nav-menu__link">Blog</a>
+    </li>
+
+    <li data-nav-page class="nav-menu__item">
+      <a href="contact.html" class="nav-menu__link">Contact</a>
+    </li>
+  </ul>
+
+  <ul class="social">
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+</nav>
+
+<!-- ====================   SEARCH   ==================== -->
+
+<div class="col-auto col-md col-xl-2 col-xxl-3 nav-search-container">
+  <form class="nav-search" role="search">
+    <label class="visually-hidden" for="nav-search-input">Search</label>
+    <input
+      autocomplete="off"
+      class="nav-search__input"
+      id="nav-search-input"
+      placeholder="Search"
+      required
+      type="search"
+    />
+
+    <button data-tooltip="bottom-right" aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
+      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
+        <use href="images/icons/sprite-mono.svg#search" />
+      </svg>
+    </button>
+  </form>
+</div>
+
+<!-- ====================   NAV-TOGGLER   ==================== -->
+
+<button class="nav-toggler nav-toggler_open col-auto" data-tooltip="bottom-right" data-hamburger-btn="open" type="button">
+  <svg aria-hidden="true" class="nav-toggler__icon">
+    <use href="images/icons/sprite-mono.svg#hamburger" />
+  </svg>
+  <span class="nav-toggler__text nav-toggler__text_open">menu</span>
+</button>
+</header>
+    </div>
+   
+    
+
+
+<main>
+  <div class="page-banner">
+    <picture>
+      <source sizes="100vw" type="image/avif" srcset="
+          images/about-page/page-banner-about-320.avif   320w,
+          images/about-page/page-banner-about-640.avif   640w,
+          images/about-page/page-banner-about-960.avif   960w,
+          images/about-page/page-banner-about-1280.avif 1280w,
+          images/about-page/page-banner-about-1920.avif 1920w,
+          images/about-page/page-banner-about-2560.avif 2560w
+        ">
+      <source sizes="100vw" type="image/webp" srcset="
+          images/about-page/page-banner-about-320.webp   320w,
+          images/about-page/page-banner-about-640.webp   640w,
+          images/about-page/page-banner-about-960.webp   960w,
+          images/about-page/page-banner-about-1280.webp 1280w,
+          images/about-page/page-banner-about-1920.webp 1920w,
+          images/about-page/page-banner-about-2560.webp 2560w
+        ">
+      <source sizes="100vw" type="image/jpeg" srcset="
+          images/about-page/page-banner-about-320.jpg   320w,
+          images/about-page/page-banner-about-640.jpg   640w,
+          images/about-page/page-banner-about-960.jpg   960w,
+          images/about-page/page-banner-about-1280.jpg 1280w,
+          images/about-page/page-banner-about-1920.jpg 1920w,
+          images/about-page/page-banner-about-2560.jpg 2560w
+        ">
+      <img draggable="false" class="page-banner-img" src="images/page-banner-about-960.jpg" alt="" width="2560"
+        height="2560">
+    </picture>
+    <h1 class="page-header">About Our Founder</h1>
+  </div>
+
+  <div class="section container-fluid container-md">
+    <div class="col-12 col-lg-8 about-company-founder-col">
+      <picture>
+        <source type="image/avif" sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw" srcset="
+            images/about-page/company-founder-320.avif   320w,
+            images/about-page/company-founder-640.avif   640w,
+            images/about-page/company-founder-960.avif   960w,
+            images/about-page/company-founder-1280.avif 1280w,
+            images/about-page/company-founder-1920.avif 1920w,
+            images/about-page/company-founder-2560.avif 2560w
+          ">
+        <source type="image/webp" sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw" srcset="
+            images/about-page/company-founder-320.webp   320w,
+            images/about-page/company-founder-640.webp   640w,
+            images/about-page/company-founder-960.webp   960w,
+            images/about-page/company-founder-1280.webp 1280w,
+            images/about-page/company-founder-1920.webp 1920w,
+            images/about-page/company-founder-2560.webp 2560w
+          ">
+        <source type="image/jpeg" sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw" srcset="
+            images/about-page/company-founder-320.jpg   320w,
+            images/about-page/company-founder-640.jpg   640w,
+            images/about-page/company-founder-960.jpg   960w,
+            images/about-page/company-founder-1280.jpg 1280w,
+            images/about-page/company-founder-1920.jpg 1920w,
+            images/about-page/company-founder-2560.jpg 2560w
+          ">
+        <img draggable="false" height="2560" width="2560" class="about-company-founder-img"
+          src="images/about-page/company-founder-960.jpg" alt="">
+      </picture>
+      <h2 class="about__header">
+        Meet <span class="color-accent-light">Anna Marie</span>
+      </h2>
+      <p>
+        Looking for the best skin care? I’m Anna Marie and my first job at age
+        14 was working on Saturdays in a beauty practice where I learned about
+        aesthetics. I didn’t choose it as my career then, but I always
+        maintained my love for all things skin care.
+      </p>
+      <p>
+        Later I formulated my own personal care products using Australian
+        botanicals, long before the term clean beauty was invented or anyone
+        knew what it was. Despite my passion for clean beauty, I was dismayed by
+        the lack of effectiveness of so many of the products and the high use of
+        essential oils and other irritating ingredients.
+      </p>
+      So many of these products, even cosmeceutical ones, were more likely to
+      compromise the skin barrier, cause inflammation and potentially trigger
+      discolourations, rather than deliver the skin miracle they were promising.
+      <p>
+        I kept finding that skin care products containing questionable
+        ingredients were being sold to customers without a second thought. Many
+        aestheticians and dermatologists were more interested in what would earn
+        them the most revenue rather than what would deliver results without
+        compromising the long-term health of their clients’ skin. So few of them
+        focused on the science behind the ingredients in the formulations or
+        independently sought out clinical research, instead relying on the
+        marketing information provided by the brands themselves.
+      </p>
+      <p>
+        I lost faith in the advice I was being given by well-meaning
+        aestheticians and the recommendations of dermatologists, who kept trying
+        to sell me inappropriate products and super expensive treatments that
+        would have damaged my very sensitive skin.
+      </p>
+      <p>
+        I decided to undertake study in integrative health and dermatology and
+        threw myself into endless hours of searching medical and dermatological
+        databases and reading published articles. I was struck by the lack of
+        real science that sat behind so many skin care products and concerned by
+        the number of potentially harmful ingredients.
+      </p>
+      <p>
+        I was determined to improve each of my skin concerns without any
+        clinical interventions. I set about finding the best skin care routine
+        and products for my skin. I hunted down products from around the world
+        and religiously applied them, to find my holy grails. Over the course of
+        two years, I tackled my sensitivity, redness, dehydration and
+        hyperpigmentation. To my great surprise, I was also able to eliminate
+        the appearance of fine lines and wrinkles around my eyes, even though I
+        was not really expecting much. My elevens are less visible and my
+        stubborn naso-labial lines look better too.
+      </p>
+      <p>
+        I also made a breakthrough with my keratosis pilaris and finally
+        achieved smoother skin. I finally stopped getting those welt-like
+        breakouts I would get from using those overly heavy urea creams
+        recommended by dermatologists. For the first time in my life, the
+        ‘chicken skin’ curse was finally behind me.
+      </p>
+      <p>
+        My experiments with hyperpigmentation and finding ingredients that work
+        as well as Hydroquinone continue. Trust me when I say I tried dozens of
+        products, with ingredients such as AHAs, Arbutin, Kojic Acid,
+        Niacinamide, Phenylethyl Resorcinol, Vitamin C, Liquorice Extract,
+        Glutathione, Tranexamic Acid and Retinol.
+      </p>
+      <p>
+        So here I am, wanting to share what I’ve learnt along the way so you are
+        better informed and can find the real ‘promise keepers’ out there. In
+        this way, I hope you’ll get to enjoy the products you use more and not
+        needlessly blow money on products that don’t deliver.
+      </p>
+      <p>
+        Make sure you visit our
+        <a href="skin-intelligence.html" class="text-link">Skin Intelligence</a>
+        pages to find out about how to create your skin care routine and find
+        the best products for your skin type. You may also like to visit my Blog
+        pages where I regularly post articles on topics I get asked most about.
+      </p>
+      <p>
+        If you would like more indepth information on tackling your skin
+        concerns and get a customised skin care plan, visit our
+        <a href="skin-care-packages.html" class="text-link">Skin Care Packages</a>
+        page.
+      </p>
+      <div class="section-btn">
+        <a href="about-why-skin-clinica.html" class="btn">Why Us</a>
+      </div>
+    </div>
+  </div>
+  <div class="section container-fluid container-md message-from-founder">
+    <div class="col-12 col-lg-8 about-company-founder-col">
+      <h2 class="about__header">A Message From Our Founder</h2>
+      <p>
+        Like many of you, I’ve been fascinated by skin health and skin care for
+        most of my life and have searched for the best skin care routine and
+        products. But finding the truth in the world of skin care proved rather
+        elusive.
+      </p>
+      <p>
+        It’s difficult to separate marketing claims from clinical research and
+        the truth. With all the celebrity endorsements, dermatologist
+        influencers and magazine affiliate marketing masquerading as editorial,
+        it’s become harder than ever to find reliable information on what
+        ingredients are good for the skin and what products actually works.
+      </p>
+      <p>
+        Trying to learn the science of it and learn which
+        <a href="skin-care-ingredients.html" class="text-link">Skin Care Ingredients</a>
+        get results and which ones damage the skin is overwhelming for most
+        people, particularly given all the conflicting information out there.
+        That’s why Skin Clinica was born.
+      </p>
+      <p>
+        We’ve done all the hard work. In buying our products, you can be assured
+        that we’ve extensively researched and tested all our products, not only
+        from a science perspective but also from a user perspective. After all,
+        I not only want you to get results, but I also want you to enjoy using
+        your products. You’ll find detailed product descriptions on our website
+        to make your choice easier, but we’re also here to provide further help
+        by way of free and paid phone and email consultations. In that way, I
+        hope you can find the best skin care routine and products for your skin.
+      </p>
+      <p class="paragraph-accent">Yours truly in better skin</p>
+
+      <picture>
+        <source type="image/avif" srcset="images/company-founder-sign-thumbnail.avif">
+        <source type="image/webp" srcset="images/company-founder-sign-thumbnail.webp">
+        <source type="image/jpeg" srcset="images/company-founder-sign-thumbnail.jpg">
+        <img draggable="false" class="company-founder-sign-thumbnail"
+          src="images/company-founder-sign-thumbnail-960.jpg" alt="" width="160" height="160">
+      </picture>
+
+      <div class="section-btn">
+        <a href="shop.html" class="btn">Shop</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container-fluid container-xxl footer-container">
+  <nav aria-label="Footer" class="footer-nav">
+    <div class="row row-cols-sm-2 row-cols-lg-4">
+      <div class="col-12 footer-nav__column">
+        <ul class="footer-nav__list">
+          <li>
+            <a class="logo-hover" href="index.html" aria-label="The Owl home. The Owl logo.">
+              <svg aria-hidden="true" class="logo-icon">
+                <use href="images/icons/sprite-multi.svg#logo"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li>
+            <div class="footer-socials"><ul class="social">
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Services</h2>
+
+        <ul class="footer-nav__list">
+          <li><a class="footer-nav__link" href="about.html">Cloud Solutions</a></li>
+          <li><a class="footer-nav__link" href="faq.html">Your Local IT Help desk</a></li>
+          <li><a class="footer-nav__link" href="blog.html">Disaster Recovery</a></li>
+          <li><a class="footer-nav__link" href="contact.html">Systems Security</a></li>
+          <li><a class="footer-nav__link" href="blog.html">Hardware Procurement</a></li>
+          <li><a class="footer-nav__link" href="contact.html">Phones and Internet</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Company</h2>
+
+        <ul class="footer-nav__list">
+          <li><a class="footer-nav__link" href="shop.html">About</a></li>
+          <li>
+            <a class="footer-nav__link" href="skin-intelligence.html">Portfolio</a>
+          </li>
+          <li>
+            <a class="footer-nav__link" href="skin-care-packages.html">Blog</a>
+          </li>
+          <li><a class="footer-nav__link" href="brands.html">Contact</a></li>
+          <li>
+            <a class="footer-nav__link" href="skin-care-packages.html">Privacy Policy</a>
+          </li>
+          <li><a class="footer-nav__link" href="brands.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 footer-nav__column">
+        <h2 class="footer-nav__header">Contact</h2>
+
+        <ul class="footer-nav__list">
+          <li>
+            <div class="h-5">Phone</div>
+            <a href="tel:1800843695" class="footer-nav__link ps-0" aria-label="Make a phone call">1800&nbsp;843&nbsp;695</a>
+          </li>
+
+          <li>
+            <div class="h-5">Address</div>
+            <a class="footer-nav__link ps-0" aria-label="Open Google Map" href="https://goo.gl/maps/cWDnimrLcYismybL7" target="_blank"
+              >Suite 6, Level 13, 350 Collins Street, Melbourne VIC 3000</a
+            >
+          </li>
+
+          <li class="footer-nav__btn">
+            <a class="btn" href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="copyright">
+    <p>© 2022 Owl IT Services</p>
+    <p>Website by SGD</p>
+  </div>
+</div>
+
+</footer>
+
+</body>
+
+</html>

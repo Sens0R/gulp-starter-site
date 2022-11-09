@@ -1,0 +1,25 @@
+.partners {
+  &__content {
+    @include flex(
+      $flex-direction: row,
+      $flex-wrap: wrap,
+      $justify-content: space-between,
+      $align-items: center,
+      $gap: var(--spacer-lg)
+    );
+  }
+  
+  &__box {
+    @include flex($justify-content: center, $align-items: center);
+    aspect-ratio: 1 / 1;
+    border-radius: var(--br);
+    padding: var(--spacer-sm);
+    border: var(--border);
+    background-color: var(--color-light);
+  }
+
+  &__icon {
+    fill: var(--color-secondary-gray);
+    @include box(100%, 5rem);
+  }
+}

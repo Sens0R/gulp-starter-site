@@ -1,0 +1,21 @@
+.card-list {
+  @include flex($flex-wrap: wrap, $align-items: center, $gap: 0.5rem);
+  font-size: var(--fs-6);
+ 
+  li a {
+    background-color: var(--color-secondary-light);
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s ease-out;
+    @include link-space();
+
+    @include hover {
+      background-color: var(--color-secondary-dark);
+      color: var(--color-light);
+    }
+
+    &:focus-visible {
+      background-color: var(--color-secondary-dark);
+      color: var(--color-light);
+    }
+  }
+}

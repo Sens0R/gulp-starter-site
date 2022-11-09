@@ -1,0 +1,50 @@
+.card {
+  border: var(--border);
+  border-radius: var(--br);
+
+  &__content {
+    @include flex($flex-direction: column, $gap: var(--spacer));
+    @include space(var(--spacer-lg), padding, all);
+  }
+
+  &__img {
+    overflow: hidden;
+
+    @include media-breakpoint-down(md) {
+      border-top-right-radius: var(--br);
+      border-top-left-radius: var(--br);
+    }
+  }
+
+  &__img-link {
+    height: 100%;
+    transition: all 0.6s ease-out;
+
+    @include hover {
+      scale: 1.05;
+      rotate: 1deg;
+    }
+  }
+
+  .image {
+    aspect-ratio: 2/1;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .card {
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(even) .card__img {
+      border-top-right-radius: var(--br);
+      border-bottom-right-radius: var(--br);
+    }
+
+    &:nth-child(odd) .card__img {
+      border-top-left-radius: var(--br);
+      border-bottom-left-radius: var(--br);
+    }
+  }
+}

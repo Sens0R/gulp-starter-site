@@ -1,0 +1,76 @@
+[data-accordion-content] {
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+[data-accordion-content].active {
+  visibility: visible;
+}
+
+.accordions-page {
+  @include flex($flex-direction: column, $gap: var(--spacer-lg));
+  max-width: 50rem;
+}
+
+.accordion {
+  @include flex($flex-direction: column, $gap: var(--spacer));
+
+  &__header {
+    text-align: center;
+  }
+
+  &__item {
+    background-color: var(--color-secondary-light);
+    border-radius: var(--br-sm);
+  }
+
+  &__button {
+    @include flex($justify-content: space-between, $column-gap: var(--spacer));
+    @include space(var(--spacer), padding, all);
+    width: 100%;
+    text-align: left;
+    font-weight: var(--fw-semibold);
+    background-color: var(--color-secondary-gray);
+    color: var(--color-light);
+    border-radius: var(--br-sm);
+    transition: var(--transition);
+
+    @include hover {
+      background-color: var(--color-primary) !important;
+      color: var(--color-dark) !important;
+      .accordion__icon {
+        fill: var(--color-dark) !important;
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--color-primary) !important;
+      color: var(--color-dark) !important;
+      .accordion__icon {
+        fill: var(--color-dark) !important;
+      }
+    }
+  }
+
+  &__button.active {
+    .accordion__icon {
+      rotate: 180deg;
+    }
+    background-color: var(--color-secondary);
+  }
+
+  &__icon {
+    @include box(1.25rem, 1.25rem);
+    display: flex;
+    align-self: center;
+    fill: var(--color-light);
+    transition: all 0.6s ease-in-out;
+  }
+
+  &__content {
+    @include flex($flex-direction: column, $gap: var(--spacer));
+    @include space(var(--spacer), padding, all);
+  }
+}

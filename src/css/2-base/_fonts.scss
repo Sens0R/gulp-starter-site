@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'GeneralSans';
+  font-display: swap;
+  src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  font-display: swap;
+  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Regular.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  font-display: swap;
+  src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Semibold.woff') format('woff');
+  font-weight: 600;
+}

@@ -1,0 +1,43 @@
+/* ====================   PAGE SECTION   ==================== */
+
+[data-animate='section-header'] {
+  opacity: 0;
+  transition: all 1s ease-out 0.25s;
+  translate: 5rem;
+}
+
+[data-animate='section-header'].show {
+  translate: none;
+  opacity: 1;
+}
+
+/* ====================   BLOG CARD HEADER   ==================== */
+
+[data-animate='blog-header-1'],
+[data-animate='blog-header-2'],
+[data-animate='blog-header-3'] {
+  opacity: 0;
+  translate: 15%;
+  transition: all 1s ease-out;
+}
+
+@include media-breakpoint-up(lg) {
+  [data-animate='blog-header-1'] {
+    transition-delay: 0.33s;
+  }
+
+  [data-animate='blog-header-2'] {
+    transition-delay: 0.66s;
+  }
+
+  [data-animate='blog-header-3'] {
+    transition-delay: 1s;
+  }
+}
+
+[data-animate='blog-header-1'].show,
+[data-animate='blog-header-2'].show,
+[data-animate='blog-header-3'].show {
+  opacity: 1;
+  translate: none;
+}

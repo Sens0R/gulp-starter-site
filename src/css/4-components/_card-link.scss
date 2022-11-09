@@ -1,0 +1,35 @@
+.card-link {
+  @include flex($display: inline-flex, $align-items: center);
+  @include link-space();
+  color: var(--color-secondary);
+  font-size: var(--fs-0);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  line-height: 1;
+  transition: var(--transition);
+
+  &__icon {
+    @include box(0.75rem, 0.75rem);
+    margin-left: 0.25rem;
+    fill: var(--color-secondary);
+    transition: var(--transition);
+  }
+
+  &:focus-visible {
+    color: var(--color-primary);
+
+    .card-link__icon {
+      fill: var(--color-primary);
+      translate: 0.375rem;
+    }
+  }
+
+  @include hover {
+    color: var(--color-primary);
+
+    .card-link__icon {
+      fill: var(--color-primary);
+      translate: 5px;
+    }
+  }
+}

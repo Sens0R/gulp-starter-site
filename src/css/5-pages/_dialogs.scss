@@ -1,0 +1,184 @@
+dialog {
+  &.fade-in {
+    animation: dialog-in 0.4s forwards;
+  }
+
+  &.fade-out {
+    animation: dialog-out 0.5s forwards;
+  }
+
+  &.fade-in::backdrop {
+    animation: backdrop-in 0.8s forwards;
+  }
+
+  &.fade-out::backdrop {
+    animation: backdrop-out 0.5s forwards;
+  }
+
+  @keyframes dialog-in {
+    from {
+      translate: 0 25%;
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+      translate: 0;
+    }
+  }
+
+  @keyframes dialog-out {
+    0% {
+      scale: 1;
+      opacity: 1;
+    }
+
+    25% {
+      scale: 1.075;
+      opacity: 1;
+    }
+
+    100% {
+      scale: 0.5;
+      opacity: 0;
+    }
+  }
+
+  @keyframes backdrop-in {
+    from {
+      background: rgba(0 0 0 / 0);
+      backdrop-filter: blur(0);
+    }
+
+    to {
+      background: rgba(0 0 0 / 0.4);
+      backdrop-filter: blur(0.125rem);
+    }
+  }
+
+  @keyframes backdrop-out {
+    from {
+      background: rgba(0 0 0 / 0.4);
+      backdrop-filter: blur(0.125rem);
+    }
+
+    to {
+      background: rgba(0 0 0 / 0);
+      backdrop-filter: blur(0);
+    }
+  }
+}
+
+.dialog {
+  @include flex($flex-direction: column, $row-gap: var(--spacer));
+  @include space(var(--spacer-lg), padding, all);
+  background-color: var(--color-light);
+  box-shadow: var(--shadow);
+  border-radius: var(--br);
+  border: 1px solid var(--color-dark);
+  min-width: 75%;
+  max-width: 85vw;
+  max-height: 90vh;
+  z-index: 9999;
+
+  &_verification {
+    ul {
+      list-style: inside;
+      margin-left: 10%;
+      @include flex($flex-direction: column, $gap: var(--spacer));
+      &:first-child {
+        margin-top: var(--spacer);
+      }
+    }
+
+    &__form-controls {
+      li * {
+        height: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    min-width: auto;
+    max-width: 50rem;
+  }
+
+  &__header {
+    color: var(--color-secondary-dark);
+    text-align: center;
+  }
+
+  &__form {
+    @include flex($flex-direction: column, $row-gap: var(--spacer-sm));
+  }
+
+  &__form-item {
+    @include flex($flex-wrap: wrap, $gap: var(--spacer-sm));
+
+    label {
+      font-weight: var(--fw-semibold);
+      @include flex($flex-direction: column, $flex-wrap: wrap, $align-items: flex-start, $gap: var(--spacer-sm));
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        width: auto;
+        flex-direction: row;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__form-input {
+    @include space(0.25rem, padding, all);
+    border: 1px solid var(--color-dark);
+    min-width: 100%;
+    @include media-breakpoint-up(lg) {
+      min-width: 25rem;
+    }
+  }
+
+  &__label-info {
+    min-width: 50%;
+    font-size: var(--fs-6);
+    @include media-breakpoint-up(lg) {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+
+  &__form-controls {
+    @include space(var(--spacer), margin, top);
+    @include flex($flex-wrap: wrap, $gap: var(--spacer-sm));
+    @include media-breakpoint-up(lg) {
+      justify-content: flex-end;
+    }
+
+    button {
+      @include btn-reverse();
+    }
+
+    .btn,
+    .btn-reverse,
+    button {
+      font-size: var(--fs-6);
+    }
+  }
+
+  .cancel-icon {
+    @include box(1.25rem, 1.25rem);
+    transition: var(--transition);
+
+    @include hover {
+      scale: 1.2;
+      fill: var(--color-primary);
+    }
+
+    &:focus-visible {
+      scale: 1.2;
+      fill: var(--color-primary);
+    }
+  }
+
+  &__headers {
+    @include flex($justify-content: space-between, $align-items: center, $column-gap: 1rem);
+  }
+}

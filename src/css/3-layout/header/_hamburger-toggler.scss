@@ -1,0 +1,55 @@
+@include media-breakpoint-up(xl) {
+  .nav-toggler {
+    display: none !important;
+  }
+}
+
+.nav-toggler {
+  margin-left: auto;
+  @include flex($justify-content: center, $align-items: center);
+
+  &_open {
+    flex-direction: column;
+    min-height: 100%;
+
+    &:focus-visible {
+      outline: 2px solid var(--color-secondary);
+      outline-offset: 4px;
+    }
+  }
+
+  &_close {
+    @include sticky(top 0 right 0);
+    @include space(var(--spacer), margin, bottom);
+    min-height: 3.75rem;
+    width: 100%;
+    border-bottom: 1px solid var(--color-secondary);
+    background-color: var(--color-light);
+
+    &:focus-visible {
+      background-color: var(--color-secondary);
+      color: var(--color-light);
+      border-color: var(--color-secondary);
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    line-height: 1;
+
+    &_close {
+      font-size: var(--fs-6);
+      font-weight: var(--fw-regular);
+    }
+
+    &_open {
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__icon {
+    @include box(2.25rem, 1.125rem);
+  }
+}

@@ -1,0 +1,31 @@
+.about {
+  &__text-content {
+    @include flex($flex-direction: column, $justify-content: center, $align-items: flex-start, $gap: var(--spacer-lg));
+  }
+
+  &__img {
+    position: relative;
+  }
+
+  .image {
+    @include media-breakpoint-down(lg) {
+      aspect-ratio: 2/1;
+    }
+  }
+}
+
+.about__attachment {
+  @include absolute(left 15% bottom 0);
+  translate: 0 50%;
+  max-width: 80vw;
+  padding: 0.75rem 1.15rem;
+  margin: 0;
+  border-radius: var(--br);
+  background-color: var(--color-dark);
+  font-size: var(--fs-0);
+  color: var(--color-light);
+
+  span {
+    font-weight: var(--fw-semibold);
+  }
+}
