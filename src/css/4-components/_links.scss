@@ -1,16 +1,17 @@
-@mixin link($color: var(--color-secondary-dark), $offset: 10%, $width: 2px) {
+@mixin link($color-regular: var(--color-primary), $color-hover: var(--color-primary), $offset: 10%, $width: 2px) {
   transition: var(--transition);
   text-decoration: underline solid $width transparent;
   text-underline-offset: $offset;
+  color: $color-regular;
 
   @include hover {
-    color: $color;
-    text-decoration-color: $color;
+    color: $color-hover;
+    text-decoration-color: $color-hover;
   }
 
   &:focus-visible {
-    color: $color;
-    text-decoration-color: $color;
+    color: $color-hover;
+    text-decoration-color: $color-hover;
   }
 }
 

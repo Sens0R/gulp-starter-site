@@ -6,37 +6,26 @@
   /* ====================   COLORS   ==================== */
   /* ==================================================== */
   --color-black: hsl(0, 0%, 0%);
-  --color-black-200: hsl(0, 0%, 18%);
   --color-white: hsl(0, 0%, 100%);
-  --color-white-stroke: hsl(20, 6%, 90%);
-  --color-orange: hsl(32, 92%, 54%);
-  --color-blue: hsl(206, 60%, 50%);
-  --color-blue-dark: hsl(206, 100%, 34%);
-  --color-blue-light: hsl(208, 60%, 95%);
-  --color-blue-gray: hsl(206, 22%, 58%);
-  --color-blue-gray-light: hsl(206, 33%, 70%);
-  --color-border: var(--color-white-stroke);
+  --color-blue: hsl(198, 100%, 46%);
+  --color-dark-yellow: hsl(42, 100%, 50%);
+  --color-red-orange: hsl(14, 92%, 54%);
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-dark-yellow);
+  --color-accent: var(--color-red-orange);
   --color-light: var(--color-white);
-  --color-dark: var(--color-black-200);
-  --color-primary: var(--color-orange);
-  --color-secondary: var(--color-blue);
-  --color-secondary-dark: var(--color-blue-dark);
-  --color-secondary-light: var(--color-blue-light);
-  --color-secondary-gray: var(--color-blue-gray);
-  --color-secondary-gray-light: var(--color-blue-gray-light);
-  --color-accent: var(--color-primary);
+  --color-dark: var(--color-black);
   --color-base: var(--color-dark);
-  --color-selection-base: var(--color-light);
   --color-focus-outline-base: var(--color-secondary);
   --color-bg-base: var(--color-light);
   --color-bg-header-base: var(--color-light);
-  --color-bg-footer-base: var(--color-blue-light);
-  --color-bg-input-base: var(--color-light);
-  --color-bg-selection-base: var(--color-primary);
+  --color-bg-footer-base: var(--color-light);
+  --color-selection-base: var(--color-light);
+  --color-bg-selection-base: var(--color-accent);
   /* ======================================================== */
   /* ====================   TYPOGRAPHY   ==================== */
   /* ======================================================== */
-  --ff-primary: GeneralSans, Arial, sans-serif;
+  --ff-primary: "Montserrat", Arial, sans-serif;
   --base-fs: var(--fs-5);
   --fs-0: 1rem;
   --fs-1: clamp(2.5rem, 2rem + 2.5vw, 3.88rem);
@@ -50,11 +39,11 @@
   --lh-lg: 2;
   --base-lh-headings: 1.2;
   --base-underline-offset: 30%;
+  --fw-light: 300;
   --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
+  --fw-bold: 700;
   --base-fw: var(--fw-regular);
-  --base-fw-headings: var(--fw-semibold);
+  --base-fw-headings: var(--fw-bold);
   /* ======================================================= */
   /* ====================   STRUCTURE   ==================== */
   /* ======================================================= */
@@ -62,13 +51,10 @@
   --spacer-sm: clamp(0.5rem, calc(0.41rem + 0.45vw), 0.75rem);
   --spacer-lg: clamp(1.5rem, calc(0.95rem + 2.73vw), 3rem);
   --spacer-xl: clamp(2rem, calc(0.55rem + 7.27vw), 6rem);
-  --border: 1px solid var(--color-white-stroke);
+  --border: 1px solid var(--color-black);
   --br: 0.625rem;
-  --br-sm: 0.25rem;
-  --br-pill: 100vw;
   --base-br: var(--br);
-  --shadow: 4px 5px 0 var(--color-dark);
-  --shadow-sm: 2px 2px 0 var(--color-dark);
+  --shadow: 5px 5px 0 var(--color-black);
   --transition: 0.3s ease-out;
   --z-tooltip: 500;
   --z-dropdown: 400;
@@ -854,51 +840,51 @@
     margin-left: 91.66666667%;
   }
   .g-sm-0,
-.gx-sm-0 {
+  .gx-sm-0 {
     --bs-gutter-x: 0;
   }
   .g-sm-0,
-.gy-sm-0 {
+  .gy-sm-0 {
     --bs-gutter-y: 0;
   }
   .g-sm-1,
-.gx-sm-1 {
+  .gx-sm-1 {
     --bs-gutter-x: 0.25rem;
   }
   .g-sm-1,
-.gy-sm-1 {
+  .gy-sm-1 {
     --bs-gutter-y: 0.25rem;
   }
   .g-sm-2,
-.gx-sm-2 {
+  .gx-sm-2 {
     --bs-gutter-x: 0.5rem;
   }
   .g-sm-2,
-.gy-sm-2 {
+  .gy-sm-2 {
     --bs-gutter-y: 0.5rem;
   }
   .g-sm-3,
-.gx-sm-3 {
+  .gx-sm-3 {
     --bs-gutter-x: 1rem;
   }
   .g-sm-3,
-.gy-sm-3 {
+  .gy-sm-3 {
     --bs-gutter-y: 1rem;
   }
   .g-sm-4,
-.gx-sm-4 {
+  .gx-sm-4 {
     --bs-gutter-x: 1.5rem;
   }
   .g-sm-4,
-.gy-sm-4 {
+  .gy-sm-4 {
     --bs-gutter-y: 1.5rem;
   }
   .g-sm-5,
-.gx-sm-5 {
+  .gx-sm-5 {
     --bs-gutter-x: 3rem;
   }
   .g-sm-5,
-.gy-sm-5 {
+  .gy-sm-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1065,51 +1051,51 @@
     margin-left: 91.66666667%;
   }
   .g-md-0,
-.gx-md-0 {
+  .gx-md-0 {
     --bs-gutter-x: 0;
   }
   .g-md-0,
-.gy-md-0 {
+  .gy-md-0 {
     --bs-gutter-y: 0;
   }
   .g-md-1,
-.gx-md-1 {
+  .gx-md-1 {
     --bs-gutter-x: 0.25rem;
   }
   .g-md-1,
-.gy-md-1 {
+  .gy-md-1 {
     --bs-gutter-y: 0.25rem;
   }
   .g-md-2,
-.gx-md-2 {
+  .gx-md-2 {
     --bs-gutter-x: 0.5rem;
   }
   .g-md-2,
-.gy-md-2 {
+  .gy-md-2 {
     --bs-gutter-y: 0.5rem;
   }
   .g-md-3,
-.gx-md-3 {
+  .gx-md-3 {
     --bs-gutter-x: 1rem;
   }
   .g-md-3,
-.gy-md-3 {
+  .gy-md-3 {
     --bs-gutter-y: 1rem;
   }
   .g-md-4,
-.gx-md-4 {
+  .gx-md-4 {
     --bs-gutter-x: 1.5rem;
   }
   .g-md-4,
-.gy-md-4 {
+  .gy-md-4 {
     --bs-gutter-y: 1.5rem;
   }
   .g-md-5,
-.gx-md-5 {
+  .gx-md-5 {
     --bs-gutter-x: 3rem;
   }
   .g-md-5,
-.gy-md-5 {
+  .gy-md-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1276,51 +1262,51 @@
     margin-left: 91.66666667%;
   }
   .g-lg-0,
-.gx-lg-0 {
+  .gx-lg-0 {
     --bs-gutter-x: 0;
   }
   .g-lg-0,
-.gy-lg-0 {
+  .gy-lg-0 {
     --bs-gutter-y: 0;
   }
   .g-lg-1,
-.gx-lg-1 {
+  .gx-lg-1 {
     --bs-gutter-x: 0.25rem;
   }
   .g-lg-1,
-.gy-lg-1 {
+  .gy-lg-1 {
     --bs-gutter-y: 0.25rem;
   }
   .g-lg-2,
-.gx-lg-2 {
+  .gx-lg-2 {
     --bs-gutter-x: 0.5rem;
   }
   .g-lg-2,
-.gy-lg-2 {
+  .gy-lg-2 {
     --bs-gutter-y: 0.5rem;
   }
   .g-lg-3,
-.gx-lg-3 {
+  .gx-lg-3 {
     --bs-gutter-x: 1rem;
   }
   .g-lg-3,
-.gy-lg-3 {
+  .gy-lg-3 {
     --bs-gutter-y: 1rem;
   }
   .g-lg-4,
-.gx-lg-4 {
+  .gx-lg-4 {
     --bs-gutter-x: 1.5rem;
   }
   .g-lg-4,
-.gy-lg-4 {
+  .gy-lg-4 {
     --bs-gutter-y: 1.5rem;
   }
   .g-lg-5,
-.gx-lg-5 {
+  .gx-lg-5 {
     --bs-gutter-x: 3rem;
   }
   .g-lg-5,
-.gy-lg-5 {
+  .gy-lg-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1487,51 +1473,51 @@
     margin-left: 91.66666667%;
   }
   .g-xl-0,
-.gx-xl-0 {
+  .gx-xl-0 {
     --bs-gutter-x: 0;
   }
   .g-xl-0,
-.gy-xl-0 {
+  .gy-xl-0 {
     --bs-gutter-y: 0;
   }
   .g-xl-1,
-.gx-xl-1 {
+  .gx-xl-1 {
     --bs-gutter-x: 0.25rem;
   }
   .g-xl-1,
-.gy-xl-1 {
+  .gy-xl-1 {
     --bs-gutter-y: 0.25rem;
   }
   .g-xl-2,
-.gx-xl-2 {
+  .gx-xl-2 {
     --bs-gutter-x: 0.5rem;
   }
   .g-xl-2,
-.gy-xl-2 {
+  .gy-xl-2 {
     --bs-gutter-y: 0.5rem;
   }
   .g-xl-3,
-.gx-xl-3 {
+  .gx-xl-3 {
     --bs-gutter-x: 1rem;
   }
   .g-xl-3,
-.gy-xl-3 {
+  .gy-xl-3 {
     --bs-gutter-y: 1rem;
   }
   .g-xl-4,
-.gx-xl-4 {
+  .gx-xl-4 {
     --bs-gutter-x: 1.5rem;
   }
   .g-xl-4,
-.gy-xl-4 {
+  .gy-xl-4 {
     --bs-gutter-y: 1.5rem;
   }
   .g-xl-5,
-.gx-xl-5 {
+  .gx-xl-5 {
     --bs-gutter-x: 3rem;
   }
   .g-xl-5,
-.gy-xl-5 {
+  .gy-xl-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1698,51 +1684,51 @@
     margin-left: 91.66666667%;
   }
   .g-xxl-0,
-.gx-xxl-0 {
+  .gx-xxl-0 {
     --bs-gutter-x: 0;
   }
   .g-xxl-0,
-.gy-xxl-0 {
+  .gy-xxl-0 {
     --bs-gutter-y: 0;
   }
   .g-xxl-1,
-.gx-xxl-1 {
+  .gx-xxl-1 {
     --bs-gutter-x: 0.25rem;
   }
   .g-xxl-1,
-.gy-xxl-1 {
+  .gy-xxl-1 {
     --bs-gutter-y: 0.25rem;
   }
   .g-xxl-2,
-.gx-xxl-2 {
+  .gx-xxl-2 {
     --bs-gutter-x: 0.5rem;
   }
   .g-xxl-2,
-.gy-xxl-2 {
+  .gy-xxl-2 {
     --bs-gutter-y: 0.5rem;
   }
   .g-xxl-3,
-.gx-xxl-3 {
+  .gx-xxl-3 {
     --bs-gutter-x: 1rem;
   }
   .g-xxl-3,
-.gy-xxl-3 {
+  .gy-xxl-3 {
     --bs-gutter-y: 1rem;
   }
   .g-xxl-4,
-.gx-xxl-4 {
+  .gx-xxl-4 {
     --bs-gutter-x: 1.5rem;
   }
   .g-xxl-4,
-.gy-xxl-4 {
+  .gy-xxl-4 {
     --bs-gutter-y: 1.5rem;
   }
   .g-xxl-5,
-.gx-xxl-5 {
+  .gx-xxl-5 {
     --bs-gutter-x: 3rem;
   }
   .g-xxl-5,
-.gy-xxl-5 {
+  .gy-xxl-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -5166,7 +5152,7 @@
   }
 }
 /**
- * Swiper 8.4.2
+ * Swiper 8.4.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -5174,7 +5160,7 @@
  *
  * Released under the MIT License
  *
- * Released on: September 15, 2022
+ * Released on: October 12, 2022
  */
 @font-face {
   font-family: "swiper-icons";
@@ -5485,7 +5471,7 @@
 }
 @media (min-width: 768px) {
   .swiper-btn--left-testimonials,
-.swiper-btn--right-testimonials {
+  .swiper-btn--right-testimonials {
     width: 4.5rem;
     height: 4.5rem;
   }
@@ -5493,7 +5479,7 @@
 
 @media (min-width: 768px) {
   .swiper-btn--left-testimonials,
-.swiper-btn--right-testimonials {
+  .swiper-btn--right-testimonials {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5778,22 +5764,34 @@
 }
 
 @font-face {
-  font-family: "GeneralSans";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/GeneralSans-Medium.woff2") format("woff2"), url("../fonts/GeneralSans-Medium.woff") format("woff");
-  font-weight: 500;
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
 }
 @font-face {
-  font-family: "GeneralSans";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/GeneralSans-Regular.woff2") format("woff2"), url("../fonts/GeneralSans-Regular.woff") format("woff");
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
   font-weight: 400;
 }
 @font-face {
-  font-family: "GeneralSans";
+  font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/GeneralSans-Semibold.woff2") format("woff2"), url("../fonts/GeneralSans-Semibold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-display: swap;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
 }
 *,
 *::before,
@@ -5837,6 +5835,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 select,
@@ -5851,10 +5850,6 @@ header {
   background-color: var(--color-bg-header-base);
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .body-wrapper {
   overflow: hidden;
 }
@@ -5867,14 +5862,16 @@ footer {
 
 menu,
 ul,
-ol,
 dl {
   list-style: none;
 }
 
+ol {
+  list-style-position: inside;
+}
+
 :focus-visible {
   outline-color: var(--base-color-focus-outline);
-  outline: none;
 }
 
 header,
@@ -5986,7 +5983,6 @@ a {
 input {
   outline: none;
   border: none;
-  background-color: var(--color-bg-input-base);
 }
 input[type=search]::-webkit-search-cancel-button {
   display: none;
@@ -6004,8 +6000,8 @@ input[type=search]::-webkit-search-cancel-button {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
@@ -6039,23 +6035,35 @@ input[type=search]::-webkit-search-cancel-button {
   color: var(--color-secondary);
 }
 
-.text-accent {
+.color-accent {
   color: var(--color-accent);
+}
+
+.color-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.color-bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.color-bg-accent {
+  background-color: var(--color-accent);
 }
 
 .text-center {
   text-align: center;
 }
 
-.text-uppercase {
+.uppercase {
   text-transform: uppercase;
 }
 
-.text-lowercase {
+.lowercase {
   text-transform: lowercase;
 }
 
-.text-capitalize {
+.capitalize {
   text-transform: capitalize;
 }
 
@@ -6067,12 +6075,16 @@ input[type=search]::-webkit-search-cancel-button {
   font-style: normal;
 }
 
-.fw-normal {
-  font-weight: normal;
+.fw-light {
+  font-weight: var(--fw-light);
 }
 
-.fw-semibold {
-  font-weight: var(--fw-semibold);
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
 }
 
 .fw-medium {
@@ -7112,16 +7124,17 @@ input[type=search]::-webkit-search-cancel-button {
   -webkit-text-decoration: underline solid 2px transparent;
           text-decoration: underline solid 2px transparent;
   text-underline-offset: 10%;
+  color: var(--color-primary);
 }
 @media (hover: hover) and (pointer: fine) {
   .link:hover {
-    color: var(--color-secondary-dark);
-    text-decoration-color: var(--color-secondary-dark);
+    color: var(--color-primary);
+    text-decoration-color: var(--color-primary);
   }
 }
 .link:focus-visible {
-  color: var(--color-secondary-dark);
-  text-decoration-color: var(--color-secondary-dark);
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
 }
 
 .card-link {

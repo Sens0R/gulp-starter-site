@@ -18,23 +18,35 @@
   color: var(--color-secondary);
 }
 
-.text-accent {
+.color-accent {
   color: var(--color-accent);
+}
+
+.color-bg-primary {
+  background-color: var(--color-primary);
+}
+
+.color-bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.color-bg-accent {
+  background-color: var(--color-accent);
 }
 
 .text-center {
   text-align: center;
 }
 
-.text-uppercase {
+.uppercase {
   text-transform: uppercase;
 }
 
-.text-lowercase {
+.lowercase {
   text-transform: lowercase;
 }
 
-.text-capitalize {
+.capitalize {
   text-transform: capitalize;
 }
 
@@ -46,12 +58,16 @@
   font-style: normal;
 }
 
-.fw-normal {
-  font-weight: normal;
+.fw-light {
+  font-weight: var(--fw-light);
 }
 
-.fw-semibold {
-  font-weight: var(--fw-semibold);
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
 }
 
 .fw-medium {

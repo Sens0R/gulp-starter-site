@@ -1,7 +1,3 @@
-// es lint htmlhint
-// prevent headroom.js header from showing when using keyboard
-// javascript breakpoints in app object
-
 :root {
   /* ==================================================== */
   /* ====================   COLORS   ==================== */
@@ -9,46 +5,36 @@
 
   // basic colors
   --color-black: hsl(0, 0%, 0%);
-  --color-black-200: hsl(0, 0%, 18%);
   --color-white: hsl(0, 0%, 100%);
-  --color-white-stroke: hsl(20, 6%, 90%);
 
   // brand colors
-  --color-orange: hsl(32, 92%, 54%);
-  --color-blue: hsl(206, 60%, 50%);
-  --color-blue-dark: hsl(206, 100%, 34%);
-  --color-blue-light: hsl(208, 60%, 95%);
-  --color-blue-gray: hsl(206, 22%, 58%);
-  --color-blue-gray-light: hsl(206, 33%, 70%);
-
+  --color-blue: hsl(198, 100%, 46%);
+  --color-dark-yellow: hsl(42, 100%, 50%);
+  --color-red-orange: hsl(14, 92%, 54%);
+   
   // color variables
-  --color-border: var(--color-white-stroke);
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-dark-yellow);
+  --color-accent: var(--color-red-orange);
   --color-light: var(--color-white);
-  --color-dark: var(--color-black-200);
-  --color-primary: var(--color-orange);
-  --color-secondary: var(--color-blue);
-  --color-secondary-dark: var(--color-blue-dark);
-  --color-secondary-light: var(--color-blue-light);
-  --color-secondary-gray: var(--color-blue-gray);
-  --color-secondary-gray-light: var(--color-blue-gray-light);
-  --color-accent: var(--color-primary);
-
+  --color-dark: var(--color-black);
+ 
   // body base variables
   --color-base: var(--color-dark);
-  --color-selection-base: var(--color-light);
   --color-focus-outline-base: var(--color-secondary);
 
   --color-bg-base: var(--color-light);
   --color-bg-header-base: var(--color-light);
-  --color-bg-footer-base: var(--color-blue-light);
-  --color-bg-input-base: var(--color-light);
-  --color-bg-selection-base: var(--color-primary);
+  --color-bg-footer-base: var(--color-light);
+
+  --color-selection-base: var(--color-light);
+  --color-bg-selection-base: var(--color-accent);
 
   /* ======================================================== */
   /* ====================   TYPOGRAPHY   ==================== */
   /* ======================================================== */
 
-  --ff-primary: GeneralSans, Arial, sans-serif;
+  --ff-primary: 'Montserrat', Arial, sans-serif;
 
   // font sizes
   --base-fs: var(--fs-5);
@@ -68,11 +54,11 @@
   --base-underline-offset: 30%;
 
   // weights
+  --fw-light: 300;
   --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
+  --fw-bold: 700;
   --base-fw: var(--fw-regular);
-  --base-fw-headings: var(--fw-semibold);
+  --base-fw-headings: var(--fw-bold);
 
   /* ======================================================= */
   /* ====================   STRUCTURE   ==================== */
@@ -84,20 +70,15 @@
   --spacer-lg: clamp(1.5rem, calc(0.95rem + 2.73vw), 3rem); // 48 > 24
   --spacer-xl: clamp(2rem, calc(0.55rem + 7.27vw), 6rem); // 96 > 48
 
- 
-
   // borders
-  --border: 1px solid var(--color-white-stroke);
+  --border: 1px solid var(--color-black);
   --br: 0.625rem;
-  --br-sm: 0.25rem;
-  --br-pill: 100vw;
   --base-br: var(--br);
 
   // shadows
-  --shadow: 4px 5px 0 var(--color-dark);
-  --shadow-sm: 2px 2px 0 var(--color-dark);
-
-  // transition
+  --shadow: 5px 5px 0 var(--color-black);
+  
+  // transitions
   --transition: 0.3s ease-out;
 
   // z-index

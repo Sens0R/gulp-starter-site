@@ -1,5 +1,5 @@
 {
-  "name": "the-owl",
+  "name": "gulp-starter-site",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,17 +13,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sens0R/the-owl.git"
+    "url": "git+https://github.com/Sens0R/gulp-starter-site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sens0R/the-owl/issues"
+    "url": "https://github.com/Sens0R/gulp-starter-site/issues"
   },
-  "homepage": "https://github.com/Sens0R/the-owl#readme",
+  "homepage": "https://github.com/Sens0R/gulp-starter-site#readme",
   "devDependencies": {
-    "@popperjs/core": "latest",
     "bootstrap": "latest",
     "browser-sync": "latest",
     "del": "latest",
@@ -48,23 +47,14 @@
     "gulp-ttf2woff2": "latest",
     "gulp-util": "latest",
     "gulp-version-number": "latest",
-    "gulp-webp": "latest",
-    "gulp-webp-css": "latest",
-    "gulp-webpcss": "latest",
     "gulp-zip": "latest",
     "headroom.js": "latest",
-    "install": "latest",
-    "lodash": "latest",
-    "npm": "latest",
-    "rename": "latest",
     "sass": "latest",
-    "scroll-lock": "^2.1.5",
+    "scroll-lock": "latest",
     "swiper": "latest",
     "vinyl-ftp": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
-  },
-  "dependencies": {
-    "particles.js": "latest"
   }
+
 }

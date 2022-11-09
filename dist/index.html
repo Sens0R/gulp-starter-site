@@ -7,11 +7,7 @@
 
   <meta name="description" content="The Owl description goes here" />
 
-  <link rel="preload" href="fonts/GeneralSans-Medium.woff2" as="font" type="font/woff2" crossorigin />
-
-  <link rel="preload" href="fonts/GeneralSans-Semibold.woff2" as="font" type="font/woff2" crossorigin />
-
-  <link rel="preload" href="fonts/GeneralSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="shortcut icon" type="image/svg+xml" href="images/icons/favicon.svg" />
 
@@ -28,20 +24,11 @@
     <div class="header-sticky-wrapper">
     <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
 
-<a aria-label="The Owl home. The Owl logo." class="logo col-auto justify-content-start logo-hover" href="index.html">
+<a aria-label="Logo-name home. Logo-name logo." class="logo col-auto logo-hover" href="index.html">
   <svg aria-hidden="true" class="logo-icon">
     <use href="images/icons/sprite-multi.svg#logo" />
   </svg>
 </a>
-
-<!-- ====================   PHONE   ==================== -->
-
-<div class="phone col-auto">
-  <svg aria-hidden="true" class="phone__icon">
-    <use href="images/icons/sprite-mono.svg#phone" />
-  </svg>
-  <a href="tel:1800843695" class="phone__link" data-tooltip aria-label="Make a phone call"> 1800&nbsp;843&nbsp;695 </a>
-</div>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
@@ -76,8 +63,8 @@
 
     <li data-dropdown="hover" class="nav-menu__item dropdown col-auto">
       <div class="dropdown__controls">
-        <a href="services.html" class="nav-menu__link dropdown__link">Services</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
+        <a href="patterns.html" class="nav-menu__link dropdown__link">Patterns</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for patterns">
           <svg aria-hidden="true" class="dropdown__icon">
             <use href="images/icons/sprite-mono.svg#arrow"></use>
           </svg>
@@ -184,24 +171,91 @@
    
     
 
-<!-- ====================   HERO   ==================== -->
+<!-- ====================  TYPOGRAPHY   ==================== -->
 
-<section class="section container-fluid container-xxl hero">
-  <div class="row hero__content">
-    <h1 class="col-12 col-xl-6">
-      <span class="color-primary">IT Managed Services</span> for Your Business<span class="color-primary">.</span>
-    </h1>
-    <p class="col-12 col-xl-5">
-      We offer business-focused IT services and solutions to help your business be more efficient and flexible.
-    </p>
-  </div>
-  <div>
-    <a class="btn" href="#">Get started</a>
+<section class="section position-relative container-fluid container-xxl headings">
+  <h2 class="text-center">Typography</h2>
+  <h1>h1 and .h-1 - Starter Site EXAMPLE</h1>
+  <h2>h2 and .h-2 - Starter Site EXAMPLE</h2>
+  <h3>h3 and .h-3 - Starter Site EXAMPLE</h3>
+  <h4>h4 and .h-4 - Starter Site EXAMPLE</h4>
+  <h5>h5 and .h-5 - Starter Site EXAMPLE</h5>
+  <h6>h6 and .h-6 - Starter Site EXAMPLE</h6>
+  <hr />
+  <p class="fs-0">.fs-0 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-1">.fs-1 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-2">.fs-2 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-3">.fs-3 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-4">.fs-4 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-5">.fs-5 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <p class="fs-6">.fs-6 - Starter Site EXAMPLE <a href="" class="link">Link EXAMPLE</a></p>
+  <hr />
+  <p>
+    <strong
+      >Large text and .fw-bold – Base text color. <span class="color-primary">Primary text color.</span>
+      <span class="color-secondary">Secondary text color.</span> <span class="color-accent">Accent text color.</span>
+    </strong>
+  </p>
+  <p>
+    Regular text and .fw-regular – Base text color. <span class="color-primary">Primary text color.</span>
+    <span class="color-secondary">Secondary text color.</span> <span class="color-accent">Accent text color.</span>
+  </p>
+  <p>
+    <small
+      >Small text and .fw-light – Base text color. <span class="color-primary">Primary text color.</span>
+      <span class="color-secondary">Secondary text color.</span>
+      <span class="color-accent">Accent text color.</span></small
+    >
+  </p>
+  <p>
+    <em>
+      Emphasis text and .fs-italic – Base text color. <span class="color-primary">Primary text color.</span>
+      <span class="color-secondary">Secondary text color.</span> <span class="color-accent">Accent text color.</span>
+    </em>
+  </p>
+  <hr />
+  <h4><strong>Unordered list:</strong></h4>
+  <ul>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+  </ul>
+  <h4><strong>Ordered list:</strong></h4>
+  <ol>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+  </ol>
+  <hr />
+  <h2 class="text-center">Colors</h2>
+  <div class="row row-cols-md-2 row-cols-xl-3 gy-4 text-center fw-bold">
+    <div class="col-12">
+      <h3>Primary</h3>
+      <div class="py-xl color-bg-primary fs-4">
+        <p class="color-light">.color-primary</p>
+        <p class="color-dark">.color-bg-primary</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <h3>Secondary</h3>
+      <div class="py-xl color-bg-secondary fs-4 color-light">
+        <p class="color-light">.color-secondary</p>
+        <p class="color-dark">.color-bg-secondary</p>
+      </div>
+    </div>
+    <div class="col-12">
+      <h3>Accent</h3>
+      <div class="py-xl color-bg-accent fs-4 color-light">
+        <p class="color-light">.color-accent</p>
+        <p class="color-dark">.color-bg-accent</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ====================   BANNER   ==================== -->
 
+<h2 class="text-center">Banner</h2>
 <div class="banner">
   <picture>
     <source
@@ -242,15 +296,11 @@
     />
     <img alt class="image" draggable="false" height="2560" src="images/main-page/hero-banner-960.jpg" width="2560" />
   </picture>
-  <div class="banner__gradient"></div>
-  <div class="banner__particles" id="banner__particles"></div>
 </div>
 
 <!-- ====================   SERVICES   ==================== -->
 
 <section class="section position-relative container-fluid container-xxl services">
-  <div class="bg-gradient bg-gradient-bottom"></div>
-  <div class="bg-gradient bg-gradient-up"></div>
   <div class="section__headers">
     <h2 class="h-5 text-center">Our services</h2>
     <p class="h-2 text-center" data-animate="section-header">
