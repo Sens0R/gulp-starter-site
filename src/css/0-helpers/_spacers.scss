@@ -1,66 +1,59 @@
-$spacers-map: (
-  '': var(--spacer),
-  '-sm': var(--spacer-sm),
-  '-lg': var(--spacer-lg),
-  '-xl': var(--spacer-xl),
-);
-
-@each $spacer-key, $spacer-value in $spacers-map {
+@each $spacer-key, $spacer-value in $spacers {
   // gutters (flex-gap)
   .g {
-    &#{$spacer-key} {
+    &-#{$spacer-key} {
       @include flex($flex-wrap: wrap, $gap: $spacer-value);
     }
 
-    &x#{$spacer-key} {
+    &x-#{$spacer-key} {
       @include flex($flex-wrap: wrap, $column-gap: $spacer-value);
     }
 
-    &y#{$spacer-key} {
+    &y-#{$spacer-key} {
       @include flex($flex-wrap: wrap, $row-gap: $spacer-value);
     }
   }
 
   // spacers - padding
   .p {
-    &#{$spacer-key} {
+    &-#{$spacer-key} {
       padding: $spacer-value;
     }
 
     &x {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         padding-left: $spacer-value;
         padding-right: $spacer-value;
       }
     }
 
     &y {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         padding-top: $spacer-value;
         padding-bottom: $spacer-value;
       }
     }
 
     &l {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         padding-left: $spacer-value;
       }
     }
 
     &r {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         padding-right: $spacer-value;
       }
     }
 
     &t {
-      &#{$spacer-key} {
-        padding-bottom: $spacer-value;
+      &-#{$spacer-key} {
+        padding-top: $spacer-value;
       }
     }
 
     &b {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         padding-bottom: $spacer-value;
       }
     }
@@ -68,44 +61,44 @@ $spacers-map: (
 
   // spacers - margins
   .m {
-    &#{$spacer-key} {
+    &-#{$spacer-key} {
       margin: $spacer-value;
     }
 
     &x {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         margin-left: $spacer-value;
         margin-right: $spacer-value;
       }
     }
 
     &y {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         margin-top: $spacer-value;
         margin-bottom: $spacer-value;
       }
     }
 
     &l {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         margin-left: $spacer-value;
       }
     }
 
     &r {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         margin-right: $spacer-value;
       }
     }
 
     &t {
-      &#{$spacer-key} {
-        margin-bottom: $spacer-value;
+      &-#{$spacer-key} {
+        margin-top: $spacer-value;
       }
     }
 
     &b {
-      &#{$spacer-key} {
+      &-#{$spacer-key} {
         margin-bottom: $spacer-value;
       }
     }

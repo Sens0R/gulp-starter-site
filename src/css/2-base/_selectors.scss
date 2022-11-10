@@ -1,81 +1,61 @@
-.disable-select {
-  user-select: none;
+/* ====================   MAPS   ==================== */
+
+.color {
+  @include modifiers($map: $colors, $attribute: 'color');
 }
 
-.color-light {
-  color: var(--color-light);
+.color-bg {
+  @include modifiers($map: $colors, $attribute: 'background-color');
 }
 
-.color-dark {
-  color: var(--color-dark);
+.fw {
+  @include modifiers($map: $font-weights, $attribute: 'font-weight');
 }
 
-.color-primary {
-  color: var(--color-primary);
-}
+/* ====================   NORMAL   ==================== */
 
-.color-secondary {
-  color: var(--color-secondary);
-}
+.lh {
+  line-height: var(--lh);
 
-.color-accent {
-  color: var(--color-accent);
-}
+  &-1 {
+    line-height: 1;
+  }
 
-.color-bg-primary {
-  background-color: var(--color-primary);
-}
+  &-sm {
+    line-height: var(--lh-sm);
+  }
 
-.color-bg-secondary {
-  background-color: var(--color-secondary);
-}
-
-.color-bg-accent {
-  background-color: var(--color-accent);
+  &-lg {
+    line-height: var(--lh-lg);
+  }
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .uppercase {
-  text-transform: uppercase;
+  text-transform: uppercase !important;
 }
 
 .lowercase {
-  text-transform: lowercase;
+  text-transform: lowercase !important;
 }
 
 .capitalize {
-  text-transform: capitalize;
+  text-transform: capitalize !important;
 }
 
-.fs-italic {
-  font-style: italic;
+.italic {
+  font-style: italic !important;
 }
 
-.fs-normal {
-  font-style: normal;
-}
-
-.fw-light {
-  font-weight: var(--fw-light);
-}
-
-.fw-regular {
-  font-weight: var(--fw-regular);
-}
-
-.fw-bold {
-  font-weight: var(--fw-bold);
-}
-
-.fw-medium {
-  font-weight: var(--fw-medium);
+.disable-select {
+  user-select: none !important;
 }
 
 .nowrap {
-  white-space: nowrap;
+  white-space: nowrap !important;
 }
 
 .visually-hidden {
@@ -96,21 +76,27 @@
 }
 
 .overflow-hidden {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
-/* ====================   ARROWS   ==================== */
+.flex-center {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
 
-.arrow {
-  &-right-icon {
+/* ====================   ROTATE   ==================== */
+
+.rotate {
+  &-right {
     rotate: -90deg;
   }
 
-  &-left-icon {
+  &-left {
     rotate: 90deg;
   }
 
-  &-top-icon {
+  &-top {
     rotate: -180deg;
   }
 }
@@ -119,26 +105,22 @@
 
 .position {
   &-static {
-    position: static;
+    position: static !important;
   }
 
   &-relative {
-    position: relative;
+    position: relative !important;
   }
 
   &-absolute {
-    position: absolute;
+    position: absolute !important;
   }
 
   &-fixed {
-    position: fixed;
+    position: fixed !important;
   }
 
   &-sticky {
-    position: sticky;
+    position: sticky !important;
   }
 }
-
-
-
-

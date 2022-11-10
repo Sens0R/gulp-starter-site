@@ -3,32 +3,46 @@
   /* ====================   COLORS   ==================== */
   /* ==================================================== */
 
+  //HR VARIABLE
+
   // basic colors
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(0, 0%, 100%);
 
   // brand colors
   --color-blue: hsl(198, 100%, 46%);
-  --color-dark-yellow: hsl(42, 100%, 50%);
-  --color-red-orange: hsl(14, 92%, 54%);
-   
+  --color-blue-light: hsl(198, 75%, 61%);
+  --color-blue-dark: hsl(198, 97%, 37%);
+  --color-yellow: hsl(42, 100%, 50%);
+  --color-yellow-light: hsl(42, 100%, 65%);
+  --color-yellow-dark: hsl(34, 100%, 50%);
+  --color-orange: hsl(14, 92%, 54%);
+  --color-orange-light: hsl(14, 95%, 64%);
+  --color-orange-dark: hsl(14, 88%, 47%);
+
   // color variables
   --color-primary: var(--color-blue);
-  --color-secondary: var(--color-dark-yellow);
-  --color-accent: var(--color-red-orange);
+  --color-primary-light: var(--color-blue-light);
+  --color-primary-dark: var(--color-blue-dark);
+  --color-secondary: var(--color-yellow);
+  --color-secondary-light: var(--color-yellow-light);
+  --color-secondary-dark: var(--color-yellow-dark);
+  --color-accent: var(--color-orange);
+  --color-accent-light: var(--color-orange-light);
+  --color-accent-dark: var(--color-orange-dark);
   --color-light: var(--color-white);
   --color-dark: var(--color-black);
- 
-  // body base variables
-  --color-base: var(--color-dark);
-  --color-focus-outline-base: var(--color-secondary);
 
-  --color-bg-base: var(--color-light);
-  --color-bg-header-base: var(--color-light);
-  --color-bg-footer-base: var(--color-light);
+  // base variables
+  --color: var(--color-dark);
+  --color-focus-outline: var(--color-primary);
 
-  --color-selection-base: var(--color-light);
-  --color-bg-selection-base: var(--color-accent);
+  --color-bg-body: var(--color-light);
+  --color-bg-header: var(--color-light);
+  --color-bg-footer: var(--color-light);
+
+  --color-selection: var(--color-light);
+  --color-bg-selection: var(--color-accent);
 
   /* ======================================================== */
   /* ====================   TYPOGRAPHY   ==================== */
@@ -37,7 +51,7 @@
   --ff-primary: 'Montserrat', Arial, sans-serif;
 
   // font sizes
-  --base-fs: var(--fs-5);
+  --fs: var(--fs-5);
   --fs-0: 1rem; // 16
   --fs-1: clamp(2.5rem, 2rem + 2.5vw, 3.88rem); // 62 > 40
   --fs-2: clamp(2.13rem, 1.81rem + 1.59vw, 3rem); // 48 > 34
@@ -50,15 +64,21 @@
   --lh: 1.65;
   --lh-sm: 1.2;
   --lh-lg: 2;
-  --base-lh-headings: 1.2;
-  --base-underline-offset: 30%;
+  --lh-headings: 1.2;
+  --underline-offset: 30%;
 
   // weights
-  --fw-light: 300;
+  --fw-thin: 100;
+  --fw-extra-light: 200;
+  --fw-light: 300;  
   --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
   --fw-bold: 700;
-  --base-fw: var(--fw-regular);
-  --base-fw-headings: var(--fw-bold);
+  --fw-extra-bold: 800;
+  --fw-black: 900;
+  --fw: var(--fw-regular);
+  --fw-headings: var(--fw-bold);
 
   /* ======================================================= */
   /* ====================   STRUCTURE   ==================== */
@@ -73,11 +93,10 @@
   // borders
   --border: 1px solid var(--color-black);
   --br: 0.625rem;
-  --base-br: var(--br);
-
+  
   // shadows
   --shadow: 5px 5px 0 var(--color-black);
-  
+
   // transitions
   --transition: 0.3s ease-out;
 

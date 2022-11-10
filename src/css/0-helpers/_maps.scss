@@ -1,0 +1,40 @@
+$spacers: (
+  base: var(--spacer),
+  sm: var(--spacer-sm),
+  lg: var(--spacer-lg),
+  xl: var(--spacer-xl),
+);
+
+$colors: (
+  white: var(--color-white),
+  black: var(--color-black),
+  light: var(--color-white),
+  dark: var(--color-black),
+  primary: (
+    base: var(--color-primary),
+    dark: var(--color-primary-dark),
+    light: var(--color-primary-light),
+  ),
+  secondary: (
+    base: var(--color-secondary),
+    dark: var(--color-secondary-dark),
+    light: var(--color-secondary-light),
+  ),
+  accent: (
+    base: var(--color-accent),
+    dark: var(--color-accent-dark),
+    light: var(--color-accent-light),
+  ),
+);
+
+$font-weights: (
+  thin: var(--fw-thin),
+  extra-light: var(--fw-extra-light),
+  light: var(--fw-light),
+  regular: var(--fw-regular),
+  medium: var(--fw-medium),
+  semi-bold: var(--fw-semi-bold),
+  bold: var(--fw-bold),
+  extra-bold: var(--fw-extra-bold),
+  black: var(--fw-black),
+);

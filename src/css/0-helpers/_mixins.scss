@@ -113,6 +113,18 @@
   border: 0 !important;
 }
 
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      } @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
+
 @mixin space($amount: var(--spacer), $type: margin, $direction: vertical, $secondary-direction: null) {
   @if $type == padding {
     @if $direction == all {

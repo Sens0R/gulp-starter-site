@@ -18,15 +18,14 @@ html {
 }
 
 body {
-  font-size: var(--base-fs);
+  font-size: var(--fs);
   font-family: var(--ff-primary);
-  font-weight: var(--base-fw);
-  color: var(--color-base);
-  background-color: var(--color-bg-base);
+  font-weight: var(--fw);
+  color: var(--color);
+  background-color: var(--color-bg-body);
   line-height: var(--lh);
-  text-underline-offset: var(--base-underline-offset);
-  border-radius: var(--base-br);
-
+  text-underline-offset: var(--underline-offset);
+  
   @include flex($flex-direction: column);
   min-height: 100vh;
 
@@ -41,11 +40,11 @@ textarea,
 input,
 button {
   font-family: var(--ff-primary);
-  font-size: var(--base-fs);
+  font-size: var(--fs);
 }
 
 header {
-  background-color: var(--color-bg-header-base);
+  background-color: var(--color-bg-header);
 }
 
 .body-wrapper {
@@ -54,22 +53,24 @@ header {
 
 footer {
   z-index: var(--z-footer);
-  background-color: var(--color-bg-footer-base);
+  background-color: var(--color-bg-footer);
   margin-top: auto;
 }
 
 menu,
 ul,
+ol,
 dl {
-  list-style: none;
-}
-
-ol {
+  list-style-type: none;
   list-style-position: inside;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 :focus-visible {
-  outline-color: var(--base-color-focus-outline);
+  outline-color: var(--color-focus-outline);
   //outline: none;
 }
 
@@ -101,21 +102,21 @@ h1,
 .h-1,
 .fs-1 {
   font-size: var(--fs-1);
-  line-height: var(--base-lh-headings);
+  line-height: var(--lh-headings);
 }
 
 h2,
 .h-2,
 .fs-2 {
   font-size: var(--fs-2);
-  line-height: var(--base-lh-headings);
+  line-height: var(--lh-headings);
 }
 
 h3,
 .h-3,
 .fs-3 {
   font-size: var(--fs-3);
-  line-height: var(--base-lh-headings);
+  line-height: var(--lh-headings);
 }
 
 h4,
@@ -148,7 +149,7 @@ h6,
 .h-4,
 .h-5,
 .h-6 {
-  font-weight: var(--base-fw-headings);
+  font-weight: var(--fw-headings);
 }
 
 dialog {
@@ -184,9 +185,14 @@ input {
   }
 }
 
+blockquote {
+  padding: var(--spacer);
+  border-left: 0.25rem solid var(--color-primary);
+}
+
 ::selection {
-  background-color: var(--color-bg-selection-base);
-  color: var(--color-selection-base);
+  background-color: var(--color-bg-selection);
+  color: var(--color-selection);
 }
 
 @media (prefers-reduced-motion: reduce) {

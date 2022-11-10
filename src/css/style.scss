@@ -2,14 +2,17 @@
 # Import
 --------------------------------------------------------------*/
 
+@import '1-tools/bootstrap';
+
 // 0 - HELPERS
 @import '0-helpers/variables';
 @import '0-helpers/mixins';
 @import '0-helpers/variable-mixins';
+@import '0-helpers/maps';
 @import '0-helpers/spacers';
 
 // 1 - TOOLS
-@import '1-tools/bootstrap';
+
 @import '1-tools/swiper';
 @import '1-tools/animations';
 @import '1-tools/dropdown';

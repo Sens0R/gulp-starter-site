@@ -1,46 +1,39 @@
 @mixin btn {
   @include flex($display: inline-flex, $justify-content: center, $align-items: center);
-  @include space((0.25rem), margin, bottom, right); // btn extra space to match shadow
   padding: 0.875rem 2.25rem;
-  border-radius: var(--br-sm);
-  background-color: var(--color-primary);
-  color: var(--color-dark);
-  font-weight: var(--fw-semibold);
-  text-transform: uppercase;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-weight: var(--fw-bold);
   border: 1px solid var(--color-dark);
-  box-shadow: var(--shadow);
   transition: var(--transition);
+  line-height: 1;
+  //border-radius: var(--br);
+  //box-shadow: var(--shadow);
 
   &:focus-visible {
-    background-color: var(--color-secondary);
-    color: var(--color-light);
-    box-shadow: none;
-    translate: 4px 5px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
   }
 
   @include hover {
-    background-color: var(--color-secondary);
-    color: var(--color-light);
-    box-shadow: none;
-    translate: 4px 5px;
+    background-color: var(--color-light);
+    color: var(--color-dark);
   }
 }
 
 @mixin btn-reverse {
   @extend .btn;
-  background-color: var(--color-secondary);
-  color: var(--color-light);
+  background-color: var(--color-light);
+  color: var(--color-dark);
 
   &:focus-visible {
-    background-color: var(--color-primary);
-    box-shadow: none;
-    translate: 4px 5px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 
   @include hover {
-    background-color: var(--color-primary);
-    box-shadow: none;
-    translate: 4px 5px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 }
 
@@ -50,8 +43,4 @@
 
 .btn-reverse {
   @include btn-reverse();
-}
-
-.btn-section {
-  @include flex($justify-content: center, $align-items: center);
 }
