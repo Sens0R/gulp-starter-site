@@ -2969,6 +2969,7 @@
   --spacer-xl: clamp(2rem, calc(0.55rem + 7.27vw), 6rem);
   --border: 1px solid var(--color-black);
   --br: 0.625rem;
+  --hr: 1px solid var(--color-dark);
   --shadow: 5px 5px 0 var(--color-black);
   --transition: 0.3s ease-out;
   --z-tooltip: 500;
@@ -4160,6 +4161,10 @@ a {
   text-decoration: none;
 }
 
+hr {
+  border: var(--hr);
+}
+
 input {
   outline: none;
   border: none;
@@ -5295,20 +5300,23 @@ blockquote {
   padding: var(--spacer);
   width: 100%;
   font-weight: var(--fw-bold);
-  background-color: var(--color-primary-light);
+  color: var(--color-dark);
+  background-color: var(--color-light);
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
 }
 .accordion__button.active {
-  background-color: var(--color-secondary);
+  background-color: var(--color-dark);
+  color: var(--color-light);
 }
 .accordion__button.active .accordion__icon {
+  fill: var(--color-light);
   rotate: 180deg;
 }
 @media (hover: hover) and (pointer: fine) {
   .accordion__button:hover {
-    background-color: var(--color-primary-dark);
+    background-color: var(--color-accent);
     color: var(--color-light);
   }
   .accordion__button:hover .accordion__icon {
@@ -5316,7 +5324,8 @@ blockquote {
   }
 }
 .accordion__button:focus-visible {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-accent);
+  color: var(--color-light);
 }
 .accordion__button:focus-visible .accordion__icon {
   fill: var(--color-light);

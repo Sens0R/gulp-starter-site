@@ -176,6 +176,10 @@ a {
   text-decoration: none;
 }
 
+hr {
+  border: var(--hr);
+}
+
 input {
   outline: none;
   border: none;

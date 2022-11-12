@@ -3,10 +3,8 @@
   /* ====================   COLORS   ==================== */
   /* ==================================================== */
 
-  //HR VARIABLE
   //BACKGROUND FOR CONTENT BLOCK
-  // USE ONE IMAGE
-
+ 
   // basic colors
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(0, 0%, 100%);
@@ -93,6 +91,9 @@
   --border: 1px solid var(--color-black);
   --br: 0.625rem;
   
+  // line
+  --hr: 1px solid var(--color-dark);
+
   // shadows
   --shadow: 5px 5px 0 var(--color-black);
 
