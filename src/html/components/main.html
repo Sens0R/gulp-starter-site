@@ -1,593 +1,706 @@
+<!-- ====================   BANNER   ==================== -->
+
+<div class="banner">
+  <picture>
+    <source
+      sizes="100vw"
+      srcset="
+        images/test-image-320.avif   320w,
+        images/test-image-640.avif   640w,
+        images/test-image-960.avif   960w,
+        images/test-image-1280.avif 1280w,
+        images/test-image-1920.avif 1920w,
+        images/test-image-2560.avif 2560w
+      "
+      type="image/avif"
+    />
+    <source
+      sizes="100vw"
+      srcset="
+        images/test-image-320.webp   320w,
+        images/test-image-640.webp   640w,
+        images/test-image-960.webp   960w,
+        images/test-image-1280.webp 1280w,
+        images/test-image-1920.webp 1920w,
+        images/test-image-2560.webp 2560w
+      "
+      type="image/webp"
+    />
+    <source
+      sizes="100vw"
+      srcset="
+        images/test-image-320.jpg   320w,
+        images/test-image-640.jpg   640w,
+        images/test-image-960.jpg   960w,
+        images/test-image-1280.jpg 1280w,
+        images/test-image-1920.jpg 1920w,
+        images/test-image-2560.jpg 2560w
+      "
+      type="image/jpeg"
+    />
+    <img alt class="banner__img" draggable="false" height="2560" src="images/test-image-960.jpg" width="2560" />
+  </picture>
+  <h1>Starter site banner EXAMPLE</h1>
+</div>
+
 <section class="section position-relative container-fluid container-xxl headings">
-  <!-- ====================   HEADINGS   ==================== -->
+  <div data-accordion class="accordion">
+    <!-- ====================   HEADINGS   ==================== -->
 
-  <h1>h1 and .h-1 headings HEADINGS</h1>
-  <h2>h2 and .h-2 headings HEADINGS</h2>
-  <h3>h3 and .h-3 headings HEADINGS</h3>
-  <h4>h4 and .h-4 headings HEADINGS</h4>
-  <h5>h5 and .h-5 headings HEADINGS</h5>
-  <h6>h6 and .h-6 headings HEADINGS</h6>
-
-  <hr />
-
-  <!-- ====================   FONT SIZES   ==================== -->
-
-  <p class="fs-0">.fs-0 / 1rem / 16px Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-1">.fs-1 Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-2">.fs-2 Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-3">.fs-3 Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-4">.fs-4 Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-5">.fs-5 Font SIZES <a href="" class="link">Link STYLE</a></p>
-  <p class="fs-6">.fs-6 Font SIZES <a href="" class="link">Link STYLE</a></p>
-
-  <hr />
-
-  <!-- ====================   FONT WEIGHTS   ==================== -->
-
-  <div class="fw-light">
-    <p>300 light .fw-light font example:</p>
-
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Headings
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <h1>h1 and .h-1 headings HEADINGS</h1>
+        <h2>h2 and .h-2 headings HEADINGS</h2>
+        <h3>h3 and .h-3 headings HEADINGS</h3>
+        <h4>h4 and .h-4 headings HEADINGS</h4>
+        <h5>h5 and .h-5 headings HEADINGS</h5>
+        <h6>h6 and .h-6 headings HEADINGS</h6>
+      </section>
     </div>
-  </div>
 
-  <div class="fw-regular">
-    <p>400 regular .fw-regular font example:</p>
+    <!-- ====================   FONT SIZES   ==================== -->
 
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Font sizes
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <p class="fs-0">.fs-0 / 1rem / 16px Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-1">.fs-1 Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-2">.fs-2 Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-3">.fs-3 Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-4">.fs-4 Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-5">.fs-5 Font SIZES <a href="" class="link">Link STYLE</a></p>
+        <p class="fs-6">.fs-6 Font SIZES <a href="" class="link">Link STYLE</a></p>
+      </section>
     </div>
-  </div>
 
-  <div class="fw-medium">
-    <p>500 medium .fw-medium font example:</p>
+    <!-- ====================   FONT WEIGHTS   ==================== -->
 
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Font weights
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <div class="fw-light">
+          <p>300 light .fw-light font example:</p>
 
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
 
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
 
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="fw-regular">
+          <p>400 regular .fw-regular font example:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="fw-medium">
+          <p>500 medium .fw-medium font example:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="fw-semi-bold">
+          <p>600 semi-bold .fw-semi-bold font example:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="fw-bold">
+          <p>700 bold .fw-bold font example:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
-  </div>
 
-  <div class="fw-semi-bold">
-    <p>600 semi-bold .fw-semi-bold font example:</p>
+    <!-- ====================   TEXT IMPORTANCE   ==================== -->
 
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Text importance
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <em>
+          <p>Emphasis / em:</p>
 
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
 
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
 
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </em>
+
+        <light>
+          <p>Light:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </light>
+
+        <strong>
+          <p>Strong:</p>
+
+          <p class="color-primary">
+            Primary text color.
+            <span class="uppercase">Primary text color. </span>
+            <span class="italic">Primary text color. </span>
+          </p>
+          <p class="color-primary-dark">
+            Primary-dark text color.
+            <span class="uppercase">Primary-dark text color. </span>
+            <span class="italic">Primary-dark text color. </span>
+          </p>
+          <p class="color-primary-light">
+            Primary-light text color.
+            <span class="uppercase">Primary-light text color. </span>
+            <span class="italic">Primary-light text color. </span>
+          </p>
+
+          <p class="color-secondary">
+            Secondary text color.
+            <span class="uppercase">Secondary text color. </span>
+            <span class="italic">Secondary text color. </span>
+          </p>
+          <p class="color-secondary-dark">
+            Secondary-dark text color.
+            <span class="uppercase">Secondary-dark text color. </span>
+            <span class="italic">Secondary-dark text color. </span>
+          </p>
+          <p class="color-secondary-light">
+            Secondary-light text color.
+            <span class="uppercase">Secondary-light text color. </span>
+            <span class="italic">Secondary-light text color. </span>
+          </p>
+
+          <p class="color-accent">
+            Accent text color.
+            <span class="uppercase">Accent text color. </span>
+            <span class="italic">Accent text color. </span>
+          </p>
+          <p class="color-accent-dark">
+            Accent-dark text color.
+            <span class="uppercase">Accent-dark text color. </span>
+            <span class="italic">Accent-dark text color. </span>
+          </p>
+          <p class="color-accent-light">
+            Accent-light text color.
+            <span class="uppercase">Accent-light text color. </span>
+            <span class="italic">Accent-light text color. </span>
+          </p>
+
+          <div class="mt-sm">
+            <p class="color-dark">
+              Dark text color.
+              <span class="uppercase">Dark text color. </span>
+              <span class="italic">Dark text color. </span>
+            </p>
+            <p class="color-light color-bg-dark p-sm">
+              Light text color.
+              <span class="uppercase">Light text color. </span>
+              <span class="italic">Light text color. </span>
+            </p>
+          </div>
+        </strong>
+      </section>
     </div>
-  </div>
 
-  <div class="fw-bold">
-    <p>700 bold .fw-bold font example:</p>
+    <!-- ====================   BLOCKQUOTE   ==================== -->
 
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Blockquote
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <figure>
+          <blockquote>
+            <p>
+              <strong>Blockquote</strong> – HTML element indicates that the enclosed text is an extended quotation.
+              Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source
+              of the quotation may be given using the cite attribute, while a text representation of the source can be
+              given using the
+              <code>cite</code>
+              element.
+              <figcaption class="mt-sm">
+                <strong>Figcaption</strong> - First sentence in by George Orwell (Part 1, Chapter 1).
+              </figcaption>
+              <strong>Cite - </strong> <cite>Nineteen Eighty-Four</cite>
+            </p>
+          </blockquote>
+        </figure>
+      </section>
     </div>
-  </div>
 
-  <hr />
+    <!-- ====================   LISTS   ==================== -->
 
-  <!-- ====================   TEXT IMPORTANCE   ==================== -->
+    <div class="accordion__item">
+      <h2 class="accordion__header">
+        <button data-accordion-button class="accordion__button" type="button">
+          Lists
+          <svg aria-hidden="true" class="accordion__icon">
+            <use href="images/icons/sprite-mono.svg#arrow"></use>
+          </svg>
+        </button>
+      </h2>
+      <section data-accordion-content class="accordion__content">
+        <div class="g-xl">
+          <ul>
+            <li>Unordered list EXAMPLE</li>
+            <li>Unordered list EXAMPLE</li>
+            <li>Unordered list EXAMPLE</li>
+          </ul>
 
-  <em>
-    <p>Emphasis / em:</p>
-
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
+          <ol>
+            <li>Ordered list EXAMPLE</li>
+            <li>Ordered list EXAMPLE</li>
+            <li>Ordered list EXAMPLE</li>
+          </ol>
+        </div>
+      </section>
     </div>
-  </em>
-
-  <light>
-    <p>Light:</p>
-
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
-    </div>
-  </light>
-
-  <strong>
-    <p>Strong:</p>
-
-    <p class="color-primary">
-      Primary text color.
-      <span class="uppercase">Primary text color. </span>
-      <span class="italic">Primary text color. </span>
-    </p>
-    <p class="color-primary-dark">
-      Primary-dark text color.
-      <span class="uppercase">Primary-dark text color. </span>
-      <span class="italic">Primary-dark text color. </span>
-    </p>
-    <p class="color-primary-light">
-      Primary-light text color.
-      <span class="uppercase">Primary-light text color. </span>
-      <span class="italic">Primary-light text color. </span>
-    </p>
-
-    <p class="color-secondary">
-      Secondary text color.
-      <span class="uppercase">Secondary text color. </span>
-      <span class="italic">Secondary text color. </span>
-    </p>
-    <p class="color-secondary-dark">
-      Secondary-dark text color.
-      <span class="uppercase">Secondary-dark text color. </span>
-      <span class="italic">Secondary-dark text color. </span>
-    </p>
-    <p class="color-secondary-light">
-      Secondary-light text color.
-      <span class="uppercase">Secondary-light text color. </span>
-      <span class="italic">Secondary-light text color. </span>
-    </p>
-
-    <p class="color-accent">
-      Accent text color.
-      <span class="uppercase">Accent text color. </span>
-      <span class="italic">Accent text color. </span>
-    </p>
-    <p class="color-accent-dark">
-      Accent-dark text color.
-      <span class="uppercase">Accent-dark text color. </span>
-      <span class="italic">Accent-dark text color. </span>
-    </p>
-    <p class="color-accent-light">
-      Accent-light text color.
-      <span class="uppercase">Accent-light text color. </span>
-      <span class="italic">Accent-light text color. </span>
-    </p>
-
-    <div class="mt-sm">
-      <p class="color-dark">
-        Dark text color.
-        <span class="uppercase">Dark text color. </span>
-        <span class="italic">Dark text color. </span>
-      </p>
-      <p class="color-light color-bg-dark p-sm">
-        Light text color.
-        <span class="uppercase">Light text color. </span>
-        <span class="italic">Light text color. </span>
-      </p>
-    </div>
-  </strong>
-
-  <!-- ====================   BLOCKQUOTE   ==================== -->
-
-  <figure>
-    <blockquote>
-      <p>
-        <strong>Blockquote</strong> – HTML element indicates that the enclosed text is an extended quotation. Usually,
-        this is rendered visually by indentation (see Notes for how to change it). A URL for the source of the quotation
-        may be given using the cite attribute, while a text representation of the source can be given using the
-        <code>cite</code>
-        element.
-        <figcaption class="mt-sm">
-          <strong>Figcaption</strong> - First sentence in by George Orwell (Part 1, Chapter 1).
-        </figcaption>
-        <strong>Cite - </strong> <cite>Nineteen Eighty-Four</cite>
-      </p>
-    </blockquote>
-  </figure>
-
-  <hr />
-
-  <!-- ====================   LISTS   ==================== -->
-
-  <div class="g-xl">
-    <ul>
-      <li>Unordered list EXAMPLE</li>
-      <li>Unordered list EXAMPLE</li>
-      <li>Unordered list EXAMPLE</li>
-    </ul>
-
-    <ol>
-      <li>Ordered list EXAMPLE</li>
-      <li>Ordered list EXAMPLE</li>
-      <li>Ordered list EXAMPLE</li>
-    </ol>
   </div>
 
   <hr />
 
   <!-- ====================   COLORS   ==================== -->
 
+  <h2 data-animate="section-header" class="text-center uppercase">Colors</h2>
   <div class="row row-cols-md-2 row-cols-xl-3 text-center fw-bold gy-4">
     <div class="col-12">
       <div class="py-xl color-bg-primary fs-4">
@@ -597,6 +710,7 @@
         <p class="color-dark">.color-bg-primary</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-primary-light fs-4">
         <h3 class="color-light uppercase">Primary-light</h3>
@@ -605,6 +719,7 @@
         <p class="color-dark">.color-bg-primary-light</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-primary-dark fs-4">
         <h3 class="color-light uppercase">Primary-dark</h3>
@@ -613,6 +728,7 @@
         <p class="color-dark">.color-bg-primary-dark</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-secondary fs-4 color-light">
         <h3 class="color-light uppercase">Secondary</h3>
@@ -621,6 +737,7 @@
         <p class="color-dark">.color-bg-secondary</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-secondary-light fs-4 color-light">
         <h3 class="color-light uppercase">Secondary-light</h3>
@@ -629,6 +746,7 @@
         <p class="color-dark">.color-bg-secondary-light</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-secondary-dark fs-4 color-light">
         <h3 class="color-light uppercase">Secondary-dark</h3>
@@ -637,6 +755,7 @@
         <p class="color-dark">.color-bg-secondary-dark</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-accent fs-4 color-light">
         <h3 class="color-light uppercase">Accent</h3>
@@ -645,6 +764,7 @@
         <p class="color-dark">.color-bg-accent</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-accent-light fs-4 color-light">
         <h3 class="color-light uppercase">Accent-light</h3>
@@ -653,6 +773,7 @@
         <p class="color-dark">.color-bg-accent-light</p>
       </div>
     </div>
+
     <div class="col-12">
       <div class="py-xl color-bg-accent-dark fs-4 color-light">
         <h3 class="color-light uppercase">Accent-dark</h3>
@@ -665,7 +786,7 @@
   <hr />
 
   <!-- ====================   BUTTONS   ==================== -->
-
+  <h2 data-animate="section-header" class="text-center uppercase">Buttons</h2>
   <div class="d-flex justify-content-center align-items-center g-sm">
     <a class="btn" href="index.html">link .btn</a>
     <a class="btn-reverse" href="index.html">link .btn-reverse</a>
@@ -677,871 +798,336 @@
   <hr />
 </section>
 
-<!-- ====================   BANNER   ==================== -->
+<!-- ====================  CONTENT BLOCK   ==================== -->
 
-<div class="banner">
-  <picture>
-    <source
-      sizes="100vw"
-      srcset="
-        images/main-page/hero-banner-320.avif   320w,
-        images/main-page/hero-banner-640.avif   640w,
-        images/main-page/hero-banner-960.avif   960w,
-        images/main-page/hero-banner-1280.avif 1280w,
-        images/main-page/hero-banner-1920.avif 1920w,
-        images/main-page/hero-banner-2560.avif 2560w
-      "
-      type="image/avif"
-    />
-    <source
-      sizes="100vw"
-      srcset="
-        images/main-page/hero-banner-320.webp   320w,
-        images/main-page/hero-banner-640.webp   640w,
-        images/main-page/hero-banner-960.webp   960w,
-        images/main-page/hero-banner-1280.webp 1280w,
-        images/main-page/hero-banner-1920.webp 1920w,
-        images/main-page/hero-banner-2560.webp 2560w
-      "
-      type="image/webp"
-    />
-    <source
-      sizes="100vw"
-      srcset="
-        images/main-page/hero-banner-320.jpg   320w,
-        images/main-page/hero-banner-640.jpg   640w,
-        images/main-page/hero-banner-960.jpg   960w,
-        images/main-page/hero-banner-1280.jpg 1280w,
-        images/main-page/hero-banner-1920.jpg 1920w,
-        images/main-page/hero-banner-2560.jpg 2560w
-      "
-      type="image/jpeg"
-    />
-    <img alt class="image" draggable="false" height="2560" src="images/main-page/hero-banner-960.jpg" width="2560" />
-  </picture>
-</div>
-
-<!-- ====================   SERVICES   ==================== -->
-
-<section class="section position-relative container-fluid container-xxl services">
-  <div class="section__headers">
-    <h2 class="h-5 text-center">Our services</h2>
-    <p class="h-2 text-center" data-animate="section-header">
-      <span class="text-accent">What</span> We Offer<span class="text-accent">.</span>
-    </p>
-  </div>
-  <div class="row row-cols-md-2 row-cols-xl-3 gy-4">
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #348acc">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--cloud-computing" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Cloud Solutions</h3>
-        <p>
-          Run your business entirely from the cloud, with email, data storage, systems management, data backup, disaster
-          recovery, telephony, and more.
-        </p>
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #c263e2">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--support" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Your Local IT Help desk</h3>
-
-        <p>
-          Get your business its own IT Help desk, located in Melbourne. It costs far less, and we have business
-          experience most internal techs don't.
-        </p>
-
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #00b188">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--turn" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Disaster Recovery</h3>
-
-        <p>
-          Our team will work with your business to configure the best fit disaster recovery solution to protect your
-          important business data.
-        </p>
-
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #f6921d">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--verified" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Systems Security</h3>
-
-        <p>
-          Ensure your important business data is protected with security software designed to find malware, prevent
-          intrusions, and adapt to new threats fast.
-        </p>
-
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #33c1e0">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--laptop" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Hardware Procurement</h3>
-
-        <p>
-          Computers, laptops, servers, network devices, custom workstations, boardroom conference systems, anything.
-        </p>
-
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-
-    <div class="col-12">
-      <a class="card-services" href="#">
-        <div class="card-services__logo" style="background-color: #e15b73">
-          <svg aria-hidden="true" class="card-services__icon">
-            <use href="images/icons/sprite-mono.svg#service-icons--earth" />
-          </svg>
-        </div>
-
-        <h3 class="h-4">Phones and Internet</h3>
-
-        <p>
-          We'll set your business up with a cloud-based telephone system that allows your staff to work from anywhere.
-          And we can connect your office with internet too!
-        </p>
-
-        <div>
-          <span class="card-link">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ====================  ABOUT   ==================== -->
-
-<section class="section container-fluid container-xxl about">
-  <div class="row g-xl justify-content-between">
-    <div class="col-12 col-lg-5 about__text-content">
-      <div class="section__headers">
-        <h2 class="h-5">About us</h2>
-        <p class="h-2" data-animate="section-header">
-          <span class="text-accent">Managed IT</span> Supports<span class="text-accent">.</span>
-        </p>
-      </div>
+<h2 data-animate="section-header" class="text-center uppercase">Content block</h2>
+<section class="section container-fluid container-xxl content">
+  <div class="row justify-content-between g-xl">
+    <div class="col-12 col-lg-5 g-base flex-column justify-content-center">
+      <h2>Managed IT Supports.</h2>
       <p>
         We offer business-focused IT services and solutions to help your business be more efficient and flexible, work
         reliably, grow comfortably, and be secure in an era of constant threats to business data.
       </p>
-      <a class="btn" href="about.html">Get started</a>
+      <div><a class="btn" href="index.html">Get started</a></div>
     </div>
-    <div class="col-12 col-lg-6 about__img">
+    <div class="col-12 col-lg-6">
       <picture>
         <source
           sizes="(min-width: 992px) 50vw, 100vw"
           srcset="
-            images/main-page/about-us-320.avif   320w,
-            images/main-page/about-us-640.avif   640w,
-            images/main-page/about-us-960.avif   960w,
-            images/main-page/about-us-1280.avif 1280w,
-            images/main-page/about-us-1920.avif 1920w,
-            images/main-page/about-us-2560.avif 2560w
+            images/test-image-320.avif   320w,
+            images/test-image-640.avif   640w,
+            images/test-image-960.avif   960w,
+            images/test-image-1280.avif 1280w,
+            images/test-image-1920.avif 1920w,
+            images/test-image-2560.avif 2560w
           "
           type="image/avif"
         />
         <source
           sizes="(min-width: 992px) 50vw, 100vw"
           srcset="
-            images/main-page/about-us-320.webp   320w,
-            images/main-page/about-us-640.webp   640w,
-            images/main-page/about-us-960.webp   960w,
-            images/main-page/about-us-1280.webp 1280w,
-            images/main-page/about-us-1920.webp 1920w,
-            images/main-page/about-us-2560.webp 2560w
+            images/test-image-320.webp   320w,
+            images/test-image-640.webp   640w,
+            images/test-image-960.webp   960w,
+            images/test-image-1280.webp 1280w,
+            images/test-image-1920.webp 1920w,
+            images/test-image-2560.webp 2560w
           "
           type="image/webp"
         />
         <source
           sizes="(min-width: 992px) 50vw, 100vw"
           srcset="
-            images/main-page/about-us-320.jpg   320w,
-            images/main-page/about-us-640.jpg   640w,
-            images/main-page/about-us-960.jpg   960w,
-            images/main-page/about-us-1280.jpg 1280w,
-            images/main-page/about-us-1920.jpg 1920w,
-            images/main-page/about-us-2560.jpg 2560w
+            images/test-image-320.jpg   320w,
+            images/test-image-640.jpg   640w,
+            images/test-image-960.jpg   960w,
+            images/test-image-1280.jpg 1280w,
+            images/test-image-1920.jpg 1920w,
+            images/test-image-2560.jpg 2560w
           "
           type="image/jpeg"
         />
         <img
-          alt
+          alt=""
           class="image"
           draggable="false"
           loading="lazy"
           height="2560"
-          src="images/main-page/about-us-960.jpg"
+          src="images/test-image-960.jpg"
           width="2560"
         />
       </picture>
-
-      <p class="about__attachment">
-        Lorem ipsum
-        <span class="fw-bold"> +250 dolor sit amet<span class="color-primary">.</span> </span>
-      </p>
     </div>
   </div>
 </section>
 
-<!-- ====================   PORTFOLIO  ==================== -->
+<!-- ====================   Cards  ==================== -->
 
-<section class="section container-fluid container-xxl portfolio">
-  <div class="section__headers">
-    <h2 class="h-5">Portfolio</h2>
-    <p class="h-2" data-animate="section-header">
-      <span class="text-accent">Case</span>Studies<span class="text-accent">.</span>
-    </p>
-  </div>
-  <div class="gy-lg">
-    <div class="row row-cols-md-2 g-0 card">
-      <div class="col-12 card__img">
-        <a class="card__img-link" href="#" tabindex="-1">
-          <picture>
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-1-320.avif   320w,
-                images/main-page/portfolio-1-640.avif   640w,
-                images/main-page/portfolio-1-960.avif   960w,
-                images/main-page/portfolio-1-1280.avif 1280w,
-                images/main-page/portfolio-1-1920.avif 1920w,
-                images/main-page/portfolio-1-2560.avif 2560w
-              "
-              type="image/avif"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-1-320.webp   320w,
-                images/main-page/portfolio-1-640.webp   640w,
-                images/main-page/portfolio-1-960.webp   960w,
-                images/main-page/portfolio-1-1280.webp 1280w,
-                images/main-page/portfolio-1-1920.webp 1920w,
-                images/main-page/portfolio-1-2560.webp 2560w
-              "
-              type="image/webp"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-1-320.jpg   320w,
-                images/main-page/portfolio-1-640.jpg   640w,
-                images/main-page/portfolio-1-960.jpg   960w,
-                images/main-page/portfolio-1-1280.jpg 1280w,
-                images/main-page/portfolio-1-1920.jpg 1920w,
-                images/main-page/portfolio-1-2560.jpg 2560w
-              "
-              type="image/jpeg"
-            />
-            <img
-              alt="Buddy Jane"
-              class="image"
-              draggable="false"
-              loading="lazy"
-              height="2560"
-              src="images/main-page/portfolio-1-960.jpg"
-              width="2560"
-            />
-          </picture>
-        </a>
-      </div>
-
-      <div class="col-12 card__content">
-        <ul class="card-list">
-          <li>
-            <a href="#">System management</a>
-          </li>
-          <li>
-            <a href="#">Disaster Recovery</a>
-          </li>
-        </ul>
-
-        <h3 class="h-3">
-          <a class="link" href="#">Buddy Jane</a>
-        </h3>
-
-        <p>
-          Ensure your important business data is protected with security software designed to find malware, prevent
-          intrusions, and adapt to new threats fast.
-        </p>
-
-        <div>
-          <a class="card-link" href="#">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row row-cols-md-2 g-0 card">
-      <div class="col-12 card__img">
-        <a class="card__img-link" href="#" tabindex="-1">
-          <picture>
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-2-320.avif   320w,
-                images/main-page/portfolio-2-640.avif   640w,
-                images/main-page/portfolio-2-960.avif   960w,
-                images/main-page/portfolio-2-1280.avif 1280w,
-                images/main-page/portfolio-2-1920.avif 1920w,
-                images/main-page/portfolio-2-2560.avif 2560w
-              "
-              type="image/avif"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-2-320.webp   320w,
-                images/main-page/portfolio-2-640.webp   640w,
-                images/main-page/portfolio-2-960.webp   960w,
-                images/main-page/portfolio-2-1280.webp 1280w,
-                images/main-page/portfolio-2-1920.webp 1920w,
-                images/main-page/portfolio-2-2560.webp 2560w
-              "
-              type="image/webp"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-2-320.jpg   320w,
-                images/main-page/portfolio-2-640.jpg   640w,
-                images/main-page/portfolio-2-960.jpg   960w,
-                images/main-page/portfolio-2-1280.jpg 1280w,
-                images/main-page/portfolio-2-1920.jpg 1920w,
-                images/main-page/portfolio-2-2560.jpg 2560w
-              "
-              type="image/jpeg"
-            />
-            <img
-              alt="Healing with Modern"
-              class="image"
-              draggable="false"
-              loading="lazy"
-              height="2560"
-              src="images/main-page/portfolio-2-960.jpg"
-              width="2560"
-            />
-          </picture>
-        </a>
-      </div>
-
-      <div class="col-12 card__content">
-        <ul class="card-list">
-          <li>
-            <a href="#">System management</a>
-          </li>
-          <li>
-            <a href="#">Disaster Recovery</a>
-          </li>
-        </ul>
-
-        <h3 class="h-3">
-          <a class="link" href="#">Healing with Modern</a>
-        </h3>
-
-        <p>
-          Ensure your important business data is protected with secure software designed to find malware, prevent
-          intrusions, and adapt to new threats fast.
-        </p>
-
-        <div>
-          <a class="card-link" href="#">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="row row-cols-md-2 g-0 card">
-      <div class="col-12 card__img">
-        <a class="card__img-link" href="#" tabindex="-1">
-          <picture>
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-3-320.avif   320w,
-                images/main-page/portfolio-3-640.avif   640w,
-                images/main-page/portfolio-3-960.avif   960w,
-                images/main-page/portfolio-3-1280.avif 1280w,
-                images/main-page/portfolio-3-1920.avif 1920w,
-                images/main-page/portfolio-3-2560.avif 2560w
-              "
-              type="image/avif"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-3-320.webp   320w,
-                images/main-page/portfolio-3-640.webp   640w,
-                images/main-page/portfolio-3-960.webp   960w,
-                images/main-page/portfolio-3-1280.webp 1280w,
-                images/main-page/portfolio-3-1920.webp 1920w,
-                images/main-page/portfolio-3-2560.webp 2560w
-              "
-              type="image/webp"
-            />
-            <source
-              sizes="(min-width: 992px) 50vw, 100vw"
-              srcset="
-                images/main-page/portfolio-3-320.jpg   320w,
-                images/main-page/portfolio-3-640.jpg   640w,
-                images/main-page/portfolio-3-960.jpg   960w,
-                images/main-page/portfolio-3-1280.jpg 1280w,
-                images/main-page/portfolio-3-1920.jpg 1920w,
-                images/main-page/portfolio-3-2560.jpg 2560w
-              "
-              type="image/jpeg"
-            />
-            <img
-              alt="OLX Motors Europe"
-              class="image"
-              draggable="false"
-              loading="lazy"
-              height="2560"
-              src="images/main-page/portfolio-3-960.jpg"
-              width="2560"
-            />
-          </picture>
-        </a>
-      </div>
-
-      <div class="col-12 card__content">
-        <ul class="card-list">
-          <li>
-            <a href="#">System management</a>
-          </li>
-          <li>
-            <a href="#">Disaster Recovery</a>
-          </li>
-        </ul>
-
-        <h3 class="h-3">
-          <a class="link" href="#">OLX Motors Europe</a>
-        </h3>
-
-        <p>
-          Ensure your important business data is protected with security software designed to find malware, prevent
-          intrusions, and adapt to new threats fast.
-        </p>
-
-        <div>
-          <a class="card-link" href="#">
-            Read more
-            <svg aria-hidden="true" class="arrow-right-icon card-link__icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="btn-section">
-    <a class="btn" href="#">Explore more</a>
-  </div>
-</section>
-
-<!-- ====================  PARTNERS  ==================== -->
-
-<section class="section position-relative container-fluid container-xxl partners">
-  <div class="bg-gradient bg-gradient-bottom"></div>
-  <div class="bg-gradient bg-gradient-up"></div>
-
-  <div class="row partners__content">
-    <div class="col-12 col-lg-4 partners__content gy-lg">
-      <div class="section__headers">
-        <h2 class="h-5">Our Partners</h2>
-        <p class="h-2" data-animate="section-header">
-          <span class="text-accent">Working</span> With the Best<span class="text-accent">.</span>
-        </p>
-      </div>
-      <p>
-        Run your business entirely from the cloud, with email, data storage, systems management, data backup, disaster
-        recovery, telephony, and more.
-      </p>
-      <div><a class="btn mt-0" href="partners.html">Get started</a></div>
-    </div>
-    <div class="col-12 col-lg-7">
-      <div class="row gy-4">
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--microsoft" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--hp" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--cisco" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--cove" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--lenovo" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div class="partners__box">
-            <svg aria-hidden="true" class="partners__icon">
-              <use href="images/icons/sprite-mono.svg#partners--hp-enterprise" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====================   BLOG   ==================== -->
-
-<section class="section container-fluid container-xxl blog">
-  <div class="section__headers">
-    <h2 class="h-5">IT Blog</h2>
-    <p class="h-2" data-animate="section-header">
-      <span class="text-accent">Expert</span> research<span class="text-accent">.</span>
-    </p>
-  </div>
-  <div class="row gy-4">
+<h2 data-animate="section-header" class="text-center uppercase">Cards</h2>
+<section class="section container-fluid container-xxl">
+  <div class="row gy-xl">
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card-blog-post">
-        <a class="card-blog-post__img" href="#" tabindex="-1">
+      <div class="card">
+        <a class="card__img" href="index.html" tabindex="-1">
           <picture>
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-1-320.avif   320w,
-                images/main-page/blog-1-640.avif   640w,
-                images/main-page/blog-1-960.avif   960w,
-                images/main-page/blog-1-1280.avif 1280w,
-                images/main-page/blog-1-1920.avif 1920w,
-                images/main-page/blog-1-2560.avif 2560w
+                images/test-image-320.avif   320w,
+                images/test-image-640.avif   640w,
+                images/test-image-960.avif   960w,
+                images/test-image-1280.avif 1280w,
+                images/test-image-1920.avif 1920w,
+                images/test-image-2560.avif 2560w
               "
               type="image/avif"
             />
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-1-320.webp   320w,
-                images/main-page/blog-1-640.webp   640w,
-                images/main-page/blog-1-960.webp   960w,
-                images/main-page/blog-1-1280.webp 1280w,
-                images/main-page/blog-1-1920.webp 1920w,
-                images/main-page/blog-1-2560.webp 2560w
+                images/test-image-320.webp   320w,
+                images/test-image-640.webp   640w,
+                images/test-image-960.webp   960w,
+                images/test-image-1280.webp 1280w,
+                images/test-image-1920.webp 1920w,
+                images/test-image-2560.webp 2560w
               "
               type="image/webp"
             />
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-1-320.jpg   320w,
-                images/main-page/blog-1-640.jpg   640w,
-                images/main-page/blog-1-960.jpg   960w,
-                images/main-page/blog-1-1280.jpg 1280w,
-                images/main-page/blog-1-1920.jpg 1920w,
-                images/main-page/blog-1-2560.jpg 2560w
+                images/test-image-320.jpg   320w,
+                images/test-image-640.jpg   640w,
+                images/test-image-960.jpg   960w,
+                images/test-image-1280.jpg 1280w,
+                images/test-image-1920.jpg 1920w,
+                images/test-image-2560.jpg 2560w
               "
               type="image/jpeg"
             />
             <img
-              alt="Packet Pushers Heavy Networking Podcast"
+              alt=""
               class="image"
               draggable="false"
               loading="lazy"
               height="2560"
-              src="images/main-page/blog-1-960.jpg"
+              src="images/test-image-960.jpg"
               width="2560"
             />
           </picture>
-
-          <span class="card-btn">
-            <svg aria-hidden="true" class="arrow-right-icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
         </a>
 
-        <div class="card-blog-post__content">
-          <p class="card-time">12 April 2022</p>
+        <div class="card__content">
+          <p class="card__date">12 April 2022</p>
 
-          <h3 class="h-4" data-animate="blog-header-1">
+          <ul class="card__list">
+            <li>
+              <a href="index.html">Management</a>
+            </li>
+
+            <li>
+              <a href="index.html">IT</a>
+            </li>
+
+            <li>
+              <a href="index.html">Disaster Recovery</a>
+            </li>
+          </ul>
+
+          <h3 class="card__header">
             <a class="link" href="#"> Packet Pushers Heavy Networking Podcast </a>
           </h3>
 
-          <ul class="card-list">
-            <li>
-              <a href="#">Management</a>
-            </li>
-
-            <li>
-              <a href="#">IT</a>
-            </li>
-
-            <li>
-              <a href="#">Disaster Recovery</a>
-            </li>
-          </ul>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
+          </p>
+          <div>
+            <a href="index.html" class="box-link">
+              Read more
+              <svg aria-hidden="true" class="rotate-right box-link__icon">
+                <use href="images/icons/sprite-mono.svg#arrow" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="col-12 col-md-6 col-lg-4">
-      <div class="card-blog-post">
-        <a class="card-blog-post__img" href="#" tabindex="-1">
+      <div class="card">
+        <a class="card__img" href="index.html" tabindex="-1">
           <picture>
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-2-320.avif   320w,
-                images/main-page/blog-2-640.avif   640w,
-                images/main-page/blog-2-960.avif   960w,
-                images/main-page/blog-2-1280.avif 1280w,
-                images/main-page/blog-2-1920.avif 1920w,
-                images/main-page/blog-2-2560.avif 2560w
+                images/test-image-320.avif   320w,
+                images/test-image-640.avif   640w,
+                images/test-image-960.avif   960w,
+                images/test-image-1280.avif 1280w,
+                images/test-image-1920.avif 1920w,
+                images/test-image-2560.avif 2560w
               "
               type="image/avif"
             />
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-2-320.webp   320w,
-                images/main-page/blog-2-640.webp   640w,
-                images/main-page/blog-2-960.webp   960w,
-                images/main-page/blog-2-1280.webp 1280w,
-                images/main-page/blog-2-1920.webp 1920w,
-                images/main-page/blog-2-2560.webp 2560w
+                images/test-image-320.webp   320w,
+                images/test-image-640.webp   640w,
+                images/test-image-960.webp   960w,
+                images/test-image-1280.webp 1280w,
+                images/test-image-1920.webp 1920w,
+                images/test-image-2560.webp 2560w
               "
               type="image/webp"
             />
             <source
               sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
               srcset="
-                images/main-page/blog-2-320.jpg   320w,
-                images/main-page/blog-2-640.jpg   640w,
-                images/main-page/blog-2-960.jpg   960w,
-                images/main-page/blog-2-1280.jpg 1280w,
-                images/main-page/blog-2-1920.jpg 1920w,
-                images/main-page/blog-2-2560.jpg 2560w
+                images/test-image-320.jpg   320w,
+                images/test-image-640.jpg   640w,
+                images/test-image-960.jpg   960w,
+                images/test-image-1280.jpg 1280w,
+                images/test-image-1920.jpg 1920w,
+                images/test-image-2560.jpg 2560w
               "
               type="image/jpeg"
             />
             <img
-              alt="Tips For Efficient Communication With Your IT Support Team"
+              alt=""
               class="image"
               draggable="false"
               loading="lazy"
               height="2560"
-              src="images/main-page/blog-2-960.jpg"
+              src="images/test-image-960.jpg"
               width="2560"
             />
           </picture>
-
-          <span class="card-btn">
-            <svg aria-hidden="true" class="arrow-right-icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
         </a>
 
-        <div class="card-blog-post__content">
-          <p class="card-time">12 April 2022</p>
+        <div class="card__content">
+          <p class="card__date">12 April 2022</p>
 
-          <h3 class="h-4" data-animate="blog-header-2">
-            <a class="link" href="#"> Tips For Efficient Communication With Your IT Support Team </a>
-          </h3>
-
-          <ul class="card-list">
+          <ul class="card__list">
             <li>
-              <a href="#">Management</a>
+              <a href="index.html">Management</a>
             </li>
 
             <li>
-              <a href="#">Business</a>
+              <a href="index.html">IT</a>
+            </li>
+
+            <li>
+              <a href="index.html">Disaster Recovery</a>
             </li>
           </ul>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-12 col-lg-4">
-      <div class="card-blog-post">
-        <a class="card-blog-post__img" href="#" tabindex="-1">
-          <picture>
-            <source
-              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-              srcset="
-                images/main-page/blog-3-320.avif   320w,
-                images/main-page/blog-3-640.avif   640w,
-                images/main-page/blog-3-960.avif   960w,
-                images/main-page/blog-3-1280.avif 1280w,
-                images/main-page/blog-3-1920.avif 1920w,
-                images/main-page/blog-3-2560.avif 2560w
-              "
-              type="image/avif"
-            />
-            <source
-              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-              srcset="
-                images/main-page/blog-3-320.webp   320w,
-                images/main-page/blog-3-640.webp   640w,
-                images/main-page/blog-3-960.webp   960w,
-                images/main-page/blog-3-1280.webp 1280w,
-                images/main-page/blog-3-1920.webp 1920w,
-                images/main-page/blog-3-2560.webp 2560w
-              "
-              type="image/webp"
-            />
-            <source
-              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-              srcset="
-                images/main-page/blog-3-320.jpg   320w,
-                images/main-page/blog-3-640.jpg   640w,
-                images/main-page/blog-3-960.jpg   960w,
-                images/main-page/blog-3-1280.jpg 1280w,
-                images/main-page/blog-3-1920.jpg 1920w,
-                images/main-page/blog-3-2560.jpg 2560w
-              "
-              type="image/jpeg"
-            />
-            <img
-              alt="Packet Pushers Heavy Networking Podcast"
-              class="image"
-              draggable="false"
-              loading="lazy"
-              height="2560"
-              src="images/main-page/blog-3-960.jpg"
-              width="2560"
-            />
-          </picture>
-
-          <span class="card-btn">
-            <svg aria-hidden="true" class="arrow-right-icon">
-              <use href="images/icons/sprite-mono.svg#arrow" />
-            </svg>
-          </span>
-        </a>
-
-        <div class="card-blog-post__content">
-          <p class="card-time">15 March 2022</p>
-
-          <h3 class="h-4" data-animate="blog-header-3">
+          <h3 class="card__header">
             <a class="link" href="#"> Packet Pushers Heavy Networking Podcast </a>
           </h3>
 
-          <ul class="card-list">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quis dolore, obcaecati sed pariatur
+            fugiat, voluptatem voluptatum dolorum fuga provident ducimus error consectetur, fugit quae?
+          </p>
+
+          <div>
+            <a href="index.html" class="box-link">
+              Read more
+              <svg aria-hidden="true" class="rotate-right box-link__icon">
+                <use href="images/icons/sprite-mono.svg#arrow" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card">
+        <a class="card__img" href="index.html" tabindex="-1">
+          <picture>
+            <source
+              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+              srcset="
+                images/test-image-320.avif   320w,
+                images/test-image-640.avif   640w,
+                images/test-image-960.avif   960w,
+                images/test-image-1280.avif 1280w,
+                images/test-image-1920.avif 1920w,
+                images/test-image-2560.avif 2560w
+              "
+              type="image/avif"
+            />
+            <source
+              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+              srcset="
+                images/test-image-320.webp   320w,
+                images/test-image-640.webp   640w,
+                images/test-image-960.webp   960w,
+                images/test-image-1280.webp 1280w,
+                images/test-image-1920.webp 1920w,
+                images/test-image-2560.webp 2560w
+              "
+              type="image/webp"
+            />
+            <source
+              sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+              srcset="
+                images/test-image-320.jpg   320w,
+                images/test-image-640.jpg   640w,
+                images/test-image-960.jpg   960w,
+                images/test-image-1280.jpg 1280w,
+                images/test-image-1920.jpg 1920w,
+                images/test-image-2560.jpg 2560w
+              "
+              type="image/jpeg"
+            />
+            <img
+              alt=""
+              class="image"
+              draggable="false"
+              loading="lazy"
+              height="2560"
+              src="images/test-image-960.jpg"
+              width="2560"
+            />
+          </picture>
+        </a>
+
+        <div class="card__content">
+          <p class="card__date">12 April 2022</p>
+
+          <ul class="card__list">
             <li>
-              <a href="#">Management</a>
+              <a href="index.html">Management</a>
             </li>
 
             <li>
-              <a href="#">Disaster Recovery</a>
+              <a href="index.html">IT</a>
+            </li>
+
+            <li>
+              <a href="index.html">Disaster Recovery</a>
             </li>
           </ul>
+
+          <h3 class="card__header">
+            <a class="link" href="#"> Packet Pushers Heavy Networking Podcast </a>
+          </h3>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
+          </p>
+          <div>
+            <a href="index.html" class="box-link">
+              Read more
+              <svg aria-hidden="true" class="rotate-right box-link__icon">
+                <use href="images/icons/sprite-mono.svg#arrow" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>

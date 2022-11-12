@@ -14,6 +14,11 @@
 
 /* ====================   NORMAL   ==================== */
 
+.section {
+  @include flex($flex-direction: column, $gap: var(--spacer-lg));
+  @include space(var(--spacer-xl), padding, vertical);
+}
+
 .lh {
   line-height: var(--lh);
 
@@ -64,19 +69,24 @@
 
 .link-space {
   @include link-space();
+}
 
-  &-none {
-    position: auto;
-    content: none;
+.transition {
+  transition: var(--transition) !important;
+
+  &-stop {
+    transition: none !important;
   }
 }
 
-.stop-transition {
-  transition: none !important;
-}
+.overflow {
+  &-hidden {
+    overflow: hidden !important;
+  }
 
-.overflow-hidden {
-  overflow: hidden !important;
+  &-visible {
+    overflow: visible !important;
+  }
 }
 
 .flex-center {
@@ -84,8 +94,6 @@
   justify-content: center !important;
   align-items: center !important;
 }
-
-/* ====================   ROTATE   ==================== */
 
 .rotate {
   &-right {
@@ -100,8 +108,6 @@
     rotate: -180deg;
   }
 }
-
-/* ====================   POSITION   ==================== */
 
 .position {
   &-static {

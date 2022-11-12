@@ -4,6 +4,8 @@
   /* ==================================================== */
 
   //HR VARIABLE
+  //BACKGROUND FOR CONTENT BLOCK
+  // USE ONE IMAGE
 
   // basic colors
   --color-black: hsl(0, 0%, 0%);
@@ -68,15 +70,12 @@
   --underline-offset: 30%;
 
   // weights
-  --fw-thin: 100;
-  --fw-extra-light: 200;
   --fw-light: 300;  
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
   --fw-bold: 700;
-  --fw-extra-bold: 800;
-  --fw-black: 900;
+
   --fw: var(--fw-regular);
   --fw-headings: var(--fw-bold);
 

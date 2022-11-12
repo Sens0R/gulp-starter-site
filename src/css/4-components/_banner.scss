@@ -1,7 +1,7 @@
-.page-banner {
+.banner {
+  @include flex($justify-content: center, $align-items: center);
   min-height: clamp(18.75rem, 15.568rem + 15.91vw, 27.5rem);
   position: relative;
-  @include flex($justify-content: center, $align-items: center);
 
   &__img {
     @include absolute(top 0 left 0);

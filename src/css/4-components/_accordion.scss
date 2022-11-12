@@ -1,0 +1,73 @@
+[data-accordion-content] {
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+[data-accordion-content].active {
+  visibility: visible;
+}
+
+.accordion {
+  @include flex($flex-direction: column, $gap: var(--spacer));
+
+  &__item {
+    border: var(--border);
+  }
+
+  &__header {
+  }
+
+  &__button {
+    @include flex($justify-content: space-between, $column-gap: var(--spacer));
+    @include space(var(--spacer), padding, all);
+    width: 100%;
+    font-weight: var(--fw-bold);
+    background-color: var(--color-primary-light);
+    transition: var(--transition);
+
+    &.active {
+      background-color: var(--color-secondary);
+
+      .accordion__icon {
+        rotate: 180deg;
+      }
+    }
+
+    @include hover {
+      background-color: var(--color-primary-dark);
+      color: var(--color-light);
+      .accordion__icon {
+        fill: var(--color-light);
+      }
+    }
+
+    &:focus-visible {
+      background-color: var(--color-primary-dark);
+
+      .accordion__icon {
+        fill: var(--color-light);
+      }
+    }
+  }
+
+  &__content {
+    @include flex($flex-direction: column, $gap: var(--spacer));
+    @include space(var(--spacer), padding, horizontal);
+    > :first-child {
+      padding-top: var(--spacer);
+    }
+    > :last-child {
+      padding-bottom: var(--spacer);
+    }
+  }
+
+  &__icon {
+    @include box(1.25rem, 1.25rem);
+    display: flex;
+    align-self: center;
+    fill: var(--color-dark);
+    transition: all 0.6s ease-in-out;
+  }
+}

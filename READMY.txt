@@ -1,1 +1,0 @@
-1. Delete _fonts.scss and dist/fonts if you need complete fonts reset. 

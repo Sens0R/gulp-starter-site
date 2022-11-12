@@ -37,9 +37,8 @@ export const path = {
     svgSpriteMono: `${srcFolder}/assets/svgicons/mono/**/*.svg`,
     svgSpriteMulti: `${srcFolder}/assets/svgicons/multi/**/*.svg`,
   },
-  clean: `${buildFolder}/!images`,
+  clean: buildFolder,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,
-  ftp: '',
 };

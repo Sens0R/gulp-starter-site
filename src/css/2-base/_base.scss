@@ -25,7 +25,7 @@ body {
   background-color: var(--color-bg-body);
   line-height: var(--lh);
   text-underline-offset: var(--underline-offset);
-  
+
   @include flex($flex-direction: column);
   min-height: 100vh;
 

@@ -1,8 +1,8 @@
-@mixin link($color-regular: var(--color-primary), $color-hover: var(--color-primary), $offset: 10%, $width: 2px) {
+@mixin link($color: var(--color-primary), $color-hover: var(--color-primary), $offset: 10%, $width: 2px) {
   transition: var(--transition);
   text-decoration: underline solid $width transparent;
   text-underline-offset: $offset;
-  color: $color-regular;
+  color: $color;
 
   @include hover {
     color: $color-hover;
@@ -17,4 +17,40 @@
 
 .link {
   @include link;
+}
+
+.box-link {
+  @include flex($display: inline-flex, $align-items: center);
+  @include link-space();
+  color: var(--color-primary);
+  font-size: var(--fs-0);
+  font-weight: var(--fw-medium);
+  text-transform: uppercase;
+  transition: var(--transition);
+  line-height: 1;
+
+  &__icon {
+    @include box(0.75rem, 0.75rem);
+    margin-left: 0.25rem;
+    fill: var(--color-primary);
+    transition: var(--transition);
+  }
+
+  &:focus-visible {
+    color: var(--color-secondary);
+
+    .box-link__icon {
+      fill: var(--color-secondary);
+      translate: 0.375rem;
+    }
+  }
+
+  @include hover {
+    color: var(--color-accent);
+
+    .box-link__icon {
+      fill: var(--color-accent);
+      translate: 0.25rem;
+    }
+  }
 }

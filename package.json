@@ -7,9 +7,7 @@
   "scripts": {
     "dev": "gulp",
     "dev-reset": "gulp devReset",
-    "build": "gulp build --build",
-    "zip": "gulp deployZIP --build",
-    "ftp": "gulp deployFTP --build"
+    "build": "gulp build --build"
   },
   "repository": {
     "type": "git",
@@ -45,16 +43,12 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-ttf2woff": "latest",
     "gulp-ttf2woff2": "latest",
-    "gulp-util": "latest",
     "gulp-version-number": "latest",
-    "gulp-zip": "latest",
     "headroom.js": "latest",
     "sass": "latest",
     "scroll-lock": "latest",
     "swiper": "latest",
-    "vinyl-ftp": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
   }
-
 }

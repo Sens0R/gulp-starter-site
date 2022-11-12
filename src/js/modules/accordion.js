@@ -6,13 +6,18 @@
 * 5. Active accordion button (accordion header) and corresponding content (accordion panel) have 'active' class for CSS styling.
 
 * EXAMPLE: 
-* <div data-accordion="faq">
-*   <h2>
-*     <button data-accordion-button type="button">                 
-*     </button>
-*   </h2>
-*   <section data-accordion-content>       
-*   </section>
+* <div data-accordion="faq" class="accordion">
+*   <div class="accordion__item">
+*     <h2 class="accordion__header">
+*       <button data-accordion-button class="accordion__button "type="button"> Accordion header-button       
+*         <svg aria-hidden="true" class="accordion__icon">
+*           <use href="images/icons/sprite-mono.svg#arrow"></use>
+*         </svg>         
+*       </button>
+*     </h2>
+*     <section data-accordion-content class="accordion__content">       
+*     </section>
+*   </div>
 * </div>
 */
 
