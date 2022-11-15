@@ -4295,7 +4295,8 @@ blockquote {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--spacer-lg);
-  padding: var(--spacer-xl) 0;
+  padding-top: var(--spacer-xl);
+  padding-bottom: var(--spacer-xl);
 }
 
 .lh {
