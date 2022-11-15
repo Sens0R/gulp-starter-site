@@ -12,7 +12,10 @@
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
   <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
-    <span class="nav-toggler__text nav-toggler__text_close">Close menu</span>
+    <span class="nav-toggler__text nav-toggler__text_close">Close</span
+    ><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
+      <use href="images/icons/sprite-mono.svg#cancel"></use>
+    </svg>
   </button>
 
   @@include('search.html',{})
@@ -69,7 +72,7 @@
 <!-- ====================   NAV-TOGGLER   ==================== -->
 
 <button class="nav-toggler nav-toggler_open col-auto" data-hamburger-btn="open" type="button">
-  <svg aria-hidden="true" class="nav-toggler__icon">
+  <svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
     <use href="images/icons/sprite-mono.svg#hamburger" />
   </svg>
   <span class="nav-toggler__text nav-toggler__text_open">menu</span>

@@ -4760,9 +4760,9 @@ blockquote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4796,17 +4796,22 @@ blockquote {
   color: var(--color-light);
   border-color: var(--color-primary);
 }
-.nav-toggler__text_close {
-  text-transform: uppercase;
-}
-.nav-toggler__text_open {
+.nav-toggler__text {
   font-size: 0.75rem;
-  margin-top: 0.375rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .nav-toggler__icon {
   width: 2.25rem;
   height: 1.125rem;
+}
+.nav-toggler__icon_open {
+  margin-bottom: 0.375rem;
+}
+.nav-toggler__icon_close {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-left: auto;
 }
 @media (min-width: 992px) {
   .nav-toggler {
