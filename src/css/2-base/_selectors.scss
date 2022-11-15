@@ -16,7 +16,7 @@
 
 .section {
   @include flex($flex-direction: column, $gap: var(--spacer-lg));
-  @include space(var(--spacer-xl), padding, vertical);
+  padding: var(--spacer-xl) 0;
 }
 
 .lh {

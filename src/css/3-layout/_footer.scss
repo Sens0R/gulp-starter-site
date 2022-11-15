@@ -1,17 +1,13 @@
 .footer {
-  @include space(var(--spacer-xl), padding, top);
+  padding-top: var(--spacer-xl);
 }
 
 .footer-nav {
-  @include space(var(--spacer-xl), padding, bottom);
+  padding-bottom: var(--spacer-xl);
 
-  .h-5 {
-    @include space(var(--spacer-sm), padding, top);
-    font-size: var(--fs-0);
-  }
-
-  .row {
-    row-gap: var(--spacer-xl);
+  &__list-header {
+    padding-top: var(--spacer-sm);
+    font-weight: var(--fw-bold);
   }
 
   &__column {
@@ -19,48 +15,31 @@
   }
 
   &__list {
-    height: 100%;
     @include flex($flex-direction: column);
+    height: 100%;
   }
 
   &__header {
-    @include space(var(--spacer), margin, bottom);
+    margin-bottom: var(--spacer);
     font-size: var(--fs-5);
-    font-weight: bold;
+    font-weight: var(--fw-bold);
+    color: var(--color-primary);
     text-transform: uppercase;
-    color: var(--color-secondary);
   }
 
   &__link {
     @include flex($justify-content: center, $flex-direction: column);
-    @include space(0.75rem, padding, vertical);
-    font-size: var(--fs-0);
+    padding: 0.75rem 0;
     font-weight: var(--fw-medium);
-    transition: padding-left var(--transition);
-
-    @include hover {
-      color: var(--color-secondary-dark);
-      padding-left: 1rem;
-      
-    }
-
-    &:focus-visible {
-      color: var(--color-secondary);
-      text-decoration: underline;
-    }
   }
 
   &__btn {
     margin-top: auto;
-    @include space(0.75rem, padding, vertical);
+    padding: 0.75rem 0;
   }
-
-
 }
 
 .copyright {
   @include flex($justify-content: space-between, $align-items: center);
-  @include space(var(--spacer-lg), padding, bottom);
-  color: var(--color-secondary-gray);
-  font-size: var(--fs-6);
+  padding-bottom: var(--spacer-lg);
 }

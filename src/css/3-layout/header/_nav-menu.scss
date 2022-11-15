@@ -1,30 +1,57 @@
 .nav-menu {
-  @include space(var(--spacer-sm), margin, vertical);
   width: 100%;
-  margin: 0;
 
   &__link {
-    @include space(var(--spacer-sm), padding, vertical);
-    @include space(var(--spacer-sm), padding, right);
-    font-weight: var(--fw-medium);
-    transition: var(--transition);
-
-    @include hover {
-      color: var(--color-secondary);
-      text-decoration: underline;
-    }
-
-    &:focus-visible {
-      color: var(--color-secondary);
-      text-decoration: underline 2px;
-    }
+    padding: var(--spacer-sm) var(--spacer-sm) var(--spacer-sm) 0;
   }
 
-  @include media-breakpoint-up(xl) {
+  /* ====================   MEDIA BREAKPOINTS   ==================== */
+
+  @include media-breakpoint-up(lg) {
     @include flex($flex-wrap: wrap, $justify-content: center, $align-items: center);
 
     &__link {
-      @include space(var(--spacer-sm), padding, horizontal);
+      padding: var(--spacer-sm);
+    }
+  }
+}
+
+/* ====================   NAVIGATION DROPDOWN   ==================== */
+
+.nav-menu .dropdown {
+  &__content {
+    @include media-breakpoint-down(lg) {
+      position: static;
+      translate: none;
+      box-shadow: none;
+    }
+  }
+
+  &__btn {
+    @include flex($justify-content: center, $align-items: center);
+
+    @include media-breakpoint-down(lg) {
+      min-width: 2.75rem;
+    }
+
+    &:focus-visible {
+      fill: var(--color-dark);
+    }
+  }
+
+  &.active {
+    .dropdown__icon {
+      fill: var(--color-dark);
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__btn {
+      padding: var(--spacer-sm) var(--spacer-sm) var(--spacer-sm) 0;
+    }
+
+    &__icon {
+      @include box(0.625rem, 0.625rem);
     }
   }
 }

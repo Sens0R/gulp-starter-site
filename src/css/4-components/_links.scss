@@ -54,3 +54,18 @@
     }
   }
 }
+
+.nav-link {
+  text-decoration: underline 1px solid transparent;
+  transition: var(--transition);
+  
+  @include hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+
+  &:focus-visible {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+}

@@ -7,7 +7,7 @@
 
   &__header {
     @include flex($justify-content: center, $align-items: center);
-    @include space(var(--spacer-lg), margin, bottom);
+    margin-bottom: var(--spacer-lg);
     font-size: var(--fs-3);
   }
 
@@ -30,7 +30,7 @@
 }
 
 .tab {
-  @include space(var(--spacer), padding, all);
+  padding: var(--spacer);
   min-height: 2.75rem;
   border-right: 1px solid var(--color-secondary-light);
   background-color: var(--color-secondary);
@@ -107,14 +107,14 @@
     transition: all 1s ease-in-out;
     color: transparent;
     translate: 0 -2rem;
-    @include space(var(--spacer), padding, horizontal);
+    padding: 0 var(--spacer);
 
     &:first-child {
-      @include space(var(--spacer), margin, top);
+       margin-top: var(--spacer);
     }
 
     &:last-child {
-      @include space(var(--spacer), margin, bottom);
+      margin-bottom: var(--spacer);
     }
   }
 

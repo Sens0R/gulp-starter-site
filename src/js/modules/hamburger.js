@@ -45,7 +45,7 @@ export function hamburger(userOptions) {
   const firstFocusableElement = focusableElements.at(0)
   const lastFocusableElement = focusableElements.at(-1)
 
-  mainElement.classList.add('stop-transition')
+  mainElement.classList.add('transition-stop')
   togglerOpen.addEventListener('click', open)
   togglerClose.addEventListener('click', close)
   backdrop.addEventListener('click', close)
@@ -56,7 +56,7 @@ export function hamburger(userOptions) {
     const watchBreakpoint = window.matchMedia(`(max-width: ${breakpoint}px)`)
     watchBreakpoint.onchange = e => {
       if (mainElement.classList.contains('active') && !e.matches) {
-        mainElement.classList.add('stop-transition')
+        mainElement.classList.add('transition-stop')
         backdrop.remove()
         close()
         return
@@ -74,7 +74,7 @@ export function hamburger(userOptions) {
     mainElement.classList.add('active')
     mainElement.setAttribute('aria-modal', 'true')
     mainElement.setAttribute('role', 'dialog')
-    mainElement.classList.remove('stop-transition')
+    mainElement.classList.remove('transition-stop')
     backdrop.classList.add('active')
   }
 
@@ -84,7 +84,7 @@ export function hamburger(userOptions) {
     mainElement.classList.remove('active')
     mainElement.removeAttribute('aria-modal')
     mainElement.removeAttribute('role')
-    mainElement.addEventListener('transitionend', () => mainElement.classList.add('stop-transition'), { once: true })
+    mainElement.addEventListener('transitionend', () => mainElement.classList.add('transition-stop'), { once: true })
     backdrop.classList.remove('active')
   }
 

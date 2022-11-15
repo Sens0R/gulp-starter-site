@@ -4,7 +4,8 @@
   /* ==================================================== */
 
   //BACKGROUND FOR CONTENT BLOCK
- 
+  //HAMBURGER FOCUS TRAP
+
   // basic colors
   --color-black: hsl(0, 0%, 0%);
   --color-white: hsl(0, 0%, 100%);
@@ -18,7 +19,7 @@
   --color-yellow-dark: hsl(34, 100%, 50%);
   --color-orange: hsl(14, 92%, 54%);
   --color-orange-light: hsl(14, 95%, 64%);
-  --color-orange-dark: hsl(14, 88%, 47%);
+  --color-orange-dark: hsl(14, 97%, 44%);
 
   // color variables
   --color-primary: var(--color-blue);
@@ -51,7 +52,7 @@
   --ff-primary: 'Montserrat', Arial, sans-serif;
 
   // font sizes
-  --fs: var(--fs-5);
+  --fs: var(--fs-0);
   --fs-0: 1rem; // 16
   --fs-1: clamp(2.5rem, 2rem + 2.5vw, 3.88rem); // 62 > 40
   --fs-2: clamp(2.13rem, 1.81rem + 1.59vw, 3rem); // 48 > 34
@@ -68,7 +69,7 @@
   --underline-offset: 30%;
 
   // weights
-  --fw-light: 300;  
+  --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-semi-bold: 600;
@@ -88,9 +89,9 @@
   --spacer-xl: clamp(2rem, calc(0.55rem + 7.27vw), 6rem); // 96 > 48
 
   // borders
-  --border: 1px solid var(--color-black);
+  --border: 1px solid var(--color-dark);
   --br: 0.625rem;
-  
+
   // line
   --hr: 1px solid var(--color-dark);
 
@@ -101,6 +102,7 @@
   --transition: 0.3s ease-out;
 
   // z-index
+  --z-hamburger-toggler: 600;
   --z-tooltip: 500;
   --z-dropdown: 400;
   --z-hamburger: 100;

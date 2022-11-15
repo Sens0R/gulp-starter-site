@@ -10,7 +10,7 @@
 
   &__content {
     @include flex($flex-direction: column, $gap: var(--spacer));
-    @include space(var(--spacer), padding, all);
+    padding: var(--spacer);
     height: 100%;
 
     > :last-child {

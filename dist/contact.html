@@ -24,47 +24,50 @@
     <div class="header-sticky-wrapper">
     <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
 
-<a aria-label="Logo-name home. Logo-name logo." class="logo col-auto" href="index.html">
-  <svg aria-hidden="true" class="logo__icon">
-    <use href="images/icons/sprite-multi.svg#logo" />
-  </svg>
-</a>
+<div class="col-auto col-xl-3">
+  <a aria-label="Logo-name home. Logo-name logo." class="logo" href="index.html">
+    <svg aria-hidden="true" class="logo__icon">
+      <use href="images/icons/sprite-multi.svg#logo" />
+    </svg>
+  </a>
+</div>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
   <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
-    <span class="nav-toggler__text nav-toggler__text_close">close menu</span>
+    <span class="nav-toggler__text nav-toggler__text_close">Close menu</span>
   </button>
 
-  <form class="nav-search" role="search">
-    <label class="visually-hidden" for="nav-search-input-mobile">Search</label>
+  <form class="search" role="search">
+    
+  <label class="visually-hidden" for="search-input">Search</label>
 
-    <input
-      autocomplete="off"
-      class="nav-search__input"
-      id="nav-search-input-mobile"
-      placeholder="Search"
-      required
-      type="search"
-    />
+  <input
+    autocomplete="off"
+    class="search__input"
+    id="search-input"
+    placeholder="Search"
+    required
+    type="search"
+  />
 
-    <button aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
-      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
-        <use href="images/icons/sprite-mono.svg#search" />
-      </svg>
-    </button>
-  </form>
+  <button aria-label="Submit search" class="search__btn" type="submit">
+    <svg aria-hidden="true" class="search__icon ">
+      <use href="images/icons/sprite-mono.svg#search" />
+    </svg>
+  </button>
+</form>
 
   <ul class="nav-menu">
     <li data-nav-page class="nav-menu__item">
-      <a href="about.html" class="nav-menu__link">About</a>
+      <a href="about.html" class="nav-menu__link nav-link">About</a>
     </li>
 
-    <li data-dropdown="hover" class="nav-menu__item dropdown col-auto">
+    <li data-dropdown="hover" class="nav-menu__item dropdown">
       <div class="dropdown__controls">
-        <a href="patterns.html" class="nav-menu__link dropdown__link">Patterns</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for patterns">
+        <a href="components.html" class="nav-menu__link dropdown__link nav-link">Components</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for components">
           <svg aria-hidden="true" class="dropdown__icon">
             <use href="images/icons/sprite-mono.svg#arrow"></use>
           </svg>
@@ -79,9 +82,6 @@
             <a href="dropdowns.html" class="dropdown-list__link">Dropdowns</a>
           </li>
           <li class="dropdown-list__item">
-            <a href="accordions.html" class="dropdown-list__link">Accordions</a>
-          </li>
-          <li class="dropdown-list__item">
             <a href="dialogs.html" class="dropdown-list__link">Dialogs</a>
           </li>
         </ul>
@@ -89,15 +89,15 @@
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="portfolio.html" class="nav-menu__link">Portfolio</a>
+      <a href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="blog.html" class="nav-menu__link">Blog</a>
+      <a href="blog.html" class="nav-menu__link nav-link">Blog</a>
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="contact.html" class="nav-menu__link">Contact</a>
+      <a href="contact.html" class="nav-menu__link nav-link">Contact</a>
     </li>
   </ul>
 
@@ -131,30 +131,25 @@
 
 <!-- ====================   SEARCH   ==================== -->
 
-<div class="col-auto col-md col-xl-2 col-xxl-3 nav-search-container">
-  <form class="nav-search" role="search">
-    <label class="visually-hidden" for="nav-search-input">Search</label>
-    <input
-      autocomplete="off"
-      class="nav-search__input"
-      id="nav-search-input"
-      placeholder="Search"
-      required
-      type="search"
-    />
+<div class="col-auto col-md col-xl-2 col-xxl-3 search-container"><form class="search" role="search">
+    
+  <label class="visually-hidden" for="search-input">Search</label>
 
-    <button
-      data-tooltip="bottom-right"
-      aria-label="Submit search"
-      class="nav-search__btn nav-search__btn_search"
-      type="submit"
-    >
-      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
-        <use href="images/icons/sprite-mono.svg#search" />
-      </svg>
-    </button>
-  </form>
-</div>
+  <input
+    autocomplete="off"
+    class="search__input"
+    id="search-input"
+    placeholder="Search"
+    required
+    type="search"
+  />
+
+  <button aria-label="Submit search" class="search__btn" type="submit">
+    <svg aria-hidden="true" class="search__icon ">
+      <use href="images/icons/sprite-mono.svg#search" />
+    </svg>
+  </button>
+</form></div>
 
 <!-- ====================   NAV-TOGGLER   ==================== -->
 
@@ -309,7 +304,7 @@
 <footer class="footer">
   <div class="container-fluid container-xxl footer-container">
   <nav aria-label="Footer" class="footer-nav">
-    <div class="row row-cols-sm-2 row-cols-lg-4">
+    <div class="row row-cols-sm-2 row-cols-lg-4 gy-xl">
       <div class="col-12 footer-nav__column">
         <ul class="footer-nav__list">
           <li>
@@ -355,12 +350,12 @@
         <h2 class="footer-nav__header">Services</h2>
 
         <ul class="footer-nav__list">
-          <li><a class="footer-nav__link" href="about.html">Cloud Solutions</a></li>
-          <li><a class="footer-nav__link" href="faq.html">Your Local IT Help desk</a></li>
-          <li><a class="footer-nav__link" href="blog.html">Disaster Recovery</a></li>
-          <li><a class="footer-nav__link" href="contact.html">Systems Security</a></li>
-          <li><a class="footer-nav__link" href="blog.html">Hardware Procurement</a></li>
-          <li><a class="footer-nav__link" href="contact.html">Phones and Internet</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Cloud Solutions</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Your Local IT Help desk</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Disaster Recovery</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Systems Security</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Hardware Procurement</a></li>
+          <li><a class="footer-nav__link nav-link" href="index.html">Phones and Internet</a></li>
         </ul>
       </div>
 
@@ -368,18 +363,18 @@
         <h2 class="footer-nav__header">Company</h2>
 
         <ul class="footer-nav__list">
-          <li><a class="footer-nav__link" href="about.html">About</a></li>
+          <li><a class="footer-nav__link nav-link" href="about.html">About</a></li>
           <li>
-            <a class="footer-nav__link" href="portfolio.html">Portfolio</a>
+            <a class="footer-nav__link nav-link" href="portfolio.html">Portfolio</a>
           </li>
           <li>
-            <a class="footer-nav__link" href="blog.html">Blog</a>
+            <a class="footer-nav__link nav-link" href="blog.html">Blog</a>
           </li>
-          <li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="footer-nav__link nav-link" href="contact.html">Contact</a></li>
           <li>
-            <a class="footer-nav__link" href="privacy-policy.html">Privacy Policy</a>
+            <a class="footer-nav__link nav-link" href="privacy-policy.html">Privacy Policy</a>
           </li>
-          <li><a class="footer-nav__link" href="therms.html">Terms & Conditions</a></li>
+          <li><a class="footer-nav__link nav-link" href="therms.html">Terms & Conditions</a></li>
         </ul>
       </div>
 
@@ -388,14 +383,14 @@
 
         <ul class="footer-nav__list">
           <li>
-            <div class="h-5">Phone</div>
-            <a href="tel:1800843695" class="footer-nav__link" aria-label="Make a phone call">1800&nbsp;843&nbsp;695</a>
+            <div class="footer-nav__list-header">Phone</div>
+            <a href="tel:1800843695" class="footer-nav__link nav-link" aria-label="Make a phone call">1800 843 695</a>
           </li>
 
           <li>
-            <div class="h-5">Address</div>
+            <div class="footer-nav__list-header">Address</div>
             <a
-              class="footer-nav__link"
+              class="footer-nav__link nav-link"
               aria-label="Open Google Map"
               href="https://goo.gl/maps/cWDnimrLcYismybL7"
               target="_blank"
@@ -412,7 +407,7 @@
   </nav>
 
   <div class="copyright">
-    <p>©2022 Starter site EXAMPLE</p>
+    <p>©2023 Starter site EXAMPLE</p>
     <p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
   </div>
 </div>

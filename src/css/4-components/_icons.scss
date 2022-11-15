@@ -4,14 +4,6 @@
   &_footer {
   }
 
-  @include hover {
-    filter: drop-shadow(0 0 0.75rem var(--color-primary));
-  }
-
-  &:focus-visible {
-    filter: drop-shadow(0 0 0.75rem var(--color-primary));
-  }
-
   &__icon {
     height: clamp(2.5rem, 2.0455rem + 2.2727vw, 3.75rem);
     width: clamp(2.5rem, 2.0455rem + 2.2727vw, 3.75rem);
@@ -21,11 +13,19 @@
       width: clamp(5rem, 4.0909rem + 4.5455vw, 7.5rem);
     }
   }
+
+  @include hover {
+    filter: drop-shadow(0 0 0.75rem var(--color-primary));
+  }
+
+  &:focus-visible {
+    filter: drop-shadow(0 0 0.75rem var(--color-primary));
+  }
 }
 
 .social {
   @include flex($flex-wrap: wrap, $align-items: center, $gap: 1rem);
-  @include space(var(--spacer), margin, top);
+  margin-top: var(--spacer);
 
   &__item {
   }
@@ -39,12 +39,10 @@
 
     @include hover {
       background-color: var(--color-primary);
-      box-shadow: var(--shadow-sm);
     }
 
     &:focus-visible {
       background-color: var(--color-primary);
-      box-shadow: var(--shadow-sm);
     }
   }
 

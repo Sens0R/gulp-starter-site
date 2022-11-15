@@ -61,11 +61,18 @@
 
   // spacers - margins
   .m {
+    &-auto {
+      margin: auto;
+    }
     &-#{$spacer-key} {
       margin: $spacer-value;
     }
 
     &x {
+      &-auto {
+        margin-left: auto;
+        margin-right: auto;
+      }
       &-#{$spacer-key} {
         margin-left: $spacer-value;
         margin-right: $spacer-value;
@@ -73,6 +80,10 @@
     }
 
     &y {
+      &-auto {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
       &-#{$spacer-key} {
         margin-top: $spacer-value;
         margin-bottom: $spacer-value;
@@ -80,24 +91,36 @@
     }
 
     &l {
+      &-auto {
+        margin-left: auto;
+      }
       &-#{$spacer-key} {
         margin-left: $spacer-value;
       }
     }
 
     &r {
+      &-auto {
+        margin-right: auto;
+      }
       &-#{$spacer-key} {
         margin-right: $spacer-value;
       }
     }
 
     &t {
+      &-auto {
+        margin-top: auto;
+      }
       &-#{$spacer-key} {
         margin-top: $spacer-value;
       }
     }
 
     &b {
+      &-auto {
+        margin-bottom: auto;
+      }
       &-#{$spacer-key} {
         margin-bottom: $spacer-value;
       }

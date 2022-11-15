@@ -1,46 +1,31 @@
 <!-- ====================   LOGO   ==================== -->
 
-<a aria-label="Logo-name home. Logo-name logo." class="logo col-auto" href="index.html">
-  <svg aria-hidden="true" class="logo__icon">
-    <use href="images/icons/sprite-multi.svg#logo" />
-  </svg>
-</a>
+<div class="col-auto col-xl-3">
+  <a aria-label="Logo-name home. Logo-name logo." class="logo" href="index.html">
+    <svg aria-hidden="true" class="logo__icon">
+      <use href="images/icons/sprite-multi.svg#logo" />
+    </svg>
+  </a>
+</div>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
   <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
-    <span class="nav-toggler__text nav-toggler__text_close">close menu</span>
+    <span class="nav-toggler__text nav-toggler__text_close">Close menu</span>
   </button>
 
-  <form class="nav-search" role="search">
-    <label class="visually-hidden" for="nav-search-input-mobile">Search</label>
-
-    <input
-      autocomplete="off"
-      class="nav-search__input"
-      id="nav-search-input-mobile"
-      placeholder="Search"
-      required
-      type="search"
-    />
-
-    <button aria-label="Submit search" class="nav-search__btn nav-search__btn_search" type="submit">
-      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
-        <use href="images/icons/sprite-mono.svg#search" />
-      </svg>
-    </button>
-  </form>
+  @@include('search.html',{})
 
   <ul class="nav-menu">
     <li data-nav-page class="nav-menu__item">
-      <a href="about.html" class="nav-menu__link">About</a>
+      <a href="about.html" class="nav-menu__link nav-link">About</a>
     </li>
 
-    <li data-dropdown="hover" class="nav-menu__item dropdown col-auto">
+    <li data-dropdown="hover" class="nav-menu__item dropdown">
       <div class="dropdown__controls">
-        <a href="patterns.html" class="nav-menu__link dropdown__link">Patterns</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for patterns">
+        <a href="components.html" class="nav-menu__link dropdown__link nav-link">Components</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for components">
           <svg aria-hidden="true" class="dropdown__icon">
             <use href="images/icons/sprite-mono.svg#arrow"></use>
           </svg>
@@ -55,9 +40,6 @@
             <a href="dropdowns.html" class="dropdown-list__link">Dropdowns</a>
           </li>
           <li class="dropdown-list__item">
-            <a href="accordions.html" class="dropdown-list__link">Accordions</a>
-          </li>
-          <li class="dropdown-list__item">
             <a href="dialogs.html" class="dropdown-list__link">Dialogs</a>
           </li>
         </ul>
@@ -65,15 +47,15 @@
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="portfolio.html" class="nav-menu__link">Portfolio</a>
+      <a href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="blog.html" class="nav-menu__link">Blog</a>
+      <a href="blog.html" class="nav-menu__link nav-link">Blog</a>
     </li>
 
     <li data-nav-page class="nav-menu__item">
-      <a href="contact.html" class="nav-menu__link">Contact</a>
+      <a href="contact.html" class="nav-menu__link nav-link">Contact</a>
     </li>
   </ul>
 
@@ -82,30 +64,7 @@
 
 <!-- ====================   SEARCH   ==================== -->
 
-<div class="col-auto col-md col-xl-2 col-xxl-3 nav-search-container">
-  <form class="nav-search" role="search">
-    <label class="visually-hidden" for="nav-search-input">Search</label>
-    <input
-      autocomplete="off"
-      class="nav-search__input"
-      id="nav-search-input"
-      placeholder="Search"
-      required
-      type="search"
-    />
-
-    <button
-      data-tooltip="bottom-right"
-      aria-label="Submit search"
-      class="nav-search__btn nav-search__btn_search"
-      type="submit"
-    >
-      <svg aria-hidden="true" class="nav-search__btn-icon nav-search__btn-icon_search">
-        <use href="images/icons/sprite-mono.svg#search" />
-      </svg>
-    </button>
-  </form>
-</div>
+<div class="col-auto col-md col-xl-2 col-xxl-3 search-container">@@include('search.html',{})</div>
 
 <!-- ====================   NAV-TOGGLER   ==================== -->
 

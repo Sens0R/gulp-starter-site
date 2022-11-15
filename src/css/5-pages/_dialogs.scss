@@ -71,7 +71,7 @@ dialog {
 
 .dialog {
   @include flex($flex-direction: column, $row-gap: var(--spacer));
-  @include space(var(--spacer-lg), padding, all);
+  padding: var(--spacer-lg);
   background-color: var(--color-light);
   box-shadow: var(--shadow);
   border-radius: var(--br);
@@ -128,7 +128,7 @@ dialog {
   }
 
   &__form-input {
-    @include space(0.25rem, padding, all);
+    padding: 0.25rem;
     border: 1px solid var(--color-dark);
     min-width: 100%;
     @include media-breakpoint-up(lg) {
@@ -146,7 +146,7 @@ dialog {
   }
 
   &__form-controls {
-    @include space(var(--spacer), margin, top);
+    margin-top: var(--spacer);
     @include flex($flex-wrap: wrap, $gap: var(--spacer-sm));
     @include media-breakpoint-up(lg) {
       justify-content: flex-end;
