@@ -1,3 +1,4 @@
+// Creating gap, padding and margin classes from spacer variables inside map
 @each $spacer-key, $spacer-value in $spacers {
   // gutters (flex-gap)
   .g {

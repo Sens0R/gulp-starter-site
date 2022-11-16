@@ -2,14 +2,11 @@
   @include sticky(top 0 left 0);
   z-index: var(--z-header);
   box-shadow: none;
-  translate: none;
   transition: all 0.5s ease-out;
 }
 
 .headroom_unpinned {
-  @include media-breakpoint-up(lg) {
-    translate: 0 -100%;
-  }
+ 
 }
 
 .headroom_not-top {
@@ -19,10 +16,6 @@
 .header {
   @include flex($flex-wrap: wrap, $align-items: center, $gap: var(--spacer));
   padding: 0.75rem;
-
-  @include media-breakpoint-up(sm) {
-    gap: var(--spacer-lg);
-  }
 
   @include media-breakpoint-up(xxl) {
     padding: 0.75rem var(--spacer-lg);

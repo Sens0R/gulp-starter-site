@@ -17,15 +17,9 @@
     translate: -50%;
   }
 
-  &.active {
-    .dropdown__content {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .dropdown__icon {
-      rotate: 90deg;
-    }
+  &__link {
+    padding: var(--spacer-sm);
+    width: 100%;
   }
 
   &__btn {
@@ -46,21 +40,15 @@
     @include box(1rem, 1rem);
     transition: var(--transition);
   }
-}
 
-.dropdown-list {
-  &__link {
-    padding: var(--spacer-sm);
-    width: 100%;
-
-    @include hover {
-      background-color: var(--color-dark);
-      color: var(--color-light);
+  &.active {
+    .dropdown__content {
+      visibility: visible;
+      opacity: 1;
     }
 
-    &:focus-visible {
-      background-color: var(--color-dark);
-      color: var(--color-light);
+    .dropdown__icon {
+      rotate: 90deg;
     }
   }
 }

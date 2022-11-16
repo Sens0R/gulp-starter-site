@@ -1,0 +1,97 @@
+.dialog {
+  @include flex($flex-direction: column, $row-gap: var(--spacer));
+  padding: var(--spacer);
+  border: 1px solid var(--color-dark);
+  z-index: 9999;
+  width: 35rem;
+  max-width: 90vw;
+
+  &_small {
+    width: 25rem;
+  }
+
+  &__header {
+    @include flex($justify-content: space-between, $align-items: center, $column-gap: 1rem);
+  }
+
+  &__controls {
+    @include flex($flex-wrap: wrap, $justify-content: flex-end, $gap: var(--spacer-sm));
+  }
+
+  .cancel-icon {
+    @include box(1.25rem, 1.25rem);
+  }
+}
+
+/* ====================   DIALOG AND BACKDROP ANIMATIONS   ==================== */
+
+dialog {
+  &.fade-in {
+    animation: dialog-in 0.4s forwards;
+  }
+
+  &.fade-out {
+    animation: dialog-out 0.5s forwards;
+  }
+
+  &.fade-in::backdrop {
+    animation: backdrop-in 0.8s forwards;
+  }
+
+  &.fade-out::backdrop {
+    animation: backdrop-out 0.5s forwards;
+  }
+
+  @keyframes dialog-in {
+    from {
+      translate: 0 25%;
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+      translate: 0;
+    }
+  }
+
+  @keyframes dialog-out {
+    0% {
+      scale: 1;
+      opacity: 1;
+    }
+
+    25% {
+      scale: 1.075;
+      opacity: 1;
+    }
+
+    100% {
+      scale: 0.5;
+      opacity: 0;
+    }
+  }
+
+  @keyframes backdrop-in {
+    from {
+      background: rgba(0 0 0 / 0);
+      backdrop-filter: blur(0);
+    }
+
+    to {
+      background: rgba(0 0 0 / 0.4);
+      backdrop-filter: blur(0.125rem);
+    }
+  }
+
+  @keyframes backdrop-out {
+    from {
+      background: rgba(0 0 0 / 0.4);
+      backdrop-filter: blur(0.125rem);
+    }
+
+    to {
+      background: rgba(0 0 0 / 0);
+      backdrop-filter: blur(0);
+    }
+  }
+}

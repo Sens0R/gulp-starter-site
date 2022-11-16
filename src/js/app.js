@@ -8,25 +8,15 @@ import { hamburger } from './modules/hamburger.js'
 import { animateOnScroll } from './modules/animate-on-scroll.js'
 import { search } from './modules/search.js'
 import { tooltip } from './modules/tooltip.js'
-import { xl } from './modules/breakpoints.js'
 import { dialog } from './modules/dialog.js'
 
 activePageHighlight()
-
 animateOnScroll()
-
 headroom()
-
 hamburger()
-
 dropdown()
-
 search()
-
 tooltip()
-
 tabs()
-
 accordion()
-
 dialog()

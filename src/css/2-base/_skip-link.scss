@@ -4,14 +4,13 @@
   width: 100%;
   text-align: center;
   z-index: 999;
-  background-color: var(--color-secondary);
+  background-color: var(--color-dark);
   font-weight: bold;
   font-size: var(--fs-4);
   text-transform: uppercase;
   color: var(--color-light);
   padding: 0.5rem;
   translate: 0 -100%;
-
   transition: var(--transition);
 
   &:focus-visible {

@@ -9,14 +9,11 @@
 @import '0-helpers/mixins';
 @import '0-helpers/variable-mixins';
 @import '0-helpers/maps';
-@import '0-helpers/spacers';
+@import '0-helpers/functions';
 
 // 1 - TOOLS
-
 @import '1-tools/swiper';
 @import '1-tools/animations';
-
-@import '1-tools/tooltips';
 
 // 2 - BASE
 @import '2-base/fonts';
@@ -28,20 +25,20 @@
 // 3 - LAYOUT
 @import '3-layout/header/header';
 @import '3-layout/footer';
-@import '3-layout/background-gradient';
 @import '3-layout/backdrop';
 @import '3-layout/card';
+@import '3-layout/banner';
 
 // 4 - COMPONENTS
 @import '4-components/icons';
 @import '4-components/buttons';
 @import '4-components/links';
-@import '4-components/banner';
 @import '4-components/accordion';
 @import '4-components/dropdown';
+@import '4-components/tabs';
+@import '4-components/dialog';
+@import '4-components/tooltip';
 
 // 5 - PAGES
 @import '5-pages/home';
-@import '5-pages/tabs';
-@import '5-pages/dropdowns';
-@import '5-pages/dialogs';
+

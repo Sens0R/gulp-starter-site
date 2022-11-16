@@ -3,8 +3,10 @@
   /* ====================   COLORS   ==================== */
   /* ==================================================== */
 
+  //ADD SWIPER
   //BACKGROUND FOR CONTENT BLOCK
   //HAMBURGER FOCUS TRAP
+  //FIX OUTSIDE CLICK FOR DIALOG
 
   // basic colors
   --color-black: hsl(0, 0%, 0%);
@@ -12,7 +14,7 @@
 
   // brand colors
   --color-blue: hsl(198, 100%, 46%);
-  --color-blue-light: hsl(198, 75%, 61%);
+  --color-blue-light: hsl(198, 84%, 71%);
   --color-blue-dark: hsl(198, 97%, 37%);
   --color-yellow: hsl(42, 100%, 50%);
   --color-yellow-light: hsl(42, 100%, 65%);
@@ -96,7 +98,7 @@
   --hr: 1px solid var(--color-dark);
 
   // shadows
-  --shadow: 5px 5px 0 var(--color-black);
+  --shadow: box-shadow: 0.5rem 0 1rem 0.5rem rgba(0 0 0 / 0.25);
 
   // transitions
   --transition: 0.3s ease-out;
