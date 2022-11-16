@@ -13,10 +13,9 @@ const currentPage = window.location.href
 
 export function activePageHighlight() {
   pagesArr.forEach(page => {
-    const pageLinkEl = page.querySelector('a')
-    if (currentPage === pageLinkEl.href) {
+    if (currentPage === page.href) {
       page.classList.add('active-page')
-      pageLinkEl.setAttribute('aria-current', 'page')
+      page.setAttribute('aria-current', 'page')
     }
   })
 }

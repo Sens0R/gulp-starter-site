@@ -1,5 +1,5 @@
 export function animateOnScroll() {
-  const sectionObserver = new IntersectionObserver(entries =>
+  const animationObserver = new IntersectionObserver(entries =>
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show')
@@ -10,9 +10,9 @@ export function animateOnScroll() {
     })
   )
 
-  const sections = document.querySelectorAll('[data-animate]')
+  const animations = document.querySelectorAll('[data-animate]')
 
-  sections.forEach(section => {
-    sectionObserver.observe(section)
+  animations.forEach(animation => {
+    animationObserver.observe(animation)
   })
 }

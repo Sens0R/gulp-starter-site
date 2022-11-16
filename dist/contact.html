@@ -62,14 +62,14 @@
 </form>
 
   <ul class="nav-menu">
-    <li data-nav-page class="nav-menu__item">
-      <a href="about.html" class="nav-menu__link nav-link">About</a>
+    <li class="nav-menu__item">
+      <a data-nav-page href="about.html" class="nav-menu__link nav-link">About</a>
     </li>
 
     <li data-dropdown="hover" class="nav-menu__item dropdown">
       <div class="dropdown__controls">
-        <a href="components.html" class="nav-menu__link nav-link">Services</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for components">
+        <a data-nav-page href="services.html" class="nav-menu__link nav-link">Services</a>
+        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
           <svg aria-hidden="true" class="dropdown__icon">
             <use href="images/icons/sprite-mono.svg#arrow"></use>
           </svg>
@@ -92,16 +92,16 @@
       </div>
     </li>
 
-    <li data-nav-page class="nav-menu__item">
-      <a href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
+    <li class="nav-menu__item">
+      <a data-nav-page href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
     </li>
 
-    <li data-nav-page class="nav-menu__item">
-      <a href="blog.html" class="nav-menu__link nav-link">Blog</a>
+    <li class="nav-menu__item">
+      <a data-nav-page href="blog.html" class="nav-menu__link nav-link">Blog</a>
     </li>
 
-    <li data-nav-page class="nav-menu__item">
-      <a href="contact.html" class="nav-menu__link nav-link">Contact</a>
+    <li class="nav-menu__item">
+      <a data-nav-page href="contact.html" class="nav-menu__link nav-link">Contact</a>
     </li>
   </ul>
 
@@ -169,89 +169,6 @@
    
     
 
-
-<div class="container-fluid container-lg contact">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 contact-col">
-      <h2 class="about__header">We'd love to hear from you</h2>
-
-      <ul class="contact__list">
-        <li class="contact__item">
-          <p class="contact__list-header">Email</p>
-          <a class="contact__link" href="mailto:service@skinclinica.com.au" target="_blank"
-            >service@skinclinica.com.au</a
-          >
-        </li>
-
-        <li class="contact__item">
-          <p class="contact__list-header">Phone</p>
-          <a href="tel:+61251347278" class="contact__link">61&nbsp;2&nbsp;5134&nbsp;7278</a>
-        </li>
-
-        <li class="contact__item">
-          <p class="contact__list-header">Social</p>
-          <div class="contact__social"><ul class="social">
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
-      </svg>
-    </a>
-  </li>
-
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
-      </svg>
-    </a>
-  </li>
-
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
-      </svg>
-    </a>
-  </li>
-</ul>
-</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4 contact-col">
-      <h2 class="about__header">Contact form</h2>
-
-      <form class="contact-form">
-        <div class="contact__item">
-          <label for="contacts-name" class="contact__list-header">Name</label>
-          <input autocomplete="off" id="contacts-name" type="text" name="name" class="contact-form__input" />
-        </div>
-
-        <div class="contact__item">
-          <label for="contacts-email" class="contact__list-header">Email address <span>(required)</span></label>
-          <input id="contacts-email" type="email" name="email" class="contact-form__input" required />
-        </div>
-
-        <div class="contact__item">
-          <label for="conctacts-message" class="contact__list-header">Your message <span>(required)</span></label>
-          <textarea
-            id="conctacts-message"
-            name="message"
-            rows="4"
-            cols="50"
-            class="contact-form__input"
-            placeholder="Enter your message here..."
-            required
-          ></textarea>
-        </div>
-
-        <button class="btn" type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
-</div>
 
 </main>
 <footer class="footer">
