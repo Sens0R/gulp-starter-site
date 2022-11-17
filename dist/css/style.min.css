@@ -5335,6 +5335,8 @@ blockquote {
   border: 1px solid var(--color-dark);
   background-color: var(--color-light);
   overflow: auto;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
   visibility: hidden;
   opacity: 0;
   min-width: 300px;
