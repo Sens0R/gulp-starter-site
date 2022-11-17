@@ -3,9 +3,6 @@
   /* ====================   COLORS   ==================== */
   /* ==================================================== */
 
-  //ADD SWIPER
-  //BACKGROUND FOR CONTENT BLOCK
-  //HAMBURGER FOCUS TRAP
   //FIX OUTSIDE CLICK FOR DIALOG
 
   // basic colors
@@ -104,9 +101,10 @@
   --transition: 0.3s ease-out;
 
   // z-index
-  --z-hamburger-toggler: 600;
   --z-tooltip: 500;
   --z-dropdown: 400;
+  --z-dialog: 300;
+  --z-hamburger-toggler: 200;
   --z-hamburger: 100;
   --z-hamburger-backdrop: 90;
   --z-header: 50;

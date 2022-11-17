@@ -131,3 +131,9 @@
     position: sticky !important;
   }
 }
+
+.bg-image {
+  @include absolute(top 0 left 0);
+  @include box(100%, 100%);
+  z-index: -1;
+}

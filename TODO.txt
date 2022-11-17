@@ -1,3 +1,2 @@
 // es lint htmlhint
-// prevent headroom.js header from showing when using keyboard
-// javascript breakpoints in app object
+

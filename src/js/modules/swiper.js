@@ -1,6 +1,6 @@
 import Swiper, { Navigation, Pagination, Keyboard, Autoplay, A11y } from 'swiper'
 
-const swiperShop = new Swiper('.slider', {
+const swiper = new Swiper('.slider', {
   modules: [Navigation, Pagination, Keyboard, Autoplay, A11y],
 
   pagination: {
@@ -67,18 +67,18 @@ const swiperShop = new Swiper('.slider', {
 
 /* ====================   INTERSECTION OBSERVERS ==================== */
 
-const swiperElArr = document.querySelectorAll('.swiper')
+const autoplaySwipers = document.querySelectorAll('[data-swiper-autoplay]')
 
-const shopObserver = new IntersectionObserver(
+const swiperAutoplayObserver = new IntersectionObserver(
   entries =>
     entries.forEach(entry => {
-      entry.isIntersecting ? swiperShop.autoplay.start() : swiperShop.autoplay.stop()
+      entry.isIntersecting ? swiper.autoplay.start() : swiper.autoplay.stop()
     }),
   {
     threshold: 0.75,
   }
 )
 
-swiperElArr.forEach(swiperEl => {
-  if (swiperEl) shopObserver.observe(swiperEl)
+autoplaySwipers.forEach(swiperInstance => {
+  if (swiperInstance) swiperAutoplayObserver.observe(swiperInstance)
 })

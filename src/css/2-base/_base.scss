@@ -151,19 +151,6 @@ h6,
   font-weight: var(--fw-headings);
 }
 
-dialog {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  opacity: 0;
-  overflow: auto;
-  visibility: hidden;
-
-  &[open] {
-    visibility: visible;
-  }
-}
-
 button {
   border: none;
   background-color: transparent;

@@ -24,14 +24,14 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock'
 * </dialog>
 */
 
-const openButtonsArr = document.querySelectorAll('[data-dialog-btn-open]')
+const openButtonsArr = document.querySelectorAll('[data-dialog-open]')
 
 export function dialog() {
   openButtonsArr.forEach(openBtnEl => {
-    const openButtonElAttrValue = openBtnEl.dataset.dialogBtnOpen
+    const openButtonElAttrValue = openBtnEl.dataset.dialogOpen
     const dialogEl = document.querySelector(`[data-dialog="${openButtonElAttrValue}"]`)
-    const submitBtnEl = document.querySelector(`[data-dialog-btn-submit="${openButtonElAttrValue}"]`)
-    const closeButtonsArr = document.querySelectorAll(`[data-dialog-btn-close="${openButtonElAttrValue}"]`)
+    const submitBtnEl = document.querySelector(`[data-dialog-submit="${openButtonElAttrValue}"]`)
+    const closeButtonsArr = document.querySelectorAll(`[data-dialog-close="${openButtonElAttrValue}"]`)
     const manualFocusEl = document.querySelector(`[data-dialog-focus="${openButtonElAttrValue}"]`)
 
     const focusableElements = Array.from(
@@ -40,6 +40,24 @@ export function dialog() {
 
     const firstFocusableEl = focusableElements.at(0)
     const lastFocusableEl = focusableElements.at(-1)
+
+    const createBackdrop = document.createElement('div')
+    createBackdrop.classList.add('dialog-backdrop')
+    dialogEl.before(createBackdrop)
+    const backdrop = dialogEl.previousElementSibling
+    backdrop.addEventListener('click', closeDialog)
+
+    openBtnEl.addEventListener('click', () => {
+      // click outside
+      dialogEl.classList.add('active')
+      backdrop.classList.add('active')
+      //disablePageScroll(dialogEl)
+
+      if (manualFocusEl) {
+        manualFocusEl.setAttribute('tabindex', '-1')
+        manualFocusEl.focus()
+      }
+    })
 
     dialogEl.addEventListener('keydown', e => {
       if (e.code === 'Escape') {
@@ -60,43 +78,24 @@ export function dialog() {
       }
     })
 
-    openBtnEl.addEventListener('click', () => {
-      dialogEl.showModal()
-      dialogEl.classList.add('fade-in')
-      disablePageScroll(dialogEl)
-
-      if (manualFocusEl) {
-        manualFocusEl.setAttribute('tabindex', '-1')
-        manualFocusEl.focus()
-      }
-    })
-
-    dialogEl.addEventListener('close', () => {
-      dialogEl.classList.remove('fade-in')
-      dialogEl.setAttribute('aria-hidden', 'true')
-      enablePageScroll(dialogEl)
-    })
-
     closeButtonsArr.forEach(closeBtnEl => closeBtnEl.addEventListener('click', closeDialog))
 
-    if (submitBtnEl) submitBtnEl.addEventListener('click', () => {
-      // add submit button functionality here
-    })
-
-    dialogEl.addEventListener('click', event => {
-      if (event.target.nodeName === 'DIALOG') closeDialog()
-    })
+    if (submitBtnEl)
+      submitBtnEl.addEventListener('click', () => {
+        // add submit button functionality here
+      })
 
     function closeDialog() {
-      dialogEl.classList.add('fade-out')
-      dialogEl.addEventListener(
-        'animationend',
+      dialogEl.classList.remove('active')
+      backdrop.classList.remove('active')
+
+     /*  dialogEl.addEventListener(
+        'transitionend',
         () => {
-          dialogEl.classList.remove('fade-out')
-          dialogEl.close()
+          enablePageScroll(dialogEl)
         },
         { once: true }
-      )
+      ) */
     }
   })
 }

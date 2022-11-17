@@ -19,7 +19,7 @@
 
 
 <body>
-
+    
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="header-sticky-wrapper">
     <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
@@ -171,6 +171,7 @@
 
 
 </main>
+
 <footer class="footer">
   <div class="container-fluid container-xxl footer-container">
   <nav aria-label="Footer" class="footer-nav">
@@ -277,13 +278,62 @@
   </nav>
 
   <div class="copyright">
-    <p>©2023 Starter site EXAMPLE</p>
+    <p>©2023 Starter site</p>
     <p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
   </div>
 </div>
 
 </footer>
 
-</body>
 </div>
+<div class="dialogs">
+  <div aria-labelledby="Dialog-title-1" data-dialog="1" class="dialog">
+    <p id="Dialog-title-1" class="dialog__title h-5 color-primary">Dialog title</p>
+    <a href="index.html" class="link">Dialog link</a>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+      quod nam. Qui, iure?
+    </p>
+
+    <menu class="dialog__controls">
+      <li><button class="btn-reverse" data-dialog-open="2" type="button">Dialog lvl2</button></li>
+      <li><button class="btn-reverse" data-dialog-close="1" type="button">Close</button></li>
+    </menu>
+  </div>
+
+  <div aria-labelledby="Dialog-title-2" data-dialog="2" class="dialog dialog_small">
+    <div id="Dialog-title-2" class="dialog__header">
+      <p class="dialog__title h-5 color-primary">Dialog lvl2 title</p>
+      <button data-dialog-close="2" class="link-space" type="button" aria-label="close dialog">
+        <svg aria-hidden="true" class="cancel-icon">
+          <use href="images/icons/sprite-mono.svg#cancel"></use>
+        </svg>
+      </button>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, omnis.</p>
+  </div>
+</div>
+
+</body>
+
 </html>

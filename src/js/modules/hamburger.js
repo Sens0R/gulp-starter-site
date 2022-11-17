@@ -23,9 +23,9 @@ export function hamburger(userOptions) {
   let { togglerOpen, togglerClose, aria, breakpoint } = options
 
   const createBackdrop = document.createElement('div')
-  createBackdrop.classList.add('backdrop')
+  createBackdrop.classList.add('dialog-backdrop')
   mainElement.after(createBackdrop)
-  const backdrop = document.querySelector('.backdrop')
+  const backdrop = document.querySelector('.dialog-backdrop')
 
   togglerOpen = document.querySelector(togglerOpen)
   togglerClose = document.querySelector(togglerClose)
@@ -94,7 +94,7 @@ export function hamburger(userOptions) {
     })
 
     mainElement.addEventListener('keydown', e => {
-      if (e.code === 9) {
+      if (e.code === 'Tab') {
         if (e.shiftKey && document.activeElement === firstFocusableElement) {
           e.preventDefault()
           lastFocusableElement.focus()

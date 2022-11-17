@@ -2972,9 +2972,10 @@
   --hr: 1px solid var(--color-dark);
   --shadow: box-shadow: 0.5rem 0 1rem 0.5rem rgba(0 0 0 / 0.25);
   --transition: 0.3s ease-out;
-  --z-hamburger-toggler: 600;
   --z-tooltip: 500;
   --z-dropdown: 400;
+  --z-dialog: 300;
+  --z-hamburger-toggler: 200;
   --z-hamburger: 100;
   --z-hamburger-backdrop: 90;
   --z-header: 50;
@@ -3985,18 +3986,6 @@ h6,
   font-weight: var(--fw-headings);
 }
 
-dialog {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  opacity: 0;
-  overflow: auto;
-  visibility: hidden;
-}
-dialog[open] {
-  visibility: visible;
-}
-
 button {
   border: none;
   background-color: transparent;
@@ -4286,6 +4275,15 @@ blockquote {
 }
 .position-sticky {
   position: sticky !important;
+}
+
+.bg-image {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .skip-link {
@@ -4642,10 +4640,20 @@ blockquote {
   color: var(--color-light);
   border-color: var(--color-primary);
 }
+.nav-toggler_close:focus-visible .nav-toggler__text {
+  translate: 0.5rem;
+}
+.nav-toggler_close:focus-visible .nav-toggler__icon_close {
+  translate: -0.5rem;
+  fill: var(--color-light);
+}
 .nav-toggler__text {
   font-size: 0.75rem;
   font-weight: bold;
   text-transform: uppercase;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
 }
 .nav-toggler__icon {
   width: 2.25rem;
@@ -4658,6 +4666,9 @@ blockquote {
   width: 1.125rem;
   height: 1.125rem;
   margin-left: auto;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
 }
 @media (min-width: 992px) {
   .nav-toggler {
@@ -4745,7 +4756,6 @@ blockquote {
   visibility: hidden;
   opacity: 0;
   margin: 0;
-  cursor: pointer;
   -webkit-transition: opacity var(--transition), visibility var(--transition);
   -o-transition: opacity var(--transition), visibility var(--transition);
   transition: opacity var(--transition), visibility var(--transition);
@@ -4753,7 +4763,6 @@ blockquote {
 
 .backdrop.active {
   opacity: 1;
-  pointer-events: auto;
   visibility: visible;
 }
 
@@ -5310,6 +5319,9 @@ blockquote {
 }
 
 .dialog {
+  top: 50%;
+  left: 50%;
+  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5318,14 +5330,30 @@ blockquote {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: var(--spacer);
+  z-index: var(--z-dialog);
   padding: var(--spacer);
   border: 1px solid var(--color-dark);
-  z-index: 9999;
-  width: 35rem;
-  max-width: 90vw;
+  background-color: var(--color-light);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 300px;
+  max-width: 35rem;
+  max-height: 85vh;
+  scale: 0;
+  translate: -50% -50%;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.dialog.active {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
 }
 .dialog_small {
-  width: 25rem;
+  min-width: 260px;
+  max-width: 25rem;
 }
 .dialog__header {
   display: -webkit-box;
@@ -5357,126 +5385,25 @@ blockquote {
   height: 1.25rem;
 }
 
-/* ====================   DIALOG AND BACKDROP ANIMATIONS   ==================== */
-dialog.fade-in {
-  -webkit-animation: dialog-in 0.4s forwards;
-          animation: dialog-in 0.4s forwards;
+/* ====================   DIALOG BACKDROP   ==================== */
+.dialog-backdrop {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-dialog);
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
-dialog.fade-out {
-  -webkit-animation: dialog-out 0.5s forwards;
-          animation: dialog-out 0.5s forwards;
-}
-dialog.fade-in::-webkit-backdrop {
-  -webkit-animation: backdrop-in 0.8s forwards;
-          animation: backdrop-in 0.8s forwards;
-}
-dialog.fade-in::backdrop {
-  -webkit-animation: backdrop-in 0.8s forwards;
-          animation: backdrop-in 0.8s forwards;
-}
-dialog.fade-out::-webkit-backdrop {
-  -webkit-animation: backdrop-out 0.5s forwards;
-          animation: backdrop-out 0.5s forwards;
-}
-dialog.fade-out::backdrop {
-  -webkit-animation: backdrop-out 0.5s forwards;
-          animation: backdrop-out 0.5s forwards;
-}
-@-webkit-keyframes dialog-in {
-  from {
-    translate: 0 25%;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    translate: 0;
-  }
-}
-@keyframes dialog-in {
-  from {
-    translate: 0 25%;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    translate: 0;
-  }
-}
-@-webkit-keyframes dialog-out {
-  0% {
-    scale: 1;
-    opacity: 1;
-  }
-  25% {
-    scale: 1.075;
-    opacity: 1;
-  }
-  100% {
-    scale: 0.5;
-    opacity: 0;
-  }
-}
-@keyframes dialog-out {
-  0% {
-    scale: 1;
-    opacity: 1;
-  }
-  25% {
-    scale: 1.075;
-    opacity: 1;
-  }
-  100% {
-    scale: 0.5;
-    opacity: 0;
-  }
-}
-@-webkit-keyframes backdrop-in {
-  from {
-    background: rgba(0, 0, 0, 0);
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  to {
-    background: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
-  }
-}
-@keyframes backdrop-in {
-  from {
-    background: rgba(0, 0, 0, 0);
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-  to {
-    background: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
-  }
-}
-@-webkit-keyframes backdrop-out {
-  from {
-    background: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
-  }
-  to {
-    background: rgba(0, 0, 0, 0);
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
-}
-@keyframes backdrop-out {
-  from {
-    background: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(0.125rem);
-            backdrop-filter: blur(0.125rem);
-  }
-  to {
-    background: rgba(0, 0, 0, 0);
-    -webkit-backdrop-filter: blur(0);
-            backdrop-filter: blur(0);
-  }
+
+.dialog-backdrop.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .tooltip {

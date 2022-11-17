@@ -1,13 +1,34 @@
+.dialogs {
+}
+
 .dialog {
+  @include fixed(top 50% left 50%);
   @include flex($flex-direction: column, $row-gap: var(--spacer));
+  z-index: var(--z-dialog);
   padding: var(--spacer);
   border: 1px solid var(--color-dark);
-  z-index: 9999;
-  width: 35rem;
-  max-width: 90vw;
+  background-color: var(--color-light);
+  overflow: auto;
+  visibility: hidden;
+  opacity: 0;
+
+  min-width: 300px;
+  max-width: 35rem;
+  max-height: 85vh;
+
+  scale: 0;
+  translate: -50% -50%;
+  transition: 0.3s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    scale: 1;
+  }
 
   &_small {
-    width: 25rem;
+    min-width: 260px;
+    max-width: 25rem;
   }
 
   &__header {
@@ -23,75 +44,19 @@
   }
 }
 
-/* ====================   DIALOG AND BACKDROP ANIMATIONS   ==================== */
+/* ====================   DIALOG BACKDROP   ==================== */
 
-dialog {
-  &.fade-in {
-    animation: dialog-in 0.4s forwards;
-  }
+.dialog-backdrop {
+  @include fixed(top 0 left 0);
+  @include box(100vw, 100vh);
+  z-index: var(--z-dialog);
+  background: rgba(0 0 0 / 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
 
-  &.fade-out {
-    animation: dialog-out 0.5s forwards;
-  }
-
-  &.fade-in::backdrop {
-    animation: backdrop-in 0.8s forwards;
-  }
-
-  &.fade-out::backdrop {
-    animation: backdrop-out 0.5s forwards;
-  }
-
-  @keyframes dialog-in {
-    from {
-      translate: 0 25%;
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-      translate: 0;
-    }
-  }
-
-  @keyframes dialog-out {
-    0% {
-      scale: 1;
-      opacity: 1;
-    }
-
-    25% {
-      scale: 1.075;
-      opacity: 1;
-    }
-
-    100% {
-      scale: 0.5;
-      opacity: 0;
-    }
-  }
-
-  @keyframes backdrop-in {
-    from {
-      background: rgba(0 0 0 / 0);
-      backdrop-filter: blur(0);
-    }
-
-    to {
-      background: rgba(0 0 0 / 0.4);
-      backdrop-filter: blur(0.125rem);
-    }
-  }
-
-  @keyframes backdrop-out {
-    from {
-      background: rgba(0 0 0 / 0.4);
-      backdrop-filter: blur(0.125rem);
-    }
-
-    to {
-      background: rgba(0 0 0 / 0);
-      backdrop-filter: blur(0);
-    }
-  }
+.dialog-backdrop.active {
+  opacity: 1;
+  visibility: visible;
 }
