@@ -9,6 +9,7 @@
   border: 1px solid var(--color-dark);
   background-color: var(--color-light);
   overflow: auto;
+  overscroll-behavior: contain;
   visibility: hidden;
   opacity: 0;
 
