@@ -4676,6 +4676,28 @@ blockquote {
   }
 }
 
+/* ====================   HAMBURGER BACKDROP   ==================== */
+.hamburger-backdrop {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: var(--z-hamburger-backdrop);
+  background: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  margin: 0;
+  -webkit-transition: opacity var(--transition), visibility var(--transition);
+  -o-transition: opacity var(--transition), visibility var(--transition);
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.hamburger-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .footer {
   padding-top: var(--spacer-xl);
 }
@@ -4743,27 +4765,6 @@ blockquote {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: var(--spacer-lg);
-}
-
-.backdrop {
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: var(--z-hamburger-backdrop);
-  background: rgba(0, 0, 0, 0.5);
-  visibility: hidden;
-  opacity: 0;
-  margin: 0;
-  -webkit-transition: opacity var(--transition), visibility var(--transition);
-  -o-transition: opacity var(--transition), visibility var(--transition);
-  transition: opacity var(--transition), visibility var(--transition);
-}
-
-.backdrop.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .card {
@@ -5334,6 +5335,8 @@ blockquote {
   padding: var(--spacer);
   border: 1px solid var(--color-dark);
   background-color: var(--color-light);
+  -webkit-box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 2rem rgba(0, 0, 0, 0.4);
   overflow: auto;
   -ms-scroll-chaining: none;
       overscroll-behavior: contain;
@@ -5370,6 +5373,11 @@ blockquote {
   -webkit-column-gap: 1rem;
      -moz-column-gap: 1rem;
           column-gap: 1rem;
+}
+.dialog__title {
+  font-size: var(--fs-5);
+  color: var(--color-primary);
+  font-weight: var(--fw-bold);
 }
 .dialog__controls {
   display: -webkit-box;

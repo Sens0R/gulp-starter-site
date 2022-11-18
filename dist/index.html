@@ -170,6 +170,7 @@
     
 
 <!-- ====================   BANNER   ==================== -->
+<button data-dialog-open="1" type="button" class="btn d-flex m-auto">Open dialog</button>
 
 <div class="banner">
   <picture>
@@ -974,7 +975,7 @@
     <a class="btn" href="index.html">link .btn</a>
     <a class="btn-reverse" href="index.html">link .btn-reverse</a>
 
-    <button data-dialog-open="1" type="button" class="btn">Open dialog</button>
+    
 
     <button type="button" class="btn">button .btn</button>
     <button type="button" class="btn-reverse">button .btn-reverse</button>
@@ -1951,29 +1952,9 @@
 
 </div>
 <div class="dialogs">
-  <div aria-labelledby="Dialog-title-1" data-dialog="1" class="dialog">
-    <p id="Dialog-title-1" class="dialog__title h-5 color-primary">Dialog title</p>
-    <a href="index.html" class="link">Dialog link</a>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
+  <div data-dialog="1" class="dialog">
+    <p class="dialog__title">Dialog title</p>
+    <a href="index.html" class="link">test</a>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
       quod nam. Qui, iure?
@@ -1985,9 +1966,9 @@
     </menu>
   </div>
 
-  <div aria-labelledby="Dialog-title-2" data-dialog="2" class="dialog dialog_small">
-    <div id="Dialog-title-2" class="dialog__header">
-      <p class="dialog__title h-5 color-primary">Dialog lvl2 title</p>
+  <div data-dialog="2" class="dialog dialog_small">
+    <div class="dialog__header">
+      <p class="dialog__title">Dialog lvl2 title</p>
       <button data-dialog-close="2" class="link-space" type="button" aria-label="close dialog">
         <svg aria-hidden="true" class="cancel-icon">
           <use href="images/icons/sprite-mono.svg#cancel"></use>

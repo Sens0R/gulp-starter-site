@@ -1,5 +1,3 @@
-
-
 const defaultOptions = {
   mainElement: '[data-hamburger]',
   togglerOpen: '[data-hamburger-btn="open"]',
@@ -23,9 +21,9 @@ export function hamburger(userOptions) {
   let { togglerOpen, togglerClose, aria, breakpoint } = options
 
   const createBackdrop = document.createElement('div')
-  createBackdrop.classList.add('dialog-backdrop')
+  createBackdrop.classList.add('hamburger-backdrop')
   mainElement.after(createBackdrop)
-  const backdrop = document.querySelector('.dialog-backdrop')
+  const backdrop = document.querySelector('.hamburger-backdrop')
 
   togglerOpen = document.querySelector(togglerOpen)
   togglerClose = document.querySelector(togglerClose)
@@ -109,7 +107,7 @@ export function hamburger(userOptions) {
   function closeWithEsc(e) {
     if (e.code === 'Escape') {
       close()
-      if (mainElement.contains(document.activeElement)) togglerOpen.focus()
+      togglerOpen.focus()
     }
   }
 }

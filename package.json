@@ -46,7 +46,6 @@
     "gulp-version-number": "latest",
     "headroom.js": "latest",
     "sass": "latest",
-    "scroll-lock": "latest",
     "swiper": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
