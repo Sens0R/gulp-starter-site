@@ -15,7 +15,7 @@
 *   <p data-dialog-focus data-dialog-label>Dialog title</p>
 *   <p data-dialog-desc>This is dialog example</p>
 *   <button data-dialog-submit type="submit">Submit</button>
-*   <button data-dialog-close type="reset">Close</button>   
+*   <button data-dialog-close type="button">Close</button>   
 * </div>
 */
 
