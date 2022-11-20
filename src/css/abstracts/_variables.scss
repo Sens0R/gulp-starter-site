@@ -53,14 +53,14 @@
   --ff-primary: 'Montserrat', Arial, sans-serif;
 
   // font sizes
-  --fs: var(--fs-0);
-  --fs-0: 1rem; // 16
-  --fs-1: #{clamp-smart(40, 62)}; // 62 > 40 2rem + 2.5vw
-  --fs-2: #{clamp-smart(34, 48)}; // 48 > 34
-  --fs-3: #{clamp-smart(28, 36)}; // 36 > 28
-  --fs-4: #{clamp-smart(22, 26)}; // 26 > 22
-  --fs-5: #{clamp-smart(16, 18)}; // 18 > 16
-  --fs-6: 0.875rem; // 14
+  --fs: var(--fs-0); //base font
+  --fs-0: 1rem; 
+  --fs-1: #{clamp-smart(40, 62)}; 
+  --fs-2: #{clamp-smart(34, 48)}; 
+  --fs-3: #{clamp-smart(28, 36)}; 
+  --fs-4: #{clamp-smart(22, 26)}; 
+  --fs-5: #{clamp-smart(16, 18)}; 
+  --fs-6: 0.875rem; 
   
   // line heights
   --lh: 1.65;
