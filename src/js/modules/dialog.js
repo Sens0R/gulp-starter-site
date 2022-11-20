@@ -1,25 +1,22 @@
-/* 
-* 1. Select button(can be more than one) that opens dialog element with data-dialog-open attribute.
-* 2. Select dialog element with data-dialog attribute.
-* 3. Select button(can be more than one) that closes dialog element with data-dialog-close attribute.
-* 4. All elements among dialog instance selected with data attributes should have same unique attribute value. This will allow to distinguish multiple different dialog instances. See example below. 
+/** 
+* 1. Select button/s that opens dialog with DATA-DIALOG-OPEN attribute.
+* 2. Select dialog with DATA-DIALOG attribute.
+* 3. For multiple dialogs button/s and dialog data attributes should have identical unique attribute value. For single dialog you can leave blank attribute value.
+* 4. Select button/s inside dialog that closes dialog with DATA-DIALOG-CLOSE attribute.
 
 * OPTIONAL:
-* 1. Select submit form button element inside dialog with data-dialog-submit attribute.
-* 2. Set focus on element with data-dialog-focus attribute. Default focus: first focusable element.
+* 1. Use DATA-DIALOG-LABEL and/or DATA-DIALOG-DESC attributes on element for all needed aria-labelledby and aria-describedby functionality. 
+* 2. Set focus on ANY element with DATA-DIALOG-FOCUS attribute. Default focus: first focusable element.
+* 3. Select submit form button element inside dialog with DATA-DIALOG-SUBMIT attribute, add functionality in javascript.
 
 * EXAMPLE: 
-* <button data-dialog-open="1" type="button">Open dialog</button>
-* <dialog data-dialog="1">
-*   <p data-dialog-focus="1"></p>
-*   <form action="" method="dialog">
-*     <label>
-*       <input type="text"/>
-*     </label>
-*     <button data-dialog-submit="1" type="submit">Submit</button>
-*     <button data-dialog-close="1" type="reset">Close</button>   
-*   </form>
-* </dialog>
+* <button data-dialog-open="two" type="button">Open dialog</button>
+* <div data-dialog="two">
+*   <p data-dialog-focus data-dialog-label>Dialog title</p>
+*   <p data-dialog-desc>This is dialog example</p>
+*   <button data-dialog-submit type="submit">Submit</button>
+*   <button data-dialog-close type="reset">Close</button>   
+* </div>
 */
 
 const openButtonsArr = document.querySelectorAll('[data-dialog-open]')
@@ -44,8 +41,16 @@ export function dialog() {
   openButtonsArr.forEach(openBtnEl => {
     const openButtonElAttrValue = openBtnEl.dataset.dialogOpen
     const dialogEl = document.querySelector(`[data-dialog="${openButtonElAttrValue}"]`)
-    const submitBtnEl = document.querySelector(`[data-dialog-submit="${openButtonElAttrValue}"]`)
-    const closeButtonsArr = document.querySelectorAll(`[data-dialog-close="${openButtonElAttrValue}"]`)
+    const submitBtnEl = dialogEl.querySelector(`[data-dialog-submit]`)
+    const closeButtonsArr = dialogEl.querySelectorAll(`[data-dialog-close]`)
+    const labelEl = dialogEl.querySelector(`[data-dialog-label]`)
+    const descEl = dialogEl.querySelector(`[data-dialog-desc]`)
+    const manualFocusEl = dialogEl.querySelector(`[data-dialog-focus]`)
+    const focusableElArr = Array.from(
+      dialogEl.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+    )
+    const firstFocusableEl = focusableElArr.at(0)
+    const lastFocusableEl = focusableElArr.at(-1)
 
     const createBackdrop = document.createElement('div')
     createBackdrop.classList.add('dialog-backdrop')
@@ -54,20 +59,27 @@ export function dialog() {
     backdrop.addEventListener('click', closeDialog)
 
     openBtnEl.addEventListener('click', () => {
-      dialogEl.classList.add('active')
-      backdrop.classList.add('active')
-
       topLevelOpenButtons.push(openBtnEl)
       topLevelOpenBtn = topLevelOpenButtons.at(-1)
+
       activeDialogs.push(dialogEl)
       topLevelDialog = activeDialogs.at(-1)
+      topLevelDialog.classList.add('active')
+
       activeBackdrops.push(backdrop)
       topLevelBackdrop = activeBackdrops.at(-1)
+      topLevelBackdrop.classList.add('active')
+
+      if (manualFocusEl) dialogEl.addEventListener('transitionend', () => manualFocusEl.focus(), { once: true })
     })
 
     closeButtonsArr.forEach(closeBtnEl => {
-      closeBtnEl.addEventListener('click', closeDialog)
-      closeBtnEl.addEventListener('keydown', e => setFocus(openBtnEl, e))
+      closeBtnEl.addEventListener('click', () => {
+        closeDialog()
+        topLevelOpenBtn.focus()
+        topLevelOpenButtons.pop()
+        topLevelOpenBtn = topLevelOpenButtons.at(-1)
+      })
     })
 
     if (submitBtnEl)
@@ -77,18 +89,24 @@ export function dialog() {
 
     /* ====================   A11Y   ==================== */
 
-    const manualFocusEl = document.querySelector(`[data-dialog-focus="${openButtonElAttrValue}"]`)
-    const focusableElArr = Array.from(
-      dialogEl.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
-    )
-
-    const firstFocusableEl = focusableElArr.at(0)
-    const lastFocusableEl = focusableElArr.at(-1)
-
+    // aria
     dialogEl.setAttribute('role', 'dialog')
     dialogEl.setAttribute('aria-modal', 'true')
 
-    if (manualFocusEl) openBtnEl.addEventListener('keydown', e => setFocus(manualFocusEl, e))
+    if (labelEl) {
+      const labelElId = `dialog-label${openButtonElAttrValue}`
+      labelEl.id = labelElId
+      dialogEl.setAttribute('aria-labelledby', labelElId)
+    }
+
+    if (descEl) {
+      const descElId = `dialog-desc${openButtonElAttrValue}`
+      descEl.id = descElId
+      dialogEl.setAttribute('aria-describedby', descElId)
+    }
+
+    // focus
+
     if (!manualFocusEl) openBtnEl.addEventListener('keydown', e => setFocus(firstFocusableEl, e))
 
     focusTrap()
