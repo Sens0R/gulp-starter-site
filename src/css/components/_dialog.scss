@@ -1,6 +1,10 @@
 .dialog {
-  @include fixed(top 50% left 50%);
-  @include flex($flex-direction: column, $row-gap: var(--spacer));
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacer);
   z-index: var(--z-dialog);
   padding: var(--spacer);
   border: 1px solid var(--color-dark);
@@ -31,7 +35,10 @@
   }
 
   &__header {
-    @include flex($justify-content: space-between, $align-items: center, $column-gap: 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
   }
 
   &__title {
@@ -41,19 +48,25 @@
   }
 
   &__controls {
-    @include flex($flex-wrap: wrap, $justify-content: flex-end, $gap: var(--spacer-sm));
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacer-sm);
   }
 
   .cancel-icon {
-    @include box(1.25rem, 1.25rem);
+    width: 1.25rem;
+    height: 1.25rem;
   }
 }
 
 /* ====================   DIALOG BACKDROP   ==================== */
 
 .dialog-backdrop {
-  @include fixed(top 0 left 0);
-  @include box(100vw, 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: var(--z-dialog);
   background: rgba(0 0 0 / 0.5);
   visibility: hidden;

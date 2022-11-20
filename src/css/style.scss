@@ -2,42 +2,41 @@
 # Import
 --------------------------------------------------------------*/
 
-@import '1-tools/bootstrap';
+@import 'tools/bootstrap';
 
 // 0 - HELPERS
-@import '0-helpers/variables';
-@import '0-helpers/mixins';
-@import '0-helpers/variable-mixins';
-@import '0-helpers/maps';
-@import '0-helpers/functions';
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/variable-mixins';
+@import 'abstracts/maps';
 
 // 1 - TOOLS
-@import '1-tools/swiper';
-@import '1-tools/animations';
+@import 'tools/swiper';
+@import 'tools/animations';
 
 // 2 - BASE
-@import '2-base/fonts';
-@import '2-base/base';
-@import '2-base/selectors';
-@import '2-base/skip-link';
-@import '2-base/active-page';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/selectors';
+@import 'base/skip-link';
 
 // 3 - LAYOUT
-@import '3-layout/header/header';
-@import '3-layout/footer';
-@import '3-layout/card';
-@import '3-layout/banner';
+@import 'layout/header/header';
+@import 'layout/footer';
+@import 'layout/card';
+@import 'layout/banner';
 
 // 4 - COMPONENTS
-@import '4-components/icons';
-@import '4-components/buttons';
-@import '4-components/links';
-@import '4-components/accordion';
-@import '4-components/dropdown';
-@import '4-components/tabs';
-@import '4-components/dialog';
-@import '4-components/tooltip';
+@import 'components/icons';
+@import 'components/buttons';
+@import 'components/links';
+@import 'components/accordion';
+@import 'components/dropdown';
+@import 'components/tabs';
+@import 'components/dialog';
+@import 'components/tooltip';
 
 // 5 - PAGES
-@import '5-pages/home';
+@import 'pages/home';
 

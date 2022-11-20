@@ -45,7 +45,8 @@ header {
 }
 
 .body-wrapper {
-  @include flex($flex-direction: column);
+  display: flex;
+  flex-direction: column;
   min-height: 90vh;
   overflow: hidden;
 }

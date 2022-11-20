@@ -34,3 +34,14 @@ $font-weights: (
   semi-bold: var(--fw-semi-bold),
   bold: var(--fw-bold),
 );
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$grid-gutter-width: 2rem;

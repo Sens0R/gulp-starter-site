@@ -11,11 +11,13 @@
   }
 
   &__column {
-    @include flex($flex-direction: column);
+    display: flex;
+    flex-direction: column;
   }
 
   &__list {
-    @include flex($flex-direction: column);
+    display: flex;
+    flex-direction: column;
     height: 100%;
   }
 
@@ -28,7 +30,9 @@
   }
 
   &__link {
-    @include flex($justify-content: center, $flex-direction: column);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 0.75rem 0;
     font-weight: var(--fw-medium);
   }
@@ -40,6 +44,8 @@
 }
 
 .copyright {
-  @include flex($justify-content: space-between, $align-items: center);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-bottom: var(--spacer-lg);
 }

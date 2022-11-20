@@ -5,12 +5,12 @@
   }
 
   &__icon {
-    height: clamp(2.5rem, 2.0455rem + 2.2727vw, 3.75rem);
-    width: clamp(2.5rem, 2.0455rem + 2.2727vw, 3.75rem);
+    height: clamp-smart(40, 60);
+    width: clamp-smart(40, 60);
 
     &_footer {
-      height: clamp(5rem, 4.0909rem + 4.5455vw, 7.5rem);
-      width: clamp(5rem, 4.0909rem + 4.5455vw, 7.5rem);
+      height: clamp-smart(80, 120);
+      width: clamp-smart(80, 120);
     }
   }
 
@@ -24,15 +24,21 @@
 }
 
 .social {
-  @include flex($flex-wrap: wrap, $align-items: center, $gap: 1rem);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: var(--spacer);
 
   &__item {
   }
 
   &__link {
-    @include flex($justify-content: center, $align-items: center);
-    @include box(2.75rem, 2.75rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
     border-radius: 100%;
     background-color: var(--color-dark);
     transition: var(--transition);
@@ -47,7 +53,8 @@
   }
 
   &__icon {
-    @include box(1rem, 1rem);
+    width: 1rem;
+    height: 1rem;
     fill: var(--color-light);
   }
 }

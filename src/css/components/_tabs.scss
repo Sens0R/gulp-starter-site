@@ -6,7 +6,8 @@
   }
 
   &__tablist {
-    @include flex($align-items: stretch);
+    display: flex;
+    align-items: stretch;
 
     &_vertical {
       flex-direction: column;
@@ -59,7 +60,9 @@
 }
 
 .tabpanel {
-  @include flex($flex-direction: column, $gap: var(--spacer));
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
   visibility: hidden;
   overflow: hidden;
   height: 0;

@@ -20,7 +20,8 @@
 }
 
 .box-link {
-  @include flex($display: inline-flex, $align-items: center);
+  display: inline-flex;
+  align-items: center;
   @include link-space();
   color: var(--color-primary);
   font-size: var(--fs-0);
@@ -30,7 +31,8 @@
   line-height: 1;
 
   &__icon {
-    @include box(0.75rem, 0.75rem);
+    width: 0.75rem;
+    height: 0.75rem;
     margin-left: 0.25rem;
     fill: var(--color-primary);
     transition: var(--transition);
@@ -58,7 +60,7 @@
 .nav-link {
   text-decoration: underline 1px solid transparent;
   transition: var(--transition);
-  
+
   @include hover {
     color: var(--color-accent);
     text-decoration-color: var(--color-accent);

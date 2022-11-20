@@ -1,0 +1,71 @@
+// Hover only for mouse users 
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// Invisible space for better link and button selecting 
+@mixin link-space($width: 100%, $height: 100%, $size: 48px) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: $width;
+    height: $height;
+    min-width: $size;
+    min-height: $size;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+}
+
+@mixin stretch-section() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin bp($breakpoint: md, $minmax: min) {
+  $breakpoint-value: map-get($grid-breakpoints, $breakpoint);
+  @if ($minmax == max) {
+    $breakpoint-value: #{map-get($grid-breakpoints, $breakpoint) - 1};
+  }
+  @media (#{$minmax}-width: $breakpoint-value) {
+    @content;
+  }
+}
+
+// Keep for screen readers, hide for others 
+@mixin visually-hidden() {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+// Creating classes from maps
+@mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
+  @each $key, $value in $map {
+    &#{if($key != $base, #{$prefix}#{$key}, '')} {
+      @if type-of($value) == 'map' {
+        @include modifiers($value, $attribute, $separator);
+      } @else {
+        #{$attribute}: $value;
+      }
+    }
+  }
+}
+

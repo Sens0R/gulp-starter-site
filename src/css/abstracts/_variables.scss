@@ -4,7 +4,7 @@
   /* ==================================================== */
 
   // shurik clamp mixin
-  //banner vmax clamp https://ishadeed.com/articles/
+  // banner vmax clamp https://ishadeed.com/articles/
 
   // basic colors
   --color-black: hsl(0, 0%, 0%);
@@ -45,6 +45,8 @@
   --color-selection: var(--color-light);
   --color-bg-selection: var(--color-accent);
 
+  --color-active-page: var(--color-primary);
+
   /* ======================================================== */
   /* ====================   TYPOGRAPHY   ==================== */
   /* ======================================================== */
@@ -54,13 +56,13 @@
   // font sizes
   --fs: var(--fs-0);
   --fs-0: 1rem; // 16
-  --fs-1: clamp(2.5rem, 2rem + 2.5vw, 3.88rem); // 62 > 40
-  --fs-2: clamp(2.13rem, 1.81rem + 1.59vw, 3rem); // 48 > 34
-  --fs-3: clamp(1.75rem, 1.57rem + 0.91vw, 2.25rem); // 36 > 28
-  --fs-4: clamp(1.38rem, 1.28rem + 0.45vw, 1.63rem); // 26 > 22
-  --fs-5: clamp(1rem, 0.95rem + 0.23vw, 1.13rem); // 18 > 16
+  --fs-1: #{clamp-smart(40, 62)}; // 62 > 40 2rem + 2.5vw
+  --fs-2: #{clamp-smart(34, 48)}; // 48 > 34
+  --fs-3: #{clamp-smart(28, 36)}; // 36 > 28
+  --fs-4: #{clamp-smart(22, 26)}; // 26 > 22
+  --fs-5: #{clamp-smart(16, 18)}; // 18 > 16
   --fs-6: 0.875rem; // 14
-
+  
   // line heights
   --lh: 1.65;
   --lh-sm: 1.2;
@@ -83,10 +85,10 @@
   /* ======================================================= */
 
   // spacers
-  --spacer: clamp(1rem, calc(0.82rem + 0.91vw), 1.5rem); // 24 > 16
-  --spacer-sm: clamp(0.5rem, calc(0.41rem + 0.45vw), 0.75rem); // 12 > 8
-  --spacer-lg: clamp(1.5rem, calc(0.95rem + 2.73vw), 3rem); // 48 > 24
-  --spacer-xl: clamp(2rem, calc(0.55rem + 7.27vw), 6rem); // 96 > 48
+  --spacer: #{clamp-smart(16, 24)}; // 24 > 16
+  --spacer-sm: #{clamp-smart(8, 12)}; // 12 > 8
+  --spacer-lg: #{clamp-smart(24, 48)}; // 48 > 24
+  --spacer-xl: #{clamp-smart(48, 96)}; // 96 > 48
 
   // borders
   --border: 1px solid var(--color-dark);

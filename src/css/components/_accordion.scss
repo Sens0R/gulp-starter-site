@@ -10,7 +10,9 @@
 }
 
 .accordion {
-  @include flex($flex-direction: column, $gap: var(--spacer));
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer);
 
   &__item {
     border: var(--border);
@@ -20,7 +22,9 @@
   }
 
   &__button {
-    @include flex($justify-content: space-between, $column-gap: var(--spacer));
+    display: flex;
+    justify-content: space-between;
+    column-gap: var(--spacer);
     padding: var(--spacer);
     width: 100%;
     font-weight: var(--fw-bold);
@@ -57,7 +61,9 @@
   }
 
   &__content {
-    @include flex($flex-direction: column, $gap: var(--spacer));
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacer);
     padding: 0 var(--spacer);
 
     > :first-child {
@@ -70,7 +76,8 @@
   }
 
   &__icon {
-    @include box(1.25rem, 1.25rem);
+    width: 1.25rem;
+    height: 1.25rem;
     display: flex;
     align-self: center;
     fill: var(--color-dark);

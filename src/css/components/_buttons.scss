@@ -1,5 +1,7 @@
 @mixin btn {
-  @include flex($display: inline-flex, $justify-content: center, $align-items: center);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.875rem 2.25rem;
   background-color: var(--color-dark);
   color: var(--color-light);
@@ -36,6 +38,8 @@
     color: var(--color-light);
   }
 }
+
+/* ====================   IMPORTS   ==================== */
 
 .btn {
   @include btn();

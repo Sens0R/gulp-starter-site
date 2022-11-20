@@ -2,11 +2,14 @@
   position: relative;
 
   &__controls {
-    @include flex($justify-content: space-between, $align-items: stretch);
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
   }
 
   &__content {
-    @include absolute(left 50%);
+    position: absolute;
+    left: 50%;
     visibility: hidden;
     opacity: 0;
     min-width: 9.375rem;
@@ -31,13 +34,15 @@
       fill: var(--color-dark);
 
       .nav-menu__icon {
-        @include box(1rem, 1rem);
+        width: 1rem;
+        height: 1rem;
       }
     }
   }
 
   &__icon {
-    @include box(1rem, 1rem);
+    width: 1rem;
+    height: 1rem;
     transition: var(--transition);
   }
 

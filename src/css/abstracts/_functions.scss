@@ -1,0 +1,18 @@
+@function round-smart($value, $decimals: 1000) {
+  @return calc(round($value * $decimals) / $decimals);
+}
+
+@function clamp-smart($min, $max, $unit: 'rem', $start: 360, $end: 1200) {
+  $min-value: #{calc($min/16)}#{$unit};
+  $max-value: #{calc($max/16)}#{$unit};
+
+  $start-value: calc(($start * $max - $end * $min) / ($start - $end) / 16);
+  $start-value: #{round-smart($start-value)}#{$unit};
+
+  $end-value: calc((100 * ($max - $min)) / ($end - $start));
+  $end-value: #{round-smart($end-value)}vw;
+
+  @return clamp($min-value, $start-value + $end-value, $max-value);
+}
+
+

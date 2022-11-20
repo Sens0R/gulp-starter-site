@@ -1,12 +1,13 @@
 .header-sticky-wrapper {
-  @include sticky(top 0 left 0);
+  position: sticky;
+  top: 0;
+  left: 0;
   z-index: var(--z-header);
   box-shadow: none;
   transition: all 0.5s ease-out;
 }
 
 .headroom_unpinned {
- 
 }
 
 .headroom_not-top {
@@ -14,15 +15,19 @@
 }
 
 .header {
-  @include flex($flex-wrap: wrap, $align-items: center, $gap: var(--spacer));
+  display: flex;
+  align-items: center;
+  gap: var(--spacer);
+  flex-wrap: wrap;
   padding: 0.75rem;
 
-  @include media-breakpoint-up(xxl) {
+  @include bp(xxl) {
     padding: 0.75rem var(--spacer-lg);
   }
 }
 
 /* ====================   IMPORTS   ==================== */
+
 @import 'nav-menu';
 @import 'search';
 @import 'hamburger';
