@@ -3,13 +3,11 @@
 .swiper {
   width: 100%;
   height: 100%;
-}
 
-.swiper-slide {
-  height: auto; // all swiper slides same height
-}
+  &-slide {
+    height: auto; // all swiper slides same height
+  }
 
-.slider {
   //navigation
   &__buttons {
     display: flex;
@@ -32,12 +30,12 @@
     }
 
     @include hover {
-      &:not(.slider__btn_disabled) {
+      &:not(.swiper__btn_disabled) {
         background-color: var(--color-accent);
       }
     }
 
-    &:focus-visible:not(.slider__btn_disabled) {
+    &:focus-visible:not(.swiper__btn_disabled) {
       background-color: var(--color-accent);
     }
   }

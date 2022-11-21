@@ -1436,20 +1436,20 @@
 
 <section class="section container-fluid container-xxl">
   <h2 data-animate="section-header" class="text-center uppercase">Slider</h2>
-  <div class="slider__buttons">
-    <button type="button" class="slider__btn slider__btn_prev">
-      <svg aria-hidden="true" class="slider__icon rotate-left">
+  <div class="swiper__buttons">
+    <button data-swiper-prev type="button" class="swiper__btn swiper__btn_prev">
+      <svg aria-hidden="true" class="swiper__icon rotate-left">
         <use href="images/icons/sprite-mono.svg#arrow"></use>
       </svg>
     </button>
 
-    <button type="button" class="slider__btn slider__btn_next">
-      <svg aria-hidden="true" class="slider__icon rotate-right">
+    <button data-swiper-next type="button" class="swiper__btn swiper__btn_next">
+      <svg aria-hidden="true" class="swiper__icon rotate-right">
         <use href="images/icons/sprite-mono.svg#arrow"></use>
       </svg>
     </button>
   </div>
-  <div data-swiper-autoplay class="swiper slider">
+  <div data-swiper data-swiper-autoplay class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="card">
@@ -1830,7 +1830,7 @@
     </div>
   </div>
 
-  <div class="slider__pagination"></div>
+  <div data-swiper-pagination class="swiper__pagination"></div>
 </section>
 
 </main>

@@ -1,26 +1,25 @@
 import Swiper, { Navigation, Pagination, Keyboard, Autoplay, A11y } from 'swiper'
 
-const swiper = new Swiper('.slider', {
+const swiper = new Swiper('[data-swiper]', {
   modules: [Navigation, Pagination, Keyboard, Autoplay, A11y],
-
-  pagination: {
-    bulletClass: 'slider__bullet',
-    bulletActiveClass: 'slider__bullet_active',
-    el: '.slider__pagination',
-    clickable: true,
-  },
-
+  direction: 'horizontal',
   //loop: true,
   a11y: true,
-
   autoplay: {
     delay: 6000,
   },
 
+  pagination: {
+    bulletClass: 'swiper__bullet',
+    bulletActiveClass: 'swiper__bullet_active',
+    el: '[data-swiper-pagination]', // pagination selector
+    clickable: true,
+  },
+
   navigation: {
-    nextEl: '.slider__btn_next',
-    prevEl: '.slider__btn_prev',
-    disabledClass: 'slider__btn_disabled',
+    nextEl: '[data-swiper-next]', // next btn selector
+    prevEl: '[data-swiper-prev]', // prev btn selector
+    disabledClass: 'swiper__btn_disabled',
   },
 
   // responsive breakpoints
@@ -55,9 +54,7 @@ const swiper = new Swiper('.slider', {
       speed: 2000,
     },
   },
-
-  direction: 'horizontal',
-
+ 
   keyboard: {
     enabled: true,
     onlyVisible: true,
