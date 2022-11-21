@@ -18,9 +18,9 @@ html {
 }
 
 body {
-  font-size: var(--fs);
+  font-size: var(--f-base);
   font-family: var(--ff-primary);
-  font-weight: var(--fw);
+  font-weight: var(--fw-base);
   color: var(--color);
   background-color: var(--color-bg-body);
   line-height: var(--lh);
@@ -37,7 +37,7 @@ textarea,
 input,
 button {
   font-family: var(--ff-primary);
-  font-size: var(--fs);
+  font-size: var(--f-base);
 }
 
 header {
@@ -94,47 +94,47 @@ img {
   aspect-ratio: 4 / 3;
 }
 
-.fs-0 {
-  font-size: 1rem;
+.f0 {
+  font-size: var(--f0);
 }
 
 h1,
-.h-1,
-.fs-1 {
-  font-size: var(--fs-1);
+.h1,
+.f1 {
+  font-size: var(--f1);
   line-height: var(--lh-headings);
 }
 
 h2,
-.h-2,
-.fs-2 {
-  font-size: var(--fs-2);
+.h2,
+.f2 {
+  font-size: var(--f2);
   line-height: var(--lh-headings);
 }
 
 h3,
-.h-3,
-.fs-3 {
-  font-size: var(--fs-3);
+.h3,
+.f3 {
+  font-size: var(--f3);
   line-height: var(--lh-headings);
 }
 
 h4,
-.h-4,
-.fs-4 {
-  font-size: var(--fs-4);
+.h4,
+.f4 {
+  font-size: var(--f4);
 }
 
 h5,
-.h-5,
-.fs-5 {
-  font-size: var(--fs-5);
+.h5,
+.f5 {
+  font-size: var(--f5);
 }
 
 h6,
-.h-6,
-.fs-6 {
-  font-size: var(--fs-6);
+.h6,
+.f6 {
+  font-size: var(--f6);
 }
 
 h1,
@@ -143,12 +143,12 @@ h3,
 h4,
 h5,
 h6,
-.h-1,
-.h-2,
-.h-3,
-.h-4,
-.h-5,
-.h-6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-weight: var(--fw-headings);
 }
 

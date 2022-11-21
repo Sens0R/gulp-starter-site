@@ -1,8 +1,8 @@
 $spacers: (
-  base: var(--spacer),
-  sm: var(--spacer-sm),
-  lg: var(--spacer-lg),
-  xl: var(--spacer-xl),
+  '': var(--spacer),
+  -sm: var(--spacer-sm),
+  -md: var(--spacer-md),
+  -lg: var(--spacer-lg),
 );
 
 $colors: (
@@ -28,11 +28,11 @@ $colors: (
 );
 
 $font-weights: (
-  light: var(--fw-light),
-  regular: var(--fw-regular),
-  medium: var(--fw-medium),
-  semi-bold: var(--fw-semi-bold),
-  bold: var(--fw-bold),
+  sm: var(--fw-sm),
+  base: var(--fw),
+  md: var(--fw-md),
+  lg: var(--fw-lg),
+  xl: var(--fw-xl),
 );
 
 $grid-breakpoints: (

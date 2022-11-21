@@ -16,18 +16,18 @@
 @each $spacer-key, $spacer-value in $spacers {
   // gutters (flex-gap)
   .g {
-    &-#{$spacer-key} {
+    &#{$spacer-key} {
       display: flex;
       gap: $spacer-value;
       flex-wrap: wrap;
     }
 
-    &x-#{$spacer-key} {
+    &x#{$spacer-key} {
       display: flex;
       column-gap: $spacer-value;
     }
 
-    &y-#{$spacer-key} {
+    &y#{$spacer-key} {
       display: flex;
       row-gap: $spacer-value;
     }
@@ -35,46 +35,34 @@
 
   // spacers - padding
   .p {
-    &-#{$spacer-key} {
+    &#{$spacer-key} {
       padding: $spacer-value;
     }
 
-    &x {
-      &-#{$spacer-key} {
-        padding-left: $spacer-value;
-        padding-right: $spacer-value;
-      }
+    &x#{$spacer-key} {
+      padding-left: $spacer-value;
+      padding-right: $spacer-value;
     }
 
-    &y {
-      &-#{$spacer-key} {
-        padding-top: $spacer-value;
-        padding-bottom: $spacer-value;
-      }
+    &y#{$spacer-key} {
+      padding-top: $spacer-value;
+      padding-bottom: $spacer-value;
     }
 
-    &l {
-      &-#{$spacer-key} {
-        padding-left: $spacer-value;
-      }
+    &s#{$spacer-key} {
+      padding-left: $spacer-value;
     }
 
-    &r {
-      &-#{$spacer-key} {
-        padding-right: $spacer-value;
-      }
+    &e#{$spacer-key} {
+      padding-right: $spacer-value;
     }
 
-    &t {
-      &-#{$spacer-key} {
-        padding-top: $spacer-value;
-      }
+    &t#{$spacer-key} {
+      padding-top: $spacer-value;
     }
 
-    &b {
-      &-#{$spacer-key} {
-        padding-bottom: $spacer-value;
-      }
+    &b#{$spacer-key} {
+      padding-bottom: $spacer-value;
     }
   }
 
@@ -83,7 +71,7 @@
     &-auto {
       margin: auto;
     }
-    &-#{$spacer-key} {
+    &#{$spacer-key} {
       margin: $spacer-value;
     }
 
@@ -92,7 +80,7 @@
         margin-left: auto;
         margin-right: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-left: $spacer-value;
         margin-right: $spacer-value;
       }
@@ -103,26 +91,26 @@
         margin-top: auto;
         margin-bottom: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-top: $spacer-value;
         margin-bottom: $spacer-value;
       }
     }
 
-    &l {
+    &s {
       &-auto {
         margin-left: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-left: $spacer-value;
       }
     }
 
-    &r {
+    &e {
       &-auto {
         margin-right: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-right: $spacer-value;
       }
     }
@@ -131,7 +119,7 @@
       &-auto {
         margin-top: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-top: $spacer-value;
       }
     }
@@ -140,7 +128,7 @@
       &-auto {
         margin-bottom: auto;
       }
-      &-#{$spacer-key} {
+      &#{$spacer-key} {
         margin-bottom: $spacer-value;
       }
     }

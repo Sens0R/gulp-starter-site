@@ -53,42 +53,42 @@
   --ff-primary: 'Montserrat', Arial, sans-serif;
 
   // font sizes
-  --fs: var(--fs-0);
-  --fs-0: 1rem; // 16
-  --fs-1: #{clamp-smart(40, 62)}; // 62 > 40 2rem + 2.5vw
-  --fs-2: #{clamp-smart(34, 48)}; // 48 > 34
-  --fs-3: #{clamp-smart(28, 36)}; // 36 > 28
-  --fs-4: #{clamp-smart(22, 26)}; // 26 > 22
-  --fs-5: #{clamp-smart(16, 18)}; // 18 > 16
-  --fs-6: 0.875rem; // 14
+  --f-base: var(--f0); 
+  --f0: 1rem; 
+  --f1: #{clamp-smart(40, 62)}; 
+  --f2: #{clamp-smart(34, 48)}; 
+  --f3: #{clamp-smart(28, 36)}; 
+  --f4: #{clamp-smart(22, 26)}; 
+  --f5: #{clamp-smart(16, 18)}; 
+  --f6: 0.875rem; 
   
   // line heights
-  --lh: 1.65;
   --lh-sm: 1.2;
-  --lh-lg: 2;
+  --lh: 1.65;
+  --lh-md: 2;
   --lh-headings: 1.2;
   --underline-offset: 30%;
 
   // weights
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
+  --fw-sm: 300;
+  --fw: 400;
+  --fw-md: 500
+  --fw-lg: 600;
+  --fw-xl: 700;
 
-  --fw: var(--fw-regular);
-  --fw-headings: var(--fw-bold);
+  --fw-base: var(--fw);
+  --fw-headings: var(--fw-xl);
 
   /* ======================================================= */
   /* ====================   STRUCTURE   ==================== */
   /* ======================================================= */
 
   // spacers
-  --spacer: #{clamp-smart(16, 24)}; // 24 > 16
-  --spacer-sm: #{clamp-smart(8, 12)}; // 12 > 8
-  --spacer-lg: #{clamp-smart(24, 48)}; // 48 > 24
-  --spacer-xl: #{clamp-smart(48, 96)}; // 96 > 48
-
+  --spacer: #{clamp-smart(12, 24)}; 
+  --spacer-sm: calc(var(--spacer) / 2); 
+  --spacer-md: calc(var(--spacer) * 2); 
+  --spacer-lg: calc(var(--spacer) * 4); 
+ 
   // borders
   --border: 1px solid var(--color-dark);
   --br: 0.625rem;
