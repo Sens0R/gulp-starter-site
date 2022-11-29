@@ -1,0 +1,10 @@
+{
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"scss.format.enable": false,
+	"css.format.enable": false,
+	"typescript.format.enable": false,
+	"less.format.enable": false,
+	"javascript.format.enable": false,
+	"json.format.enable": false,
+	"html.format.enable": false
+}

@@ -2,41 +2,42 @@
 # Import
 --------------------------------------------------------------*/
 
-@import 'tools/bootstrap';
-
-// 0 - HELPERS
+// HELPERS
 @import 'abstracts/functions';
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-@import 'abstracts/variable-mixins';
-@import 'abstracts/maps';
+// component mixins
+@import 'components/links/link-mixin';
+@import 'components/buttons/button-mixin';
 
-// 1 - TOOLS
+// TOOLS
+@import 'tools/bootstrap';
 @import 'tools/swiper';
 @import 'tools/animations';
 
-// 2 - BASE
+// BASE
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/selectors';
+@import 'base/custom-selectors';
 @import 'base/skip-link';
+@import 'base/containers';
 
-// 3 - LAYOUT
+// LAYOUT
 @import 'layout/header/header';
 @import 'layout/footer';
 @import 'layout/card';
 @import 'layout/banner';
 
-// 4 - COMPONENTS
+// COMPONENTS
 @import 'components/icons';
-@import 'components/buttons';
-@import 'components/links';
+@import 'components/buttons/button';
+@import 'components/links/link';
 @import 'components/accordion';
 @import 'components/dropdown';
 @import 'components/tabs';
 @import 'components/dialog';
 @import 'components/tooltip';
 
-// 5 - PAGES
+// PAGES
 @import 'pages/home';
-

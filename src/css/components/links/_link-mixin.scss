@@ -1,0 +1,15 @@
+@mixin underline {
+	text-decoration-color: currentColor;
+
+	@include hover {
+		text-decoration-color: transparent;
+	}
+}
+
+@mixin underline-reverse() {
+	text-decoration-color: transparent;
+
+	@include hover {
+		text-decoration-color: currentColor;
+	}
+}

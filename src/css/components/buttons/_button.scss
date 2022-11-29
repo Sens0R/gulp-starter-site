@@ -1,4 +1,4 @@
-@mixin btn {
+@mixin button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -23,8 +23,8 @@
   }
 }
 
-@mixin btn-reverse {
-  @extend .btn;
+@mixin button-reverse {
+  @extend %button;
   background-color: var(--color-light);
   color: var(--color-dark);
 
@@ -41,10 +41,11 @@
 
 /* ====================   IMPORTS   ==================== */
 
-.btn {
-  @include btn();
+.button,
+%button {
+  @include button();
 }
 
-.btn-reverse {
-  @include btn-reverse();
+.button-reverse {
+  @include button-reverse();
 }

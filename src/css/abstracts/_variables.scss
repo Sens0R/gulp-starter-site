@@ -1,115 +1,203 @@
 :root {
-  /* ==================================================== */
-  /* ====================   COLORS   ==================== */
-  /* ==================================================== */
+	/*
+|--------------------------------------------------------------------------
+|	COLORS
+|--------------------------------------------------------------------------
+*/
 
-  // banner vmax clamp https://ishadeed.com/articles/
+	// shades
+	--color-black: hsl(0, 5%, 15%);
+	--color-gray: hsl(240, 1%, 65%);
+	--color-white: hsl(0, 0%, 100%);
 
-  // basic colors
-  --color-black: hsl(0, 0%, 0%);
-  --color-white: hsl(0, 0%, 100%);
+	// feedback
+	--color-error: hsl(4, 90%, 58%);
+	--color-success: hsl(147, 100%, 35%);
+	--color-warning: hsl(41, 100%, 80%);
 
-  // brand colors
-  --color-blue: hsl(198, 100%, 46%);
-  --color-blue-light: hsl(198, 84%, 71%);
-  --color-blue-dark: hsl(198, 97%, 37%);
-  --color-yellow: hsl(42, 100%, 50%);
-  --color-yellow-light: hsl(42, 100%, 65%);
-  --color-yellow-dark: hsl(34, 100%, 50%);
-  --color-orange: hsl(14, 92%, 54%);
-  --color-orange-light: hsl(14, 95%, 64%);
-  --color-orange-dark: hsl(14, 97%, 44%);
+	// brand
+	--color-primary: hsl(198, 100%, 46%);
+	--color-primary-light: hsl(198, 100%, 71%);
+	--color-primary-dark: hsl(198, 100%, 37%);
+	--color-secondary: hsl(42, 100%, 60%);
+	--color-accent: hsl(14, 100%, 54%);
+	--color-neutral: hsl(290, 60%, 74%);
 
-  // color variables
-  --color-primary: var(--color-blue);
-  --color-primary-light: var(--color-blue-light);
-  --color-primary-dark: var(--color-blue-dark);
-  --color-secondary: var(--color-yellow);
-  --color-secondary-light: var(--color-yellow-light);
-  --color-secondary-dark: var(--color-yellow-dark);
-  --color-accent: var(--color-orange);
-  --color-accent-light: var(--color-orange-light);
-  --color-accent-dark: var(--color-orange-dark);
-  --color-light: var(--color-white);
-  --color-dark: var(--color-black);
+	// backgrounds
+	--color-bg: var(--color-primary-light);
+	--color-bg-body: var(--color-white);
+	--color-bg-header: var(--color-white);
+	--color-bg-footer: var(--color-white);
 
-  // base variables
-  --color: var(--color-dark);
-  --color-focus-outline: var(--color-primary);
+	// typography
+	--color-text: var(--color-black);
+	--color-text-muted: var(--color-gray);
+	--color-text-headings: var(--color-black);
+	--color-blockquote-border: var(--color-primary);
 
-  --color-bg-body: var(--color-light);
-  --color-bg-header: var(--color-light);
-  --color-bg-footer: var(--color-light);
+	// selection
+	--color-text-selection: var(--color-white);
+	--color-bg-selection: var(--color-primary);
 
-  --color-selection: var(--color-light);
-  --color-bg-selection: var(--color-accent);
+	// focus
+	--color-focus: var(--color-accent);
 
-  --color-active-page: var(--color-primary);
+	/*
+|--------------------------------------------------------------------------
+|	TYPOGRAPHY
+|--------------------------------------------------------------------------
+*/
 
-  /* ======================================================== */
-  /* ====================   TYPOGRAPHY   ==================== */
-  /* ======================================================== */
+	--ff-primary: 'Montserrat', Arial, sans-serif;
 
-  --ff-primary: 'Montserrat', Arial, sans-serif;
+	// font sizes
+	--fs-0: 1rem; // base font-size
+	--fs-1: #{clamp-smart(40, 62)};
+	--fs-2: #{clamp-smart(34, 48)};
+	--fs-3: #{clamp-smart(28, 36)};
+	--fs-4: #{clamp-smart(22, 26)};
+	--fs-5: #{clamp-smart(16, 18)};
+	--fs-6: 0.875rem;
 
-  // font sizes
-  --f-base: var(--f0); 
-  --f0: 1rem; 
-  --f1: #{clamp-smart(40, 62)}; 
-  --f2: #{clamp-smart(34, 48)}; 
-  --f3: #{clamp-smart(28, 36)}; 
-  --f4: #{clamp-smart(22, 26)}; 
-  --f5: #{clamp-smart(16, 18)}; 
-  --f6: 0.875rem; 
-  
-  // line heights
-  --lh-sm: 1.2;
-  --lh: 1.65;
-  --lh-md: 2;
-  --lh-headings: 1.2;
-  --underline-offset: 30%;
+	// line heights
+	--lh-base: 1.65;
+	--lh-sm: 1.2;
+	--lh-lg: 2;
+	--lh-headings: 1.2;
+	
+	// font weights
+	--fw: 400;
+	--fw-sm: 300;
+	--fw-md: 500;
+	--fw-lg: 600;
+	--fw-xl: 700;
 
-  // weights
-  --w-sm: 300;
-  --w: 400;
-  --w-md: 500
-  --w-lg: 600;
-  --w-xl: 700;
+	--fw-base: var(--fw);
+	--fw-headings: var(--fw-xl);
 
-  --w-base: var(--w);
-  --w-headings: var(--w-xl);
+	/*
+|--------------------------------------------------------------------------
+|	STRUCTURE
+|--------------------------------------------------------------------------
+*/
 
-  /* ======================================================= */
-  /* ====================   STRUCTURE   ==================== */
-  /* ======================================================= */
+	// spacers
+	--spacer: #{clamp-smart(20, 24)};
+	--spacer-sm: calc(var(--spacer) / 2);
+	--spacer-md: calc(var(--spacer) * 1.5);
+	--spacer-lg: calc(var(--spacer) * 3);
 
-  // spacers
-  --spacer: #{clamp-smart(12, 24)}; 
-  --spacer-sm: calc(var(--spacer) / 2); 
-  --spacer-md: calc(var(--spacer) * 2); 
-  --spacer-lg: calc(var(--spacer) * 4); 
- 
-  // borders
-  --border: 1px solid var(--color-dark);
-  --br: 0.625rem;
+	// container
+	--container-max-width: 1400px;
+	--container-space-x: var(--spacer);
+	--container-space-y: var(--spacer-lg);
 
-  // line
-  --hr: 1px solid var(--color-dark);
+	// borders
+	--border-color: var(--color-primary);
+	--border-thickness: 2px;
+	--border-radius: 0.625rem;
+	--border: var(--border-thickness) solid var(--border-color);
 
-  // shadows
-  --shadow: box-shadow: 0.5rem 0 1rem 0.5rem rgba(0 0 0 / 0.25);
+	// line
+	--hr-color: var(--color-primary);
+	--hr-width: 90%;
+	--hr-height: 2px;
+	--hr-br: 100vmax;
 
-  // transitions
-  --transition: 0.3s ease-out;
+	// shadows
+	--shadow: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
+	//--shadow-sm: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
+	//--shadow-lg: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
 
-  // z-index
-  --z-tooltip: 500;
-  --z-dropdown: 400;
-  --z-dialog: 300;
-  --z-hamburger-toggler: 200;
-  --z-hamburger: 100;
-  --z-hamburger-backdrop: 90;
-  --z-header: 50;
-  --z-footer: 40;
+	// transitions
+	--transition: 0.3s ease-out;
+
+	// z-index
+	--z-tooltip: 500;
+	--z-dropdown: 400;
+	--z-dialog: 300;
+	--z-hamburger-toggler: 200;
+	--z-hamburger: 100;
+	--z-hamburger-backdrop: 90;
+	--z-header: 50;
+	--z-footer: 40;
+
+	/*
+|--------------------------------------------------------------------------
+|	ELEMENTS
+|--------------------------------------------------------------------------
+*/
+
+	// buttons
+	--color-btn-bg: var(--color-primary);
+	--color-btn-hover: var(--color-primary-light);
+
+	// icons
+	--icon-color: var(--color-primary);
+
+	// forms
+	--input-border-color: var(--border-color);
+	--input-border-focus-color: var(--color-focus);
+	--input-border-error-color: var(--color-error);
+	--input-bg-color: var(--color-white);
+	--input-bg-focus-color: var(--color-gray);
+	--input-placeholder-color: var(--color-black);
 }
 
+/*
+|--------------------------------------------------------------------------
+|	SASS VARIABLES MAPS 
+|--------------------------------------------------------------------------
+*/
+
+$colors: (
+	white: var(--color-white),
+	black: var(--color-black),
+	primary: (
+		base: var(--color-primary),
+		dark: var(--color-primary-dark),
+		light: var(--color-primary-light),
+	),
+	secondary: (
+		base: var(--color-secondary),
+	),
+	accent: (
+		base: var(--color-accent),
+	),
+);
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px,
+);
+
+$spacers: (
+	0: 0 !important,
+	1: var(--spacer-sm) !important,
+	2: var(--spacer) !important,
+	3: var(--spacer-md) !important,
+	4: var(--spacer-lg) !important,
+);
+
+// TODO negative spacers
+
+$font-sizes: (
+	1: var(--fs-1),
+	2: var(--fs-2),
+	3: var(--fs-3),
+	4: var(--fs-4),
+	5: var(--fs-5),
+	6: var(--fs-6),
+);
+
+$font-weights: (
+	sm: var(--fw-sm),
+	base: var(--fw),
+	md: var(--fw-md),
+	lg: var(--fw-lg),
+	xl: var(--fw-xl),
+);

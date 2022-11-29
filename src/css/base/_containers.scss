@@ -1,0 +1,48 @@
+.row {
+	--bs-gutter-x: var(--spacer);
+	--bs-gutter-y: var(--spacer);
+}
+
+%container {
+	padding-top: var(--container-space-y);
+	padding-bottom: var(--container-space-y);
+	padding-right: var(--container-space-x);
+	padding-left: var(--container-space-x);
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.container {
+	@extend %container;
+	max-width: var(--container-max-width, map-get($map: $grid-breakpoints, $key: xxl));
+
+	&-sm {
+		@extend %container;
+		max-width: map-get($map: $grid-breakpoints, $key: sm);
+	}
+
+	&-md {
+		@extend %container;
+		max-width: map-get($map: $grid-breakpoints, $key: md);
+	}
+
+	&-lg {
+		@extend %container;
+		max-width: map-get($map: $grid-breakpoints, $key: lg);
+	}
+
+	&-xl {
+		@extend %container;
+		max-width: map-get($map: $grid-breakpoints, $key: xl);
+	}
+
+	&-xxl {
+		@extend %container;
+		max-width: map-get($map: $grid-breakpoints, $key: xxl);
+	}
+
+	&-fluid {
+		@extend %container;
+	}
+}
