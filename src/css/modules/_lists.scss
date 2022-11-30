@@ -1,0 +1,12 @@
+ul:not([class]) {
+	list-style-type: disc;
+}
+
+ol:not([class]) {
+	list-style-type: decimal;
+}
+
+ul li::marker {
+	color: var(--color-primary);
+	font-size: 1.25em;
+}

@@ -1,0 +1,158 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/maps';
+
+@import 'bootstrap/scss/mixins';
+
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/grid';
+
+$utilities: map-get-multiple(
+	$utilities,
+	(
+		'pointer-events',
+		'user-select',
+		'overflow',
+		'translate-middle',
+		'position',
+		'visibility',
+		'text-transform',
+		'white-space',
+		'word-wrap',
+		'line-height',
+		'text-align',
+		'font-style',
+		'display',
+		'order',
+		'flex',
+		'flex-direction',
+		'flex-wrap',
+		'justify-content',
+		'align-items',
+		'align-content',
+		'align-self',
+		'margin',
+		'margin-x',
+		'margin-y',
+		'margin-top',
+		'margin-end',
+		'margin-bottom',
+		'margin-start',
+		'padding',
+		'padding-x',
+		'padding-y',
+		'padding-top',
+		'padding-end',
+		'padding-bottom',
+		'padding-start',
+		'gap'
+	)
+);
+
+$utilities: map-merge(
+	$utilities,
+	(
+		'display':
+			map-merge(
+				map-get($utilities, 'display'),
+				(
+					print: false,
+					values: block flex inline-flex none,
+				)
+			),
+		'margin': (
+			responsive: false,
+			property: margin,
+			class: m,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-x': (
+			responsive: false,
+			property: margin-right margin-left,
+			class: mx,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-y': (
+			responsive: false,
+			property: margin-top margin-bottom,
+			class: my,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-top': (
+			responsive: false,
+			property: margin-top,
+			class: mt,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-end': (
+			responsive: false,
+			property: margin-right,
+			class: me,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-bottom': (
+			responsive: false,
+			property: margin-bottom,
+			class: mb,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		'margin-start': (
+			responsive: false,
+			property: margin-left,
+			class: ms,
+			values:
+				map-merge(
+					$spacers,
+					(
+						auto: auto,
+					)
+				),
+		),
+		// Gap utility
+		'gap':
+			(
+				responsive: false,
+				property: gap,
+				class: gap,
+				values: $spacers,
+			),
+	)
+);
+
+@import 'bootstrap/scss/utilities/api';

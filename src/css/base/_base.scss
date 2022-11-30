@@ -57,18 +57,6 @@ footer {
 	margin-top: auto;
 }
 
-menu,
-ul,
-ol,
-dl {
-	list-style-type: none;
-	list-style-position: inside;
-}
-
-ol {
-	list-style-type: decimal;
-}
-
 :focus-visible {
 	outline-color: var(--color-focus-outline);
 	//outline: none;
@@ -91,7 +79,14 @@ img {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	aspect-ratio: 4 / 3;
+}
+
+ul,
+ol,
+menu,
+dt {
+	padding: 0;
+	list-style: none;
 }
 
 .fs-0 {
@@ -115,7 +110,8 @@ button,
 }
 
 a,
-[type='link'] {
+[type='link'],
+[href] {
 	display: inline-block;
 	cursor: pointer;
 }

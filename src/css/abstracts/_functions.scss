@@ -1,10 +1,65 @@
+/* 
+num-to-rem -  padding: clamp-smart(16, 32);            //output 1rem < 2rem
+px-to-rem  -  padding: clamp-smart(16px, 32px);        //output 1rem < 2rem
+rem        -  padding: clamp-smart(1rem, 2rem);        //output 1rem < 2rem
+em         -  padding: clamp-smart(1em, 2em);          //output 1em  < 2em
+num-to-em  -  padding: clamp-smart(16, 32, "em");      //output 1em  < 2em
+px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em 
+*/
+
 @function round-smart($value, $decimals: 1000) {
 	@return calc(round($value * $decimals) / $decimals);
 }
 
-@function clamp-smart($min, $max, $unit: 'rem', $start: 360, $end: 1200) {
+@function is-number($value) {
+	@return type-of($value) == 'number';
+}
+
+@function is-unit($value, $unit) {
+	@return is-number($value) and index($unit, unit($value)) != null;
+}
+
+@function clamp-smart($min, $max, $unit: 'rem', $start: 360, $end: $container-max-width) {
+	@if is-unit($min, 'px') {
+		$min: calc($min / 1px);
+	}
+
+	@if is-unit($max, 'px') {
+		$max: calc($max / 1px);
+	}
+
+	@if is-unit($min, 'rem') {
+		$unit: 'rem';
+		$min: calc($min / 1rem * 16);
+	}
+
+	@if is-unit($max, 'rem') {
+		$unit: 'rem';
+		$max: calc($max / 1rem * 16);
+	}
+
+	@if is-unit($min, 'em') {
+		$unit: 'em';
+		$min: calc($min / 1em * 16);
+	}
+
+	@if is-unit($max, 'em') {
+		$unit: 'em';
+		$max: calc($max / 1em * 16);
+	}
+
 	$min-value: #{calc($min/16)}#{$unit};
 	$max-value: #{calc($max/16)}#{$unit};
+
+	@if is-unit($start, 'px') {
+		$start: calc($start / 1px);
+	}
+
+	@if is-unit($end, 'px') {
+		$end: calc($end / 1px);
+	}
+
+	/* ======================================== */
 
 	$start-value: calc(($start * $max - $end * $min) / ($start - $end) / 16);
 	$start-value: #{round-smart($start-value)}#{$unit};
@@ -14,4 +69,3 @@
 
 	@return clamp($min-value, $start-value + $end-value, $max-value);
 }
-

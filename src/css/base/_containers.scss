@@ -15,7 +15,7 @@
 
 .container {
 	@extend %container;
-	max-width: var(--container-max-width, map-get($map: $grid-breakpoints, $key: xxl));
+	max-width: map-get($map: $grid-breakpoints, $key: xxl);
 
 	&-sm {
 		@extend %container;

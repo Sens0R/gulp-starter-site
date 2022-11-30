@@ -2,42 +2,44 @@
 # Import
 --------------------------------------------------------------*/
 
-// HELPERS
-@import 'abstracts/functions';
+// ABSTRACTS
 @import 'abstracts/variables';
+@import 'abstracts/functions';
 @import 'abstracts/mixins';
-// component mixins
-@import 'components/links/link-mixin';
-@import 'components/buttons/button-mixin';
 
-// TOOLS
-@import 'tools/bootstrap';
-@import 'tools/swiper';
-@import 'tools/animations';
+// modules mixins
+@import 'modules/buttons/button-mixin';
+@import 'modules/links/link-mixin';
+
+// PLUGINS
+@import 'plugins/bootstrap';
+@import 'plugins/swiper';
+@import 'plugins/animations';
 
 // BASE
+@import 'base/root';
+@import 'base/containers';
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/selectors';
-@import 'base/custom-selectors';
-@import 'base/skip-link';
-@import 'base/containers';
 
 // LAYOUT
 @import 'layout/header/header';
 @import 'layout/footer';
-@import 'layout/card';
 @import 'layout/banner';
+@import 'layout/card';
 
-// COMPONENTS
-@import 'components/icons';
-@import 'components/buttons/button';
-@import 'components/links/link';
-@import 'components/accordion';
-@import 'components/dropdown';
-@import 'components/tabs';
-@import 'components/dialog';
-@import 'components/tooltip';
+// MODULES
+@import 'modules/buttons/button';
+@import 'modules/links/link';
+@import 'modules/links/scroll-links';
+@import 'modules/accordion';
+@import 'modules/dialog';
+@import 'modules/dropdown';
+@import 'modules/icons';
+@import 'modules/lists';
+@import 'modules/tabs';
+@import 'modules/tooltip';
 
 // PAGES
 @import 'pages/home';
