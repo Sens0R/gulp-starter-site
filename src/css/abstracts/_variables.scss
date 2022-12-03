@@ -1,33 +1,39 @@
-$container-max-width: 1600px;
-
-/*
-|--------------------------------------------------------------------------
-|	SASS VARIABLES MAPS 
-|--------------------------------------------------------------------------
-*/
+$container-max-width: 1536px;
 
 $colors: (
-	white: var(--color-white),
-	black: var(--color-black),
+	white: hsl(0, 0%, 100%),
+	grey: hsl(240, 1%, 65%),
+	black: hsl(0, 5%, 15%),
 	primary: (
-		base: var(--color-primary),
-		dark: var(--color-primary-dark),
-		light: var(--color-primary-light),
+		base: hsl(198 100% 46%),
+		dark: hsl(198, 100%, 71%),
+		light: hsl(198, 100%, 37%),
 	),
 	secondary: (
-		base: var(--color-secondary),
+		base: hsl(42, 100%, 60%),
 	),
 	accent: (
-		base: var(--color-accent),
+		base: hsl(14, 100%, 54%),
 	),
+	neutral: (
+		base: hsl(290, 60%, 74%),
+	),
+);
+
+$font-weights: (
+	sm: 300,
+	'': 400,
+	md: 500,
+	lg: 600,
+	xl: 700,
 );
 
 $grid-breakpoints: (
 	xs: 0,
-	sm: 576px,
+	sm: 640px,
 	md: 768px,
-	lg: 992px,
-	xl: 1200px,
+	lg: 1024px,
+	xl: 1280px,
 	xxl: $container-max-width,
 );
 
@@ -46,12 +52,4 @@ $font-sizes: (
 	4: var(--fs-4),
 	5: var(--fs-5),
 	6: var(--fs-6),
-);
-
-$font-weights: (
-	sm: var(--fw-sm),
-	base: var(--fw),
-	md: var(--fw-md),
-	lg: var(--fw-lg),
-	xl: var(--fw-xl),
 );

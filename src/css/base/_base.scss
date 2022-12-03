@@ -7,14 +7,14 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
 }
 
 html {
 	scroll-behavior: smooth;
 	scroll-padding: 15%;
-	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
-	font-size: 100%;
 }
 
 body {
@@ -30,14 +30,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 
 	overflow-x: hidden;
-}
-
-select,
-textarea,
-input,
-button {
-	font-family: var(--ff-primary);
-	font-size: var(--f-base);
 }
 
 header {
@@ -62,21 +54,8 @@ footer {
 	//outline: none;
 }
 
-header,
-button,
-img,
-picture {
-	user-select: none;
-}
-
-img,
-svg {
-	vertical-align: middle;
-}
-
 img {
 	width: 100%;
-	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
@@ -93,6 +72,30 @@ dt {
 	font-size: var(--fs-0);
 }
 
+h1 {
+	font-size: var(--fs-1);
+}
+
+h2 {
+	font-size: var(--fs-2);
+}
+
+h3 {
+	font-size: var(--fs-3);
+}
+
+h4 {
+	font-size: var(--fs-4);
+}
+
+h5 {
+	font-size: var(--fs-5);
+}
+
+h6 {
+	font-size: var(--fs-6);
+}
+
 h1,
 h2,
 h3,
@@ -107,6 +110,7 @@ button,
 [type='button'] {
 	border: none;
 	background-color: transparent;
+	user-select: none;
 }
 
 a,
@@ -128,7 +132,7 @@ hr {
 
 input {
 	outline: none;
-	border: none;
+	border: var(--border, none);
 
 	&[type='search']::-webkit-search-cancel-button {
 		display: none;

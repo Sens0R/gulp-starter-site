@@ -144,6 +144,50 @@ $utilities: map-merge(
 					)
 				),
 		),
+		 // Padding utilities
+		 "padding": (
+			responsive: false,
+			property: padding,
+			class: p,
+			values: $spacers
+		 ),
+		 "padding-x": (
+			responsive: false,
+			property: padding-right padding-left,
+			class: px,
+			values: $spacers
+		 ),
+		 "padding-y": (
+			responsive: false,
+			property: padding-top padding-bottom,
+			class: py,
+			values: $spacers
+		 ),
+		 "padding-top": (
+			responsive: false,
+			property: padding-top,
+			class: pt,
+			values: $spacers
+		 ),
+		 "padding-end": (
+			responsive: false,
+			property: padding-right,
+			class: pe,
+			values: $spacers
+		 ),
+		 "padding-bottom": (
+			responsive: false,
+			property: padding-bottom,
+			class: pb,
+			values: $spacers
+		 ),
+		 "padding-start": (
+			responsive: false,
+			property: padding-left,
+			class: ps,
+			values: $spacers
+		 ),
+	
 		// Gap utility
 		'gap':
 			(

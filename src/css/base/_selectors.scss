@@ -2,24 +2,24 @@
 # GLOBAL SELECTORS. PLACE CUSTOM SELECTORS ON TOP
 --------------------------------------------------------------*/
 
+// colors from sass map
 .color {
-	@include modifiers($map: $colors, $attribute: 'color');
+	@include modifiers($colors, 'color');
 }
 
-.color-bg {
-	@include modifiers($map: $colors, $attribute: 'background-color');
+// background colors from sass map
+.bg {
+	@include modifiers($colors, 'background-color');
 }
 
+// font sizes from sass map
 .fs {
-	@include modifiers($map: $font-sizes, $attribute: 'font-size');
+	@include modifiers($font-sizes, 'font-size');
 }
 
-h {
-	@include modifiers($map: $font-sizes, $attribute: 'font-size', $prefix: '');
-}
-
+// font weights from sass map
 .fw {
-	@include modifiers($map: $font-weights, $attribute: 'font-weight');
+	@include modifiers($font-weights, 'font-weight');
 }
 
 .stretch-child > :first-child,
@@ -53,14 +53,6 @@ h {
 
 .shadow {
 	box-shadow: var(--shadow);
-
-	&-sm {
-		box-shadow: var(--shadow-sm);
-	}
-
-	&-lg {
-		box-shadow: var(--shadow-lg);
-	}
 }
 
 .visually-hidden {

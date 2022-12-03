@@ -4,27 +4,13 @@
 |	COLORS
 |--------------------------------------------------------------------------
 */
+	// variables from sass color map
+	@include map-scss-vars-into-css-vars($colors, '--color');
 
-	// shades
-	--color-black: hsl(0, 5%, 15%);
-	--color-gray: hsl(240, 1%, 65%);
-	--color-white: hsl(0, 0%, 100%);
-
-	// feedback
 	--color-error: hsl(4, 90%, 58%);
 	--color-success: hsl(147, 100%, 35%);
 	--color-warning: hsl(41, 100%, 80%);
 
-	// brand
-	--color-primary-hsl: 198 100% 46%;
-	--color-primary: hsl(var(--color-primary-hsl)); // change opacity: color: hsl(--color-primary-hsl) / 0.5);
-	--color-primary-light: hsl(198, 100%, 71%);
-	--color-primary-dark: hsl(198, 100%, 37%);
-	--color-secondary: hsl(42, 100%, 60%);
-	--color-accent: hsl(14, 100%, 54%);
-	--color-neutral: hsl(290, 60%, 74%);
-
-	// backgrounds
 	--color-bg: var(--color-primary-light);
 	--color-bg-body: var(--color-white);
 	--color-bg-header: var(--color-white);
@@ -51,9 +37,8 @@
 
 	--ff-primary: 'Montserrat', Arial, sans-serif;
 
-	// font sizes
-	--fs-0: 1rem; // base font-size
-	--fs-1: #{clamp-smart(40, 62)};
+	--fs-0: 1rem;
+	--fs-1: #{clamp-smart(40, 60)};
 	--fs-2: calc(var(--fs-1) * 0.6);
 	--fs-3: calc(var(--fs-1) * 0.5);
 	--fs-4: calc(var(--fs-1) * 0.4);
@@ -67,12 +52,8 @@
 	--lh-headings: 1.2;
 
 	// font weights
-	--fw: 400;
-	--fw-sm: 300;
-	--fw-md: 500;
-	--fw-lg: 600;
-	--fw-xl: 700;
-
+	// variables from sass color map
+	@include map-scss-vars-into-css-vars($font-weights, '--fw');
 	--fw-base: var(--fw);
 	--fw-headings: var(--fw-xl);
 

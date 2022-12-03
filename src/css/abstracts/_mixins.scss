@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 // Hover only for mouse users
 @mixin hover {
 	@media (hover: hover) and (pointer: fine) {
@@ -44,6 +46,7 @@
 }
 
 // Creating classes from maps
+// $base value is ignored during classes creation
 @mixin modifiers($map, $attribute, $prefix: '-', $separator: '-', $base: 'base') {
 	@each $key, $value in $map {
 		&#{if($key != $base, #{$prefix}#{$key}, '')} {
@@ -53,5 +56,28 @@
 				#{$attribute}: $value;
 			}
 		}
+	}
+}
+
+// Creating css custom properties from sass variable maps
+// for extra prefix use '--prefixname'
+@mixin map-scss-vars-into-css-vars($map, $prefix: '-', $key: null) {
+	@each $name, $value in $map {
+		// copy the map key
+		$key-copy: $key;
+		// create name for CSS custom property that contains:
+		// current key + child key from nested map
+		@if $name != 'base' {
+			$key: #{$key}-#{$name};
+		}
+
+		@if meta.type-of($value) == 'map' {
+			// if value is a map, invoke it once more
+			@include map-scss-vars-into-css-vars($value, $prefix, $key);
+		} @else {
+			#{$prefix}#{$key}: #{$value};
+		}
+		// next iteration of loop should go with unchanged key
+		$key: $key-copy;
 	}
 }

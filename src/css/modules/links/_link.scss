@@ -26,6 +26,7 @@ a {
 .link-heading {
 	--color-link: var(--color-primary);
 	--color-link-hover: var(--color-primary);
+	--underline-offset: 30%;
 	@include underline();
 }
 
