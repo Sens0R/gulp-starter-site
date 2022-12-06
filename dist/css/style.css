@@ -4666,17 +4666,13 @@ blockquote {
 }
 a,
 [href] {
-  --color-link: var(--color-text);
-  --color-link-hover: var(--color-accent);
   --transition-link: 0.2s ease-in-out;
-  --underline-thickness: var(--border-thickness);
-  --underline-offset: 20%;
-  color: var(--color-link);
+  color: var(--color-text);
   -webkit-transition: var(--transition-link);
   -o-transition: var(--transition-link);
   transition: var(--transition-link);
-  text-underline-offset: var(--underline-offset);
-  text-decoration-thickness: var(--underline-thickness);
+  text-decoration-thickness: var(--border-thickness);
+  text-underline-offset: 20%;
   text-decoration-color: transparent;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -4692,23 +4688,12 @@ a:focus-visible,
 @media (hover: hover) and (pointer: fine) {
   a:hover,
   [href]:hover {
-    color: var(--color-link-hover);
+    color: var(--color-accent);
   }
 }
 a:focus-visible,
 [href]:focus-visible {
-  color: var(--color-link-hover);
-}
-a:focus-visible,
-[href]:focus-visible {
-  color: var(--color-link-hover);
-  outline: none;
-}
-
-.link-heading {
-  --color-link: var(--color-primary);
-  --color-link-hover: var(--color-primary-light);
-  text-decoration: underline;
+  color: var(--color-accent);
 }
 
 .button {

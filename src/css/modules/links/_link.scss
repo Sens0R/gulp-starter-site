@@ -1,30 +1,15 @@
 a,
 [href] {
-	--color-link: var(--color-text);
-	--color-link-hover: var(--color-accent);
 	--transition-link: 0.2s ease-in-out;
-	--underline-thickness: var(--border-thickness);
-	--underline-offset: 20%;
 
-	color: var(--color-link);
+	color: var(--color-text);
 	transition: var(--transition-link);
-	text-underline-offset: var(--underline-offset);
-	text-decoration-thickness: var(--underline-thickness);
+	text-decoration-thickness: var(--border-thickness);
+	text-underline-offset: 20%;
 
 	@include underline-reverse();
 
 	@include hover {
-		color: var(--color-link-hover);
+		color: var(--color-accent);
 	}
-
-	&:focus-visible {
-		color: var(--color-link-hover);
-		outline: none;
-	}
-}
-
-.link-heading {
-	--color-link: var(--color-primary);
-	--color-link-hover: var(--color-primary-light);
-	text-decoration: underline;
 }
