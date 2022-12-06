@@ -1,51 +1,54 @@
-@mixin button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.875rem 2.25rem;
-  background-color: var(--color-dark);
-  color: var(--color-light);
-  font-weight: var(--fw-bold);
-  border: 1px solid var(--color-dark);
-  transition: var(--transition);
-  line-height: 1;
-  //border-radius: var(--br);
-  //box-shadow: var(--shadow);
-
-  &:focus-visible {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-  }
-
-  @include hover {
-    background-color: var(--color-light);
-    color: var(--color-dark);
-  }
-}
-
-@mixin button-reverse {
-  @extend %button;
-  background-color: var(--color-light);
-  color: var(--color-dark);
-
-  &:focus-visible {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-  }
-
-  @include hover {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-  }
-}
-
-/* ====================   IMPORTS   ==================== */
-
 .button,
 %button {
-  @include button();
+	--button-color: var(--color-black);
+	--button-color-accent: var(--color-white);
+	--button-bg: var(--color-primary-light);
+	--button-bg-accent: var(--color-primary-dark);
+
+	color: var(--button-color);
+	background: var(--button-bg);
+	font-weight: var(--fw-xl);
+	border: var(--border-thickness) solid var(--button-bg);
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+	//box-shadow: var(--shadow);
+	padding: 0.75rem 1.5rem;
+	min-width: 10rem;
+	min-height: 2.875rem; // 46px
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	line-height: 1;
+
+	@include hover() {
+		background: var(--button-bg-accent);
+		border-color: var(--button-bg-accent);
+		color: var(--button-color-accent);
+	}
 }
 
-.button-reverse {
-  @include button-reverse();
+.button-outline,
+%button-outline {
+	background: none;
+	color: var(--button-bg);
+	border-color: var(--button-bg);
+
+	@include hover() {
+		background-color: var(--button-bg-accent);
+		color: var(--button-color-accent);
+	}
+}
+
+.button-reverse,
+%button-reverse {
+	color: var(--button-color-accent);
+	background: var(--button-bg-accent);
+	border-color: var(--button-bg-accent);
+
+	@include hover() {
+		background-color: var(--button-bg);
+		border-color: var(--button-bg);
+		color: var(--button-color);
+	}
 }

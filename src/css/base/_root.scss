@@ -75,8 +75,8 @@
 
 	// borders
 	--border-color: var(--color-primary);
-	--border-thickness: 2px;
-	--border-radius: 0.625rem;
+	--border-thickness: 1px;
+	--border-radius: 100vmax;
 	--border: var(--border-thickness) solid var(--border-color);
 
 	// line
@@ -86,10 +86,8 @@
 	--hr-br: 100vmax;
 
 	// shadows
-	--shadow: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
-	//--shadow-sm: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
-	//--shadow-lg: 0.5rem 0 1rem rgba(0 0 0 / 0.25);
-
+	--shadow: 0 0 1rem rgba(0 0 0 / 0.25);
+	
 	// transitions
 	--transition: 0.3s ease-out;
 

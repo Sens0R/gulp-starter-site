@@ -1,9 +1,15 @@
 @use 'sass:meta';
 
-// Hover only for mouse users
-@mixin hover {
+// Hover only for mouse users, focus only for keyboard
+@mixin hover($focus: 'true') {
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {
+			@content;
+		}
+	}
+
+	@if $focus == 'true' {
+		&:focus-visible {
 			@content;
 		}
 	}
