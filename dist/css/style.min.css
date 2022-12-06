@@ -4710,6 +4710,7 @@ a:focus-visible,
   -o-transition: var(--transition);
   transition: var(--transition);
   padding: 0.75rem 1.5rem;
+  min-width: 7.5rem;
   min-height: 2.875rem;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -4730,46 +4731,10 @@ a:focus-visible,
     color: var(--button-color-accent);
   }
 }
-@media (hover: hover) and (pointer: fine) and (hover: hover) and (pointer: fine) {
-  .button:hover:hover:after {
-    translate: 0.375rem;
-    scale: 1.25;
-  }
-}
-@media (hover: hover) and (pointer: fine) {
-  .button:hover:focus-visible:after {
-    translate: 0.375rem;
-    scale: 1.25;
-  }
-}
 .button:focus-visible {
   background: var(--button-bg-accent);
   border-color: var(--button-bg-accent);
   color: var(--button-color-accent);
-}
-@media (hover: hover) and (pointer: fine) {
-  .button:focus-visible:hover:after {
-    translate: 0.375rem;
-    scale: 1.25;
-  }
-}
-.button:focus-visible:focus-visible:after {
-  translate: 0.375rem;
-  scale: 1.25;
-}
-.button:after {
-  --chevron-line: 2px solid currentColor;
-  --chevron-size: 0.5em;
-  content: "";
-  margin-left: 0.75rem;
-  rotate: 135deg;
-  width: var(--chevron-size);
-  height: var(--chevron-size);
-  border-top: var(--chevron-line);
-  border-left: var(--chevron-line);
-  -webkit-transition: var(--transition);
-  -o-transition: var(--transition);
-  transition: var(--transition);
 }
 
 .button-outline {
@@ -4786,6 +4751,30 @@ a:focus-visible,
 .button-outline:focus-visible {
   background-color: var(--button-bg-accent);
   color: var(--button-color-accent);
+}
+.button-outline:after {
+  --chevron-line: 2px solid currentColor;
+  --chevron-size: 0.5em;
+  content: "";
+  margin-left: 0.75rem;
+  rotate: 135deg;
+  width: var(--chevron-size);
+  height: var(--chevron-size);
+  border-top: var(--chevron-line);
+  border-left: var(--chevron-line);
+  -webkit-transition: translate var(--transition), scale var(--transition);
+  -o-transition: translate var(--transition), scale var(--transition);
+  transition: translate var(--transition), scale var(--transition);
+}
+@media (hover: hover) and (pointer: fine) {
+  .button-outline:hover:after {
+    translate: 0.375rem;
+    scale: 1.25;
+  }
+}
+.button-outline:focus-visible:after {
+  translate: 0.375rem;
+  scale: 1.25;
 }
 
 .button-reverse {

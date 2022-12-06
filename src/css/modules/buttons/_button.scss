@@ -13,7 +13,7 @@
 	transition: var(--transition);
 	//box-shadow: var(--shadow);
 	padding: 0.75rem 1.5rem;
-	//min-width: 10rem;
+	min-width: 7.5rem;
 	min-height: 2.875rem; // 46px
 	display: inline-flex;
 	align-items: center;
@@ -25,10 +25,7 @@
 		background: var(--button-bg-accent);
 		border-color: var(--button-bg-accent);
 		color: var(--button-color-accent);
-		@include button-chevron-hover();
 	}
-
-	@include button-chevron();
 }
 
 .button-outline,
@@ -41,6 +38,9 @@
 		background-color: var(--button-bg-accent);
 		color: var(--button-color-accent);
 	}
+
+	@include button-chevron();
+	
 }
 
 .button-reverse,

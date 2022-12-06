@@ -10,11 +10,9 @@
 		height: var(--chevron-size);
 		border-top: var(--chevron-line);
 		border-left: var(--chevron-line);
-		transition: var(--transition);
+		transition: translate var(--transition), scale var(--transition);
 	}
-}
 
-@mixin button-chevron-hover {
 	@include hover {
 		&:after {
 			translate: 0.375rem;
