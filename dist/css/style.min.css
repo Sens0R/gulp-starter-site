@@ -4712,10 +4712,10 @@ a:focus-visible,
 }
 
 .button {
-  --button-color: var(--color-black);
+  --button-color: var(--color-white);
   --button-color-accent: var(--color-white);
-  --button-bg: var(--color-primary-light);
-  --button-bg-accent: var(--color-primary-dark);
+  --button-bg: var(--color-accent);
+  --button-bg-accent: var(--color-primary);
   color: var(--button-color);
   background: var(--button-bg);
   font-weight: var(--fw-xl);
