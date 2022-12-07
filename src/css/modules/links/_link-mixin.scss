@@ -1,7 +1,7 @@
 @mixin underline {
 	text-decoration-color: currentColor;
 
-	@include hover {
+	@include hover(focus) {
 		text-decoration-color: transparent;
 	}
 }
@@ -9,7 +9,7 @@
 @mixin underline-reverse() {
 	text-decoration-color: transparent;
 
-	@include hover {
+	@include hover(focus) {
 		text-decoration-color: currentColor;
 	}
 }

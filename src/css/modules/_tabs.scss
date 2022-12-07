@@ -15,7 +15,7 @@
   }
 
   &__content-area {
-    padding: var(--spacer);
+    padding: var(--spacer-2);
     border: var(--border);
     margin-top: -1px;
 
@@ -27,9 +27,9 @@
 }
 
 .tab {
-  padding: var(--spacer);
+  padding: var(--spacer-2);
   border: var(--border);
-  background-color: var(--color-light);
+  background-color: var(--color-white);
 
   &:not(:first-child):not(.tab_vertical) {
     margin-left: -1px;
@@ -39,7 +39,7 @@
     width: 100%;
   }
 
-  @include hover {
+  @include hover(focus) {
     text-decoration: underline;
   }
 
@@ -62,13 +62,13 @@
 .tabpanel {
   display: flex;
   flex-direction: column;
-  gap: var(--spacer);
+  gap: var(--spacer-2);
   visibility: hidden;
   overflow: hidden;
   height: 0;
 
   &:focus-visible {
-    outline: 2px solid var(--color-dark);
+    outline: 2px solid var(--color-black);
     outline-offset: 0.5rem;
   }
 

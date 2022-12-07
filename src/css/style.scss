@@ -3,8 +3,8 @@
 --------------------------------------------------------------*/
 
 // ABSTRACTS
-@import 'abstracts/variables';
 @import 'abstracts/functions';
+@import 'abstracts/variables';
 @import 'abstracts/mixins';
 
 // modules mixins
@@ -17,8 +17,8 @@
 @import 'plugins/animations';
 
 // BASE
-@import 'base/root';
 @import 'base/containers';
+@import 'base/root';
 @import 'base/fonts';
 @import 'base/base';
 @import 'base/selectors';

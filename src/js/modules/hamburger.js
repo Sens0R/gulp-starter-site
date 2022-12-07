@@ -1,7 +1,7 @@
 const defaultOptions = {
   mainElement: '[data-hamburger]',
-  togglerOpen: '[data-hamburger-btn="open"]',
-  togglerClose: '[data-hamburger-btn="close"]',
+  togglerOpen: '[data-hamburger-button="open"]',
+  togglerClose: '[data-hamburger-button="close"]',
   aria: 'navigation',
   breakpoint: 1200,
 }

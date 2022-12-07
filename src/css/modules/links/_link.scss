@@ -1,5 +1,4 @@
-a,
-[href] {
+a, [type="link"] {
 	--transition-link: 0.2s ease-in-out;
 
 	color: var(--color-text);
@@ -9,7 +8,23 @@ a,
 
 	@include underline-reverse();
 
-	@include hover {
+	@include hover(focus) {
 		color: var(--color-accent);
 	}
+}
+
+.link-heading {
+	color: var(--color-primary-dark);
+	text-decoration: underline var(--border-thickness);
+	@include hover(focus) {
+		color: var(--color-primary-light);
+	}
+}
+
+.box-link {
+	color: var(--color-accent);
+	font-weight: var(--fw-lg);
+	padding: var(--spacer-1);
+	text-decoration: none;
+	@include chevron(0.375rem);
 }

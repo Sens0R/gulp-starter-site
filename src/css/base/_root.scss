@@ -7,55 +7,55 @@
 	// variables from sass color map
 	@include map-scss-vars-into-css-vars($colors, '--color');
 
+	// alerts
 	--color-error: hsl(4, 90%, 58%);
 	--color-success: hsl(147, 100%, 35%);
 	--color-warning: hsl(41, 100%, 80%);
 
-	--color-bg: var(--color-primary-light);
-	--color-bg-body: var(--color-white);
-	--color-bg-header: var(--color-white);
-	--color-bg-footer: var(--color-white);
+	// backgrounds
+	--bg-body: var(--color-white);
+	--bg-header: var(--color-white);
+	--bg-footer: var(--color-white);
 
 	// typography
-	--color-text: var(--color-black);
-	--color-text-muted: var(--color-gray);
-	--color-text-headings: var(--color-black);
-	--color-blockquote-border: var(--color-primary);
+	--color-base: var(--color-black);
+	--color-muted: var(--color-grey);
+	--color-heading: var(--color-black);
 
 	// selection
-	--color-text-selection: var(--color-white);
-	--color-bg-selection: var(--color-primary);
-
-	// focus
-	--color-focus: var(--color-accent);
+	--selection-color: var(--color-white);
+	--selection-bg: var(--color-primary);
 
 	/*
 |--------------------------------------------------------------------------
 |	TYPOGRAPHY
 |--------------------------------------------------------------------------
 */
-
+	// font family
 	--ff-primary: 'Montserrat', Arial, sans-serif;
 
-	--fs-0: 1rem;
-	--fs-1: #{clamp-smart(40, 60)};
-	--fs-2: calc(var(--fs-1) * 0.6);
-	--fs-3: calc(var(--fs-1) * 0.5);
-	--fs-4: calc(var(--fs-1) * 0.4);
-	--fs-5: #{clamp-smart(16, 18)};
-	--fs-6: 0.875rem;
+	// heading sizes
+	--h1: #{clamp-smart(40, 60)};
+	--h2: calc(var(--h1) * 0.6);
+	--h3: calc(var(--h1) * 0.5);
+	--h4: calc(var(--h1) * 0.4);
+	--h5: #{clamp-smart(16, 18)};
+	--h6: 0.875rem;
+
+	// font sizes
+	@include map-scss-vars-into-css-vars($font-sizes, '--fs');
 
 	// line heights
-	--lh-base: 1.65;
-	--lh-sm: 1.2;
+	--lh-base: 1.7;
+	--lh-sm: 1.3;
 	--lh-lg: 2;
-	--lh-headings: 1.2;
+	--lh-heading: 1.2;
 
 	// font weights
-	// variables from sass color map
+	// variables from sass font weights map
 	@include map-scss-vars-into-css-vars($font-weights, '--fw');
-	--fw-base: var(--fw);
-	--fw-headings: var(--fw-xl);
+	--fw-base-body: var(--fw-base);
+	--fw-heading: var(--fw-lg);
 
 	/*
 |--------------------------------------------------------------------------
@@ -64,14 +64,11 @@
 */
 
 	// spacers
-	--spacer: #{clamp-smart(20, 24)};
-	--spacer-sm: calc(var(--spacer) / 2);
-	--spacer-md: calc(var(--spacer) * 1.5);
-	--spacer-lg: calc(var(--spacer) * 3);
+	@include map-scss-vars-into-css-vars($spacers, '--spacer');
 
 	// container
-	--container-space-x: var(--spacer);
-	--container-space-y: var(--spacer-lg);
+	--container-space-x: var(--spacer-2);
+	--container-space-y: var(--spacer-3);
 
 	// borders
 	--border-color: var(--color-primary);
@@ -87,9 +84,9 @@
 
 	// shadows
 	--shadow: 0 0 1rem rgba(0 0 0 / 0.25);
-	
+
 	// transitions
-	--transition: 0.3s ease-out;
+	--transition: 0.25s ease-out;
 
 	// z-index
 	--z-tooltip: 500;
@@ -106,11 +103,6 @@
 |	ELEMENTS
 |--------------------------------------------------------------------------
 */
-
-	// buttons
-	--color-btn-bg: var(--color-primary);
-	--color-btn-hover: var(--color-primary-light);
-
 	// icons
 	--icon-color: var(--color-primary);
 

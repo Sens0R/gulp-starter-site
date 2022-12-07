@@ -12,7 +12,7 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--spacer);
+  gap: var(--spacer-2);
 
   &__item {
     border: var(--border);
@@ -24,38 +24,38 @@
   &__button {
     display: flex;
     justify-content: space-between;
-    column-gap: var(--spacer);
-    padding: var(--spacer);
+    column-gap: var(--spacer-2);
+    padding: var(--spacer-2);
     width: 100%;
-    font-weight: var(--fw-bold);
-    color: var(--color-dark);
-    background-color: var(--color-light);
+    font-weight: var(--fw-xl);
+    color: var(--color-black);
+    background-color: var(--color-white);
     transition: var(--transition);
 
     &.active {
-      background-color: var(--color-dark);
-      color: var(--color-light);
+      background-color: var(--color-black);
+      color: var(--color-white);
 
       .accordion__icon {
-        fill: var(--color-light);
+        fill: var(--color-white);
         rotate: 180deg;
       }
     }
 
-    @include hover {
+    @include hover(focus) {
       background-color: var(--color-accent);
-      color: var(--color-light);
+      color: var(--color-white);
       .accordion__icon {
-        fill: var(--color-light);
+        fill: var(--color-white);
       }
     }
 
     &:focus-visible {
       background-color: var(--color-accent);
-      color: var(--color-light);
+      color: var(--color-white);
 
       .accordion__icon {
-        fill: var(--color-light);
+        fill: var(--color-white);
       }
     }
   }
@@ -63,15 +63,15 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: var(--spacer);
-    padding: 0 var(--spacer);
+    gap: var(--spacer-2);
+    padding: 0 var(--spacer-2);
 
     > :first-child {
-      padding-top: var(--spacer);
+      padding-top: var(--spacer-2);
     }
 
     > :last-child {
-      padding-bottom: var(--spacer);
+      padding-bottom: var(--spacer-2);
     }
   }
 
@@ -80,7 +80,7 @@
     height: 1.25rem;
     display: flex;
     align-self: center;
-    fill: var(--color-dark);
+    fill: var(--color-black);
     transition: all 0.6s ease-in-out;
   }
 }

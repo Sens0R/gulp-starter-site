@@ -1,70 +1,70 @@
 <!-- ====================   LOGO   ==================== -->
 
 <div class="col-auto col-xl-3">
-  <a aria-label="Logo-name home. Logo-name logo." class="logo logo_header" href="index.html">
-    <svg aria-hidden="true" class="logo__icon">
-      <use href="images/icons/sprite-multi.svg#logo" />
-    </svg>
-  </a>
+	<a aria-label="Logo-name home. Logo-name logo." class="logo logo_header" href="index.html">
+		<svg aria-hidden="true" class="logo__icon">
+			<use href="images/icons/sprite-multi.svg#logo" />
+		</svg>
+	</a>
 </div>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
-  <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
-    <span class="nav-toggler__text nav-toggler__text_close">Close</span
-    ><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
-      <use href="images/icons/sprite-mono.svg#cancel"></use>
-    </svg>
-  </button>
+	<button class="nav-toggler nav-toggler_close" data-hamburger-button="close" type="button">
+		<span class="nav-toggler__text nav-toggler__text_close">Close</span
+		><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
+			<use href="images/icons/sprite-mono.svg#cancel"></use>
+		</svg>
+	</button>
 
-  @@include('search.html',{})
+	@@include('search.html',{})
 
-  <ul class="nav-menu">
-    <li class="nav-menu__item">
-      <a data-nav-page href="about.html" class="nav-menu__link nav-link">About</a>
-    </li>
+	<ul class="nav-menu">
+		<li class="nav-menu__item">
+			<a data-nav-page href="about.html" class="nav-menu__link">About</a>
+		</li>
 
-    <li data-dropdown="hover" class="nav-menu__item dropdown">
-      <div class="dropdown__controls">
-        <a data-nav-page href="services.html" class="nav-menu__link nav-link">Services</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
-          <svg aria-hidden="true" class="dropdown__icon">
-            <use href="images/icons/sprite-mono.svg#arrow"></use>
-          </svg>
-        </button>
-      </div>
-      <div data-dropdown-content class="dropdown__content">
-        <ul>
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
+		<li data-dropdown="hover" class="nav-menu__item dropdown">
+			<div class="dropdown__controls">
+				<a data-nav-page href="services.html" class="nav-menu__link">Services</a>
+				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
+					<svg aria-hidden="true" class="dropdown__icon">
+						<use href="images/icons/sprite-mono.svg#arrow"></use>
+					</svg>
+				</button>
+			</div>
+			<div data-dropdown-content class="dropdown__content">
+				<ul>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
 
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
 
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
-        </ul>
-      </div>
-    </li>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
+				</ul>
+			</div>
+		</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
-    </li>
+		<li class="nav-menu__item">
+			<a data-nav-page href="portfolio.html" class="nav-menu__link">Portfolio</a>
+		</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="blog.html" class="nav-menu__link nav-link">Blog</a>
-    </li>
+		<li class="nav-menu__item">
+			<a data-nav-page href="blog.html" class="nav-menu__link">Blog</a>
+		</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="contact.html" class="nav-menu__link nav-link">Contact</a>
-    </li>
-  </ul>
+		<li class="nav-menu__item">
+			<a data-nav-page href="contact.html" class="nav-menu__link">Contact</a>
+		</li>
+	</ul>
 
-  @@include('social.html',{})
+	@@include('social.html',{})
 </nav>
 
 <!-- ====================   SEARCH   ==================== -->
@@ -73,9 +73,9 @@
 
 <!-- ====================   NAV-TOGGLER   ==================== -->
 
-<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-btn="open" type="button">
-  <svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
-    <use href="images/icons/sprite-mono.svg#hamburger" />
-  </svg>
-  <span class="nav-toggler__text nav-toggler__text_open">menu</span>
+<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
+		<use href="images/icons/sprite-mono.svg#hamburger" />
+	</svg>
+	<span class="nav-toggler__text nav-toggler__text_open">menu</span>
 </button>

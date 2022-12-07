@@ -36,18 +36,18 @@ export function accordion() {
     const contentsArr = accordion.querySelectorAll('[data-accordion-content]')
     const accordionAttrValue = accordion.dataset.accordion
 
-    buttonsArr.forEach((button, btnNum) => {
+    buttonsArr.forEach((button, buttonNum) => {
       const firstButton = buttonsArr[0]
       const lastButton = buttonsArr[buttonsArr.length - 1]
-      const nextButton = buttonsArr[btnNum + 1]
-      const prevButton = buttonsArr[btnNum - 1]
+      const nextButton = buttonsArr[buttonNum + 1]
+      const prevButton = buttonsArr[buttonNum - 1]
 
-      button.id = `accordion-${accordionAttrValue}-header-${btnNum + 1}`
-      button.setAttribute('aria-controls', `accordion-${accordionAttrValue}-panel-${btnNum + 1}`)
+      button.id = `accordion-${accordionAttrValue}-header-${buttonNum + 1}`
+      button.setAttribute('aria-controls', `accordion-${accordionAttrValue}-panel-${buttonNum + 1}`)
       button.setAttribute('aria-expanded', 'false')
 
-      const content = contentsArr[btnNum]
-      content.id = `accordion-${accordionAttrValue}-panel-${btnNum + 1}`
+      const content = contentsArr[buttonNum]
+      content.id = `accordion-${accordionAttrValue}-panel-${buttonNum + 1}`
       content.setAttribute('aria-labelledby', `${button.id}`)
 
       button.addEventListener('click', toggler)

@@ -2,7 +2,7 @@
 # GLOBAL SELECTORS. PLACE CUSTOM SELECTORS ON TOP
 --------------------------------------------------------------*/
 
-// colors from sass map
+// text colors from sass map
 .color {
 	@include modifiers($colors, 'color');
 }

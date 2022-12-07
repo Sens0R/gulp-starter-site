@@ -14,7 +14,7 @@
 		}
 	}
 
-	@include hover {
+	@include hover(focus) {
 		filter: drop-shadow(0 0 0.75rem var(--color-primary));
 	}
 
@@ -28,7 +28,7 @@
 	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin-top: var(--spacer);
+	margin-top: var(--spacer-2);
 
 	&__item {
 	}
@@ -40,21 +40,17 @@
 		width: 2.75rem;
 		height: 2.75rem;
 		border-radius: 100%;
-		background-color: var(--color-dark);
+		background: var(--color-black);
 		transition: var(--transition);
 
-		@include hover {
-			background-color: var(--color-primary);
-		}
-
-		&:focus-visible {
-			background-color: var(--color-primary);
+		@include hover(focus) {
+			background: var(--color-accent);
 		}
 	}
 
 	&__icon {
 		width: 1rem;
 		height: 1rem;
-		fill: var(--color-light);
+		fill: var(--color-white);
 	}
 }

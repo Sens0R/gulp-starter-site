@@ -15,23 +15,23 @@
     min-width: 9.375rem;
     transition: var(--transition);
     overflow: hidden;
-    background-color: var(--color-light);
+    background-color: var(--color-white);
     box-shadow: 0 4px 8px rgba(0 0 0 / 0.35);
     translate: -50%;
   }
 
   &__link {
-    padding: var(--spacer-sm);
+    padding: var(--spacer-1);
     width: 100%;
   }
 
-  &__btn {
+  &__button {
     transition: var(--transition);
 
     &:focus-visible {
       scale: 1.5;
       translate: 3px;
-      fill: var(--color-dark);
+      fill: var(--color-black);
 
       .nav-menu__icon {
         width: 1rem;

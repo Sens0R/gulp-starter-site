@@ -2,30 +2,46 @@ $container-max-width: 1536px;
 
 $colors: (
 	white: hsl(0, 0%, 100%),
-	grey: hsl(240, 1%, 65%),
+	grey: hsl(240, 1%, 55%),
 	black: hsl(0, 5%, 15%),
 	primary: (
-		base: hsl(198 100% 46%),
+		null: hsl(198 100% 46%),
 		light: hsl(198, 100%, 71%),
 		dark: hsl(198, 100%, 37%),
 	),
 	secondary: (
-		base: hsl(42, 100%, 60%),
+		null: hsl(42, 100%, 60%),
 	),
 	accent: (
-		base: hsl(14, 100%, 54%),
+		null: hsl(14, 100%, 54%),
 	),
 	neutral: (
-		base: hsl(290, 60%, 74%),
+		null: hsl(290, 60%, 74%),
 	),
+);
+
+$font-sizes: (
+	xs: calc(var(--fs-base) * 0.75),
+	sm: calc(var(--fs-base) * 0.875),
+	base: clamp-smart(14, 16),
+	lg: calc(var(--fs-base) * 1.125),
+	xl: calc(var(--fs-base) * 1.25),
 );
 
 $font-weights: (
 	sm: 300,
-	'': 400,
+	base: 400,
 	md: 500,
 	lg: 600,
 	xl: 700,
+);
+
+$spacers: (
+	0: 0,
+	1: calc(var(--spacer-2) / 2),
+	2: clamp-smart(20, 24),
+	3: calc(var(--spacer-2) * 1.5),
+	4: calc(var(--spacer-2) * 3),
 );
 
 $grid-breakpoints: (
@@ -35,21 +51,4 @@ $grid-breakpoints: (
 	lg: 1024px,
 	xl: 1280px,
 	xxl: $container-max-width,
-);
-
-$spacers: (
-	0: 0,
-	1: var(--spacer-sm),
-	2: var(--spacer),
-	3: var(--spacer-md),
-	4: var(--spacer-lg),
-);
-
-$font-sizes: (
-	1: var(--fs-1),
-	2: var(--fs-2),
-	3: var(--fs-3),
-	4: var(--fs-4),
-	5: var(--fs-5),
-	6: var(--fs-6),
 );

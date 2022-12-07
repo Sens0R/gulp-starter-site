@@ -7,12 +7,12 @@ export function notification() {
         notification.style.maxHeight = notification.scrollHeight + 'px';
     };
 
-    const closeNotificationBtn = notification.querySelector('button');
+    const closeNotificationbutton = notification.querySelector('button');
 
     notification.style.maxHeight = notification.scrollHeight + 'px';
 
-    closeNotificationBtn.setAttribute('aria-label', 'Close notification');
-    closeNotificationBtn.addEventListener(
+    closeNotificationbutton.setAttribute('aria-label', 'Close notification');
+    closeNotificationbutton.addEventListener(
       'click',
       () => {
         notification.classList.add('closed');

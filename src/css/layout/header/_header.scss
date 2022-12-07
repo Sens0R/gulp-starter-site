@@ -17,12 +17,12 @@
 .header {
   display: flex;
   align-items: center;
-  gap: var(--spacer);
+  gap: var(--spacer-2);
   flex-wrap: wrap;
   padding: 0.75rem;
 
   @include bp(xxl) {
-    padding: 0.75rem var(--spacer-lg);
+    padding: 0.75rem var(--spacer-3);
   }
 }
 

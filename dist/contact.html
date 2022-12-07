@@ -25,87 +25,81 @@
     <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
 
 <div class="col-auto col-xl-3">
-  <a aria-label="Logo-name home. Logo-name logo." class="logo logo_header" href="index.html">
-    <svg aria-hidden="true" class="logo__icon">
-      <use href="images/icons/sprite-multi.svg#logo" />
-    </svg>
-  </a>
+	<a aria-label="Logo-name home. Logo-name logo." class="logo logo_header" href="index.html">
+		<svg aria-hidden="true" class="logo__icon">
+			<use href="images/icons/sprite-multi.svg#logo" />
+		</svg>
+	</a>
 </div>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
-  <button class="nav-toggler nav-toggler_close" data-hamburger-btn="close" type="button">
-    <span class="nav-toggler__text nav-toggler__text_close">Close</span
-    ><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
-      <use href="images/icons/sprite-mono.svg#cancel"></use>
-    </svg>
-  </button>
+	<button class="nav-toggler nav-toggler_close" data-hamburger-button="close" type="button">
+		<span class="nav-toggler__text nav-toggler__text_close">Close</span
+		><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
+			<use href="images/icons/sprite-mono.svg#cancel"></use>
+		</svg>
+	</button>
 
-  <form class="search" role="search">
-    
-  <label class="visually-hidden">Search</label>
+	<form class="search" role="search">
+	<label class="visually-hidden">Search</label>
 
-  <input
-    autocomplete="off"
-    class="search__input"
-    placeholder="Search"
-    required
-    type="search"
-  />
+	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
 
-  <button aria-label="Submit search" class="search__btn" type="submit">
-    <svg aria-hidden="true" class="search__icon ">
-      <use href="images/icons/sprite-mono.svg#search" />
-    </svg>
-  </button>
+	<button aria-label="Submit search" class="search__button" type="submit">
+		<svg aria-hidden="true" class="search__icon">
+			<use href="images/icons/sprite-mono.svg#search" />
+		</svg>
+	</button>
 </form>
 
-  <ul class="nav-menu">
-    <li class="nav-menu__item">
-      <a data-nav-page href="about.html" class="nav-menu__link nav-link">About</a>
-    </li>
 
-    <li data-dropdown="hover" class="nav-menu__item dropdown">
-      <div class="dropdown__controls">
-        <a data-nav-page href="services.html" class="nav-menu__link nav-link">Services</a>
-        <button type="button" class="dropdown__btn" aria-label="Dropdown menu for Services">
-          <svg aria-hidden="true" class="dropdown__icon">
-            <use href="images/icons/sprite-mono.svg#arrow"></use>
-          </svg>
-        </button>
-      </div>
-      <div data-dropdown-content class="dropdown__content">
-        <ul>
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
+	<ul class="nav-menu">
+		<li class="nav-menu__item">
+			<a data-nav-page href="about.html" class="nav-menu__link">About</a>
+		</li>
 
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
+		<li data-dropdown="hover" class="nav-menu__item dropdown">
+			<div class="dropdown__controls">
+				<a data-nav-page href="services.html" class="nav-menu__link">Services</a>
+				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
+					<svg aria-hidden="true" class="dropdown__icon">
+						<use href="images/icons/sprite-mono.svg#arrow"></use>
+					</svg>
+				</button>
+			</div>
+			<div data-dropdown-content class="dropdown__content">
+				<ul>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
 
-          <li>
-            <a href="index.html" class="dropdown__link nav-link">Lorem, ipsum.</a>
-          </li>
-        </ul>
-      </div>
-    </li>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="portfolio.html" class="nav-menu__link nav-link">Portfolio</a>
-    </li>
+					<li>
+						<a href="index.html" class="dropdown__link">Lorem, ipsum.</a>
+					</li>
+				</ul>
+			</div>
+		</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="blog.html" class="nav-menu__link nav-link">Blog</a>
-    </li>
+		<li class="nav-menu__item">
+			<a data-nav-page href="portfolio.html" class="nav-menu__link">Portfolio</a>
+		</li>
 
-    <li class="nav-menu__item">
-      <a data-nav-page href="contact.html" class="nav-menu__link nav-link">Contact</a>
-    </li>
-  </ul>
+		<li class="nav-menu__item">
+			<a data-nav-page href="blog.html" class="nav-menu__link">Blog</a>
+		</li>
 
-  <ul class="social">
+		<li class="nav-menu__item">
+			<a data-nav-page href="contact.html" class="nav-menu__link">Contact</a>
+		</li>
+	</ul>
+
+	<ul class="social">
   <li class="social__item">
     <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
       <svg aria-hidden="true" class="social__icon">
@@ -136,31 +130,25 @@
 <!-- ====================   SEARCH   ==================== -->
 
 <div class="col-auto col-md col-xl-2 col-xxl-3 search-container"><form class="search" role="search">
-    
-  <label class="visually-hidden">Search</label>
+	<label class="visually-hidden">Search</label>
 
-  <input
-    autocomplete="off"
-    class="search__input"
-    placeholder="Search"
-    required
-    type="search"
-  />
+	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
 
-  <button aria-label="Submit search" class="search__btn" type="submit">
-    <svg aria-hidden="true" class="search__icon ">
-      <use href="images/icons/sprite-mono.svg#search" />
-    </svg>
-  </button>
-</form></div>
+	<button aria-label="Submit search" class="search__button" type="submit">
+		<svg aria-hidden="true" class="search__icon">
+			<use href="images/icons/sprite-mono.svg#search" />
+		</svg>
+	</button>
+</form>
+</div>
 
 <!-- ====================   NAV-TOGGLER   ==================== -->
 
-<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-btn="open" type="button">
-  <svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
-    <use href="images/icons/sprite-mono.svg#hamburger" />
-  </svg>
-  <span class="nav-toggler__text nav-toggler__text_open">menu</span>
+<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
+		<use href="images/icons/sprite-mono.svg#hamburger" />
+	</svg>
+	<span class="nav-toggler__text nav-toggler__text_open">menu</span>
 </button>
 </header>
     </div>
@@ -174,20 +162,20 @@
 
 <footer class="footer">
   <div class="container-fluid container-xxl footer-container">
-  <nav aria-label="Footer" class="footer-nav">
-    <div class="row row-cols-sm-2 row-cols-lg-4 gy-xl">
-      <div class="col-12 footer-nav__column">
-        <ul class="footer-nav__list">
-          <li>
-            <a class="logo logo_footer" href="index.html" aria-label="Logo-name home. Logo-name logo.">
-              <svg aria-hidden="true" class="logo-icon logo__icon_footer">
-                <use href="images/icons/sprite-multi.svg#logo"></use>
-              </svg>
-            </a>
-          </li>
+	<nav aria-label="Footer" class="footer-nav">
+		<div class="row row-cols-sm-2 row-cols-lg-4 gy-xl">
+			<div class="col-12 footer-nav__column">
+				<ul class="footer-nav__list">
+					<li>
+						<a class="logo logo_footer" href="index.html" aria-label="Logo-name home. Logo-name logo.">
+							<svg aria-hidden="true" class="logo-icon logo__icon_footer">
+								<use href="images/icons/sprite-multi.svg#logo"></use>
+							</svg>
+						</a>
+					</li>
 
-          <li>
-            <div class="footer-socials"><ul class="social">
+					<li>
+						<div class="footer-socials"><ul class="social">
   <li class="social__item">
     <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
       <svg aria-hidden="true" class="social__icon">
@@ -213,104 +201,104 @@
   </li>
 </ul>
 </div>
-          </li>
-        </ul>
-      </div>
+					</li>
+				</ul>
+			</div>
 
-      <div class="col-12 footer-nav__column">
-        <h2 class="footer-nav__header">Services</h2>
+			<div class="col-12 footer-nav__column">
+				<h2 class="footer-nav__header">Services</h2>
 
-        <ul class="footer-nav__list">
-          <li><a class="footer-nav__link nav-link" href="index.html">Cloud Solutions</a></li>
-          <li><a class="footer-nav__link nav-link" href="index.html">Your Local IT Help desk</a></li>
-          <li><a class="footer-nav__link nav-link" href="index.html">Disaster Recovery</a></li>
-          <li><a class="footer-nav__link nav-link" href="index.html">Systems Security</a></li>
-          <li><a class="footer-nav__link nav-link" href="index.html">Hardware Procurement</a></li>
-          <li><a class="footer-nav__link nav-link" href="index.html">Phones and Internet</a></li>
-        </ul>
-      </div>
+				<ul class="footer-nav__list">
+					<li><a class="footer-nav__link" href="index.html">Cloud Solutions</a></li>
+					<li><a class="footer-nav__link" href="index.html">Your Local IT Help desk</a></li>
+					<li><a class="footer-nav__link" href="index.html">Disaster Recovery</a></li>
+					<li><a class="footer-nav__link" href="index.html">Systems Security</a></li>
+					<li><a class="footer-nav__link" href="index.html">Hardware Procurement</a></li>
+					<li><a class="footer-nav__link" href="index.html">Phones and Internet</a></li>
+				</ul>
+			</div>
 
-      <div class="col-12 footer-nav__column">
-        <h2 class="footer-nav__header">Company</h2>
+			<div class="col-12 footer-nav__column">
+				<h2 class="footer-nav__header">Company</h2>
 
-        <ul class="footer-nav__list">
-          <li><a class="footer-nav__link nav-link" href="about.html">About</a></li>
-          <li>
-            <a class="footer-nav__link nav-link" href="portfolio.html">Portfolio</a>
-          </li>
-          <li>
-            <a class="footer-nav__link nav-link" href="blog.html">Blog</a>
-          </li>
-          <li><a class="footer-nav__link nav-link" href="contact.html">Contact</a></li>
-          <li>
-            <a class="footer-nav__link nav-link" href="privacy-policy.html">Privacy Policy</a>
-          </li>
-          <li><a class="footer-nav__link nav-link" href="therms.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
+				<ul class="footer-nav__list">
+					<li><a class="footer-nav__link" href="about.html">About</a></li>
+					<li>
+						<a class="footer-nav__link" href="portfolio.html">Portfolio</a>
+					</li>
+					<li>
+						<a class="footer-nav__link" href="blog.html">Blog</a>
+					</li>
+					<li><a class="footer-nav__link" href="contact.html">Contact</a></li>
+					<li>
+						<a class="footer-nav__link" href="privacy-policy.html">Privacy Policy</a>
+					</li>
+					<li><a class="footer-nav__link" href="therms.html">Terms & Conditions</a></li>
+				</ul>
+			</div>
 
-      <div class="col-12 footer-nav__column">
-        <h2 class="footer-nav__header">Contact</h2>
+			<div class="col-12 footer-nav__column">
+				<h2 class="footer-nav__header">Contact</h2>
 
-        <ul class="footer-nav__list">
-          <li>
-            <div class="footer-nav__list-header">Phone</div>
-            <a href="tel:1800843695" class="footer-nav__link nav-link" aria-label="Make a phone call">1800 843 695</a>
-          </li>
+				<ul class="footer-nav__list">
+					<li>
+						<div class="footer-nav__list-header">Phone</div>
+						<a href="tel:1800843695" class="footer-nav__link" aria-label="Make a phone call">1800 843 695</a>
+					</li>
 
-          <li>
-            <div class="footer-nav__list-header">Address</div>
-            <a
-              class="footer-nav__link nav-link"
-              aria-label="Open Google Map"
-              href="https://goo.gl/maps/cWDnimrLcYismybL7"
-              target="_blank"
-              >Suite 6, Level 13, 350 Collins Street, Melbourne VIC 3000</a
-            >
-          </li>
+					<li>
+						<div class="footer-nav__list-header">Address</div>
+						<a
+							class="footer-nav__link"
+							aria-label="Open Google Map"
+							href="https://goo.gl/maps/cWDnimrLcYismybL7"
+							target="_blank"
+							>Suite 6, Level 13, 350 Collins Street, Melbourne VIC 3000</a
+						>
+					</li>
 
-          <li class="footer-nav__btn">
-            <a class="btn" href="#">Contact us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+					<li class="footer-nav__button">
+						<a class="button" href="#">Contact us</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-  <div class="copyright">
-    <p>©2023 Starter site</p>
-    <p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
-  </div>
+	<div class="copyright">
+		<p>©2023 Starter site</p>
+		<p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
+	</div>
 </div>
 
 </footer>
 
 </div>
 <div class="dialogs">
-  <div data-dialog class="dialog">
-    <p data-dialog-label class="dialog__title">Dialog title</p>
-    <p data-dialog-desc>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
-      quod nam. Qui, iure?
-    </p>
+	<div data-dialog class="dialog">
+		<p data-dialog-label class="dialog__title">Dialog title</p>
+		<p data-dialog-desc>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam cumque culpa natus qui voluptate deserunt minima
+			quod nam. Qui, iure?
+		</p>
 
-    <menu class="dialog__controls">
-      <li><button class="btn-reverse" data-dialog-open="two" type="button">Dialog lvl2</button></li>
-      <li><button data-dialog-focus class="btn-reverse" data-dialog-close type="button">Close</button></li>
-    </menu>
-  </div>
+		<menu class="dialog__controls">
+			<li><button class="button-reverse" data-dialog-open="two" type="button">Dialog lvl2</button></li>
+			<li><button data-dialog-focus class="button-reverse" data-dialog-close type="button">Close</button></li>
+		</menu>
+	</div>
 
-  <div data-dialog="two" class="dialog dialog_small">
-    <div class="dialog__header">
-      <p class="dialog__title">Dialog lvl2 title</p>
-      <button data-dialog-close class="link-space" type="button" aria-label="close dialog">
-        <svg aria-hidden="true" class="cancel-icon">
-          <use href="images/icons/sprite-mono.svg#cancel"></use>
-        </svg>
-      </button>
-    </div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, omnis.</p>
-  </div>
+	<div data-dialog="two" class="dialog dialog_small">
+		<div class="dialog__header">
+			<p class="dialog__title">Dialog lvl2 title</p>
+			<button data-dialog-close class="link-space" type="button" aria-label="close dialog">
+				<svg aria-hidden="true" class="cancel-icon">
+					<use href="images/icons/sprite-mono.svg#cancel"></use>
+				</svg>
+			</button>
+		</div>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, omnis.</p>
+	</div>
 </div>
 
 </body>

@@ -2,15 +2,15 @@
 %button {
 	--button-color: var(--color-white);
 	--button-color-accent: var(--color-white);
-	--button-bg: var(--color-accent);
-	--button-bg-accent: var(--color-primary);
+	--button-bg: var(--color-primary);
+	--button-bg-accent: var(--color-primary-dark);
 
 	color: var(--button-color);
 	background: var(--button-bg);
 	font-weight: var(--fw-xl);
 	border: var(--border-thickness) solid var(--button-bg);
-	border-radius: var(--border-radius);
 	transition: var(--transition);
+	//border-radius: var(--border-radius);
 	//box-shadow: var(--shadow);
 	padding: 0.75rem 1.5rem;
 	min-width: 7.5rem;
@@ -21,7 +21,7 @@
 	text-decoration: none;
 	line-height: 1;
 
-	@include hover() {
+	@include hover(focus) {
 		background: var(--button-bg-accent);
 		border-color: var(--button-bg-accent);
 		color: var(--button-color-accent);
@@ -34,12 +34,12 @@
 	color: var(--button-bg);
 	border-color: var(--button-bg);
 
-	@include hover() {
+	@include hover(focus) {
 		background-color: var(--button-bg-accent);
 		color: var(--button-color-accent);
 	}
 
-	@include button-chevron();
+	@include chevron();
 	
 }
 
@@ -49,7 +49,7 @@
 	background: var(--button-bg-accent);
 	border-color: var(--button-bg-accent);
 
-	@include hover() {
+	@include hover(focus) {
 		background-color: var(--button-bg);
 		border-color: var(--button-bg);
 		color: var(--button-color);

@@ -9,4 +9,5 @@ ol:not([class]) {
 ul li::marker {
 	color: var(--color-primary);
 	font-size: 1.25em;
+	line-height: 1;
 }

@@ -4,11 +4,11 @@
   left: 50%;
   display: flex;
   flex-direction: column;
-  row-gap: var(--spacer);
+  row-gap: var(--spacer-2);
   z-index: var(--z-dialog);
-  padding: var(--spacer);
-  border: 1px solid var(--color-dark);
-  background-color: var(--color-light);
+  padding: var(--spacer-2);
+  border: 1px solid var(--color-black);
+  background-color: var(--color-white);
   box-shadow: 0 0 2rem rgba(0 0 0 / 0.4);
   overflow: auto;
   overscroll-behavior: contain;
@@ -44,13 +44,13 @@
   &__title {
     font-size: var(--fs-5);
     color: var(--color-primary);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-xl);
   }
 
   &__controls {
     display: flex;
     justify-content: flex-end;
-    gap: var(--spacer-sm);
+    gap: var(--spacer-1);
   }
 
   .cancel-icon {

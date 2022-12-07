@@ -1,64 +1,48 @@
 .card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  border: var(--border);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	border: var(--border);
 
-  &__img {
-    @include hover {
-    }
-  }
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-2);
+		padding: var(--spacer-2) var(--spacer-3);
+		height: 100%;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacer);
-    padding: var(--spacer);
-    height: 100%;
+		> :last-child:has(a),
+		a {
+			margin-top: auto;
+		}
+	}
 
-    > :last-child {
-      margin-top: auto;
-    }
-  }
+	&__date {
+		font-size: var(--fs-sm);
+		color: var(--color-muted);
+	}
+	
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		color: var(--color-white);
 
-  &__date {
-    font-size: var(--fs-0);
-  }
+		li a {
+			background: var(--color-primary);
+			padding: 0.25rem 0.5rem;
+			transition: var(--transition);
+			@include link-space();
 
-  &__header {
-    font-size: var(--fs-4);
-  }
+			@include hover(focus) {
+				background: var(--color-primary-dark);
+				color: var(--color-white);
+			}			
+		}
+	}
 
-  &__list {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    font-size: var(--fs-6);
-    color: var(--color-light);
-
-    li a {
-      background-color: var(--color-accent-light);
-      padding: 0.25rem 0.5rem;
-      transition: var(--transition);
-      @include link-space();
-
-      @include hover {
-        background-color: var(--color-accent-dark);
-        color: var(--color-light);
-      }
-
-      &:focus-visible {
-        background-color: var(--color-accent-dark);
-        color: var(--color-light);
-      }
-    }
-  }
-
-  .image {
-    aspect-ratio: 5 / 3;
-  }
-
-  &:focus-within {
-  }
+	.image {
+		aspect-ratio: 5 / 3;
+	}
 }

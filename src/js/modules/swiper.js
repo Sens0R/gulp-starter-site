@@ -16,9 +16,9 @@ const swiper = new Swiper('[data-swiper]', {
 	},
 
 	navigation: {
-		nextEl: '[data-swiper-next]', // next btn selector
-		prevEl: '[data-swiper-prev]', // prev btn selector
-		disabledClass: 'swiper__btn_disabled',
+		nextEl: '[data-swiper-next]', // next button selector
+		prevEl: '[data-swiper-prev]', // prev button selector
+		disabledClass: 'swiper__button_disabled',
 	},
 
 	// responsive breakpoints 576 768 992 1200
