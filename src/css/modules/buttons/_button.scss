@@ -21,7 +21,13 @@
 	text-decoration: none;
 	line-height: 1;
 
-	@include hover(focus) {
+	@include hover() {
+		background: var(--button-bg-accent);
+		border-color: var(--button-bg-accent);
+		color: var(--button-color-accent);
+	}
+
+	&:focus {
 		background: var(--button-bg-accent);
 		border-color: var(--button-bg-accent);
 		color: var(--button-color-accent);
@@ -40,7 +46,6 @@
 	}
 
 	@include chevron();
-	
 }
 
 .button-reverse,

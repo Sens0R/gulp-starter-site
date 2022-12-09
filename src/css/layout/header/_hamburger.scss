@@ -9,6 +9,8 @@
   visibility: hidden;
   min-width: 320px;
   width: auto;
+  height: 100vh;
+
   z-index: var(--z-hamburger);
 
   padding: 0 0.75rem 0.75rem 0.75rem;
@@ -21,6 +23,7 @@
     position: static;
     translate: 0;
     padding: 0;
+	 height: auto;
   }
 
   &.active {
@@ -109,6 +112,7 @@
 
   @include bp(lg) {
     display: none;
+	
   }
 }
 

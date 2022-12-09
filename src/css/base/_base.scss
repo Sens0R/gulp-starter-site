@@ -144,13 +144,13 @@ dt {
 	list-style-position: inside;
 }
 
-input {
-	outline: none;
+input,
+textarea {
 	border: var(--border, none);
+}
 
-	&[type='search']::-webkit-search-cancel-button {
-		display: none;
-	}
+input[type='search']::-webkit-search-cancel-button {
+	display: none;
 }
 
 ::selection {

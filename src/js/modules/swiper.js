@@ -53,7 +53,7 @@ const swiper = new Swiper('[data-swiper]', {
 })
 
 /* ====================   ONLY VISIBLE AUTOPLAY ==================== */
-// TODO 
+// TODO
 
 const autoplayObserver = new IntersectionObserver(
 	entries =>
@@ -64,5 +64,3 @@ const autoplayObserver = new IntersectionObserver(
 		threshold: 0.75,
 	}
 )
-
-

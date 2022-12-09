@@ -1,86 +1,84 @@
 [data-accordion-content] {
-  max-height: 0;
-  visibility: hidden;
-  overflow: hidden;
-  transition: all 0.6s ease;
+	max-height: 0;
+	visibility: hidden;
+	overflow: hidden;
 }
 
 [data-accordion-content].active {
-  visibility: visible;
+	visibility: visible;
 }
 
 .accordion {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacer-2);
+	--accordion-transition: all 0.6s ease;
+	--accordion-color: var(--color-primary);
+	--accordion-accent-color: var(--color-white);
 
-  &__item {
-    border: var(--border);
-  }
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacer-2);
 
-  &__header {
-  }
+	&__item {
+	}
 
-  &__button {
-    display: flex;
-    justify-content: space-between;
-    column-gap: var(--spacer-2);
-    padding: var(--spacer-2);
-    width: 100%;
-    font-weight: var(--fw-xl);
-    color: var(--color-black);
-    background-color: var(--color-white);
-    transition: var(--transition);
+	&__header {
+	}
 
-    &.active {
-      background-color: var(--color-black);
-      color: var(--color-white);
+	&__button {
+		display: flex;
+		justify-content: space-between;
+		column-gap: var(--spacer-2);
+		padding: var(--spacer-2);
+		width: 100%;
+		color: var(--accordion-color);
+		background: var(--color-primary-bg);
+		transition: var(--transition);
+		font-weight: var(--fw-xl);
+		font-size: var(--h4);
 
-      .accordion__icon {
-        fill: var(--color-white);
-        rotate: 180deg;
-      }
-    }
+		&.active {
+			background: var(--color-primary-dark);
+			color: var(--accordion-accent-color);
+			box-shadow: var(--shadow);
 
-    @include hover(focus) {
-      background-color: var(--color-accent);
-      color: var(--color-white);
-      .accordion__icon {
-        fill: var(--color-white);
-      }
-    }
+			.accordion__icon {
+				fill: var(--accordion-accent-color);
+				rotate: 180deg;
+			}
+		}
 
-    &:focus-visible {
-      background-color: var(--color-accent);
-      color: var(--color-white);
+		@include hover(focus) {
+			background-color: var(--accordion-color);
+			color: var(--accordion-accent-color);
+			.accordion__icon {
+				fill: var(--accordion-accent-color);
+			}
+		}
+	}
 
-      .accordion__icon {
-        fill: var(--color-white);
-      }
-    }
-  }
+	&__content {
+		transition: var(--accordion-transition);
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacer-2);
+		padding: 0 var(--spacer-2);
+		box-shadow: var(--shadow);
+		
+		> :first-child {
+			padding-top: var(--spacer-2);
+		}
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacer-2);
-    padding: 0 var(--spacer-2);
+		> :last-child {
+			padding-bottom: var(--spacer-2);
+		}
+	}
 
-    > :first-child {
-      padding-top: var(--spacer-2);
-    }
+	&__icon {
+		width: 1rem;
+		height: 1rem;
+		display: flex;
+		align-self: center;
+		fill: currentColor;
+		transition: var(--accordion-transition);
 
-    > :last-child {
-      padding-bottom: var(--spacer-2);
-    }
-  }
-
-  &__icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    display: flex;
-    align-self: center;
-    fill: var(--color-black);
-    transition: all 0.6s ease-in-out;
-  }
+	}
 }

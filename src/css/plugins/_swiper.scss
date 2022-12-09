@@ -21,11 +21,13 @@
 		min-width: auto !important;
 
 		&_disabled {
+			--swiper-disabled-color: var(--color-primary-light);
+
 			background: none !important;
-			border-color: var(--color-primary-light) !important;
+			border-color: var(--swiper-disabled-color) !important;
 			cursor: inherit;
 			svg {
-				fill: var(--color-primary-light);
+				fill: var(--swiper-disabled-color);
 			}
 		}
 	}

@@ -15,7 +15,7 @@
 	// backgrounds
 	--bg-body: var(--color-white);
 	--bg-header: var(--color-white);
-	--bg-footer: var(--color-white);
+	--bg-footer: var(--color-primary-bg);
 
 	// typography
 	--color-base: var(--color-black);
@@ -68,12 +68,12 @@
 
 	// container
 	--container-space-x: var(--spacer-2);
-	--container-space-y: var(--spacer-3);
+	--container-space-y: var(--spacer-4);
 
 	// borders
 	--border-color: var(--color-primary);
 	--border-thickness: 1px;
-	--border-radius: 100vmax;
+	--border-radius: 1rem;
 	--border: var(--border-thickness) solid var(--border-color);
 
 	// line
@@ -83,7 +83,7 @@
 	--hr-br: 100vmax;
 
 	// shadows
-	--shadow: 0 0 1rem rgba(0 0 0 / 0.25);
+	--shadow: 0 0 0.5rem hsl(198 100% 46% / 0.15);
 
 	// transitions
 	--transition: 0.25s ease-out;
@@ -103,14 +103,5 @@
 |	ELEMENTS
 |--------------------------------------------------------------------------
 */
-	// icons
-	--icon-color: var(--color-primary);
-
-	// forms
-	--input-border-color: var(--border-color);
-	--input-border-focus-color: var(--color-focus);
-	--input-border-error-color: var(--color-error);
-	--input-bg-color: var(--color-white);
-	--input-bg-focus-color: var(--color-gray);
-	--input-placeholder-color: var(--color-black);
+	
 }

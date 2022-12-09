@@ -1,6 +1,6 @@
 @use 'sass:meta';
 
-@mixin chevron($margin-left: 0.75rem) {
+@mixin chevron($margin-left: 0.5rem) {
 	&:after {
 		--chevron-line: 2px solid currentColor;
 		--chevron-size: 0.5em;
@@ -19,7 +19,7 @@
 
 	@include hover(focus) {
 		&:after {
-			translate: 0.375rem;
+			translate: 0.188rem;
 			scale: 1.25;
 		}
 	}

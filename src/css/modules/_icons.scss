@@ -28,10 +28,7 @@
 	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap;
-	margin-top: var(--spacer-2);
-
-	&__item {
-	}
+	margin-top: var(--spacer-1);
 
 	&__link {
 		display: flex;
@@ -40,11 +37,11 @@
 		width: 2.75rem;
 		height: 2.75rem;
 		border-radius: 100%;
-		background: var(--color-black);
+		background: var(--color-primary);
 		transition: var(--transition);
 
 		@include hover(focus) {
-			background: var(--color-accent);
+			background: var(--color-primary-dark);
 		}
 	}
 

@@ -17,10 +17,10 @@
 @import 'plugins/animations';
 
 // BASE
-@import 'base/containers';
 @import 'base/root';
 @import 'base/fonts';
 @import 'base/base';
+@import 'base/containers';
 @import 'base/selectors';
 
 // LAYOUT
@@ -40,6 +40,7 @@
 @import 'modules/lists';
 @import 'modules/tabs';
 @import 'modules/tooltip';
+@import 'modules/forms';
 
 // PAGES
 @import 'pages/home';

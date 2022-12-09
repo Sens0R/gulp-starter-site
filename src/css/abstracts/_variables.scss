@@ -1,3 +1,4 @@
+$grid-gutter-width: 0; // default bootstrap x gutter
 $container-max-width: 1536px;
 
 $colors: (
@@ -8,6 +9,7 @@ $colors: (
 		null: hsl(198 100% 46%),
 		light: hsl(198, 100%, 71%),
 		dark: hsl(198, 100%, 37%),
+		bg: hsl(198, 100%, 97%),
 	),
 	secondary: (
 		null: hsl(42, 100%, 60%),
@@ -16,7 +18,7 @@ $colors: (
 		null: hsl(14, 100%, 54%),
 	),
 	neutral: (
-		null: hsl(290, 60%, 74%),
+		null: rgb(185, 238, 125),
 	),
 );
 

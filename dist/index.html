@@ -220,7 +220,7 @@
 	</div>
 </div>
 
-<section class="container">
+<section class="container-lg">
 	<div data-accordion class="accordion">
 		<!-- ====================   HEADINGS   ==================== -->
 
@@ -789,7 +789,7 @@
 <section class="container vstack gap-3">
 	<h2 data-animate="section-header" class="text-center text-uppercase">Buttons</h2>
 
-	<div class="hstack gap-2">
+	<div class="hstack gap-2 flex-wrap">
 		<a class="button m-auto" href="index.html">Link</a>
 		<a class="button button-reverse m-auto" href="index.html">Link-reverse</a>
 		<a class="button button-outline m-auto" href="index.html">Link-outline</a>
@@ -1508,14 +1508,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="hstack gap-2">
+	<div class="hstack gap-2 justify-content-between">
 		<button data-swiper-prev type="button" class="swiper__button button swiper__button_prev">
 			<svg aria-hidden="true" class="swiper__icon rotate-left">
 				<use href="images/icons/sprite-mono.svg#arrow"></use>
 			</svg>
 		</button>
 
-		<div data-swiper-pagination class="swiper__pagination"></div>
+		<div data-swiper-pagination class="swiper__pagination d-none d-md-flex"></div>
 		<button data-swiper-next type="button" class="swiper__button button swiper__button_next">
 			<svg aria-hidden="true" class="swiper__icon rotate-right">
 				<use href="images/icons/sprite-mono.svg#arrow"></use>
@@ -1524,12 +1524,94 @@
 	</div>
 </section>
 
+<!-- ====================		FORM		==================== -->
+
+<div class="container">
+	<div class="row row-cols-lg-2 g-4">
+		<div class="col-12 gap-3 d-flex flex-column">
+			<h2>We'd love to hear from you</h2>
+
+			<ul class="contact-form">
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Email</h3>
+					<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
+				</li>
+
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Phone</h3>
+					<a href="tel:+61251347278">61 2 5134 7278</a>
+				</li>
+
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Social</h3>
+					<div><ul class="social">
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li class="social__item">
+    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="social__icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-12 gap-3 d-flex flex-column">
+			<h2>Contact form</h2>
+
+			<form class="contact-form">
+				<label class="contact-form__title contact-form__item">
+					Name
+					<input autocomplete="off" type="text" name="name" class="contact-form__input" />
+				</label>
+
+				<label class="contact-form__title contact-form__item">
+					Email address (required)
+					<input type="email" name="email" class="contact-form__input" required />
+				</label>
+
+				<label class="contact-form__title contact-form__item">
+					Your message (required)
+					<textarea
+						name="message"
+						rows="4"
+						cols="50"
+						class="contact-form__input"
+						placeholder="Enter your message here..."
+						required
+					></textarea>
+				</label>
+
+				<button class="button" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
 </main>
 
 <footer class="footer">
-  <div class="container-fluid container-xxl footer-container">
+  <div class="container-xxl">
 	<nav aria-label="Footer" class="footer-nav">
-		<div class="row row-cols-sm-2 row-cols-lg-4 gy-xl">
+		<div class="row row-cols-sm-2 row-cols-lg-4 gy-4">
 			<div class="col-12 footer-nav__column">
 				<ul class="footer-nav__list">
 					<li>
@@ -1649,8 +1731,8 @@
 		</p>
 
 		<menu class="dialog__controls">
-			<li><button class="button-reverse" data-dialog-open="two" type="button">Dialog lvl2</button></li>
-			<li><button data-dialog-focus class="button-reverse" data-dialog-close type="button">Close</button></li>
+			<li><button class="button" data-dialog-open="two" type="button">Dialog lvl2</button></li>
+			<li><button data-dialog-focus class="button" data-dialog-close type="button">Close</button></li>
 		</menu>
 	</div>
 
