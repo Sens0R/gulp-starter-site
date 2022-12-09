@@ -38,8 +38,7 @@
 		&.active {
 			background: var(--color-primary-dark);
 			color: var(--accordion-accent-color);
-			box-shadow: var(--shadow);
-
+			
 			.accordion__icon {
 				fill: var(--accordion-accent-color);
 				rotate: 180deg;
@@ -61,8 +60,8 @@
 		flex-direction: column;
 		gap: var(--spacer-2);
 		padding: 0 var(--spacer-2);
-		box-shadow: var(--shadow);
-		
+		background: var(--color-primary-bg);
+
 		> :first-child {
 			padding-top: var(--spacer-2);
 		}
@@ -79,6 +78,5 @@
 		align-self: center;
 		fill: currentColor;
 		transition: var(--accordion-transition);
-
 	}
 }
