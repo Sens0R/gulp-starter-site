@@ -15,7 +15,7 @@
 	// backgrounds
 	--bg-body: var(--color-white);
 	--bg-header: var(--color-white);
-	--bg-footer: var(--color-primary-bg);
+	--bg-footer: var(--color-primary-white);
 
 	// typography
 	--color-base: var(--color-black);
@@ -50,6 +50,7 @@
 	--lh-sm: 1.3;
 	--lh-lg: 2;
 	--lh-heading: 1.2;
+	--underline-offset: 30%;
 
 	// font weights
 	// variables from sass font weights map
@@ -79,11 +80,13 @@
 	// line
 	--hr-color: var(--color-primary);
 	--hr-width: 90%;
-	--hr-height: 2px;
+	--hr-height: var(--border-thickness);
 	--hr-br: 100vmax;
 
 	// shadows
-	--shadow: 0 0 0.5rem hsl(198 100% 46% / 0.15);
+	--shadow-color: hsl(203 90% 40% / 0.1);
+	--shadow-spread: 15px;
+	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
 
 	// transitions
 	--transition: 0.25s ease-out;
@@ -97,11 +100,4 @@
 	--z-hamburger-backdrop: 90;
 	--z-header: 50;
 	--z-footer: 40;
-
-	/*
-|--------------------------------------------------------------------------
-|	ELEMENTS
-|--------------------------------------------------------------------------
-*/
-	
 }

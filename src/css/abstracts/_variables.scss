@@ -3,23 +3,20 @@ $container-max-width: 1536px;
 
 $colors: (
 	white: hsl(0, 0%, 100%),
-	grey: hsl(240, 1%, 55%),
+	grey: hsl(240, 0%, 50%),
 	black: hsl(0, 5%, 15%),
 	primary: (
-		null: hsl(198 100% 46%),
-		light: hsl(198, 100%, 71%),
-		dark: hsl(198, 100%, 37%),
-		bg: hsl(198, 100%, 98%),
+		null: hsl(203 90% 40%),
+		light: hsl(203, 90%, 60%),
+		dark: hsl(203, 90%, 30%),
+		white: hsl(203, 90%, 98%),
 	),
 	secondary: (
-		null: hsl(42, 100%, 60%),
+		null: hsl(42, 100%, 55%),
 	),
 	accent: (
-		null: hsl(14, 100%, 54%),
-	),
-	neutral: (
-		null: rgb(185, 238, 125),
-	),
+		null: hsl(14, 100%, 60%),
+	)
 );
 
 $font-sizes: (

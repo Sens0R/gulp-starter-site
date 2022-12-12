@@ -23,8 +23,7 @@
 	&__input {
 		padding: 0.75rem 3rem 0.75rem 0.75rem;
 		width: 100%;
-		transition: var(--transition);
-
+		
 		&::placeholder {
 			transition: var(--transition);
 		}

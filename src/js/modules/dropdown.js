@@ -20,132 +20,136 @@ if (window.matchMedia('(pointer: coarse)').matches) mobileDevice = true
 const dropdownsArr = document.querySelectorAll('[data-dropdown]')
 
 window.matchMedia('(orientation: landscape)').onchange = () => {
-  const activeDropdownsArr = document.querySelectorAll('[data-dropdown].active')
-  activeDropdownsArr.forEach(activeDropdownEl => {
-    const activeDropdownContent = activeDropdownEl.querySelector('[data-dropdown-content]')
-    activeDropdownContent.style.maxHeight = activeDropdownContent.scrollHeight + 'px'
-  })
+	const activeDropdownsArr = document.querySelectorAll('[data-dropdown].active')
+	activeDropdownsArr.forEach(activeDropdownEl => {
+		const activeDropdownContent = activeDropdownEl.querySelector('[data-dropdown-content]')
+		activeDropdownContent.style.maxHeight = activeDropdownContent.scrollHeight + 'px'
+	})
 }
 
 export function dropdown() {
-  dropdownsArr.forEach(dropdownEl => {
-    const dropdownButton = dropdownEl.querySelector('button')
-    const dropdownContent = dropdownEl.querySelector('[data-dropdown-content]')
-    const parentContentEl = dropdownEl.closest('[data-dropdown-content]') //nested dropdown
-    const dropdownContentLinksArr = dropdownContent.querySelectorAll(
-      'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    )
+	dropdownsArr.forEach(dropdownEl => {
+		const dropdownButton = dropdownEl.querySelector('button')
+		const dropdownContent = dropdownEl.querySelector('[data-dropdown-content]')
+		const parentContentEl = dropdownEl.closest('[data-dropdown-content]') //nested dropdown
+		const dropdownContentLinksArr = dropdownContent.querySelectorAll(
+			'button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+		)
 
-    dropdownButton.setAttribute('aria-expanded', 'false')
-    dropdownContent.style.maxHeight = 0
+		dropdownButton.setAttribute('aria-expanded', 'false')
 
-    if (dropdownEl.dataset.dropdown === 'hover' && !mobileDevice) {
-      dropdownEl.addEventListener('mouseenter', toggle)
-      dropdownEl.addEventListener('mouseleave', close)
-    }
+		if (mobileDevice) dropdownContent.style.maxHeight = 0
 
-    dropdownButton.addEventListener('click', toggle)
+		if (dropdownEl.dataset.dropdown === 'hover' && !mobileDevice) {
+			dropdownEl.addEventListener('mouseenter', toggle)
+			dropdownEl.addEventListener('mouseleave', close)
+		}
 
-    dropdownContentLinksArr.forEach((dropdownContentLink, i) => {
-      const firstLink = dropdownContentLinksArr[0]
-      const lastLink = dropdownContentLinksArr[dropdownContentLinksArr.length - 1]
-      const nextLink = dropdownContentLinksArr[i + 1]
-      const prevLink = dropdownContentLinksArr[i - 1]
+		dropdownButton.addEventListener('click', toggle)
 
-      dropdownContentLink.addEventListener('keydown', e => {
-        if (e.code === 'Home') {
-          e.preventDefault()
-          firstLink.focus()
-        }
+		dropdownContentLinksArr.forEach((dropdownContentLink, i) => {
+			const firstLink = dropdownContentLinksArr[0]
+			const lastLink = dropdownContentLinksArr[dropdownContentLinksArr.length - 1]
+			const nextLink = dropdownContentLinksArr[i + 1]
+			const prevLink = dropdownContentLinksArr[i - 1]
 
-        if (e.code === 'End') {
-          e.preventDefault()
-          lastLink.focus()
-        }
+			dropdownContentLink.addEventListener('keydown', e => {
+				if (e.code === 'Home') {
+					e.preventDefault()
+					firstLink.focus()
+				}
 
-        if (e.code === 'ArrowDown' || e.code === 'ArrowRight') {
-          e.preventDefault()
-          if (nextLink) return nextLink.focus()
-          firstLink.focus()
-        }
+				if (e.code === 'End') {
+					e.preventDefault()
+					lastLink.focus()
+				}
 
-        if (e.code === 'ArrowUp' || e.code === 'ArrowLeft') {
-          e.preventDefault()
-          if (prevLink) return prevLink.focus()
-          lastLink.focus()
-        }
-      })
-    })
+				if (e.code === 'ArrowDown' || e.code === 'ArrowRight') {
+					e.preventDefault()
+					if (nextLink) return nextLink.focus()
+					firstLink.focus()
+				}
 
-    function toggle() {
-      if (dropdownEl.classList.contains('active')) return close()
-      dropdownContent.style.maxHeight = `${dropdownContent.scrollHeight}px`
+				if (e.code === 'ArrowUp' || e.code === 'ArrowLeft') {
+					e.preventDefault()
+					if (prevLink) return prevLink.focus()
+					lastLink.focus()
+				}
+			})
+		})
 
-      //nested dropdown
-      if (parentContentEl) {
-        parentContentEl.style.maxHeight = `${dropdownContent.scrollHeight + parentContentEl.scrollHeight}px`
-        parentContentEl.style.overflow = 'visible'
-      }
+		function toggle() {
+			if (dropdownEl.classList.contains('active')) return close()
+			if (mobileDevice) dropdownContent.style.maxHeight = `${dropdownContent.scrollHeight}px`
 
-      dropdownEl.classList.add('active')
-      document.addEventListener('keydown', closeWithEsc)
-      dropdownButton.setAttribute('aria-expanded', 'true')
-      checkBoundingBox()
-      setTimeout(() => {
-        document.addEventListener('click', clickOutside)
-      }, 1)
-      dropdownButton.addEventListener('keydown', selectFirstLink)
-    }
+			//nested dropdown
+			if (parentContentEl & mobileDevice) {
+				parentContentEl.style.maxHeight = `${dropdownContent.scrollHeight + parentContentEl.scrollHeight}px`
+				parentContentEl.style.overflow = 'visible'
+			}
 
-    function close() {
-      dropdownContent.style.overflow = null
-      dropdownContent.style.maxHeight = 0
-      document.removeEventListener('keydown', closeWithEsc)
-      dropdownButton.setAttribute('aria-expanded', 'false')
-      document.removeEventListener('click', clickOutside)
-      resetBoundingBox()
-      dropdownButton.removeEventListener('keydown', selectFirstLink)
-      dropdownEl.classList.remove('active')
-    }
+			dropdownEl.classList.add('active')
+			document.addEventListener('keydown', closeWithEsc)
+			dropdownButton.setAttribute('aria-expanded', 'true')
+			checkBoundingBox()
+			setTimeout(() => {
+				document.addEventListener('click', clickOutside)
+			}, 1)
+			dropdownButton.addEventListener('keydown', selectFirstLink)
+		}
 
-    function selectFirstLink(e) {
-      if (e.code === 'ArrowDown' || e.code === 'ArrowRight') {
-        e.preventDefault()
-        dropdownContentLinksArr[0].focus()
-      }
-    }
+		function close() {
+			if (mobileDevice) {
+				dropdownContent.style.maxHeight = 0
+				dropdownContent.style.overflow = null
+			}
 
-    function clickOutside(e) {
-      if (!dropdownContent.contains(e.target)) close()
-    }
+			document.removeEventListener('keydown', closeWithEsc)
+			dropdownButton.setAttribute('aria-expanded', 'false')
+			document.removeEventListener('click', clickOutside)
+			resetBoundingBox()
+			dropdownButton.removeEventListener('keydown', selectFirstLink)
+			dropdownEl.classList.remove('active')
+		}
 
-    function closeWithEsc(e) {
-      if (e.code === 'Escape') {
-        close()
-        if (dropdownEl.contains(document.activeElement)) dropdownButton.focus()
-      }
-    }
+		function selectFirstLink(e) {
+			if (e.code === 'ArrowDown' || e.code === 'ArrowRight') {
+				e.preventDefault()
+				dropdownContentLinksArr[0].focus()
+			}
+		}
 
-    function checkBoundingBox() {
-      let bounds = dropdownContent.getBoundingClientRect()
+		function clickOutside(e) {
+			if (!dropdownContent.contains(e.target)) close()
+		}
 
-      if (bounds.right > window.innerWidth) {
-        dropdownContent.style.right = '0'
-        dropdownContent.style.left = 'inherit'
-        dropdownContent.style.translate = '0'
-      }
+		function closeWithEsc(e) {
+			if (e.code === 'Escape') {
+				close()
+				if (dropdownEl.contains(document.activeElement)) dropdownButton.focus()
+			}
+		}
 
-      if (bounds.left < 0) {
-        dropdownContent.style.right = 'inherit'
-        dropdownContent.style.left = '0'
-        dropdownContent.style.translate = '0'
-      }
-    }
+		function checkBoundingBox() {
+			let bounds = dropdownContent.getBoundingClientRect()
 
-    function resetBoundingBox() {
-      dropdownContent.style.right = null
-      dropdownContent.style.left = null
-      dropdownContent.style.translate = null
-    }
-  })
+			if (bounds.right > window.innerWidth) {
+				dropdownContent.style.right = '0'
+				dropdownContent.style.left = 'inherit'
+				dropdownContent.style.translate = '0'
+			}
+
+			if (bounds.left < 0) {
+				dropdownContent.style.right = 'inherit'
+				dropdownContent.style.left = '0'
+				dropdownContent.style.translate = '0'
+			}
+		}
+
+		function resetBoundingBox() {
+			dropdownContent.style.right = null
+			dropdownContent.style.left = null
+			dropdownContent.style.translate = null
+		}
+	})
 }

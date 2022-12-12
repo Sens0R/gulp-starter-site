@@ -5,6 +5,12 @@
 		display: flex;
 		align-items: stretch;
 		justify-content: space-between;
+
+		&:has(button) {
+			.nav-menu__link {
+				padding-right: 0;
+			}
+		}
 	}
 
 	&__content {
@@ -12,12 +18,12 @@
 		left: 50%;
 		visibility: hidden;
 		opacity: 0;
-		min-width: 9.375rem;
 		transition: var(--transition);
 		overflow: hidden;
 		background-color: var(--color-white);
-		box-shadow: 0 4px 8px rgba(0 0 0 / 0.15);
+		box-shadow: 0 2px 4px rgba(0 0 0 / 0.1);
 		translate: -50%;
+		border-top: var(--border);
 
 		ul {
 			list-style: none;
@@ -25,8 +31,10 @@
 	}
 
 	&__link {
-		padding: var(--spacer-1);
+		padding: var(--spacer-1) calc(var(--spacer-1) * 1.5);
 		width: 100%;
+		font-weight: var(--fw-md);
+		white-space: nowrap;
 	}
 
 	&__button {
@@ -35,12 +43,6 @@
 		&:focus-visible {
 			scale: 1.5;
 			translate: 3px;
-			fill: var(--color-black);
-
-			.nav-menu__icon {
-				width: 1rem;
-				height: 1rem;
-			}
 		}
 	}
 

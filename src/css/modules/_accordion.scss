@@ -18,6 +18,7 @@
 	gap: var(--spacer-2);
 
 	&__item {
+		box-shadow: var(--shadow);
 	}
 
 	&__header {
@@ -30,7 +31,6 @@
 		padding: var(--spacer-2);
 		width: 100%;
 		color: var(--accordion-color);
-		background: var(--color-primary-bg);
 		transition: var(--transition);
 		font-weight: var(--fw-xl);
 		font-size: var(--h4);
@@ -38,7 +38,7 @@
 		&.active {
 			background: var(--color-primary-dark);
 			color: var(--accordion-accent-color);
-			
+
 			.accordion__icon {
 				fill: var(--accordion-accent-color);
 				rotate: 180deg;
@@ -60,14 +60,15 @@
 		flex-direction: column;
 		gap: var(--spacer-2);
 		padding: 0 var(--spacer-2);
-		background: var(--color-primary-bg);
+		background: var(--bg-body);
+	
 
 		> :first-child {
-			padding-top: var(--spacer-2);
+			margin-top: var(--spacer-2);
 		}
 
 		> :last-child {
-			padding-bottom: var(--spacer-2);
+			margin-bottom: var(--spacer-2);
 		}
 	}
 

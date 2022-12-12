@@ -1,63 +1,53 @@
 .nav-menu {
-  width: 100%;
+	width: 100%;
 
-  &__link {
-    padding: var(--spacer-1) var(--spacer-1) var(--spacer-1) 0;
-  }
+	&__link {
+		padding: var(--spacer-1) var(--spacer-1) var(--spacer-1) 0;
+		font-weight: var(--fw-md);
+		font-size: var(--fs-lg);
+	}
 
-  /* ====================   MEDIA BREAKPOINTS   ==================== */
+	@include bp(lg) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
 
-  @include bp(lg) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    &__link {
-      padding: var(--spacer-1);
-    }
-  }
+		&__link {
+			padding: var(--spacer-1) var(--spacer-2);
+		}
+	}
 }
 
 /* ====================   NAVIGATION DROPDOWN   ==================== */
 
 .nav-menu .dropdown {
-  &__content {
-    @include bp(lg, max) {
-      position: static;
-      translate: none;
-      box-shadow: none;
-    }
-  }
+	&__content {
+		@include bp(lg, max) {
+			position: static;
+			translate: none;
+			box-shadow: none;
+		}
+	}
 
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    @include bp(lg, max) {
-      min-width: 2.75rem;
-    }
+		@include bp(lg, max) {
+			min-width: 2.75rem;
+		}
+	}
 
-    &:focus-visible {
-      fill: var(--color-black);
-    }
-  }
+	@include bp(lg) {
+		&__button {
+			padding: var(--spacer-1) var(--spacer-2) var(--spacer-1) var(--spacer-1);
+		}
 
-  &.active {
-    .dropdown__icon {
-      fill: var(--color-black);
-    }
-  }
-
-  @include bp(lg) {
-    &__button {
-      padding: var(--spacer-1) var(--spacer-1) var(--spacer-1) 0;
-    }
-
-    &__icon {
-      width: 0.625rem;
-      height: 0.625rem;
-    }
-  }
+		&__icon {
+			width: 0.625em;
+			height: 0.625em;
+		}
+	}
 }

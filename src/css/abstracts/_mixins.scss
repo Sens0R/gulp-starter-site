@@ -24,6 +24,7 @@
 		}
 	}
 }
+
 // Hover only for mouse users, focus only for keyboard
 @mixin hover($focus: null) {
 	@media (hover: hover) and (pointer: fine) {

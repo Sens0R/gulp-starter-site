@@ -24,7 +24,7 @@ body {
 	color: var(--color-base);
 	background-color: var(--bg-body);
 	line-height: var(--lh-base);
-	text-underline-offset: 20%;
+	text-underline-offset: var(--underline-offset);
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
 
@@ -107,7 +107,7 @@ hr {
 
 blockquote {
 	padding: var(--spacer-2);
-	border-left: 0.25rem solid var(--color-primary);
+	border-left: calc(var(--border-thickness) * 2) solid var(--color-primary);
 }
 
 :focus-visible {

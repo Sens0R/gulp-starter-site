@@ -2,21 +2,21 @@ a,
 [type='link'] {
 	--transition-link: 0.2s ease-in-out;
 
-	color: var(--color-text);
+	color: var(--color-base);
 	transition: var(--transition-link);
 	text-decoration-thickness: var(--border-thickness);
-	text-underline-offset: 20%;
-
+	
 	@include underline-reverse();
 
 	@include hover(focus) {
-		color: var(--color-accent);
+		color: var(--color-primary);
 	}
 }
 
 .link-heading {
-	color: var(--color-primary-dark);
-	text-decoration: underline var(--border-thickness);
+	color: var(--color-primary);
+	text-decoration: underline 0.1em;
+
 	@include hover(focus) {
 		color: var(--color-primary-light);
 	}
@@ -28,6 +28,6 @@ a,
 	text-decoration: none;
 	@include chevron();
 	@include hover(focus) {
-		color: var(--color-primary-dark);
+		color: var(--color-primary-light);
 	}
 }

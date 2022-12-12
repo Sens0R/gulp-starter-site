@@ -1,5 +1,15 @@
 @import 'swiper/swiper.scss';
 
+.swiper-shadow-wrapper {
+	overflow: hidden;
+	padding: var(--shadow-spread);
+	margin: calc(var(--shadow-spread) * -1);
+
+	.swiper {
+		overflow: unset;
+	}
+}
+
 .swiper {
 	width: 100%;
 	height: 100%;
@@ -65,7 +75,6 @@
 
 		@include hover(focus) {
 			&:not(.swiper__bullet_active) {
-				background: var(--color-accent);
 				cursor: pointer;
 				scale: 1.25;
 			}

@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	background: var(--color-primary-bg);
+	box-shadow: var(--shadow);
 
 	&__content {
 		display: flex;
@@ -12,7 +12,7 @@
 		height: 100%;
 
 		> :last-child:has(a),
-		a {
+		> a:last-child {
 			margin-top: auto;
 		}
 	}
@@ -27,19 +27,14 @@
 		align-items: center;
 		gap: var(--spacer-1);
 		flex-wrap: wrap;
-		color: var(--color-white);
 
 		li a {
+			color: var(--color-white);
 			font-size: var(--fs-sm);
 			background: var(--color-primary);
 			transition: var(--transition);
 			padding: 0.25rem 0.5rem;
 			@include link-space();
-
-			@include hover(focus) {
-				background: var(--color-primary-dark);
-				color: var(--color-white);
-			}
 		}
 	}
 
