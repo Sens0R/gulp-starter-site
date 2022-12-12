@@ -4846,7 +4846,9 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --shadow-color: hsl(203 90% 40% / 0.1);
   --shadow-spread: 15px;
   --shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-  --transition: 0.25s ease-out;
+  --transition-duration: 0.25s;
+  --transition-easing: ease-out;
+  --transition: var(--transition-duration) var(--transition-easing);
   --z-tooltip: 500;
   --z-dropdown: 400;
   --z-dialog: 300;
@@ -6201,7 +6203,7 @@ a:focus-visible,
 }
 
 .accordion {
-  --accordion-transition: all 0.6s ease;
+  --accordion-transition: var(--transition-duration) ease-in-out;
   --accordion-color: var(--color-primary);
   --accordion-accent-color: var(--color-white);
   display: -webkit-box;

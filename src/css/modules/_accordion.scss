@@ -9,7 +9,7 @@
 }
 
 .accordion {
-	--accordion-transition: all 0.6s ease;
+	--accordion-transition: var(--transition-duration) ease-in-out;
 	--accordion-color: var(--color-primary);
 	--accordion-accent-color: var(--color-white);
 
@@ -61,7 +61,6 @@
 		gap: var(--spacer-2);
 		padding: 0 var(--spacer-2);
 		background: var(--bg-body);
-	
 
 		> :first-child {
 			margin-top: var(--spacer-2);

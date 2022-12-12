@@ -89,7 +89,9 @@
 	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
 
 	// transitions
-	--transition: 0.25s ease-out;
+	--transition-duration: 0.25s;
+	--transition-easing: ease-out;
+	--transition: var(--transition-duration) var(--transition-easing);
 
 	// z-index
 	--z-tooltip: 500;
