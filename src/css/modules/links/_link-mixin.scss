@@ -1,15 +1,15 @@
-@mixin underline {
+@mixin underline-hover($type: null) {
 	text-decoration-color: currentColor;
+
+	@if $type == reverse {
+		text-decoration-color: transparent;
+	}
 
 	@include hover(focus) {
 		text-decoration-color: transparent;
-	}
-}
 
-@mixin underline-reverse() {
-	text-decoration-color: transparent;
-
-	@include hover(focus) {
-		text-decoration-color: currentColor;
+		@if $type == reverse {
+			text-decoration-color: currentColor;
+		}
 	}
 }

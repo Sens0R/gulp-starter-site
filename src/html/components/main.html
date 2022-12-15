@@ -1,5 +1,5 @@
 <!-- ====================   BANNER   ==================== -->
-<div class="banner">
+<div class="banner hero vstack">
 	<picture>
 		<source
 			sizes="100vw"
@@ -46,7 +46,8 @@
 			width="2560"
 		/>
 	</picture>
-	<h1 class="text-center">Starter site BANNER</h1>
+	<h1 class="hero__title">hero-title HERO-TITLE</h1>
+	<p class="hero__subtitle">hero-subtitle HERO-SUBTITLE</p>
 </div>
 
 <div class="container-sm">
@@ -61,6 +62,7 @@
 	</div>
 </div>
 
+<!-- ====================		ACCORDION		==================== -->
 <section class="container-lg">
 	<div data-accordion class="accordion">
 		<!-- ====================   HEADINGS   ==================== -->
@@ -98,7 +100,7 @@
 			<section data-accordion-content class="accordion__content">
 				<p class="fs-xs">.fs-xs Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
 				<p class="fs-sm">.fs-sm Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
-				<p class="fs-base">.fs-base Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
+				<p class="fs-md">.fs-md Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
 				<p class="fs-lg">.fs-lg Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
 				<p class="fs-xl">.fs-xl Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
 			</section>
@@ -116,142 +118,8 @@
 				</button>
 			</h2>
 			<section data-accordion-content class="accordion__content">
-				<div class="fw-sm">
-					<p>300 white .fw-sm font example:</p>
-
-					<p class="color-primary">
-						Primary text color.
-						<span class="text-uppercase">Primary text color. </span>
-						<span class="fst-italic">Primary text color. </span>
-					</p>
-					<p class="color-primary-dark">
-						Primary-dark text color.
-						<span class="text-uppercase">Primary-dark text color. </span>
-						<span class="fst-italic">Primary-dark text color. </span>
-					</p>
-					<p class="color-primary-light">
-						Primary-light text color.
-						<span class="text-uppercase">Primary-light text color. </span>
-						<span class="fst-italic">Primary-light text color. </span>
-					</p>
-
-					<p class="color-secondary">
-						Secondary text color.
-						<span class="text-uppercase">Secondary text color. </span>
-						<span class="fst-italic">Secondary text color. </span>
-					</p>
-					<p class="color-secondary-dark">
-						Secondary-dark text color.
-						<span class="text-uppercase">Secondary-dark text color. </span>
-						<span class="fst-italic">Secondary-dark text color. </span>
-					</p>
-					<p class="color-secondary-light">
-						Secondary-light text color.
-						<span class="text-uppercase">Secondary-light text color. </span>
-						<span class="fst-italic">Secondary-light text color. </span>
-					</p>
-
-					<p class="color-accent">
-						Accent text color.
-						<span class="text-uppercase">Accent text color. </span>
-						<span class="fst-italic">Accent text color. </span>
-					</p>
-					<p class="color-accent-dark">
-						Accent-dark text color.
-						<span class="text-uppercase">Accent-dark text color. </span>
-						<span class="fst-italic">Accent-dark text color. </span>
-					</p>
-					<p class="color-accent-light">
-						Accent-light text color.
-						<span class="text-uppercase">Accent-light text color. </span>
-						<span class="fst-italic">Accent-light text color. </span>
-					</p>
-
-					<div class="mt-sm">
-						<p class="color-black">
-							black text color.
-							<span class="text-uppercase">black text color. </span>
-							<span class="fst-italic">black text color. </span>
-						</p>
-						<p class="color-white bg-black p-sm">
-							white text color.
-							<span class="text-uppercase">white text color. </span>
-							<span class="fst-italic">white text color. </span>
-						</p>
-					</div>
-				</div>
-
-				<hr />
-
-				<div class="fw-base">
-					<p>400 base .fw-base font example:</p>
-
-					<p class="color-primary">
-						Primary text color.
-						<span class="text-uppercase">Primary text color. </span>
-						<span class="fst-italic">Primary text color. </span>
-					</p>
-					<p class="color-primary-dark">
-						Primary-dark text color.
-						<span class="text-uppercase">Primary-dark text color. </span>
-						<span class="fst-italic">Primary-dark text color. </span>
-					</p>
-					<p class="color-primary-light">
-						Primary-light text color.
-						<span class="text-uppercase">Primary-light text color. </span>
-						<span class="fst-italic">Primary-light text color. </span>
-					</p>
-
-					<p class="color-secondary">
-						Secondary text color.
-						<span class="text-uppercase">Secondary text color. </span>
-						<span class="fst-italic">Secondary text color. </span>
-					</p>
-					<p class="color-secondary-dark">
-						Secondary-dark text color.
-						<span class="text-uppercase">Secondary-dark text color. </span>
-						<span class="fst-italic">Secondary-dark text color. </span>
-					</p>
-					<p class="color-secondary-light">
-						Secondary-light text color.
-						<span class="text-uppercase">Secondary-light text color. </span>
-						<span class="fst-italic">Secondary-light text color. </span>
-					</p>
-
-					<p class="color-accent">
-						Accent text color.
-						<span class="text-uppercase">Accent text color. </span>
-						<span class="fst-italic">Accent text color. </span>
-					</p>
-					<p class="color-accent-dark">
-						Accent-dark text color.
-						<span class="text-uppercase">Accent-dark text color. </span>
-						<span class="fst-italic">Accent-dark text color. </span>
-					</p>
-					<p class="color-accent-light">
-						Accent-light text color.
-						<span class="text-uppercase">Accent-light text color. </span>
-						<span class="fst-italic">Accent-light text color. </span>
-					</p>
-
-					<div class="mt-sm">
-						<p class="color-black">
-							black text color.
-							<span class="text-uppercase">black text color. </span>
-							<span class="fst-italic">black text color. </span>
-						</p>
-						<p class="color-white bg-black p-sm">
-							white text color.
-							<span class="text-uppercase">white text color. </span>
-							<span class="fst-italic">white text color. </span>
-						</p>
-					</div>
-				</div>
-
-				<hr />
-
 				<div class="fw-md">
-					<p>500 md .fw-md font example:</p>
+					<p>400 md .fw-md font example:</p>
 
 					<p class="color-primary">
 						Primary text color.
@@ -283,22 +151,6 @@
 						Secondary-light text color.
 						<span class="text-uppercase">Secondary-light text color. </span>
 						<span class="fst-italic">Secondary-light text color. </span>
-					</p>
-
-					<p class="color-accent">
-						Accent text color.
-						<span class="text-uppercase">Accent text color. </span>
-						<span class="fst-italic">Accent text color. </span>
-					</p>
-					<p class="color-accent-dark">
-						Accent-dark text color.
-						<span class="text-uppercase">Accent-dark text color. </span>
-						<span class="fst-italic">Accent-dark text color. </span>
-					</p>
-					<p class="color-accent-light">
-						Accent-light text color.
-						<span class="text-uppercase">Accent-light text color. </span>
-						<span class="fst-italic">Accent-light text color. </span>
 					</p>
 
 					<div class="mt-sm">
@@ -318,7 +170,7 @@
 				<hr />
 
 				<div class="fw-lg">
-					<p>600 lg .fw-lg font example:</p>
+					<p>500 lg .fw-lg font example:</p>
 
 					<p class="color-primary">
 						Primary text color.
@@ -350,22 +202,6 @@
 						Secondary-light text color.
 						<span class="text-uppercase">Secondary-light text color. </span>
 						<span class="fst-italic">Secondary-light text color. </span>
-					</p>
-
-					<p class="color-accent">
-						Accent text color.
-						<span class="text-uppercase">Accent text color. </span>
-						<span class="fst-italic">Accent text color. </span>
-					</p>
-					<p class="color-accent-dark">
-						Accent-dark text color.
-						<span class="text-uppercase">Accent-dark text color. </span>
-						<span class="fst-italic">Accent-dark text color. </span>
-					</p>
-					<p class="color-accent-light">
-						Accent-light text color.
-						<span class="text-uppercase">Accent-light text color. </span>
-						<span class="fst-italic">Accent-light text color. </span>
 					</p>
 
 					<div class="mt-sm">
@@ -385,7 +221,7 @@
 				<hr />
 
 				<div class="fw-xl">
-					<p>700 xl .fw-xl font example:</p>
+					<p>600 xl .fw-xl font example:</p>
 
 					<p class="color-primary">
 						Primary text color.
@@ -419,20 +255,55 @@
 						<span class="fst-italic">Secondary-light text color. </span>
 					</p>
 
-					<p class="color-accent">
-						Accent text color.
-						<span class="text-uppercase">Accent text color. </span>
-						<span class="fst-italic">Accent text color. </span>
+					<div class="mt-sm">
+						<p class="color-black">
+							black text color.
+							<span class="text-uppercase">black text color. </span>
+							<span class="fst-italic">black text color. </span>
+						</p>
+						<p class="color-white bg-black p-sm">
+							white text color.
+							<span class="text-uppercase">white text color. </span>
+							<span class="fst-italic">white text color. </span>
+						</p>
+					</div>
+				</div>
+
+				<hr />
+
+				<div class="fw-xxl">
+					<p>700 xxl .fw-xxl font example:</p>
+
+					<p class="color-primary">
+						Primary text color.
+						<span class="text-uppercase">Primary text color. </span>
+						<span class="fst-italic">Primary text color. </span>
 					</p>
-					<p class="color-accent-dark">
-						Accent-dark text color.
-						<span class="text-uppercase">Accent-dark text color. </span>
-						<span class="fst-italic">Accent-dark text color. </span>
+					<p class="color-primary-dark">
+						Primary-dark text color.
+						<span class="text-uppercase">Primary-dark text color. </span>
+						<span class="fst-italic">Primary-dark text color. </span>
 					</p>
-					<p class="color-accent-light">
-						Accent-light text color.
-						<span class="text-uppercase">Accent-light text color. </span>
-						<span class="fst-italic">Accent-light text color. </span>
+					<p class="color-primary-light">
+						Primary-light text color.
+						<span class="text-uppercase">Primary-light text color. </span>
+						<span class="fst-italic">Primary-light text color. </span>
+					</p>
+
+					<p class="color-secondary">
+						Secondary text color.
+						<span class="text-uppercase">Secondary text color. </span>
+						<span class="fst-italic">Secondary text color. </span>
+					</p>
+					<p class="color-secondary-dark">
+						Secondary-dark text color.
+						<span class="text-uppercase">Secondary-dark text color. </span>
+						<span class="fst-italic">Secondary-dark text color. </span>
+					</p>
+					<p class="color-secondary-light">
+						Secondary-light text color.
+						<span class="text-uppercase">Secondary-light text color. </span>
+						<span class="fst-italic">Secondary-light text color. </span>
 					</p>
 
 					<div class="mt-sm">
@@ -445,6 +316,50 @@
 							white text color.
 							<span class="text-uppercase">white text color. </span>
 							<span class="fst-italic">white text color. </span>
+						</p>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- ====================		TEXT PRESETS		==================== -->
+		<div class="accordion__item">
+			<h2 class="accordion__header">
+				<button data-accordion-button class="accordion__button" type="button">
+					Text presets
+					<svg aria-hidden="true" class="accordion__icon">
+						<use href="images/icons/sprite-mono.svg#arrow"></use>
+					</svg>
+				</button>
+			</h2>
+			<section data-accordion-content class="accordion__content">
+				<div class="vstack gap-1">
+					<h3 class="text-preset-1">text-preset-1</h3>
+
+					<div class="color-text">
+						color-text
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi sunt numquam accusamus,
+							corporis beatae, sed magni reiciendis illo atque necessitatibus obcaecati. Recusandae, atque consequatur
+							voluptas sapiente dolores fugit corporis.
+						</p>
+					</div>
+
+					<div class="color-text-muted">
+						color-text-muted
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi sunt numquam accusamus,
+							corporis beatae, sed magni reiciendis illo atque necessitatibus obcaecati. Recusandae, atque consequatur
+							voluptas sapiente dolores fugit corporis.
+						</p>
+					</div>
+
+					<div class="color-text-reverse p-1 bg-primary">
+						color-text-reverse
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quasi sunt numquam accusamus,
+							corporis beatae, sed magni reiciendis illo atque necessitatibus obcaecati. Recusandae, atque consequatur
+							voluptas sapiente dolores fugit corporis.
 						</p>
 					</div>
 				</div>
@@ -515,24 +430,24 @@
 
 <!-- ====================   COLORS   ==================== -->
 
-<h2 data-animate="section-header" class="text-center text-uppercase">Colors</h2>
+<h2 data-animate="section-header" class="text-preset-3">Colors</h2>
 <div class="container-fluid">
 	<div class="row row-cols-md-2 row-cols-xl-3 text-center fw-xl g-3">
-		<div class="col-12">
-			<div class="py-4 bg-primary fs-lg">
-				<h3 class="color-white text-uppercase">Primary</h3>
-				<h3 class="color-black text-uppercase">Primary</h3>
-				<p class="color-white">.color-primary</p>
-				<p class="color-black">.bg-primary</p>
-			</div>
-		</div>
-
 		<div class="col-12">
 			<div class="py-4 bg-primary-light fs-lg">
 				<h3 class="color-white text-uppercase">Primary-light</h3>
 				<h3 class="color-black text-uppercase">Primary-light</h3>
 				<p class="color-white">.color-primary-light</p>
 				<p class="color-black">.bg-primary-light</p>
+			</div>
+		</div>
+
+		<div class="col-12">
+			<div class="py-4 bg-primary fs-lg">
+				<h3 class="color-white text-uppercase">Primary</h3>
+				<h3 class="color-black text-uppercase">Primary</h3>
+				<p class="color-white">.color-primary</p>
+				<p class="color-black">.bg-primary</p>
 			</div>
 		</div>
 
@@ -546,80 +461,11 @@
 		</div>
 
 		<div class="col-12">
-			<div class="py-4 bg-secondary fs-lg color-white">
-				<h3 class="color-white text-uppercase">Secondary</h3>
-				<h3 class="color-black text-uppercase">Secondary</h3>
-				<p class="color-white">.color-secondary</p>
-				<p class="color-black">.bg-secondary</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-secondary-light fs-lg color-white">
-				<h3 class="color-white text-uppercase">Secondary-light</h3>
-				<h3 class="color-black text-uppercase">Secondary-light</h3>
-				<p class="color-white">.color-secondary-light</p>
-				<p class="color-black">.bg-secondary-light</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-secondary-dark fs-lg color-white">
-				<h3 class="color-white text-uppercase">Secondary-dark</h3>
-				<h3 class="color-black text-uppercase">Secondary-dark</h3>
-				<p class="color-white">.color-secondary-dark</p>
-				<p class="color-black">.bg-secondary-dark</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-accent fs-lg color-white">
-				<h3 class="color-white text-uppercase">Accent</h3>
-				<h3 class="color-black text-uppercase">Accent</h3>
-				<p class="color-white">.color-accent</p>
-				<p class="color-black">.bg-accent</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-accent-light fs-lg color-white">
-				<h3 class="color-white text-uppercase">Accent-light</h3>
-				<h3 class="color-black text-uppercase">Accent-light</h3>
-				<p class="color-white">.color-accent-light</p>
-				<p class="color-black">.bg-accent-light</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-accent-dark fs-lg color-white">
-				<h3 class="color-white text-uppercase">Accent-dark</h3>
-				<h3 class="color-black text-uppercase">Accent-dark</h3>
-				<p class="color-white">.color-accent-dark</p>
-				<p class="color-black">.bg-accent-dark</p>
-			</div>
-		</div>
-		<div class="col-12">
-			<div class="py-4 bg-neutral fs-lg color-white">
-				<h3 class="color-white text-uppercase">neutral</h3>
-				<h3 class="color-black text-uppercase">neutral</h3>
-				<p class="color-white">.color-neutral</p>
-				<p class="color-black">.bg-neutral</p>
-			</div>
-		</div>
-		<div class="col-12">
-			<div class="py-4 bg-neutral-light fs-lg color-white">
-				<h3 class="color-white text-uppercase">neutral-light</h3>
-				<h3 class="color-black text-uppercase">neutral-light</h3>
-				<p class="color-white">.color-neutral-light</p>
-				<p class="color-black">.bg-neutral-light</p>
-			</div>
-		</div>
-		<div class="col-12">
-			<div class="py-4 bg-neutral-dark fs-lg color-white">
-				<h3 class="color-white text-uppercase">neutral-dark</h3>
-				<h3 class="color-black text-uppercase">neutral-dark</h3>
-				<p class="color-white">.color-neutral-dark</p>
-				<p class="color-black">.bg-neutral-dark</p>
+			<div class="py-4 bg-surface fs-lg">
+				<h3 class="color-white text-uppercase">surface</h3>
+				<h3 class="color-black text-uppercase">surface</h3>
+				<p class="color-white">.color-surface</p>
+				<p class="color-black">.bg-surface</p>
 			</div>
 		</div>
 	</div>
@@ -628,7 +474,7 @@
 <!-- ====================   BUTTONS   ==================== -->
 
 <section class="container vstack gap-3">
-	<h2 data-animate="section-header" class="text-center text-uppercase">Buttons</h2>
+	<h2 data-animate="section-header" class="text-preset-3">Buttons</h2>
 
 	<div class="hstack gap-2 flex-wrap">
 		<a class="button m-auto" href="index.html">Link</a>
@@ -645,7 +491,7 @@
 
 <!-- ====================   Cards  ==================== -->
 
-<h2 data-animate="section-header" class="text-center text-uppercase">Cards</h2>
+<h2 data-animate="section-header" class="text-preset-3">Cards</h2>
 <section class="container">
 	<div class="row row-cols-lg-3 g-3">
 		<div class="col-12">
@@ -688,15 +534,7 @@
 							"
 							type="image/jpeg"
 						/>
-						<img
-							alt=""
-							class="image"
-							draggable="false"
-							loading="lazy"
-							height="2560"
-							src="images/test-image-960.jpg"
-							width="2560"
-						/>
+						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
 					</picture>
 				</a>
 
@@ -717,7 +555,7 @@
 						</li>
 					</ul>
 
-					<h3 class="card__header">
+					<h3 class="card__title">
 						<a class="link-heading" href="#"> Card tittle </a>
 					</h3>
 
@@ -770,15 +608,7 @@
 							"
 							type="image/jpeg"
 						/>
-						<img
-							alt=""
-							class="image"
-							draggable="false"
-							loading="lazy"
-							height="2560"
-							src="images/test-image-960.jpg"
-							width="2560"
-						/>
+						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
 					</picture>
 				</a>
 
@@ -799,7 +629,7 @@
 						</li>
 					</ul>
 
-					<h3 class="card__header">
+					<h3 class="card__title">
 						<a class="link-heading" href="#"> Card tittle </a>
 					</h3>
 
@@ -854,15 +684,7 @@
 							"
 							type="image/jpeg"
 						/>
-						<img
-							alt=""
-							class="image"
-							draggable="false"
-							loading="lazy"
-							height="2560"
-							src="images/test-image-960.jpg"
-							width="2560"
-						/>
+						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
 					</picture>
 				</a>
 
@@ -883,7 +705,7 @@
 						</li>
 					</ul>
 
-					<h3 class="card__header">
+					<h3 class="card__title">
 						<a class="link-heading" href="#"> Card tittle </a>
 					</h3>
 
@@ -901,7 +723,7 @@
 
 <!-- ====================   TABS   ==================== -->
 
-<h2 data-animate="section-header" class="text-center text-uppercase">Tabs</h2>
+<h2 data-animate="section-header" class="text-preset-3">Tabs</h2>
 <section class="container">
 	<div data-tabs class="tabbed-interface">
 		<div class="tabbed-interface__body">
@@ -967,7 +789,7 @@
 <!--  ====================   Slider   ==================== -->
 
 <section class="container vstack gap-3">
-	<h2 data-animate="section-header" class="text-center text-uppercase">Slider</h2>
+	<h2 data-animate="section-header" class="text-preset-3">Slider</h2>
 
 	<div class="swiper-shadow-wrapper">
 		<div data-swiper class="swiper">
@@ -1014,7 +836,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1025,7 +846,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 1 </a>
 							</h3>
 
@@ -1078,7 +899,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1089,7 +909,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 2 </a>
 							</h3>
 
@@ -1139,7 +959,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1150,7 +969,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 3 </a>
 							</h3>
 
@@ -1203,7 +1022,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1214,7 +1032,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 4 </a>
 							</h3>
 
@@ -1267,7 +1085,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1278,7 +1095,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 5 </a>
 							</h3>
 
@@ -1331,7 +1148,6 @@
 								/>
 								<img
 									alt=""
-									class="image"
 									draggable="false"
 									loading="lazy"
 									height="2560"
@@ -1342,7 +1158,7 @@
 						</a>
 
 						<div class="card__content">
-							<h3 class="card__header">
+							<h3 class="card__title">
 								<a class="link-heading" href="#"> Slide 6 </a>
 							</h3>
 
@@ -1378,29 +1194,28 @@
 <div class="container">
 	<div class="row row-cols-lg-2 g-4">
 		<div class="col-12 gap-3 d-flex flex-column">
-			<h2>We'd love to hear from you</h2>
-			
-				<ul class="contact-form">
-					<li class="contact-form__item">
-						<h3 class="contact-form__title">Email</h3>
-						<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
-					</li>
+			<h2 class="text-preset-4">We'd love to hear from you</h2>
 
-					<li class="contact-form__item">
-						<h3 class="contact-form__title">Phone</h3>
-						<a href="tel:+61251347278">61 2 5134 7278</a>
-					</li>
+			<ul class="contact-form">
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Email</h3>
+					<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
+				</li>
 
-					<li class="contact-form__item">
-						<h3 class="contact-form__title">Social</h3>
-						<div>@@include('social.html',{})</div>
-					</li>
-				</ul>
-			
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Phone</h3>
+					<a href="tel:+61251347278">61 2 5134 7278</a>
+				</li>
+
+				<li class="contact-form__item">
+					<h3 class="contact-form__title">Social</h3>
+					<div>@@include('social.html',{})</div>
+				</li>
+			</ul>
 		</div>
 
 		<div class="col-12 gap-3 d-flex flex-column">
-			<h2>Contact form</h2>
+			<h2 class="text-preset-4">Contact form</h2>
 
 			<form class="contact-form">
 				<label class="contact-form__title contact-form__item">
@@ -1414,7 +1229,7 @@
 				</label>
 
 				<label class="contact-form__title contact-form__item">
-					Your message (required)
+					Message (required)
 					<textarea
 						name="message"
 						rows="4"

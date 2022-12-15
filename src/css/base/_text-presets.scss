@@ -1,0 +1,64 @@
+/*--------------------------------------------------------------
+# TEXT PRESETS
+--------------------------------------------------------------*/
+
+@mixin text-preset($value) {
+	// base
+	@if $value == 1 {
+		font-size: var(--fs-md);
+		font-weight: var(--fw-md);
+		line-height: var(--lh-md);
+		text-underline-offset: 0.4em;
+	}
+
+	// headings
+	@else if $value == 2 {
+		line-height: var(--lh-sm);
+		font-weight: var(--fw-xxl);
+	}
+
+	// section title
+	@else if $value == 3 {
+		font-size: var(--h2);
+		line-height: var(--lh-sm);
+		font-weight: var(--fw-xxl);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	// section subtitle
+	@else if $value == 4 {
+		font-size: var(--h3);
+		line-height: var(--lh-sm);
+		font-weight: var(--fw-xxl);
+		text-transform: uppercase;
+	}
+
+	// form/navigation/accordion title headings
+	@else if $value == 5 {
+		font-size: var(--fs-md);
+		font-weight: var(--fw-xxl);
+		line-height: var(--lh-sm);
+		text-transform: uppercase;
+	}
+
+	// box links
+	@else if $value == 6 {
+		font-size: var(--fs-md);
+		font-weight: var(--fw-lg);
+		text-transform: uppercase;
+	}
+
+	// low importance text
+	@else if $value == 7 {
+		font-size: var(--fs-sm);
+		font-weight: var(--fw-lg);
+		text-transform: uppercase;
+	}
+}
+
+@for $i from 1 through 7 {
+	.text-preset-#{$i} {
+		@include text-preset($i);
+	}
+}

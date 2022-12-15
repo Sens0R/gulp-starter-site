@@ -2,9 +2,17 @@
 # GLOBAL SELECTORS. PLACE CUSTOM SELECTORS ON TOP
 --------------------------------------------------------------*/
 
-// text colors from sass map
 .color {
+	// text colors from sass map
 	@include modifiers($colors, 'color');
+
+	&-current {
+		color: currentColor;
+	}
+
+	&-transparent {
+		color: transparent;
+	}
 }
 
 // background colors from sass map
@@ -31,24 +39,22 @@
 	z-index: -1;
 }
 
-.lh-base {
-	line-height: var(--lh);
-
-	&-1 {
-		line-height: 1;
-	}
-
+.lh {
 	&-sm {
 		line-height: var(--lh-sm);
+	}
+
+	&-md {
+		line-height: var(--lh-md);
 	}
 
 	&-lg {
 		line-height: var(--lh-lg);
 	}
-}
 
-.text-decoration-none {
-	text-decoration: none !important;
+	&-none {
+		line-height: 1;
+	}
 }
 
 .shadow {
@@ -119,10 +125,19 @@
 	}
 }
 
-.underline-reverse {
-	&,
-	& a {
-		@include underline-reverse;
+.underline {
+	text-decoration: underline !important;
+
+	&-none {
+		text-decoration: none !important;
+	}
+
+	&-hover {
+		@include underline-hover;
+	}
+
+	&-hover-reverse {
+		@include underline-hover(reverse);
 	}
 }
 

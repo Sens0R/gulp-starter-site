@@ -2,12 +2,9 @@ a,
 [type='link'] {
 	--transition-link: 0.2s ease-in-out;
 
-	color: var(--color-base);
+	color: var(--color-text);
 	transition: var(--transition-link);
-	text-decoration-thickness: var(--border-thickness);
 	
-	@include underline-reverse();
-
 	@include hover(focus) {
 		color: var(--color-primary);
 	}
@@ -15,7 +12,7 @@ a,
 
 .link-heading {
 	color: var(--color-primary);
-	text-decoration: underline 0.1em;
+	text-decoration: none;
 
 	@include hover(focus) {
 		color: var(--color-primary-light);
@@ -23,10 +20,13 @@ a,
 }
 
 .box-link {
-	font-weight: var(--fw-lg);
+	display: inline-flex;
+	@include text-preset(6);
 	color: var(--color-primary);
 	text-decoration: none;
+
 	@include chevron();
+
 	@include hover(focus) {
 		color: var(--color-primary-light);
 	}

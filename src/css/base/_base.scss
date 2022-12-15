@@ -18,21 +18,20 @@ html {
 }
 
 body {
-	font-size: var(--fs-base);
 	font-family: var(--ff-primary);
-	font-weight: var(--fw-base);
-	color: var(--color-base);
+	font-size: var(--fs-md);
+	font-weight: var(--fw-md);
+	line-height: var(--lh-md);
+	text-underline-offset: 0.4em;
+	color: var(--color-text);
 	background-color: var(--bg-body);
-	line-height: var(--lh-base);
-	text-underline-offset: var(--underline-offset);
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
-
 	overflow-x: hidden;
 }
 
 header {
-	background-color: var(--bg-header);
+	background: var(--bg-header);
 }
 
 .body-wrapper {
@@ -90,19 +89,17 @@ h5,
 .h5,
 h6,
 .h6 {
-	line-height: var(--lh-heading);
-	font-weight: var(--fw-heading);
-	color: var(--color-heading);
+	line-height: var(--lh-sm);
+	font-weight: var(--fw-xxl);
 }
 
 hr {
 	border: none;
-	background-color: var(--hr-color);
-	width: var(--hr-width);
-	min-height: var(--hr-height);
-	border-radius: var(--hr-br);
-	margin-left: auto;
-	margin-right: auto;
+	background-color: var(--color-primary);
+	width: 100%;
+	min-height: var(--border-thickness);
+	border-radius: 100vmax;
+	margin: 0 auto;
 }
 
 blockquote {
@@ -124,7 +121,6 @@ button,
 
 a,
 [type='link'] {
-	display: inline-flex;
 	cursor: pointer;
 }
 

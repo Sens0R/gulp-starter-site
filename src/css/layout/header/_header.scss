@@ -1,29 +1,27 @@
 .header-sticky-wrapper {
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: var(--z-header);
-  box-shadow: none;
-  transition: all 0.5s ease-out;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: var(--z-header);
+	box-shadow: none;
+	transition: all 0.5s ease-out;
 }
 
 .headroom_unpinned {
 }
 
 .headroom_not-top {
-  box-shadow: 0 0 10px rgba(0 0 0 / 0.12);
+	box-shadow: 0 0 10px rgba(0 0 0 / 0.12);
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacer-2);
-  flex-wrap: wrap;
-  padding: 0.75rem;
+	--container-space-y: var(--spacer-1);
 
-  @include bp(xxl) {
-    padding: 0.75rem var(--spacer-3);
-  }
+	display: flex;
+	align-items: center;
+	gap: var(--spacer-2);
+	flex-wrap: wrap;
+	
 }
 
 /* ====================   IMPORTS   ==================== */

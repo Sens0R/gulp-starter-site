@@ -1,65 +1,79 @@
 .dropdown {
 	position: relative;
+}
 
-	&__controls {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-between;
+.dropdown__content {
+	position: absolute;
+	left: 50%;
+	visibility: hidden;
+	opacity: 0;
+	transition: var(--transition-duration) ease-in-out;
+	overflow: hidden;
+	background-color: var(--color-white);
+	box-shadow: 0 2px 4px rgba(0 0 0 / 0.1);
+	translate: -50% 0;
 
-		&:has(button) {
-			.nav-menu__link {
-				padding-right: 0;
-			}
-		}
+	@include bp(lg) {
+		translate: -50% -10px;
+		border-top: 2px solid var(--color-primary);
+	}
+}
+
+.dropdown.active .dropdown__content {
+	visibility: visible;
+	opacity: 1;
+
+	@include bp(lg) {
+		translate: -50% 0;
+	}
+}
+
+.dropdown__controls {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+}
+
+.dropdown__button {
+	transition: var(--transition);
+
+	&:focus-visible {
+		scale: 1.5;
+		translate: 3px;
+	}
+}
+
+.dropdown__icon {
+	width: 1rem;
+	height: 1rem;
+	transition: var(--transition);
+}
+
+.dropdown.active .dropdown__icon {
+	rotate: 90deg;
+}
+
+.dropdown__link {
+	display: flex;
+	padding: var(--spacer-1) calc(var(--spacer-1) * 1.5);
+	width: 100%;
+	font-weight: var(--fw-lg);
+	white-space: nowrap;
+	text-decoration: none;
+
+	@include hover(focus) {
+		background: var(--color-surface);
+	}
+}
+
+// a11y fix for desktop screen resize. TODO better solution possible?
+@include device-input(mouse) {
+	.navigation.active .dropdown__content {
+		visibility: visible;
+		opacity: 1;
 	}
 
-	&__content {
-		position: absolute;
-		left: 50%;
-		visibility: hidden;
-		opacity: 0;
-		transition: var(--transition);
-		overflow: hidden;
-		background-color: var(--color-white);
-		box-shadow: 0 2px 4px rgba(0 0 0 / 0.1);
-		translate: -50%;
-		border-top: var(--border);
-
-		ul {
-			list-style: none;
-		}
-	}
-
-	&__link {
-		padding: var(--spacer-1) calc(var(--spacer-1) * 1.5);
-		width: 100%;
-		font-weight: var(--fw-md);
-		white-space: nowrap;
-	}
-
-	&__button {
-		transition: var(--transition);
-
-		&:focus-visible {
-			scale: 1.5;
-			translate: 3px;
-		}
-	}
-
-	&__icon {
-		width: 1rem;
-		height: 1rem;
-		transition: var(--transition);
-	}
-
-	&.active {
-		.dropdown__content {
-			visibility: visible;
-			opacity: 1;
-		}
-
-		.dropdown__icon {
-			rotate: 90deg;
-		}
+	.navigation.active .dropdown__icon {
+		display: none;
 	}
 }

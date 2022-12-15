@@ -1,6 +1,21 @@
 @use 'sass:meta';
 
-@mixin chevron($margin-left: 0.5rem) {
+// check for device input type
+@mixin device-input($type) {
+	@if $type == touch {
+		@media (hover: none) and (pointer: coarse) {
+			@content;
+		}
+	} @else if $type == mouse {
+		@media (hover: hover) and (pointer: fine) {
+			@content;
+		}
+	} @else if $type {
+		@error "Device input type is INVALID. Device input types: touch, mouse";
+	}
+}
+
+@mixin chevron($margin-left: 0.5em) {
 	&:after {
 		--chevron-line: 2px solid currentColor;
 		--chevron-size: 0.5em;
@@ -20,7 +35,7 @@
 	@include hover(focus) {
 		&:after {
 			translate: 0.188rem;
-			scale: 1.25;
+			scale: 1.15;
 		}
 	}
 }

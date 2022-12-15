@@ -7,7 +7,7 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-// modules mixins
+// component mixins
 @import 'modules/buttons/button-mixin';
 @import 'modules/links/link-mixin';
 
@@ -18,10 +18,13 @@
 
 // BASE
 @import 'base/root';
-@import 'base/fonts';
 @import 'base/base';
+@import 'base/text-presets';
+@import 'base/dark';
+@import 'base/fonts';
 @import 'base/containers';
 @import 'base/selectors';
+@import 'base/hero';
 
 // LAYOUT
 @import 'layout/header/header';

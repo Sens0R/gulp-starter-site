@@ -5,39 +5,65 @@
 |--------------------------------------------------------------------------
 */
 	// variables from sass color map
-	@include map-scss-vars-into-css-vars($colors, '--color');
+	// @include map-scss-vars-into-css-vars($colors, '--color');
+
+	// brand color (primary)
+	--primary-hue: 201;
+	--primary-saturation: 100%;
+	--primary-lightness: 37%;
+	--lighten: 12%;
+	--darken: 8%;
+
+	// basic colors
+	--color-white: hsl(0, 0%, 100%);
+	--color-black: hsl(0, 5%, 15%);
+
+	// color scheme light
+	--color-primary: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+
+	--color-primary-light: hsl(
+		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + var(--lighten))
+	);
+
+	--color-primary-dark: hsl(
+		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - var(--darken))
+	);
+
+	--color-bg-primary: var(--color-white);
+	--color-bg-secondary: hsl(var(--primary-hue) var(--primary-saturation) 93%);
+	--color-surface: hsl(var(--primary-hue) var(--primary-saturation) 99%);
+
+	// backgrounds
+	--bg-body: var(--color-bg-primary);
+	--bg-header: var(--color-bg-primary);
+	--bg-footer: var(--color-bg-primary);
+
+	// typography
+	--color-text: hsl(var(--primary-hue) 100% 15%);
+	--color-text-reverse: var(--color-white);
+	--color-text-muted: hsl(var(--primary-hue) 20% 45%);
+
+	// selection
+	--selection-color: var(--color-white);
+	--selection-bg: var(--color-primary);
 
 	// alerts
 	--color-error: hsl(4, 90%, 58%);
 	--color-success: hsl(147, 100%, 35%);
 	--color-warning: hsl(41, 100%, 80%);
 
-	// backgrounds
-	--bg-body: var(--color-white);
-	--bg-header: var(--color-white);
-	--bg-footer: var(--color-primary-white);
-
-	// typography
-	--color-base: var(--color-black);
-	--color-muted: var(--color-grey);
-	--color-heading: var(--color-black);
-
-	// selection
-	--selection-color: var(--color-white);
-	--selection-bg: var(--color-primary);
-
 	/*
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------|
 |	TYPOGRAPHY
-|--------------------------------------------------------------------------
+|-------------------------------------------------------------------------|
 */
 	// font family
 	--ff-primary: 'Montserrat', Arial, sans-serif;
 
 	// heading sizes
 	--h1: #{clamp-smart(40, 60)};
-	--h2: calc(var(--h1) * 0.6);
-	--h3: calc(var(--h1) * 0.5);
+	--h2: calc(var(--h1) * 0.7);
+	--h3: calc(var(--h1) * 0.45);
 	--h4: calc(var(--h1) * 0.4);
 	--h5: #{clamp-smart(16, 18)};
 	--h6: 0.875rem;
@@ -46,17 +72,13 @@
 	@include map-scss-vars-into-css-vars($font-sizes, '--fs');
 
 	// line heights
-	--lh-base: 1.7;
-	--lh-sm: 1.3;
+	--lh-md: 1.7; // base
+	--lh-sm: 1.2;
 	--lh-lg: 2;
-	--lh-heading: 1.2;
-	--underline-offset: 30%;
 
 	// font weights
 	// variables from sass font weights map
 	@include map-scss-vars-into-css-vars($font-weights, '--fw');
-	--fw-base-body: var(--fw-base);
-	--fw-heading: var(--fw-lg);
 
 	/*
 |--------------------------------------------------------------------------
@@ -77,14 +99,9 @@
 	--border-radius: 1rem;
 	--border: var(--border-thickness) solid var(--border-color);
 
-	// line
-	--hr-color: var(--color-primary);
-	--hr-width: 90%;
-	--hr-height: var(--border-thickness);
-	--hr-br: 100vmax;
-
 	// shadows
-	--shadow-color: hsl(203 90% 40% / 0.1);
+	--shadow-alpha: 0.12;
+	--shadow-color: hsla(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / var(--shadow-alpha));
 	--shadow-spread: 15px;
 	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
 

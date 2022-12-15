@@ -25,6 +25,7 @@
 	}
 
 	&__button {
+		@include text-preset(5);
 		display: flex;
 		justify-content: space-between;
 		column-gap: var(--spacer-2);
@@ -32,8 +33,8 @@
 		width: 100%;
 		color: var(--accordion-color);
 		transition: var(--transition);
-		font-weight: var(--fw-xl);
-		font-size: var(--h4);
+		background: var(--color-surface);
+
 
 		&.active {
 			background: var(--color-primary-dark);

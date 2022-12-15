@@ -14,7 +14,7 @@
 	align-items: center;
 	width: 100%;
 	max-width: 10rem;
-	transition: max-width 0.6s ease-in-out;
+	transition: max-width var(--transition-duration) ease-in-out;
 
 	&:focus-within {
 		max-width: 100%;

@@ -1,36 +1,29 @@
 .button,
 %button {
-	--button-color: var(--color-white);
-	--button-color-accent: var(--color-white);
+	--button-text-color: var(--color-text-reverse);
+	--button-text-color-accent: var(--color-text);
 	--button-bg: var(--color-primary);
 	--button-bg-accent: var(--color-primary-dark);
-
-	color: var(--button-color);
+	
+	@include text-preset(5);
+	color: var(--button-text-color);
 	background: var(--button-bg);
-	font-weight: var(--fw-xl);
 	border: var(--border-thickness) solid var(--button-bg);
 	transition: var(--transition);
 	//border-radius: var(--border-radius);
 	//box-shadow: var(--shadow);
-	padding: 0.75rem 1.5rem;
-	min-width: 7.5rem;
-	min-height: 2.875rem; // 46px
+	padding: 0.75em 1.5em;
+	min-width: 7.5em;
+	min-height: 2.875em; 
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	line-height: 1;
-
-	@include hover() {
+	
+	@include hover(focus) {
 		background: var(--button-bg-accent);
 		border-color: var(--button-bg-accent);
-		color: var(--button-color-accent);
-	}
-
-	&:focus {
-		background: var(--button-bg-accent);
-		border-color: var(--button-bg-accent);
-		color: var(--button-color-accent);
+		color: var(--button-text-color);
 	}
 }
 
@@ -41,8 +34,8 @@
 	border-color: var(--button-bg);
 
 	@include hover(focus) {
-		background-color: var(--button-bg-accent);
-		color: var(--button-color-accent);
+		background: var(--button-bg-accent);
+		color: var(--button-text-color);
 	}
 
 	@include chevron();
@@ -50,13 +43,11 @@
 
 .button-reverse,
 %button-reverse {
-	color: var(--button-color-accent);
 	background: var(--button-bg-accent);
 	border-color: var(--button-bg-accent);
 
 	@include hover(focus) {
-		background-color: var(--button-bg);
+		background: var(--button-bg);
 		border-color: var(--button-bg);
-		color: var(--button-color);
 	}
 }

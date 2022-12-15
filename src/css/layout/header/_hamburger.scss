@@ -10,7 +10,7 @@
   min-width: 320px;
   width: auto;
   height: 100vh;
-
+  overscroll-behavior: contain;
   z-index: var(--z-hamburger);
 
   padding: 0 0.75rem 0.75rem 0.75rem;
@@ -24,6 +24,7 @@
     translate: 0;
     padding: 0;
 	 height: auto;
+	 background-color: unset;
   }
 
   &.active {

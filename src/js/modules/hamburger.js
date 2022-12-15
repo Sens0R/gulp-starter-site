@@ -68,7 +68,6 @@ export function hamburger(userOptions) {
 
   function open() {
     document.addEventListener('keydown', closeWithEsc)
-    document.body.style.overflow = 'hidden'
     mainElement.classList.add('active')
     mainElement.setAttribute('aria-modal', 'true')
     mainElement.setAttribute('role', 'dialog')
@@ -78,7 +77,6 @@ export function hamburger(userOptions) {
 
   function close() {
     document.removeEventListener('keydown', closeWithEsc)
-    document.body.style.overflow = null
     mainElement.classList.remove('active')
     mainElement.removeAttribute('aria-modal')
     mainElement.removeAttribute('role')
