@@ -1,6 +1,6 @@
 @import 'swiper/swiper.scss';
 
-// optional for slides with shadows 
+// optional for slides with shadows
 .swiper-shadow-container {
 	overflow: hidden;
 	padding: var(--shadow-spread);
@@ -31,7 +31,7 @@
 .swiper-button {
 	cursor: pointer;
 	min-width: auto !important;
-	padding: var(--box-lg) !important;
+	padding: var(--space-inset-md) !important;
 }
 
 .swiper-button-disabled {
@@ -51,11 +51,10 @@
 .swiper-pagination-horizontal {
 	display: flex;
 	justify-content: center;
-	gap: var(--space-1);
+	gap: var(--space-2);
 }
 
 .swiper-pagination-bullet {
-	@include link-space();
 	width: 0.75rem;
 	height: 0.75rem;
 	border-radius: 50%;
@@ -65,6 +64,7 @@
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+	@include link-space();
 	@include hover(focus) {
 		cursor: pointer;
 		scale: 1.33;

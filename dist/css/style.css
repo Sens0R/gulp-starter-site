@@ -5044,7 +5044,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 .swiper-button {
   cursor: pointer;
   min-width: auto !important;
-  padding: var(--box-lg) !important;
+  padding: var(--space-inset-md) !important;
 }
 
 .swiper-button-disabled {
@@ -5066,11 +5066,10 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: var(--space-1);
+  gap: var(--space-2);
 }
 
 .swiper-pagination-bullet {
-  position: relative;
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 50%;
@@ -5080,7 +5079,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   transition: var(--transition);
   scale: 0.66;
 }
-.swiper-pagination-bullet::after {
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+  position: relative;
+}
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active)::after {
   content: "";
   position: absolute;
   display: block;
@@ -5092,7 +5095,6 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   left: 50%;
   translate: -50% -50%;
 }
-
 @media (hover: hover) and (pointer: fine) {
   .swiper-pagination-bullet:not(.swiper-pagination-bullet-active):hover {
     cursor: pointer;
@@ -6568,9 +6570,10 @@ a:focus-visible,
 }
 
 .accordion {
+  --accordion-space: var(--space-inset-md);
+  --accordion-color: var(--color-text-accent);
+  --accordion-accent-color: var(--color-text-reverse);
   --accordion-transition: 0.3s ease-in-out;
-  --accordion-color: var(--color-primary);
-  --accordion-accent-color: var(--color-white);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6578,7 +6581,7 @@ a:focus-visible,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .accordion__item {
@@ -6594,8 +6597,7 @@ a:focus-visible,
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  gap: var(--space-2);
-  padding: var(--space-2);
+  padding: var(--accordion-space);
   color: var(--accordion-color);
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -6639,15 +6641,15 @@ a:focus-visible,
   -webkit-transition: var(--accordion-transition);
   -o-transition: var(--accordion-transition);
   transition: var(--accordion-transition);
-  gap: var(--space-2);
-  padding: 0 var(--space-2);
+  gap: var(--space-3);
+  padding: 0 var(--accordion-space);
   background: var(--color-bg-body);
 }
 .accordion__content > :first-child {
-  margin-top: var(--space-2);
+  margin-top: var(--accordion-space);
 }
 .accordion__content > :last-child {
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--accordion-space);
 }
 
 .accordion__icon {
