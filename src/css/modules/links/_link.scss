@@ -2,7 +2,7 @@ a,
 [type='link'] {
 	--transition-link: 0.15s ease-in-out;
 
-	color: var(--color-text);
+	color: var(--color-text-primary);
 	transition: var(--transition-link);
 
 	@include hover(focus) {
@@ -20,7 +20,7 @@ a,
 }
 
 .box-link {
-	@include text-preset(6);
+	@include text-preset(5);
 	color: var(--color-text-accent);
 	text-decoration: none;
 

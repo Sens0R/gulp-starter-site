@@ -10,7 +10,7 @@
 }
 
 .footer-nav__subtitle {
-	font-weight: var(--fw-semibold);
+	font-weight: var(--fw-bold);
 }
 
 .footer-nav__list {
@@ -21,7 +21,6 @@
 }
 
 .footer-nav__link {
-	font-weight: var(--fw-medium);
 	font-size: var(--fs-sm);
 	@include link-space();
 	@include underline-hover(reverse);
@@ -31,6 +30,6 @@
 	@include text-preset(7);
 	display: flex;
 	justify-content: space-between;
-	color: var(--color-text-dim);
+	color: var(--color-text-secondary);
 	padding-top: var(--space-4);
 }

@@ -31,18 +31,17 @@
 
 	--color-bg-primary: var(--color-white);
 	--color-bg-secondary: hsl(var(--primary-hue) var(--primary-saturation) 93%);
-	--color-surface: hsl(var(--primary-hue) var(--primary-saturation) 99%);
-
+	
 	// backgrounds
-	--bg-body: var(--color-bg-primary);
-	--bg-header: var(--color-bg-primary);
-	--bg-footer: var(--color-bg-primary);
+	--color-bg-body: var(--color-bg-primary);
+	--color-bg-header: var(--color-bg-primary);
+	--color-bg-footer: var(--color-bg-primary);
 
 	// typography
-	--color-text: hsl(var(--primary-hue) 100% 15%);
-	--color-text-reverse: var(--color-white);
-	--color-text-dim: hsl(var(--primary-hue) 20% 45%);
+	--color-text-primary: hsl(var(--primary-hue) 100% 15%);
+	--color-text-secondary: hsl(var(--primary-hue) 20% 45%);
 	--color-text-accent: var(--color-primary);
+	--color-text-reverse: var(--color-white);
 
 	// alerts
 	--color-error: hsl(4, 90%, 58%);
@@ -59,11 +58,9 @@
 
 	// heading sizes
 	--h1: #{clamp-smart(40, 60)};
-	--h2: calc(var(--h1) * 0.7);
-	--h3: calc(var(--h1) * 0.45);
-	--h4: calc(var(--h1) * 0.4);
-	--h5: #{clamp-smart(16, 18)};
-	--h6: 0.875rem;
+	--h2: #{clamp-smart(26, 36)};
+	--h3: #{clamp-smart(20, 24)};
+	--h4: #{clamp-smart(18, 20)};
 
 	// font sizes
 	@include map-scss-vars-into-css-vars($font-sizes, '--fs');

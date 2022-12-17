@@ -3,7 +3,7 @@ textarea {
 	padding: var(--space-inset-sm);
 	line-height: var(--lh-sm);
 	border: var(--border);
-	background: var(--bg-body);
+	background: var(--color-bg-body);
 	transition: border-color var(--transition), box-shadow var(--transition);
 
 	&:focus-visible {

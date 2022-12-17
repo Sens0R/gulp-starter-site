@@ -2,34 +2,28 @@ $grid-gutter-width: 0; // default bootstrap x gutter
 $container-max-width: 1536px;
 
 $colors: (
-	white: var(--color-white),
-	black: var(--color-black),
-	text: (
-		null: var(--color-text),
-		reverse: var(--color-text-reverse),
-		muted: var(--color-text-muted),
-	),
 	primary: (
 		null: var(--color-primary),
 		light: var(--color-primary-light),
 		dark: var(--color-primary-dark),
 	),
-	surface: var(--color-surface),
+	text: (
+		primary: var(--color-text-primary),
+		secondary: var(--color-text-secondary),
+		accent: var(--color-text-accent),
+		reverse: var(--color-text-reverse),
+	),
 );
 
 $font-sizes: (
-	xs: calc(var(--fs-md) * 0.75),
 	sm: calc(var(--fs-md) * 0.875),
 	md: clamp-smart(14, 16),
 	lg: calc(var(--fs-md) * 1.125),
-	xl: calc(var(--fs-md) * 1.25),
 );
 
 $font-weights: (
 	regular: 400,
-	medium: 500,
-	semibold: 600,
-	bold: 700,
+	bold: 600,
 );
 
 $spacers: (

@@ -1,11 +1,9 @@
 %button {
-	--button-text-color: var(--color-text-reverse);
-	--button-text-color-accent: var(--color-text);
 	--button-bg: var(--color-primary);
 	--button-bg-accent: var(--color-primary-dark);
 
-	font-weight: var(--fw-semibold);
-	color: var(--button-text-color);
+	font-weight: var(--fw-bold);
+	color: var(--color-text-reverse);
 	background: var(--button-bg);
 	border: var(--border-thickness) solid var(--button-bg);
 	transition: var(--transition);
@@ -19,7 +17,7 @@
 	@include hover(focus) {
 		background: var(--button-bg-accent);
 		border-color: var(--button-bg-accent);
-		color: var(--button-text-color);
+		color: var(--color-text-reverse);
 	}
 }
 
@@ -30,7 +28,7 @@
 
 	@include hover(focus) {
 		background: var(--button-bg-accent);
-		color: var(--button-text-color);
+		color: var(--color-text-reverse);
 	}
 
 	@include chevron();
