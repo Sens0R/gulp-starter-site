@@ -1,10 +1,11 @@
 a,
 [type='link'] {
-	--transition-link: 0.2s ease-in-out;
+	--transition-link: 0.15s ease-in-out;
 
 	color: var(--color-text);
 	transition: var(--transition-link);
-	
+	line-height: var(--lh-sm);
+
 	@include hover(focus) {
 		color: var(--color-primary);
 	}
@@ -20,7 +21,6 @@ a,
 }
 
 .box-link {
-	display: inline-flex;
 	@include text-preset(6);
 	color: var(--color-primary);
 	text-decoration: none;

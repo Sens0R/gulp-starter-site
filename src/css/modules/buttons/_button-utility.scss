@@ -1,0 +1,35 @@
+@mixin button {
+	@extend %button;
+}
+
+@mixin button-outline {
+	@extend %button;
+	@extend %button--outline;
+}
+
+@mixin button-reverse {
+	@extend %button;
+	@extend %button--reverse;
+}
+
+@mixin button-circle {
+	@extend %button;
+	@extend %button--circle;
+}
+
+// selectors
+.button {
+	@include button;
+}
+
+.button--outline {
+	@include button-outline;
+}
+
+.button--reverse {
+	@include button-reverse;
+}
+
+.button--circle {
+	@include button-circle;
+}

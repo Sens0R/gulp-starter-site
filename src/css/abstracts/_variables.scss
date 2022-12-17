@@ -26,18 +26,34 @@ $font-sizes: (
 );
 
 $font-weights: (
-	md: 400,
-	lg: 500,
-	xl: 600,
-	xxl: 700,
+	regular: 400,
+	medium: 500,
+	semibold: 600,
+	bold: 700,
 );
 
 $spacers: (
 	0: 0,
-	1: calc(var(--spacer-2) / 2),
-	2: clamp-smart(20, 24),
-	3: calc(var(--spacer-2) * 1.5),
-	4: calc(var(--spacer-2) * 3),
+	1: calc(var(--space-3) / 4),
+	2: calc(var(--space-3) / 2),
+	3: clamp-smart(16, 20),
+	4: calc(var(--space-3) * 2),
+	5: calc(var(--space-3) * 4),
+);
+
+$space-insets: (
+	sm: var(--space-2),
+	md: var(--space-3),
+	lg: var(--space-4),
+	squish: (
+		sm: var(--space-1) var(--space-2),
+		md: var(--space-2) var(--space-3),
+		lg: var(--space-3) var(--space-4),
+	),
+	stretch: (
+		sm: calc(var(--space-2) * 1.5) var(--space-2),
+		md: calc(var(--space-3) * 1.5) var(--space-3),
+	),
 );
 
 $grid-breakpoints: (

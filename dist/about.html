@@ -24,9 +24,9 @@
     <div class="header-sticky-wrapper">
     <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
 
-<div class="col-auto col-xl-3">
-	<a aria-label="Logo-name home. Logo-name logo." class="logo logo_header" href="index.html">
-		<svg aria-hidden="true" class="logo__icon">
+<div class="col-auto col-xl-3 d-flex align-items-center">
+	<a aria-label="Logo-name home. Logo-name logo." href="index.html">
+		<svg aria-hidden="true" class="site-logo">
 			<use href="images/icons/sprite-multi.svg#logo" />
 		</svg>
 	</a>
@@ -35,9 +35,8 @@
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation col-12 col-xl" data-hamburger>
-	<button class="nav-toggler nav-toggler_close" data-hamburger-button="close" type="button">
-		<span class="nav-toggler__text nav-toggler__text_close">Close</span
-		><svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_close">
+	<button class="nav-toggler nav-toggler--close" data-hamburger-button="close" type="button">
+		<svg aria-hidden="true" class="nav-toggler__icon">
 			<use href="images/icons/sprite-mono.svg#cancel"></use>
 		</svg>
 	</button>
@@ -64,7 +63,7 @@
 			<div class="dropdown__controls">
 				<a data-nav-page href="services.html" class="nav-menu__link">Services</a>
 				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
-					<svg aria-hidden="true" class="dropdown__icon">
+					<svg aria-hidden="true" class="icon">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
 					</svg>
 				</button>
@@ -99,37 +98,38 @@
 		</li>
 	</ul>
 
-	<ul class="social">
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
-      <svg aria-hidden="true" class="social__icon">
+	<div class="d-lg-none"><ul class="social-icons">
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="icon">
         <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
       </svg>
     </a>
   </li>
 
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
-      <svg aria-hidden="true" class="social__icon">
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="icon">
         <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
       </svg>
     </a>
   </li>
 
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
-      <svg aria-hidden="true" class="social__icon">
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="icon">
         <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
       </svg>
     </a>
   </li>
 </ul>
-
+</div>
 </nav>
 
 <!-- ====================   SEARCH   ==================== -->
 
-<div class="col-auto col-md col-xl-2 col-xxl-3 search-container"><form class="search" role="search">
+<div class="col-auto col-md col-xl-2 col-xxl-3 d-flex align-items-center d-none d-lg-flex justify-content-end">
+	<form class="search" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
@@ -140,15 +140,16 @@
 		</svg>
 	</button>
 </form>
+
 </div>
 
 <!-- ====================   NAV-TOGGLER   ==================== -->
 
-<button class="nav-toggler nav-toggler_open col-auto" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="nav-toggler__icon nav-toggler__icon_open">
+<button class="nav-toggler nav-toggler col-auto" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" class="nav-toggler__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
-	<span class="nav-toggler__text nav-toggler__text_open">menu</span>
+	Menu
 </button>
 </header>
     </div>
@@ -161,65 +162,36 @@
 </main>
 
 <footer class="footer">
-  <div class="container-xxl">
+  <div class="container">
 	<nav aria-label="Footer" class="footer-nav">
 		<div class="row row-cols-sm-2 row-cols-lg-4 gy-4">
-			<div class="col-12 footer-nav__column">
+			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>
-						<a class="logo logo_footer" href="index.html" aria-label="Logo-name home. Logo-name logo.">
-							<svg aria-hidden="true" class="logo-icon logo__icon_footer">
+						<a href="index.html" aria-label="Logo-name home. Logo-name logo.">
+							<svg aria-hidden="true" class="site-logo site-logo--large">
 								<use href="images/icons/sprite-multi.svg#logo"></use>
 							</svg>
 						</a>
 					</li>
-
-					<li>
-						<div class="footer-socials"><ul class="social">
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Linkedin">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
-      </svg>
-    </a>
-  </li>
-
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Facebook">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
-      </svg>
-    </a>
-  </li>
-
-  <li class="social__item">
-    <a href="#" class="social__link" data-tooltip aria-label="Instagram">
-      <svg aria-hidden="true" class="social__icon">
-        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
-      </svg>
-    </a>
-  </li>
-</ul>
-</div>
-					</li>
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Services</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Services</h2>
 
 				<ul class="footer-nav__list">
-					<li><a class="footer-nav__link" href="index.html">Cloud Solutions</a></li>
-					<li><a class="footer-nav__link" href="index.html">Your Local IT Help desk</a></li>
-					<li><a class="footer-nav__link" href="index.html">Disaster Recovery</a></li>
-					<li><a class="footer-nav__link" href="index.html">Systems Security</a></li>
-					<li><a class="footer-nav__link" href="index.html">Hardware Procurement</a></li>
-					<li><a class="footer-nav__link" href="index.html">Phones and Internet</a></li>
+					<li><a class="footer-nav__link" href="#">Cloud Solutions</a></li>
+					<li><a class="footer-nav__link" href="#">Your Local IT Help desk</a></li>
+					<li><a class="footer-nav__link" href="#">Disaster Recovery</a></li>
+					<li><a class="footer-nav__link" href="#">Systems Security</a></li>
+					<li><a class="footer-nav__link" href="#">Hardware Procurement</a></li>
+					<li><a class="footer-nav__link" href="#">Phones and Internet</a></li>
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Company</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Company</h2>
 
 				<ul class="footer-nav__list">
 					<li><a class="footer-nav__link" href="about.html">About</a></li>
@@ -237,17 +209,17 @@
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Contact</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Contact</h2>
 
 				<ul class="footer-nav__list">
 					<li>
-						<div class="footer-nav__list-header">Phone</div>
+						<div class="footer-nav__subtitle">Phone</div>
 						<a href="tel:1800843695" class="footer-nav__link" aria-label="Make a phone call">1800 843 695</a>
 					</li>
 
 					<li>
-						<div class="footer-nav__list-header">Address</div>
+						<div class="footer-nav__subtitle">Address</div>
 						<a
 							class="footer-nav__link"
 							aria-label="Open Google Map"
@@ -257,18 +229,43 @@
 						>
 					</li>
 
-					<li class="footer-nav__button">
-						<a class="button" href="#">Contact us</a>
+					<li class="mt-auto">
+						<div class="footer-socials"><ul class="social-icons">
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Linkedin">
+      <svg aria-hidden="true" class="icon">
+        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Facebook">
+      <svg aria-hidden="true" class="icon">
+        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+      </svg>
+    </a>
+  </li>
+
+  <li>
+    <a href="#" class="button button--circle" data-tooltip aria-label="Instagram">
+      <svg aria-hidden="true" class="icon">
+        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-	</nav>
 
-	<div class="copyright">
-		<p>©2023 Starter site</p>
-		<p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
-	</div>
+		<div class="footer-nav__copyright">
+			<p>©2023 Starter site</p>
+			<p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
+		</div>
+	</nav>
 </div>
 
 </footer>

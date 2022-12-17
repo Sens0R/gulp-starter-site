@@ -1,0 +1,112 @@
+.navigation {
+	position: fixed;
+	right: 0;
+	top: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-direction: column;
+	visibility: hidden;
+	min-width: 320px;
+	width: auto;
+	height: 100vh;
+	overscroll-behavior: contain;
+	z-index: var(--z-hamburger);
+	padding: var(--header-space-y) var(--container-space-x);
+	background-color: var(--color-white);
+	translate: 100%;
+	transition: var(--transition);
+	gap: var(--space-4);
+
+	@include bp(lg) {
+		visibility: visible;
+		position: static;
+		translate: 0;
+		padding: 0;
+		height: auto;
+		background-color: unset;
+	}
+
+	&.active {
+		overflow: hidden auto;
+		visibility: visible;
+		translate: 0;
+		box-shadow: 0.5rem 0 1rem 0.5rem rgba(0 0 0 / 0.25);
+	}
+}
+
+.nav-menu {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+
+	&__link {
+		@include text-preset(5);
+		display: flex;
+		padding: var(--space-2) 0;
+		@include underline-hover(reverse);
+	}
+
+	@include bp(lg) {
+		flex-direction: row;
+
+		&__link {
+			padding: var(--box-stretch);
+		}
+	}
+}
+
+
+/* ====================   HAMBURGER BACKDROP   ==================== */
+
+.hamburger-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: var(--z-hamburger-backdrop);
+	background: rgba(0 0 0 / 0.5);
+	visibility: hidden;
+	opacity: 0;
+	margin: 0;
+	transition: opacity var(--transition), visibility var(--transition);
+}
+
+.hamburger-backdrop.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/* ====================   NAVIGATION DROPDOWN   ==================== */
+
+.nav-menu .dropdown {
+	.nav-menu__link {
+		padding-right: 0;
+	}
+
+	&__content {
+		@include bp(lg, max) {
+			position: static;
+			translate: none;
+			box-shadow: none;
+		}
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include link-space();
+	}
+
+	@include bp(lg) {
+		&__button {
+			padding: var(--spacer-1) var(--spacer-2) var(--spacer-1) var(--spacer-1);
+		}
+	
+	}
+}

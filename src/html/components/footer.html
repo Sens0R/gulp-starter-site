@@ -1,37 +1,33 @@
-<div class="container-xxl">
+<div class="container">
 	<nav aria-label="Footer" class="footer-nav">
 		<div class="row row-cols-sm-2 row-cols-lg-4 gy-4">
-			<div class="col-12 footer-nav__column">
+			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>
-						<a class="logo logo_footer" href="index.html" aria-label="Logo-name home. Logo-name logo.">
-							<svg aria-hidden="true" class="logo-icon logo__icon_footer">
+						<a href="index.html" aria-label="Logo-name home. Logo-name logo.">
+							<svg aria-hidden="true" class="site-logo site-logo--large">
 								<use href="images/icons/sprite-multi.svg#logo"></use>
 							</svg>
 						</a>
 					</li>
-
-					<li>
-						<div class="footer-socials">@@include('social.html',{})</div>
-					</li>
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Services</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Services</h2>
 
 				<ul class="footer-nav__list">
-					<li><a class="footer-nav__link" href="index.html">Cloud Solutions</a></li>
-					<li><a class="footer-nav__link" href="index.html">Your Local IT Help desk</a></li>
-					<li><a class="footer-nav__link" href="index.html">Disaster Recovery</a></li>
-					<li><a class="footer-nav__link" href="index.html">Systems Security</a></li>
-					<li><a class="footer-nav__link" href="index.html">Hardware Procurement</a></li>
-					<li><a class="footer-nav__link" href="index.html">Phones and Internet</a></li>
+					<li><a class="footer-nav__link" href="#">Cloud Solutions</a></li>
+					<li><a class="footer-nav__link" href="#">Your Local IT Help desk</a></li>
+					<li><a class="footer-nav__link" href="#">Disaster Recovery</a></li>
+					<li><a class="footer-nav__link" href="#">Systems Security</a></li>
+					<li><a class="footer-nav__link" href="#">Hardware Procurement</a></li>
+					<li><a class="footer-nav__link" href="#">Phones and Internet</a></li>
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Company</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Company</h2>
 
 				<ul class="footer-nav__list">
 					<li><a class="footer-nav__link" href="about.html">About</a></li>
@@ -49,17 +45,17 @@
 				</ul>
 			</div>
 
-			<div class="col-12 footer-nav__column">
-				<h2 class="footer-nav__header">Contact</h2>
+			<div class="col-12 footer-nav__group">
+				<h2 class="footer-nav__title">Contact</h2>
 
 				<ul class="footer-nav__list">
 					<li>
-						<div class="footer-nav__list-header">Phone</div>
+						<div class="footer-nav__subtitle">Phone</div>
 						<a href="tel:1800843695" class="footer-nav__link" aria-label="Make a phone call">1800 843 695</a>
 					</li>
 
 					<li>
-						<div class="footer-nav__list-header">Address</div>
+						<div class="footer-nav__subtitle">Address</div>
 						<a
 							class="footer-nav__link"
 							aria-label="Open Google Map"
@@ -69,16 +65,16 @@
 						>
 					</li>
 
-					<li class="footer-nav__button">
-						<a class="button" href="#">Contact us</a>
+					<li class="mt-auto">
+						<div class="footer-socials">@@include('social.html',{})</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-	</nav>
 
-	<div class="copyright">
-		<p>©2023 Starter site</p>
-		<p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
-	</div>
+		<div class="footer-nav__copyright">
+			<p>©2023 Starter site</p>
+			<p>Website by <a href="https://sgd.com.au/" class="link" target="_blank">SGD</a></p>
+		</div>
+	</nav>
 </div>

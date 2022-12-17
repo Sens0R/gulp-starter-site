@@ -1,8 +1,5 @@
 %container {
-	padding-top: var(--container-space-y);
-	padding-bottom: var(--container-space-y);
-	padding-right: var(--container-space-x);
-	padding-left: var(--container-space-x);
+	padding: var(--container-space-y) var(--container-space-x);
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;

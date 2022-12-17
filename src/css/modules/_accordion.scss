@@ -9,75 +9,69 @@
 }
 
 .accordion {
-	--accordion-transition: var(--transition-duration) ease-in-out;
+	--accordion-transition: 0.3s ease-in-out;
 	--accordion-color: var(--color-primary);
 	--accordion-accent-color: var(--color-white);
 
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacer-2);
+}
 
-	&__item {
-		box-shadow: var(--shadow);
-	}
+.accordion__item {
+	box-shadow: var(--shadow);
+}
 
-	&__header {
-	}
+.accordion__button {
+	@include text-preset(5);
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: var(--spacer-2);
+	padding: var(--spacer-2);
+	color: var(--accordion-color);
+	transition: var(--transition);
+	background: var(--color-surface);
 
-	&__button {
-		@include text-preset(5);
-		display: flex;
-		justify-content: space-between;
-		column-gap: var(--spacer-2);
-		padding: var(--spacer-2);
-		width: 100%;
-		color: var(--accordion-color);
-		transition: var(--transition);
-		background: var(--color-surface);
+	@include hover(focus) {
+		background-color: var(--accordion-color);
+		color: var(--accordion-accent-color);
 
-
-		&.active {
-			background: var(--color-primary-dark);
-			color: var(--accordion-accent-color);
-
-			.accordion__icon {
-				fill: var(--accordion-accent-color);
-				rotate: 180deg;
-			}
-		}
-
-		@include hover(focus) {
-			background-color: var(--accordion-color);
-			color: var(--accordion-accent-color);
-			.accordion__icon {
-				fill: var(--accordion-accent-color);
-			}
+		.icon {
+			fill: var(--accordion-accent-color);
 		}
 	}
+}
 
-	&__content {
-		transition: var(--accordion-transition);
-		display: flex;
-		flex-direction: column;
-		gap: var(--spacer-2);
-		padding: 0 var(--spacer-2);
-		background: var(--bg-body);
+.accordion__button.active {
+	background: var(--color-primary-dark);
+	color: var(--accordion-accent-color);
 
-		> :first-child {
-			margin-top: var(--spacer-2);
-		}
+	.icon {
+		fill: var(--accordion-accent-color);
+		rotate: 180deg;
+	}
+}
 
-		> :last-child {
-			margin-bottom: var(--spacer-2);
-		}
+.accordion__content {
+	display: flex;
+	flex-direction: column;
+	transition: var(--accordion-transition);
+	gap: var(--spacer-2);
+	padding: 0 var(--spacer-2);
+	background: var(--bg-body);
+
+	> :first-child {
+		margin-top: var(--spacer-2);
 	}
 
-	&__icon {
-		width: 1rem;
-		height: 1rem;
-		display: flex;
-		align-self: center;
-		fill: currentColor;
-		transition: var(--accordion-transition);
+	> :last-child {
+		margin-bottom: var(--spacer-2);
 	}
+}
+
+.accordion__icon {
+	display: flex;
+	align-self: center;
+	transition: var(--accordion-transition);
 }

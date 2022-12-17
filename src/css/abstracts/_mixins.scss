@@ -1,4 +1,7 @@
-@use 'sass:meta';
+// text presets from _text-presets.scss
+@mixin text-preset($value) {
+	@extend %text-preset-#{$value} !optional;
+}
 
 // check for device input type
 @mixin device-input($type) {
@@ -117,7 +120,7 @@
 			$key: #{$key}-#{$name};
 		}
 
-		@if meta.type-of($value) == 'map' {
+		@if type-of($value) == 'map' {
 			// if value is a map, invoke it once more
 			@include map-scss-vars-into-css-vars($value, $prefix, $key);
 		} @else {
@@ -126,4 +129,16 @@
 		// next iteration of loop should go with unchanged key
 		$key: $key-copy;
 	}
+}
+
+@mixin visually-hidden() {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0, 0, 0, 0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
 }

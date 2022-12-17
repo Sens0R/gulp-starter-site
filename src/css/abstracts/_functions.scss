@@ -1,3 +1,5 @@
+@import './variables.scss' ;
+
 /* 
 num-to-rem -  padding: clamp-smart(16, 32);            //output 1rem < 2rem
 px-to-rem  -  padding: clamp-smart(16px, 32px);        //output 1rem < 2rem

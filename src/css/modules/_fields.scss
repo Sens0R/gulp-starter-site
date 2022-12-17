@@ -1,28 +1,20 @@
 input,
 textarea {
-	--input-border-color: var(--color-black);
-	--input-bg-color: var(--color-white);
-
-	padding: var(--spacer-1);
-	border-color: var(--input-border-color);
-	background: var(--input-bg-color);
+	padding: var(--space-inset-sm);
+	line-height: var(--lh-sm);
+	border: var(--border);
+	background: var(--bg-body);
 	transition: border-color var(--transition), box-shadow var(--transition);
 
 	&:focus-visible {
-		--input-bg-color: var(--color-surface);
 		border-color: var(--color-primary);
 		box-shadow: 0 0 0 4px var(--shadow-color);
 	}
 }
 
-::placeholder {
-	color: var(--color-black);
-	font-size: var(--fs-md);
-}
-
 .contact-form {
 	--contact-form-gap: 0.375rem;
-	
+
 	gap: var(--spacer-2);
 	display: flex;
 	flex-direction: column;
@@ -31,6 +23,7 @@ textarea {
 		display: flex;
 		flex-direction: column;
 		gap: var(--contact-form-gap);
+		align-items: flex-start;
 	}
 
 	&__title {
@@ -47,5 +40,9 @@ textarea {
 .contact-form__title.contact-form__item {
 	display: flex;
 	flex-direction: column;
+	align-items: unset;
 	gap: var(--contact-form-gap);
+}
+
+.contact-form__item a {
 }

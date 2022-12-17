@@ -30,6 +30,11 @@
 	@include modifiers($font-weights, 'font-weight');
 }
 
+// space insets from sass map
+.space-inset {
+	@include modifiers($space-insets, 'padding');
+}
+
 .stretch-child > :first-child,
 .stretch {
 	@include stretch;
@@ -46,10 +51,6 @@
 
 	&-md {
 		line-height: var(--lh-md);
-	}
-
-	&-lg {
-		line-height: var(--lh-lg);
 	}
 
 	&-none {

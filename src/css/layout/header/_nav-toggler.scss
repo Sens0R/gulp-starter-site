@@ -1,0 +1,38 @@
+.nav-toggler {
+	--toggler-size: 14px;
+
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	flex-direction: column;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+	margin-left: auto;
+	font-size: var(--toggler-size);
+	font-weight: var(--fw-bold);
+	text-transform: uppercase;
+	line-height: 1;
+	transition: var(--transition);
+	cursor: pointer;
+
+	@include bp(lg) {
+		display: none;
+	}
+
+	@include hover(focus) {
+		color: var(--color-text-accent);
+	}
+}
+
+.nav-toggler__icon {
+	fill: currentColor;
+	width: 3.175em;
+	height: 2em;
+	margin: auto;
+}
+
+.nav-toggler--close .nav-toggler__icon {
+	height: 2em;
+	width: 2em;
+	margin-right: 0;
+}

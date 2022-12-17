@@ -4,7 +4,6 @@
 	left: 0;
 	z-index: var(--z-header);
 	box-shadow: none;
-	transition: all 0.5s ease-out;
 }
 
 .headroom_unpinned {
@@ -15,17 +14,16 @@
 }
 
 .header {
-	--container-space-y: var(--spacer-1);
+	--container-space-y: var(--space-2);
+	--header-space-y: var(--container-space-y);
 
 	display: flex;
 	align-items: center;
-	gap: var(--spacer-2);
 	flex-wrap: wrap;
-	
+	gap: var(--spacer-2);
+	background: var(--bg-header);
 }
 
-/* ====================   IMPORTS   ==================== */
-
-@import 'nav-menu';
+@import 'nav-toggler';
 @import 'search';
-@import 'hamburger';
+@import 'navigation';
