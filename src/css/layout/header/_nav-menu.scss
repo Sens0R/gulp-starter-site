@@ -1,0 +1,38 @@
+.nav-menu {
+	--nav-space: var(--space-3);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.nav-menu__link {
+	@include text-preset(5);
+	padding: var(--nav-space) 0;
+	text-decoration: none;
+}
+
+.nav-menu__list .nav-menu__link {
+	text-transform: unset;
+}
+
+@include bp(lg) {
+	.nav-menu {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.nav-menu__link {
+		white-space: nowrap;
+		padding: var(--nav-space);
+	}
+
+	.nav-menu .dropdown__button {
+		margin-left: calc(var(--nav-space) * -1 + 5px);
+		padding-right: var(--nav-space);
+	}
+
+	.nav-menu .dropdown .icon {
+		width: 0.75em;
+		height: 0.75em;
+	}
+}

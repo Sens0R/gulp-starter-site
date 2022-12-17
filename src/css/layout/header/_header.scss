@@ -2,15 +2,16 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: var(--z-header);
+	z-index: 50;
 	box-shadow: none;
+	transition: var(--transition);
 }
 
 .headroom_unpinned {
 }
 
 .headroom_not-top {
-	box-shadow: 0 0 10px rgba(0 0 0 / 0.12);
+	box-shadow: 0 0 1.5rem 0.5rem rgba(0 0 0 / 0.075);
 }
 
 .header {
@@ -19,11 +20,14 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	gap: var(--spacer-2);
+	gap: var(--space-3);
 	background: var(--bg-header);
 }
 
 @import 'nav-toggler';
+@import 'nav-backdrop';
+@import 'nav-menu';
 @import 'search';
 @import 'navigation';

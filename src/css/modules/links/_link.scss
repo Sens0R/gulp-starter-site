@@ -4,15 +4,14 @@ a,
 
 	color: var(--color-text);
 	transition: var(--transition-link);
-	line-height: var(--lh-sm);
 
 	@include hover(focus) {
-		color: var(--color-primary);
+		color: var(--color-text-accent);
 	}
 }
 
 .link-heading {
-	color: var(--color-primary);
+	color: var(--color-text-accent);
 	text-decoration: none;
 
 	@include hover(focus) {
@@ -22,7 +21,7 @@ a,
 
 .box-link {
 	@include text-preset(6);
-	color: var(--color-primary);
+	color: var(--color-text-accent);
 	text-decoration: none;
 
 	@include chevron();

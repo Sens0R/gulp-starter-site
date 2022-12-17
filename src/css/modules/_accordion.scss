@@ -15,7 +15,7 @@
 
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacer-2);
+	gap: var(--space-2);
 }
 
 .accordion__item {
@@ -27,8 +27,8 @@
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	gap: var(--spacer-2);
-	padding: var(--spacer-2);
+	gap: var(--space-2);
+	padding: var(--space-2);
 	color: var(--accordion-color);
 	transition: var(--transition);
 	background: var(--color-surface);
@@ -57,16 +57,16 @@
 	display: flex;
 	flex-direction: column;
 	transition: var(--accordion-transition);
-	gap: var(--spacer-2);
-	padding: 0 var(--spacer-2);
+	gap: var(--space-2);
+	padding: 0 var(--space-2);
 	background: var(--bg-body);
 
 	> :first-child {
-		margin-top: var(--spacer-2);
+		margin-top: var(--space-2);
 	}
 
 	> :last-child {
-		margin-bottom: var(--spacer-2);
+		margin-bottom: var(--space-2);
 	}
 }
 

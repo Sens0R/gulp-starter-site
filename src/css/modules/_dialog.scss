@@ -4,9 +4,9 @@
   left: 50%;
   display: flex;
   flex-direction: column;
-  row-gap: var(--spacer-2);
+  row-gap: var(--space-2);
   z-index: var(--z-dialog);
-  padding: var(--spacer-2);
+  padding: var(--space-2);
   border: 1px solid var(--color-black);
   background-color: var(--color-white);
   box-shadow: 0 0 2rem rgba(0 0 0 / 0.4);
@@ -50,7 +50,7 @@
   &__controls {
     display: flex;
     justify-content: flex-end;
-    gap: var(--spacer-1);
+    gap: var(--space-1);
   }
 
   .cancel-icon {

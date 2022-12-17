@@ -23,6 +23,7 @@
 .footer-nav__link {
 	font-weight: var(--fw-medium);
 	font-size: var(--fs-sm);
+	@include link-space();
 	@include underline-hover(reverse);
 }
 

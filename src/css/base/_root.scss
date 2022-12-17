@@ -89,7 +89,7 @@
 
 	--container-space-x: var(--space-3);
 	--container-space-y: var(--space-5);
-	
+
 	// space insets
 	@include map-scss-vars-into-css-vars($space-insets, '--space-inset');
 
@@ -114,7 +114,4 @@
 	--z-tooltip: 500;
 	--z-dropdown: 400;
 	--z-dialog: 300;
-	--z-hamburger: 100;
-	--z-hamburger-backdrop: 90;
-	--z-header: 50;
 }

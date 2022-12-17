@@ -1,9 +1,9 @@
 .nav-toggler {
-	--toggler-size: 14px;
+	--toggler-size: 11px;
 
 	display: flex;
 	align-items: flex-end;
-	justify-content: flex-end;
+	justify-content: center;
 	flex-direction: column;
 	min-width: 2.75rem;
 	min-height: 2.75rem;
@@ -28,11 +28,9 @@
 	fill: currentColor;
 	width: 3.175em;
 	height: 2em;
-	margin: auto;
 }
 
 .nav-toggler--close .nav-toggler__icon {
-	height: 2em;
-	width: 2em;
-	margin-right: 0;
+	height: 1.25em;
+	width: 1.25em;
 }

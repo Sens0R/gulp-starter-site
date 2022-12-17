@@ -31,7 +31,7 @@ body {
 .body-wrapper {
 	display: flex;
 	flex-direction: column;
-	min-height: 90vh;
+	min-height: 100vh;
 	overflow: hidden;
 }
 
@@ -95,7 +95,7 @@ hr {
 }
 
 blockquote {
-	padding: var(--spacer-2);
+	padding: var(--space-2);
 	border-left: calc(var(--border-thickness) * 2) solid var(--color-primary);
 }
 

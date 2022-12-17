@@ -4,13 +4,17 @@
 	height: 1em;
 }
 
-.site-logo {
+.brand-logo {
 	transition: var(--transition);
 	height: clamp-smart(44, 80);
 	width: clamp-smart(44, 80);
+
+	@include hover(focus) {
+		filter: invert(100%);
+	}
 }
 
-.site-logo--large {
+.brand-logo--large {
 	height: clamp-smart(80, 120);
 	width: clamp-smart(80, 120);
 }

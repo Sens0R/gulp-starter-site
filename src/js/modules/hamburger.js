@@ -21,9 +21,9 @@ export function hamburger(userOptions) {
   let { togglerOpen, togglerClose, aria, breakpoint } = options
 
   const createBackdrop = document.createElement('div')
-  createBackdrop.classList.add('hamburger-backdrop')
+  createBackdrop.classList.add('navigation__backdrop')
   mainElement.after(createBackdrop)
-  const backdrop = document.querySelector('.hamburger-backdrop')
+  const backdrop = document.querySelector('.navigation__backdrop')
 
   togglerOpen = document.querySelector(togglerOpen)
   togglerClose = document.querySelector(togglerClose)
