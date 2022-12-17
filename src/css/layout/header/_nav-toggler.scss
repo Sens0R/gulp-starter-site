@@ -5,13 +5,13 @@
 	align-items: flex-end;
 	justify-content: center;
 	flex-direction: column;
-	min-width: 2.75rem;
-	min-height: 2.75rem;
+	min-width: 44px;
+	min-height: 44px;
 	margin-left: auto;
 	font-size: var(--toggler-size);
 	font-weight: var(--fw-bold);
 	text-transform: uppercase;
-	line-height: 1;
+	
 	transition: var(--transition);
 	cursor: pointer;
 

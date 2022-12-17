@@ -30,7 +30,7 @@ $spacers: (
 	0: 0,
 	1: calc(var(--space-3) / 4),
 	2: calc(var(--space-3) / 2),
-	3: clamp-smart(16, 20),
+	3: clamp-smart(14, 16),
 	4: calc(var(--space-3) * 2),
 	5: calc(var(--space-3) * 4),
 );
