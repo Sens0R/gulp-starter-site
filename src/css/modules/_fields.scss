@@ -5,7 +5,7 @@ textarea {
 	background: var(--color-bg-body);
 	transition: border-color var(--transition), box-shadow var(--transition);
 
-	&:focus-visible {
+	&:focus-within {
 		border-color: var(--color-primary);
 		box-shadow: 0 0 0 4px var(--shadow-color);
 	}
@@ -17,6 +17,7 @@ textarea {
 	gap: var(--space-3);
 
 	&__input {
+		margin-top: var(--space-1);
 		width: 100%;
 	}
 
@@ -37,9 +38,6 @@ textarea {
 	}
 }
 
-.contact-form__title.contact-form__item {
-	display: flex;
-	flex-direction: column;
-	align-items: unset;
-}
+.contact-form__label.contact-form__item {
 
+}

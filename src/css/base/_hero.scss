@@ -1,15 +1,19 @@
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: clamp-smart(300, 440);
+	color: var(--color-text-reverse);
+	line-height: 1;
+	text-align: center;
+}
+
 .hero__title {
 	font-size: clamp-smart(40px, 100px);
 	font-weight: var(--fw-bold);
-	text-align: center;
-	line-height: 1;
-	color: var(--color-text-reverse);
 }
 
 .hero__subtitle {
 	font-size: clamp-smart(20px, 50px);
 	margin-top: 0.5em;
-	text-align: center;
-	color: var(--color-text-reverse);
-	line-height: var(--lh-sm);
 }

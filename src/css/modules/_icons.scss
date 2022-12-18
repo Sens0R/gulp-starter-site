@@ -4,14 +4,19 @@
 	height: 1em;
 }
 
+
+a {
+	@include hover(focus) {
+		.brand-logo {
+			filter: contrast(200%);
+		}
+	}
+}
+
 .brand-logo {
 	transition: var(--transition);
 	height: clamp-smart(44, 80);
 	width: clamp-smart(44, 80);
-
-	@include hover(focus) {
-		filter: contrast(200%);
-	}
 }
 
 .brand-logo--large {

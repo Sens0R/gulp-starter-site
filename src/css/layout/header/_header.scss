@@ -15,15 +15,13 @@
 }
 
 .header {
-	--container-space-y: var(--space-2);
-	--header-space-y: var(--container-space-y);
-
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: var(--space-3);
 	background: var(--color-bg-header);
+	padding: var(--space-container);
 }
 
 @import 'nav-toggler';

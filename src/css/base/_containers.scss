@@ -1,10 +1,10 @@
 .content-block {
 	position: relative;
-	padding: var(--space-5);
+	padding: var(--space-5) 0;
 }
 
 %container {
-	padding: var(--container-space-y) var(--container-space-x);
+	padding: 0 var(--space-container);
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;

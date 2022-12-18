@@ -10,7 +10,7 @@
 
 .accordion {
 	--accordion-space: var(--space-3);
-	--accordion-color: var(--color-text-accent);
+	--accordion-color: var(--color-accent);
 	--accordion-accent-color: var(--color-text-reverse);
 	--accordion-transition: 0.3s ease-in-out;
 
@@ -21,6 +21,16 @@
 
 .accordion__item {
 	box-shadow: var(--shadow);
+}
+
+.accordion__button.active {
+	background: var(--color-primary-dark);
+	color: var(--accordion-accent-color);
+
+	.icon {
+		fill: var(--accordion-accent-color);
+		rotate: 180deg;
+	}
 }
 
 .accordion__button {
@@ -34,22 +44,12 @@
 	background: var(--color-bg);
 
 	@include hover(focus) {
-		background-color: var(--accordion-color);
+		background: var(--accordion-color);
 		color: var(--accordion-accent-color);
 
 		.icon {
 			fill: var(--accordion-accent-color);
 		}
-	}
-}
-
-.accordion__button.active {
-	background: var(--color-primary-dark);
-	color: var(--accordion-accent-color);
-
-	.icon {
-		fill: var(--accordion-accent-color);
-		rotate: 180deg;
 	}
 }
 

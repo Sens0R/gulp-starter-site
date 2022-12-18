@@ -31,6 +31,8 @@
 		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - var(--darken))
 	);
 
+	--color-accent: var(--color-primary);
+
 	// background
 	--color-bg: var(--color-white);
 	--color-bg-body: var(--color-bg);
@@ -40,7 +42,7 @@
 	// text
 	--color-text-primary: hsl(var(--primary-hue) 100% 15%);
 	--color-text-secondary: hsl(var(--primary-hue) 20% 45%);
-	--color-text-accent: var(--color-primary);
+
 	--color-text-reverse: var(--color-white);
 
 	// feedback
@@ -58,7 +60,7 @@
 
 	// heading sizes
 	--h1: #{clamp-smart(40, 60)};
-	--h2: #{clamp-smart(28, 40)};
+	--h2: #{clamp-smart(26, 36)};
 	--h3: #{clamp-smart(20, 28)};
 	--h4: #{clamp-smart(18, 20)};
 
@@ -84,8 +86,7 @@
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
 
-	--container-space-x: var(--space-3);
-	--container-space-y: 0;
+	--space-container: var(--space-3);
 
 	// borders
 	--border-color: var(--color-black);

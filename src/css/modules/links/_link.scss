@@ -6,12 +6,12 @@ a,
 	transition: var(--transition-link);
 
 	@include hover(focus) {
-		color: var(--color-text-accent);
+		color: var(--color-accent);
 	}
 }
 
 .link-heading {
-	color: var(--color-text-accent);
+	color: var(--color-accent);
 	text-decoration: none;
 
 	@include hover(focus) {
@@ -21,7 +21,7 @@ a,
 
 .box-link {
 	@include text-preset(3);
-	color: var(--color-text-accent);
+	color: var(--color-accent);
 	text-decoration: none;
 
 	@include chevron();

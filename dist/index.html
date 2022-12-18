@@ -36,13 +36,8 @@
 <!-- ====================   NAVIGATION   ==================== -->
 
 <nav aria-label="Main" class="navigation" data-hamburger>
-	<button class="nav-toggler nav-toggler--close" data-hamburger-button="close" type="button">
-		<svg aria-hidden="true" class="nav-toggler__icon">
-			<use href="images/icons/sprite-mono.svg#cancel"></use>
-		</svg>
-	</button>
-
-	<form class="search" role="search">
+	<div class="d-flex align-items-center">
+		<div class="d-md-none"><form class="search" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
@@ -53,7 +48,13 @@
 		</svg>
 	</button>
 </form>
-
+</div>
+		<button class="nav-toggler nav-toggler--close" data-hamburger-button="close" type="button">
+			<svg aria-hidden="true" class="nav-toggler__icon">
+				<use href="images/icons/sprite-mono.svg#cancel"></use>
+			</svg>
+		</button>
+	</div>
 
 	<ul class="nav-menu">
 		<li class="nav-menu__item">
@@ -160,7 +161,7 @@
     
 
 <!-- ====================   BANNER   ==================== -->
-<div class="banner hero vstack">
+<div class="content-block hero vstack">
 	<picture>
 		<source
 			sizes="100vw"
@@ -267,7 +268,7 @@
 					<h1>h1 and .h1 headings HEADINGS</h1>
 					<h2>h2 and .h2 headings HEADINGS</h2>
 					<h3>h3 and .h3 headings HEADINGS</h3>
-					<h4>h4 and .h4 headings HEADINGS</h4>
+					<h3>h4 and .h4 headings HEADINGS</h3>
 					<h5>h5 and .h5 headings HEADINGS</h5>
 					<h6>h6 and .h6 headings HEADINGS</h6>
 				</section>
@@ -502,17 +503,17 @@
 <!-- ====================   BUTTONS   ==================== -->
 <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Buttons</h2>
-	<section class="container vstack gap-4">
-		<div class="hstack gap-3 flex-wrap">
-			<a class="button m-auto" href="#">Button</a>
-			<a class="button button--reverse m-auto" href="#">Reverse</a>
-			<a class="button button--outline m-auto" href="#">Outline</a>
+	<section class="container vstack">
+		<div class="hstack gap-3 flex-wrap mx-auto">
+			<a class="button" href="#">Button</a>
+			<a class="button button--reverse" href="#">Reverse</a>
+			<a class="button button--outline" href="#">Outline</a>
 
-			<button data-dialog-open type="button" class="button m-auto">Open dialog</button>
+			<button data-dialog-open type="button" class="button">Open dialog</button>
 
-			<button type="button" class="button m-auto">Button</button>
-			<button type="button" class="button button--reverse m-auto">Reverse</button>
-			<button type="button" class="button button--outline m-auto">Outline</button>
+			<button type="button" class="button">Button</button>
+			<button type="button" class="button button--reverse">Reverse</button>
+			<button type="button" class="button button--outline">Outline</button>
 		</div>
 	</section>
 </div>
@@ -1222,19 +1223,18 @@
 <!-- ====================		FIELDS		==================== -->
 
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-4">Fields</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Contact form</h2>
 	<div class="container">
-		<div class="row row-cols-lg-2">
-			<div class="col-12 gap-4 vstack">
-				<h3>We'd love to hear from you</h3>
+		<div class="row row-cols-lg-2 g-3">
+			<div class="col-12 gap-3 vstack">
 				<ul class="contact-form">
 					<li class="contact-form__item">
-						<h4 class="contact-form__label">Email</h4>
+						<h3 class="contact-form__label">Email</h3>
 						<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
 					</li>
 
 					<li class="contact-form__item">
-						<h4 class="contact-form__label">Phone</h4>
+						<h3 class="contact-form__label">Phone</h3>
 						<a href="tel:+61251347278">61 2 5134 7278</a>
 					</li>
 
@@ -1269,9 +1269,7 @@
 				</ul>
 			</div>
 
-			<div class="col-12 gap-4 vstack">
-				<h3>Contact form</h3>
-
+			<div class="col-12 gap-3 vstack">
 				<form class="contact-form">
 					<label class="contact-form__label contact-form__item">
 						Name
@@ -1285,14 +1283,7 @@
 
 					<label class="contact-form__label contact-form__item">
 						Message (required)
-						<textarea
-							name="message"
-							rows="4"
-							cols="50"
-							class="contact-form__input"
-							placeholder="Enter your message here..."
-							required
-						></textarea>
+						<textarea name="message" rows="4" cols="50" class="contact-form__input" required></textarea>
 					</label>
 
 					<button class="button" type="submit">Submit</button>

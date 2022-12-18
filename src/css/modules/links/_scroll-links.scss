@@ -1,19 +1,20 @@
 .skip-link {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 999;
-  background-color: var(--color-black);
-  font-weight: bold;
-  font-size: var(--fs-4);
-  text-transform: uppercase;
-  color: var(--color-white);
-  padding: 0.5rem;
-  translate: 0 -100%;
-  transition: var(--transition);
+	top: var(--space-container);
+	left: var(--space-container);
+	position: fixed;
+	z-index: 999;
+	background-color: var(--color-black);
+	padding: var(--space-3);
+	font-weight: bold;
+	font-size: var(--fs-lg);
+	text-transform: uppercase;
+	opacity: 0;
+	translate: -200% 0;
+	transition: 0.25s ease;
 
-  &:focus-visible {
-    translate: none;
-  }
+	&:focus-visible {
+		translate: none;
+		opacity: 1;
+		color: var(--color-white);
+	}
 }

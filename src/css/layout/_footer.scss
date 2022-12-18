@@ -2,7 +2,7 @@
 	background-color: var(--color-bg-footer);
 	margin-top: auto;
 	padding-top: var(--space-5);
-	padding-bottom: var(--space-4);
+	padding-bottom: var(--space-3);
 }
 
 .footer-nav__group {
@@ -13,11 +13,11 @@
 .footer-nav__title {
 	@include text-preset(2);
 	margin-bottom: var(--space-3);
-	color: var(--color-text-accent);
+	color: var(--color-accent);
 }
 
 .footer-nav__subtitle {
-	font-weight: var(--fw-bold);
+	@include text-preset(3);
 }
 
 .footer-nav__list {
@@ -38,5 +38,5 @@
 	display: flex;
 	justify-content: space-between;
 	color: var(--color-text-secondary);
-	margin-top: var(--space-4);
+	margin-top: var(--space-5);
 }
