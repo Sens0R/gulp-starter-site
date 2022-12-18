@@ -1,11 +1,10 @@
-
 .search {
 	position: relative;
 	display: flex;
 	align-items: center;
 	width: 100%;
 	max-width: 10rem;
-	transition: max-width var(--transition-duration) ease-in-out;
+	transition: max-width 0.3s ease-in-out;
 
 	&:focus-within {
 		max-width: 100%;
@@ -26,7 +25,7 @@
 	}
 
 	&__button {
-		padding: var(--space-inset-sm);
+		padding: var(--space-2);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -46,8 +45,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 1rem;
-		height: 1rem;
+		width: 1.575em;
+		height: 1.575em;
 		transition: var(--transition);
 	}
 }

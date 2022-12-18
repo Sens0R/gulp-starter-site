@@ -4,36 +4,36 @@
 		<source
 			sizes="100vw"
 			srcset="
-				images/test-banner-image-320.avif   320w,
-				images/test-banner-image-640.avif   640w,
-				images/test-banner-image-960.avif   960w,
-				images/test-banner-image-1280.avif 1280w,
-				images/test-banner-image-1920.avif 1920w,
-				images/test-banner-image-2560.avif 2560w
+				images/test-image-320.avif   320w,
+				images/test-image-640.avif   640w,
+				images/test-image-960.avif   960w,
+				images/test-image-1280.avif 1280w,
+				images/test-image-1920.avif 1920w,
+				images/test-image-2560.avif 2560w
 			"
 			type="image/avif"
 		/>
 		<source
 			sizes="100vw"
 			srcset="
-				images/test-banner-image-320.webp   320w,
-				images/test-banner-image-640.webp   640w,
-				images/test-banner-image-960.webp   960w,
-				images/test-banner-image-1280.webp 1280w,
-				images/test-banner-image-1920.webp 1920w,
-				images/test-banner-image-2560.webp 2560w
+				images/test-image-320.webp   320w,
+				images/test-image-640.webp   640w,
+				images/test-image-960.webp   960w,
+				images/test-image-1280.webp 1280w,
+				images/test-image-1920.webp 1920w,
+				images/test-image-2560.webp 2560w
 			"
 			type="image/webp"
 		/>
 		<source
 			sizes="100vw"
 			srcset="
-				images/test-banner-image-320.jpg   320w,
-				images/test-banner-image-640.jpg   640w,
-				images/test-banner-image-960.jpg   960w,
-				images/test-banner-image-1280.jpg 1280w,
-				images/test-banner-image-1920.jpg 1920w,
-				images/test-banner-image-2560.jpg 2560w
+				images/test-image-320.jpg   320w,
+				images/test-image-640.jpg   640w,
+				images/test-image-960.jpg   960w,
+				images/test-image-1280.jpg 1280w,
+				images/test-image-1920.jpg 1920w,
+				images/test-image-2560.jpg 2560w
 			"
 			type="image/jpeg"
 		/>
@@ -42,1131 +42,1076 @@
 			class="banner__img stretch z-negative"
 			draggable="false"
 			height="2560"
-			src="images/test-banner-image-960.jpg"
+			src="images/test-image-960.jpg"
 			width="2560"
 		/>
 	</picture>
-	<h1 class="hero__title">hero-title HERO-TITLE</h1>
-	<p class="hero__subtitle">hero-subtitle HERO-SUBTITLE</p>
+	<h1 class="hero__title">Starter theme hero title</h1>
+	<p class="hero__subtitle">Starter theme hero subtitle</p>
 </div>
-
-<!-- ====================		ACCORDION		==================== -->
-
-<section class="container-lg">
-	<div data-accordion class="accordion">
-		<!-- ====================   HEADINGS   ==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Headings
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-			<section data-accordion-content class="accordion__content">
-				<h1>h1 and .h1 headings HEADINGS</h1>
-				<h2>h2 and .h2 headings HEADINGS</h2>
-				<h3>h3 and .h3 headings HEADINGS</h3>
-				<h4>h4 and .h4 headings HEADINGS</h4>
-				<h5>h5 and .h5 headings HEADINGS</h5>
-				<h6>h6 and .h6 headings HEADINGS</h6>
-			</section>
-		</div>
-
-		<!-- ====================   FONT SIZES   ==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Font sizes
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-			<section data-accordion-content class="accordion__content">
-				<p class="fs-sm">.fs-sm Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
-				<p class="fs-md">.fs-md Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
-				<p class="fs-lg">.fs-lg Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
-			</section>
-		</div>
-
-		<!-- ====================   FONT WEIGHTS   ==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Font weights
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-			<section data-accordion-content class="accordion__content">
-				<div class="fw-regular vstack gap-1">
-					<h3>fw-regular</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="fw-bold vstack gap-1">
-					<h3>fw-bold</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<!-- ====================		TEXT PRESETS		==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Text presets
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-			<section data-accordion-content class="accordion__content">
-				<div class="text-preset-1 vstack gap-1">
-					<h3>text-preset-1</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-2 vstack gap-1">
-					<h3>text-preset-2</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-3 vstack gap-1">
-					<h3>text-preset-3</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-4 vstack gap-1">
-					<h3>text-preset-4</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-5 vstack gap-1">
-					<h3>text-preset-5</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-6 vstack gap-1">
-					<h3>text-preset-6</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-				<hr />
-				<div class="text-preset-7 vstack gap-1">
-					<h3>text-preset-7</h3>
-
-					<div class="color-text-primary">
-						color-text-primary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-secondary">
-						color-text-secondary
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-
-					<div class="color-text-reverse p-1 bg-primary">
-						color-text-reverse
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-					</div>
-				</div>
-			</section>
-		</div>
-
-		<!-- ====================   BLOCKQUOTE   ==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Blockquote
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-			<section data-accordion-content class="accordion__content">
-				<figure>
-					<blockquote>
-						<p>
-							<strong>Blockquote</strong> – HTML element indicates that the enclosed text is an extended quotation.
-							Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source
-							of the quotation may be given using the cite attribute, while a text representation of the source can be
-							given using the
-							<code>cite</code>
-							element.
-							<figcaption class="mt-sm">
-								<strong>Figcaption</strong> - First sentence in by George Orwell (Part 1, Chapter 1).
-							</figcaption>
-							<strong>Cite - </strong> <cite>Nineteen Eighty-Four</cite>
-						</p>
-					</blockquote>
-				</figure>
-			</section>
-		</div>
-
-		<!-- ====================   LISTS   ==================== -->
-
-		<div class="accordion__item">
-			<h2 class="accordion__header">
-				<button data-accordion-button class="accordion__button" type="button">
-					Lists
-					<svg aria-hidden="true" class="accordion__icon icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</h2>
-
-			<section data-accordion-content class="accordion__content">
-				<div class="g-xl hstack gap-2 flex-wrap">
-					<ul>
-						<li>Unordered list EXAMPLE</li>
-						<li>Unordered list EXAMPLE</li>
-						<li>Unordered list EXAMPLE</li>
-					</ul>
-
-					<ol>
-						<li>Ordered list EXAMPLE</li>
-						<li>Ordered list EXAMPLE</li>
-						<li>Ordered list EXAMPLE</li>
-					</ol>
-				</div>
-			</section>
-		</div>
-	</div>
-</section>
 
 <!-- ====================   COLORS   ==================== -->
 
-<h2 data-animate="section-header" class="text-preset-3">Colors</h2>
-<div class="container-fluid">
-	<div class="row row-cols-md-2 row-cols-xl-3 text-center fw-xl g-4">
-		<div class="col-12">
-			<div class="py-4 bg-primary-light fs-lg">
-				<h3 class="color-text-reverse text-uppercase">Primary-light</h3>
-				<h3 class="color-text-primary text-uppercase">Primary-light</h3>
-				<p class="color-text-reverse">.color-primary-light</p>
-				<p class="color-text-primary">.bg-primary-light</p>
+<div class="content-block">
+	<div class="container-fluid">
+		<h2 data-animate="section-header" class="text-preset-1 mb-4">Colors</h2>
+		<div class="row row-cols-md-2 row-cols-xl-3 text-center fw-xl g-4">
+			<div class="col-12">
+				<div class="py-4 bg-primary-light fs-lg">
+					<h3 class="color-text-reverse text-uppercase">Primary-light</h3>
+					<h3 class="color-text-primary text-uppercase">Primary-light</h3>
+					<p class="color-text-reverse">.color-primary-light</p>
+					<p class="color-text-primary">.bg-primary-light</p>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="py-4 bg-primary fs-lg">
+					<h3 class="color-text-reverse text-uppercase">Primary</h3>
+					<h3 class="color-text-primary text-uppercase">Primary</h3>
+					<p class="color-text-reverse">.color-primary</p>
+					<p class="color-text-primary">.bg-primary</p>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="py-4 bg-primary-dark fs-lg">
+					<h3 class="color-text-reverse text-uppercase">Primary-dark</h3>
+					<h3 class="color-text-primary text-uppercase">Primary-dark</h3>
+					<p class="color-text-reverse">.color-primary-dark</p>
+					<p class="color-text-primary">.bg-primary-dark</p>
+				</div>
 			</div>
 		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-primary fs-lg">
-				<h3 class="color-text-reverse text-uppercase">Primary</h3>
-				<h3 class="color-text-primary text-uppercase">Primary</h3>
-				<p class="color-text-reverse">.color-primary</p>
-				<p class="color-text-primary">.bg-primary</p>
-			</div>
-		</div>
-
-		<div class="col-12">
-			<div class="py-4 bg-primary-dark fs-lg">
-				<h3 class="color-text-reverse text-uppercase">Primary-dark</h3>
-				<h3 class="color-text-primary text-uppercase">Primary-dark</h3>
-				<p class="color-text-reverse">.color-primary-dark</p>
-				<p class="color-text-primary">.bg-primary-dark</p>
-			</div>
-		</div>
-
 	</div>
 </div>
 
+<!-- ====================		ACCORDION		==================== -->
+<div class="content-block bg-primary-light-1">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Accordion</h2>
+	<section class="container-lg">
+		<div data-accordion class="accordion">
+			<!-- ====================   HEADINGS   ==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Headings
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+				<section data-accordion-content class="accordion__content">
+					<h1>h1 and .h1 headings HEADINGS</h1>
+					<h2>h2 and .h2 headings HEADINGS</h2>
+					<h3>h3 and .h3 headings HEADINGS</h3>
+					<h4>h4 and .h4 headings HEADINGS</h4>
+					<h5>h5 and .h5 headings HEADINGS</h5>
+					<h6>h6 and .h6 headings HEADINGS</h6>
+				</section>
+			</div>
+
+			<!-- ====================   FONT SIZES   ==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Font sizes
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+				<section data-accordion-content class="accordion__content">
+					<p class="fs-sm">.fs-sm Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
+					<p class="fs-md">.fs-md Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
+					<p class="fs-lg">.fs-lg Font SIZES <a href="" class="link-heading">link-heading LINK-HEADING</a></p>
+				</section>
+			</div>
+
+			<!-- ====================   FONT WEIGHTS   ==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Font weights
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+				<section data-accordion-content class="accordion__content">
+					<h3 class="color-feedback-error">fw-regular</h3>
+					<div class="fw-regular vstack gap-3">
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<hr />
+					<h3 class="color-feedback-error">fw-bold</h3>
+					<div class="fw-bold vstack gap-3">
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- ====================		TEXT PRESETS		==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Text presets
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+				<section data-accordion-content class="accordion__content">
+					<h3 class="color-feedback-error">text-preset-1 @include text-preset(1)</h3>
+					<div class="text-preset-1 vstack gap-3">
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<hr />
+					<h3 class="color-feedback-error">text-preset-2 @include text-preset(2)</h3>
+					<div class="text-preset-2 vstack gap-3">
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<hr />
+					<div class="text-preset-3 vstack gap-3">
+						<h3 class="color-feedback-error">text-preset-3 @include text-preset(3)</h3>
+
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+					<hr />
+					<h3 class="color-feedback-error">text-preset-4 @include text-preset(4)</h3>
+					<div class="text-preset-4 vstack gap-3">
+						<div class="color-text-primary">
+							color-text-primary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-secondary">
+							color-text-secondary
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+
+						<div class="color-text-reverse p-1 bg-primary">
+							color-text-reverse
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- ====================   BLOCKQUOTE   ==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Blockquote
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+				<section data-accordion-content class="accordion__content">
+					<figure>
+						<blockquote class="vstack gap-2">
+							<p>
+								<strong>Blockquote</strong> – HTML element indicates that the enclosed text is an extended quotation.
+								Usually, this is rendered visually by indentation (see Notes for how to change it). A URL for the source
+								of the quotation may be given using the cite attribute, while a text representation of the source can be
+								given using the
+								<code>cite</code>
+								element.
+							</p>
+							<p>
+								<figcaption class="mt-sm">
+									<strong>Figcaption</strong> - First sentence in by George Orwell (Part 1, Chapter 1).
+								</figcaption>
+							</p>
+							<p><strong>Cite - </strong> <cite>Nineteen Eighty-Four</cite></p>
+						</blockquote>
+					</figure>
+				</section>
+			</div>
+
+			<!-- ====================   LISTS   ==================== -->
+
+			<div class="accordion__item">
+				<h2 class="accordion__header">
+					<button data-accordion-button class="accordion__button" type="button">
+						Lists
+						<svg aria-hidden="true" class="accordion__icon icon">
+							<use href="images/icons/sprite-mono.svg#arrow"></use>
+						</svg>
+					</button>
+				</h2>
+
+				<section data-accordion-content class="accordion__content">
+					<div class="g-xl hstack gap-4 flex-wrap">
+						<ul>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+							<li>Unordered list</li>
+						</ul>
+
+						<ol>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+							<li>Ordered list</li>
+						</ol>
+					</div>
+				</section>
+			</div>
+		</div>
+	</section>
+</div>
+
 <!-- ====================   BUTTONS   ==================== -->
+<div class="content-block">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Buttons</h2>
+	<section class="container vstack gap-4">
+		<div class="hstack gap-3 flex-wrap">
+			<a class="button m-auto" href="#">Button</a>
+			<a class="button button--reverse m-auto" href="#">Reverse</a>
+			<a class="button button--outline m-auto" href="#">Outline</a>
 
-<section class="container vstack gap-3">
-	<h2 data-animate="section-header" class="text-preset-3">Buttons</h2>
+			<button data-dialog-open type="button" class="button m-auto">Open dialog</button>
 
-	<div class="hstack gap-2 flex-wrap">
-		<a class="button m-auto" href="index.html">Button</a>
-		<a class="button button--reverse m-auto" href="index.html">Button--reverse</a>
-		<a class="button button--outline m-auto" href="index.html">Button--outline</a>
-
-		<button data-dialog-open type="button" class="button m-auto">Open dialog</button>
-
-		<button type="button" class="button m-auto">Button</button>
-		<button type="button" class="button button--reverse m-auto">Button--reverse</button>
-		<button type="button" class="button button--outline m-auto">Button--outline</button>
-	</div>
-</section>
+			<button type="button" class="button m-auto">Button</button>
+			<button type="button" class="button button--reverse m-auto">Reverse</button>
+			<button type="button" class="button button--outline m-auto">Outline</button>
+		</div>
+	</section>
+</div>
 
 <!-- ====================   Cards  ==================== -->
+<div class="content-block bg-primary-light-1">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Cards</h2>
+	<section class="container">
+		<div class="row row-cols-lg-3 g-4">
+			<div class="col-12">
+				<div class="card">
+					<a class="card__img" href="index.html" tabindex="-1">
+						<picture>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.avif   320w,
+									images/test-image-640.avif   640w,
+									images/test-image-960.avif   960w,
+									images/test-image-1280.avif 1280w,
+									images/test-image-1920.avif 1920w,
+									images/test-image-2560.avif 2560w
+								"
+								type="image/avif"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.webp   320w,
+									images/test-image-640.webp   640w,
+									images/test-image-960.webp   960w,
+									images/test-image-1280.webp 1280w,
+									images/test-image-1920.webp 1920w,
+									images/test-image-2560.webp 2560w
+								"
+								type="image/webp"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.jpg   320w,
+									images/test-image-640.jpg   640w,
+									images/test-image-960.jpg   960w,
+									images/test-image-1280.jpg 1280w,
+									images/test-image-1920.jpg 1920w,
+									images/test-image-2560.jpg 2560w
+								"
+								type="image/jpeg"
+							/>
+							<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
+						</picture>
+					</a>
 
-<h2 data-animate="section-header" class="text-preset-3">Cards</h2>
-<section class="container">
-	<div class="row row-cols-lg-3 g-4">
-		<div class="col-12">
-			<div class="card">
-				<a class="card__img" href="index.html" tabindex="-1">
-					<picture>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.avif   320w,
-								images/test-image-640.avif   640w,
-								images/test-image-960.avif   960w,
-								images/test-image-1280.avif 1280w,
-								images/test-image-1920.avif 1920w,
-								images/test-image-2560.avif 2560w
-							"
-							type="image/avif"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.webp   320w,
-								images/test-image-640.webp   640w,
-								images/test-image-960.webp   960w,
-								images/test-image-1280.webp 1280w,
-								images/test-image-1920.webp 1920w,
-								images/test-image-2560.webp 2560w
-							"
-							type="image/webp"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.jpg   320w,
-								images/test-image-640.jpg   640w,
-								images/test-image-960.jpg   960w,
-								images/test-image-1280.jpg 1280w,
-								images/test-image-1920.jpg 1920w,
-								images/test-image-2560.jpg 2560w
-							"
-							type="image/jpeg"
-						/>
-						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
-					</picture>
-				</a>
+					<div class="card__content">
+						<p class="card__date">12 April 2022</p>
 
-				<div class="card__content">
-					<p class="card__date">12 April 2022</p>
+						<ul class="card__list">
+							<li>
+								<a href="index.html">Management</a>
+							</li>
 
-					<ul class="card__list">
-						<li>
-							<a href="index.html">Management</a>
-						</li>
+							<li>
+								<a href="index.html">IT</a>
+							</li>
 
-						<li>
-							<a href="index.html">IT</a>
-						</li>
+							<li>
+								<a href="index.html">Disaster Recovery</a>
+							</li>
+						</ul>
 
-						<li>
-							<a href="index.html">Disaster Recovery</a>
-						</li>
-					</ul>
+						<h3 class="card__title">
+							<a class="link-heading" href="#"> Card tittle </a>
+						</h3>
 
-					<h3 class="card__title">
-						<a class="link-heading" href="#"> Card tittle </a>
-					</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
+						</p>
+						<div>
+							<a href="index.html" class="box-link">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="card">
+					<a class="card__img" href="index.html" tabindex="-1">
+						<picture>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.avif   320w,
+									images/test-image-640.avif   640w,
+									images/test-image-960.avif   960w,
+									images/test-image-1280.avif 1280w,
+									images/test-image-1920.avif 1920w,
+									images/test-image-2560.avif 2560w
+								"
+								type="image/avif"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.webp   320w,
+									images/test-image-640.webp   640w,
+									images/test-image-960.webp   960w,
+									images/test-image-1280.webp 1280w,
+									images/test-image-1920.webp 1920w,
+									images/test-image-2560.webp 2560w
+								"
+								type="image/webp"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.jpg   320w,
+									images/test-image-640.jpg   640w,
+									images/test-image-960.jpg   960w,
+									images/test-image-1280.jpg 1280w,
+									images/test-image-1920.jpg 1920w,
+									images/test-image-2560.jpg 2560w
+								"
+								type="image/jpeg"
+							/>
+							<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
+						</picture>
+					</a>
 
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
-					</p>
-					<div>
-						<a href="index.html" class="box-link"> BOX-LINK </a>
+					<div class="card__content">
+						<p class="card__date">12 April 2022</p>
+
+						<ul class="card__list">
+							<li>
+								<a href="index.html">Management</a>
+							</li>
+
+							<li>
+								<a href="index.html">IT</a>
+							</li>
+
+							<li>
+								<a href="index.html">Disaster Recovery</a>
+							</li>
+						</ul>
+
+						<h3 class="card__title">
+							<a class="link-heading" href="#"> Card tittle </a>
+						</h3>
+
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quis dolore, obcaecati sed pariatur
+							fugiat, voluptatem voluptatum dolorum fuga provident ducimus error consectetur, fugit quae?
+						</p>
+
+						<div>
+							<a href="index.html" class="box-link">Read more</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="card">
+					<a class="card__img" href="index.html" tabindex="-1">
+						<picture>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.avif   320w,
+									images/test-image-640.avif   640w,
+									images/test-image-960.avif   960w,
+									images/test-image-1280.avif 1280w,
+									images/test-image-1920.avif 1920w,
+									images/test-image-2560.avif 2560w
+								"
+								type="image/avif"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.webp   320w,
+									images/test-image-640.webp   640w,
+									images/test-image-960.webp   960w,
+									images/test-image-1280.webp 1280w,
+									images/test-image-1920.webp 1920w,
+									images/test-image-2560.webp 2560w
+								"
+								type="image/webp"
+							/>
+							<source
+								sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+								srcset="
+									images/test-image-320.jpg   320w,
+									images/test-image-640.jpg   640w,
+									images/test-image-960.jpg   960w,
+									images/test-image-1280.jpg 1280w,
+									images/test-image-1920.jpg 1920w,
+									images/test-image-2560.jpg 2560w
+								"
+								type="image/jpeg"
+							/>
+							<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
+						</picture>
+					</a>
+
+					<div class="card__content">
+						<p class="card__date">12 April 2022</p>
+
+						<ul class="card__list">
+							<li>
+								<a href="index.html">Management</a>
+							</li>
+
+							<li>
+								<a href="index.html">IT</a>
+							</li>
+
+							<li>
+								<a href="index.html">Disaster Recovery</a>
+							</li>
+						</ul>
+
+						<h3 class="card__title">
+							<a class="link-heading" href="#"> Card tittle </a>
+						</h3>
+
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
+						</p>
+						<div>
+							<a href="index.html" class="box-link">Read more</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-12">
-			<div class="card">
-				<a class="card__img" href="index.html" tabindex="-1">
-					<picture>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.avif   320w,
-								images/test-image-640.avif   640w,
-								images/test-image-960.avif   960w,
-								images/test-image-1280.avif 1280w,
-								images/test-image-1920.avif 1920w,
-								images/test-image-2560.avif 2560w
-							"
-							type="image/avif"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.webp   320w,
-								images/test-image-640.webp   640w,
-								images/test-image-960.webp   960w,
-								images/test-image-1280.webp 1280w,
-								images/test-image-1920.webp 1920w,
-								images/test-image-2560.webp 2560w
-							"
-							type="image/webp"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.jpg   320w,
-								images/test-image-640.jpg   640w,
-								images/test-image-960.jpg   960w,
-								images/test-image-1280.jpg 1280w,
-								images/test-image-1920.jpg 1920w,
-								images/test-image-2560.jpg 2560w
-							"
-							type="image/jpeg"
-						/>
-						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
-					</picture>
-				</a>
-
-				<div class="card__content">
-					<p class="card__date">12 April 2022</p>
-
-					<ul class="card__list">
-						<li>
-							<a href="index.html">Management</a>
-						</li>
-
-						<li>
-							<a href="index.html">IT</a>
-						</li>
-
-						<li>
-							<a href="index.html">Disaster Recovery</a>
-						</li>
-					</ul>
-
-					<h3 class="card__title">
-						<a class="link-heading" href="#"> Card tittle </a>
-					</h3>
-
-					<p>
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente quis dolore, obcaecati sed pariatur
-						fugiat, voluptatem voluptatum dolorum fuga provident ducimus error consectetur, fugit quae?
-					</p>
-
-					<div>
-						<a href="index.html" class="box-link"> BOX-LINK </a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-12">
-			<div class="card">
-				<a class="card__img" href="index.html" tabindex="-1">
-					<picture>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.avif   320w,
-								images/test-image-640.avif   640w,
-								images/test-image-960.avif   960w,
-								images/test-image-1280.avif 1280w,
-								images/test-image-1920.avif 1920w,
-								images/test-image-2560.avif 2560w
-							"
-							type="image/avif"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.webp   320w,
-								images/test-image-640.webp   640w,
-								images/test-image-960.webp   960w,
-								images/test-image-1280.webp 1280w,
-								images/test-image-1920.webp 1920w,
-								images/test-image-2560.webp 2560w
-							"
-							type="image/webp"
-						/>
-						<source
-							sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-							srcset="
-								images/test-image-320.jpg   320w,
-								images/test-image-640.jpg   640w,
-								images/test-image-960.jpg   960w,
-								images/test-image-1280.jpg 1280w,
-								images/test-image-1920.jpg 1920w,
-								images/test-image-2560.jpg 2560w
-							"
-							type="image/jpeg"
-						/>
-						<img alt="" draggable="false" loading="lazy" height="2560" src="images/test-image-960.jpg" width="2560" />
-					</picture>
-				</a>
-
-				<div class="card__content">
-					<p class="card__date">12 April 2022</p>
-
-					<ul class="card__list">
-						<li>
-							<a href="index.html">Management</a>
-						</li>
-
-						<li>
-							<a href="index.html">IT</a>
-						</li>
-
-						<li>
-							<a href="index.html">Disaster Recovery</a>
-						</li>
-					</ul>
-
-					<h3 class="card__title">
-						<a class="link-heading" href="#"> Card tittle </a>
-					</h3>
-
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe quam?
-					</p>
-					<div>
-						<a href="index.html" class="box-link"> BOX-LINK </a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
+	</section>
+</div>
 <!-- ====================   TABS   ==================== -->
-
-<h2 data-animate="section-header" class="text-preset-3">Tabs</h2>
-<section class="container">
-	<div data-tabs class="tabbed-interface">
-		<div class="tabbed-interface__body">
-			<div role="tablist" class="tabbed-interface__tablist">
-				<button type="button" class="tab active">Tab 1</button>
-				<button type="button" class="tab">Tab 2</button>
-				<button type="button" class="tab">Tab 3</button>
-			</div>
-			<div class="tabbed-interface__content-area">
-				<div role="tabpanel" class="tabpanel active">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
-					<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
-					<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
+<div class="content-block">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Tabs</h2>
+	<section class="container">
+		<div data-tabs class="tabbed-interface">
+			<div class="tabbed-interface__body">
+				<div role="tablist" class="tabbed-interface__tablist">
+					<button type="button" class="tab active">Tab 1</button>
+					<button type="button" class="tab">Tab 2</button>
+					<button type="button" class="tab">Tab 3</button>
 				</div>
-				<div role="tabpanel" class="tabpanel">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam.</p>
-					<p>Minima doloribus, consequuntur sint maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
-					<p>Eligendi quisquam ea cumque illo, magni sit voluptatibus? Officia.</p>
-				</div>
-				<div role="tabpanel" class="tabpanel">
-					<p>Lorem sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
-					<p>Minima doloribus, laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
-					<p>Eligendiea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div data-tabs="vertical" class="tabbed-interface tabbed-interface_vertical" aria-orientation="vertical">
-		<div class="tabbed-interface__body tabbed-interface__body_vertical">
-			<div role="tablist" class="tabbed-interface__tablist tabbed-interface__tablist_vertical">
-				<button type="button" class="tab tab_vertical active">Tab 1</button>
-				<button type="button" class="tab tab_vertical">Tab 2</button>
-				<button type="button" class="tab tab_vertical">Tab 3</button>
-			</div>
-			<div class="tabbed-interface__content-area tabbed-interface__content-area_vertical">
-				<div role="tabpanel" class="tabpanel tabpanel_vertical active">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
-					<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
-					<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
-				</div>
-				<div role="tabpanel" class="tabpanel tabpanel_vertical">
-					<p>Lorem ipsum dolor sit amet adipisicing elit. Veniam, cumque.</p>
-					<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboritotam voluptatem?</p>
-					<p>Eligendi quisquam ea cumque illo, magni cusantium voluptatibus? Officia.</p>
-				</div>
-				<div role="tabpanel" class="tabpanel tabpanel_vertical">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
-					<p>Minima doloribus, enim maiores repudiandae voluptatibus nemo.</p>
-					<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
-					<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!--  ====================   Slider   ==================== -->
-
-<section class="container vstack gap-3">
-	<h2 data-animate="section-header" class="text-preset-3">Slider</h2>
-
-	<div class="swiper-shadow-container">
-		<div data-swiper class="swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 1 </a>
-							</h3>
-
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
-						</div>
+				<div class="tabbed-interface__content-area">
+					<div role="tabpanel" class="tabpanel active">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
+						<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
+						<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 2 </a>
-							</h3>
-
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
-						</div>
+					<div role="tabpanel" class="tabpanel">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam.</p>
+						<p>Minima doloribus, consequuntur sint maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
+						<p>Eligendi quisquam ea cumque illo, magni sit voluptatibus? Officia.</p>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 3 </a>
-							</h3>
-
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 4 </a>
-							</h3>
-
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 5 </a>
-							</h3>
-
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-320.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
-
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="link-heading" href="#"> Slide 6 </a>
-							</h3>
-
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
-						</div>
+					<div role="tabpanel" class="tabpanel">
+						<p>Lorem sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
+						<p>Minima doloribus, laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
+						<p>Eligendiea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div data-swiper-pagination></div>
+		<div data-tabs="vertical" class="tabbed-interface tabbed-interface_vertical" aria-orientation="vertical">
+			<div class="tabbed-interface__body tabbed-interface__body_vertical">
+				<div role="tablist" class="tabbed-interface__tablist tabbed-interface__tablist_vertical">
+					<button type="button" class="tab tab_vertical active">Tab 1</button>
+					<button type="button" class="tab tab_vertical">Tab 2</button>
+					<button type="button" class="tab tab_vertical">Tab 3</button>
+				</div>
+				<div class="tabbed-interface__content-area tabbed-interface__content-area_vertical">
+					<div role="tabpanel" class="tabpanel tabpanel_vertical active">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
+						<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
+						<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
+					</div>
+					<div role="tabpanel" class="tabpanel tabpanel_vertical">
+						<p>Lorem ipsum dolor sit amet adipisicing elit. Veniam, cumque.</p>
+						<p>Minima doloribus, enim laboriosam consequuntur sint maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboritotam voluptatem?</p>
+						<p>Eligendi quisquam ea cumque illo, magni cusantium voluptatibus? Officia.</p>
+					</div>
+					<div role="tabpanel" class="tabpanel tabpanel_vertical">
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, cumque.</p>
+						<p>Minima doloribus, enim maiores repudiandae voluptatibus nemo.</p>
+						<p>Ullam nisi possimus maxime voluptatum quia laboriosam neque totam voluptatem?</p>
+						<p>Eligendi quisquam ea cumque illo, magni sit accusantium voluptatibus? Officia.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
-	<div class="swiper-button-container">
-		<button data-swiper-prev type="button" class="button swiper-button">
-			<svg aria-hidden="true" class="icon rotate-left">
-				<use href="images/icons/sprite-mono.svg#arrow"></use>
-			</svg>
-		</button>
+<!--  ====================   SLIDER   ==================== -->
+<div class="content-block bg-primary-light-1">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Slider</h2>
+	<section class="container vstack gap-3">
+		<div class="swiper-shadow-container">
+			<div data-swiper class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-		<button data-swiper-next type="button" class="button swiper-button">
-			<svg aria-hidden="true" class="icon rotate-right">
-				<use href="images/icons/sprite-mono.svg#arrow"></use>
-			</svg>
-		</button>
-	</div>
-</section>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 1 </a>
+								</h3>
 
-<!-- ====================		FORM		==================== -->
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-<div class="container">
-	<div class="row row-cols-lg-2 g-4">
-		<div class="col-12 gap-3 d-flex flex-column">
-			<h2 class="text-preset-4">We'd love to hear from you</h2>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 2 </a>
+								</h3>
 
-			<ul class="contact-form">
-				<li class="contact-form__item">
-					<h3 class="contact-form__title">Email</h3>
-					<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
-				</li>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-				<li class="contact-form__item">
-					<h3 class="contact-form__title">Phone</h3>
-					<a href="tel:+61251347278">61 2 5134 7278</a>
-				</li>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 3 </a>
+								</h3>
 
-				<li class="contact-form__item">
-					<h3 class="contact-form__title">Social</h3>
-					<div>@@include('social.html',{})</div>
-				</li>
-			</ul>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
+
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 4 </a>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
+
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 5 </a>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-320.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
+
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="link-heading" href="#"> Slide 6 </a>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
-		<div class="col-12 gap-3 d-flex flex-column">
-			<h2 class="text-preset-4">Contact form</h2>
+		<div data-swiper-pagination></div>
 
-			<form class="contact-form">
-				<label class="contact-form__title contact-form__item">
-					Name
-					<input autocomplete="off" type="text" name="name" class="contact-form__input" />
-				</label>
+		<div class="swiper-button-container">
+			<button data-swiper-prev type="button" class="button swiper-button">
+				<svg aria-hidden="true" class="icon rotate-left">
+					<use href="images/icons/sprite-mono.svg#arrow"></use>
+				</svg>
+			</button>
 
-				<label class="contact-form__title contact-form__item">
-					Email address (required)
-					<input type="email" name="email" class="contact-form__input" required />
-				</label>
+			<button data-swiper-next type="button" class="button swiper-button">
+				<svg aria-hidden="true" class="icon rotate-right">
+					<use href="images/icons/sprite-mono.svg#arrow"></use>
+				</svg>
+			</button>
+		</div>
+	</section>
+</div>
 
-				<label class="contact-form__title contact-form__item">
-					Message (required)
-					<textarea
-						name="message"
-						rows="4"
-						cols="50"
-						class="contact-form__input"
-						placeholder="Enter your message here..."
-						required
-					></textarea>
-				</label>
+<!-- ====================		FIELDS		==================== -->
 
-				<button class="button" type="submit">Submit</button>
-			</form>
+<div class="content-block">
+	<h2 data-animate="section-header" class="text-preset-1 mb-4">Fields</h2>
+	<div class="container">
+		<div class="row row-cols-lg-2">
+			<div class="col-12 gap-4 vstack">
+				<h3>We'd love to hear from you</h3>
+				<ul class="contact-form">
+					<li class="contact-form__item">
+						<h4 class="contact-form__label">Email</h4>
+						<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au</a>
+					</li>
+
+					<li class="contact-form__item">
+						<h4 class="contact-form__label">Phone</h4>
+						<a href="tel:+61251347278">61 2 5134 7278</a>
+					</li>
+
+					<li class="contact-form__item">
+						<div>@@include('social.html',{})</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-12 gap-4 vstack">
+				<h3>Contact form</h3>
+
+				<form class="contact-form">
+					<label class="contact-form__label contact-form__item">
+						Name
+						<input autocomplete="off" type="text" name="name" class="contact-form__input" />
+					</label>
+
+					<label class="contact-form__label contact-form__item">
+						Email address (required)
+						<input type="email" name="email" class="contact-form__input" required />
+					</label>
+
+					<label class="contact-form__label contact-form__item">
+						Message (required)
+						<textarea
+							name="message"
+							rows="4"
+							cols="50"
+							class="contact-form__input"
+							placeholder="Enter your message here..."
+							required
+						></textarea>
+					</label>
+
+					<button class="button" type="submit">Submit</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

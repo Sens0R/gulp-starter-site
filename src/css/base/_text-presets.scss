@@ -1,24 +1,9 @@
-
-
 /*--------------------------------------------------------------
 # TEXT PRESETS
 --------------------------------------------------------------*/
 
-// base
-%text-preset-1 {
-	font-size: var(--fs-md);
-	font-weight: var(--fw-regular);
-	line-height: var(--lh-md);
-}
-
-// headings
-%text-preset-2 {
-	line-height: var(--lh-sm);
-	font-weight: var(--fw-bold);
-}
-
 // section title
-%text-preset-3 {
+%text-preset-1 {
 	font-size: var(--h2);
 	line-height: var(--lh-sm);
 	font-weight: var(--fw-bold);
@@ -26,34 +11,27 @@
 	text-align: center;
 }
 
-// section subtitle
-%text-preset-4 {
-	font-size: var(--h3);
-	line-height: var(--lh-sm);
+// form label/navigation/accordion buttons/list title/dropdown title
+%text-preset-2 {
+	font-size: var(--fs-lg);
 	font-weight: var(--fw-bold);
 	text-transform: uppercase;
 }
 
-// form/navigation/accordion title headings
-%text-preset-5 {
+// list subtitle/card link/tab title/dropdown items
+%text-preset-3 {
 	font-size: var(--fs-md);
 	font-weight: var(--fw-bold);
-	line-height: var(--lh-sm);
-	text-transform: uppercase;
 }
 
-%text-preset-6 {
-
-}
-
-// low importance text
-%text-preset-7 {
+// data text, copyright text
+%text-preset-4 {
 	font-size: var(--fs-sm);
 	text-transform: uppercase;
 }
 
 // making real classes from silent classes
-@for $i from 1 through 20 {
+@for $i from 1 through 10 {
 	.text-preset-#{$i} {
 		@include text-preset($i);
 	}

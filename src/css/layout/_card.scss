@@ -5,14 +5,8 @@
 	box-shadow: var(--shadow);
 
 	&__date {
-		@include text-preset(7);
+		@include text-preset(4);
 		color: var(--color-text-secondary);
-	}
-
-	&__img {
-	}
-
-	&__title {
 	}
 
 	img {
@@ -24,8 +18,9 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-3);
-	padding: var(--space-inset-lg);
+	padding: var(--space-4);
 	height: 100%;
+	background: var(--color-bg);
 
 	> :last-child:has(a),
 	> a:last-child {
@@ -38,7 +33,7 @@
 
 	display: flex;
 	align-items: center;
-	gap: var(--space-1);
+	gap: var(--space-2);
 	flex-wrap: wrap;
 }
 
@@ -47,7 +42,7 @@
 	font-size: var(--fs-sm);
 	background: var(--color-primary);
 	transition: var(--transition);
-	padding: var(--space-inset-squish-sm);
+	padding: var(--space-1) var(--space-2);
 	text-decoration: none;
 
 	@include hover(focus) {

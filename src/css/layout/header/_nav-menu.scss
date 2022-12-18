@@ -6,13 +6,13 @@
 }
 
 .nav-menu__link {
-	@include text-preset(5);
+	@include text-preset(3);
 	padding: var(--nav-space) 0;
 	text-decoration: none;
 }
 
 .nav-menu__list .nav-menu__link {
-	text-transform: unset;
+	font-size: var(--fs-xs);
 }
 
 @include bp(lg) {

@@ -1,16 +1,15 @@
 .hero__title {
-	font-size: clamp-smart(40px, 90px);
+	font-size: clamp-smart(40px, 100px);
 	font-weight: var(--fw-bold);
 	text-align: center;
 	line-height: 1;
-	color: var(--color-primary-dark);
+	color: var(--color-text-reverse);
 }
 
 .hero__subtitle {
-	font-size: clamp-smart(20px, 40px);
+	font-size: clamp-smart(20px, 50px);
 	margin-top: 0.5em;
 	text-align: center;
-	text-transform: uppercase;
-	color: var(--color-primary);
-	line-height: 1.2;
+	color: var(--color-text-reverse);
+	line-height: var(--lh-sm);
 }

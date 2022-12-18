@@ -20,7 +20,7 @@ a,
 }
 
 .box-link {
-	@include text-preset(5);
+	@include text-preset(3);
 	color: var(--color-text-accent);
 	text-decoration: none;
 

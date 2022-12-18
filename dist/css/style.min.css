@@ -252,12 +252,12 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 
 .g-3,
 .gx-3 {
-  --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+  --bs-gutter-x: var(--fs-md);
 }
 
 .g-3,
 .gy-3 {
-  --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+  --bs-gutter-y: var(--fs-md);
 }
 
 .g-4,
@@ -468,11 +468,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   }
   .g-sm-3,
   .gx-sm-3 {
-    --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-x: var(--fs-md);
   }
   .g-sm-3,
   .gy-sm-3 {
-    --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-y: var(--fs-md);
   }
   .g-sm-4,
   .gx-sm-4 {
@@ -679,11 +679,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   }
   .g-md-3,
   .gx-md-3 {
-    --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-x: var(--fs-md);
   }
   .g-md-3,
   .gy-md-3 {
-    --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-y: var(--fs-md);
   }
   .g-md-4,
   .gx-md-4 {
@@ -890,11 +890,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   }
   .g-lg-3,
   .gx-lg-3 {
-    --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-x: var(--fs-md);
   }
   .g-lg-3,
   .gy-lg-3 {
-    --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-y: var(--fs-md);
   }
   .g-lg-4,
   .gx-lg-4 {
@@ -1101,11 +1101,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   }
   .g-xl-3,
   .gx-xl-3 {
-    --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-x: var(--fs-md);
   }
   .g-xl-3,
   .gy-xl-3 {
-    --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-y: var(--fs-md);
   }
   .g-xl-4,
   .gx-xl-4 {
@@ -1312,11 +1312,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   }
   .g-xxl-3,
   .gx-xxl-3 {
-    --bs-gutter-x: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-x: var(--fs-md);
   }
   .g-xxl-3,
   .gy-xxl-3 {
-    --bs-gutter-y: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+    --bs-gutter-y: var(--fs-md);
   }
   .g-xxl-4,
   .gx-xxl-4 {
@@ -1647,7 +1647,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .m-3 {
-  margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin: var(--fs-md) !important;
 }
 
 .m-4 {
@@ -1678,8 +1678,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .mx-3 {
-  margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-  margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-right: var(--fs-md) !important;
+  margin-left: var(--fs-md) !important;
 }
 
 .mx-4 {
@@ -1713,8 +1713,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .my-3 {
-  margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-  margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-top: var(--fs-md) !important;
+  margin-bottom: var(--fs-md) !important;
 }
 
 .my-4 {
@@ -1745,7 +1745,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .mt-3 {
-  margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-top: var(--fs-md) !important;
 }
 
 .mt-4 {
@@ -1773,7 +1773,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .me-3 {
-  margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-right: var(--fs-md) !important;
 }
 
 .me-4 {
@@ -1801,7 +1801,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .mb-3 {
-  margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-bottom: var(--fs-md) !important;
 }
 
 .mb-4 {
@@ -1829,7 +1829,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .ms-3 {
-  margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  margin-left: var(--fs-md) !important;
 }
 
 .ms-4 {
@@ -1857,7 +1857,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .p-3 {
-  padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding: var(--fs-md) !important;
 }
 
 .p-4 {
@@ -1884,8 +1884,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .px-3 {
-  padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-  padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-right: var(--fs-md) !important;
+  padding-left: var(--fs-md) !important;
 }
 
 .px-4 {
@@ -1914,8 +1914,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .py-3 {
-  padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-  padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-top: var(--fs-md) !important;
+  padding-bottom: var(--fs-md) !important;
 }
 
 .py-4 {
@@ -1941,7 +1941,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .pt-3 {
-  padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-top: var(--fs-md) !important;
 }
 
 .pt-4 {
@@ -1965,7 +1965,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .pe-3 {
-  padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-right: var(--fs-md) !important;
 }
 
 .pe-4 {
@@ -1989,7 +1989,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .pb-3 {
-  padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-bottom: var(--fs-md) !important;
 }
 
 .pb-4 {
@@ -2013,7 +2013,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .ps-3 {
-  padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  padding-left: var(--fs-md) !important;
 }
 
 .ps-4 {
@@ -2037,7 +2037,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 }
 
 .gap-3 {
-  gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+  gap: var(--fs-md) !important;
 }
 
 .gap-4 {
@@ -2360,7 +2360,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin: calc(var(--space-3) / 2) !important;
   }
   .m-sm-3 {
-    margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin: var(--fs-md) !important;
   }
   .m-sm-4 {
     margin: calc(var(--space-3) * 2) !important;
@@ -2384,8 +2384,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .mx-sm-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
+    margin-left: var(--fs-md) !important;
   }
   .mx-sm-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -2412,8 +2412,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .my-sm-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .my-sm-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -2437,7 +2437,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-top: calc(var(--space-3) / 2) !important;
   }
   .mt-sm-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
   }
   .mt-sm-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -2458,7 +2458,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-right: calc(var(--space-3) / 2) !important;
   }
   .me-sm-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
   }
   .me-sm-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -2479,7 +2479,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .mb-sm-3 {
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .mb-sm-4 {
     margin-bottom: calc(var(--space-3) * 2) !important;
@@ -2500,7 +2500,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .ms-sm-3 {
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-left: var(--fs-md) !important;
   }
   .ms-sm-4 {
     margin-left: calc(var(--space-3) * 2) !important;
@@ -2521,7 +2521,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding: calc(var(--space-3) / 2) !important;
   }
   .p-sm-3 {
-    padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding: var(--fs-md) !important;
   }
   .p-sm-4 {
     padding: calc(var(--space-3) * 2) !important;
@@ -2542,8 +2542,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .px-sm-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
+    padding-left: var(--fs-md) !important;
   }
   .px-sm-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -2566,8 +2566,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .py-sm-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .py-sm-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -2587,7 +2587,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-top: calc(var(--space-3) / 2) !important;
   }
   .pt-sm-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
   }
   .pt-sm-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -2605,7 +2605,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-right: calc(var(--space-3) / 2) !important;
   }
   .pe-sm-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
   }
   .pe-sm-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -2623,7 +2623,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .pb-sm-3 {
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .pb-sm-4 {
     padding-bottom: calc(var(--space-3) * 2) !important;
@@ -2641,7 +2641,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .ps-sm-3 {
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-left: var(--fs-md) !important;
   }
   .ps-sm-4 {
     padding-left: calc(var(--space-3) * 2) !important;
@@ -2659,7 +2659,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     gap: calc(var(--space-3) / 2) !important;
   }
   .gap-sm-3 {
-    gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    gap: var(--fs-md) !important;
   }
   .gap-sm-4 {
     gap: calc(var(--space-3) * 2) !important;
@@ -2890,7 +2890,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin: calc(var(--space-3) / 2) !important;
   }
   .m-md-3 {
-    margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin: var(--fs-md) !important;
   }
   .m-md-4 {
     margin: calc(var(--space-3) * 2) !important;
@@ -2914,8 +2914,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .mx-md-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
+    margin-left: var(--fs-md) !important;
   }
   .mx-md-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -2942,8 +2942,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .my-md-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .my-md-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -2967,7 +2967,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-top: calc(var(--space-3) / 2) !important;
   }
   .mt-md-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
   }
   .mt-md-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -2988,7 +2988,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-right: calc(var(--space-3) / 2) !important;
   }
   .me-md-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
   }
   .me-md-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -3009,7 +3009,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .mb-md-3 {
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .mb-md-4 {
     margin-bottom: calc(var(--space-3) * 2) !important;
@@ -3030,7 +3030,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .ms-md-3 {
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-left: var(--fs-md) !important;
   }
   .ms-md-4 {
     margin-left: calc(var(--space-3) * 2) !important;
@@ -3051,7 +3051,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding: calc(var(--space-3) / 2) !important;
   }
   .p-md-3 {
-    padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding: var(--fs-md) !important;
   }
   .p-md-4 {
     padding: calc(var(--space-3) * 2) !important;
@@ -3072,8 +3072,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .px-md-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
+    padding-left: var(--fs-md) !important;
   }
   .px-md-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -3096,8 +3096,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .py-md-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .py-md-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -3117,7 +3117,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-top: calc(var(--space-3) / 2) !important;
   }
   .pt-md-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
   }
   .pt-md-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -3135,7 +3135,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-right: calc(var(--space-3) / 2) !important;
   }
   .pe-md-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
   }
   .pe-md-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -3153,7 +3153,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .pb-md-3 {
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .pb-md-4 {
     padding-bottom: calc(var(--space-3) * 2) !important;
@@ -3171,7 +3171,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .ps-md-3 {
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-left: var(--fs-md) !important;
   }
   .ps-md-4 {
     padding-left: calc(var(--space-3) * 2) !important;
@@ -3189,7 +3189,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     gap: calc(var(--space-3) / 2) !important;
   }
   .gap-md-3 {
-    gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    gap: var(--fs-md) !important;
   }
   .gap-md-4 {
     gap: calc(var(--space-3) * 2) !important;
@@ -3420,7 +3420,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin: calc(var(--space-3) / 2) !important;
   }
   .m-lg-3 {
-    margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin: var(--fs-md) !important;
   }
   .m-lg-4 {
     margin: calc(var(--space-3) * 2) !important;
@@ -3444,8 +3444,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .mx-lg-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
+    margin-left: var(--fs-md) !important;
   }
   .mx-lg-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -3472,8 +3472,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .my-lg-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .my-lg-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -3497,7 +3497,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-top: calc(var(--space-3) / 2) !important;
   }
   .mt-lg-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
   }
   .mt-lg-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -3518,7 +3518,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-right: calc(var(--space-3) / 2) !important;
   }
   .me-lg-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
   }
   .me-lg-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -3539,7 +3539,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .mb-lg-3 {
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .mb-lg-4 {
     margin-bottom: calc(var(--space-3) * 2) !important;
@@ -3560,7 +3560,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .ms-lg-3 {
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-left: var(--fs-md) !important;
   }
   .ms-lg-4 {
     margin-left: calc(var(--space-3) * 2) !important;
@@ -3581,7 +3581,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding: calc(var(--space-3) / 2) !important;
   }
   .p-lg-3 {
-    padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding: var(--fs-md) !important;
   }
   .p-lg-4 {
     padding: calc(var(--space-3) * 2) !important;
@@ -3602,8 +3602,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .px-lg-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
+    padding-left: var(--fs-md) !important;
   }
   .px-lg-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -3626,8 +3626,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .py-lg-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .py-lg-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -3647,7 +3647,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-top: calc(var(--space-3) / 2) !important;
   }
   .pt-lg-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
   }
   .pt-lg-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -3665,7 +3665,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-right: calc(var(--space-3) / 2) !important;
   }
   .pe-lg-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
   }
   .pe-lg-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -3683,7 +3683,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .pb-lg-3 {
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .pb-lg-4 {
     padding-bottom: calc(var(--space-3) * 2) !important;
@@ -3701,7 +3701,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .ps-lg-3 {
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-left: var(--fs-md) !important;
   }
   .ps-lg-4 {
     padding-left: calc(var(--space-3) * 2) !important;
@@ -3719,7 +3719,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     gap: calc(var(--space-3) / 2) !important;
   }
   .gap-lg-3 {
-    gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    gap: var(--fs-md) !important;
   }
   .gap-lg-4 {
     gap: calc(var(--space-3) * 2) !important;
@@ -3950,7 +3950,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin: calc(var(--space-3) / 2) !important;
   }
   .m-xl-3 {
-    margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin: var(--fs-md) !important;
   }
   .m-xl-4 {
     margin: calc(var(--space-3) * 2) !important;
@@ -3974,8 +3974,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .mx-xl-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
+    margin-left: var(--fs-md) !important;
   }
   .mx-xl-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -4002,8 +4002,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .my-xl-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .my-xl-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -4027,7 +4027,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-top: calc(var(--space-3) / 2) !important;
   }
   .mt-xl-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
   }
   .mt-xl-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -4048,7 +4048,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-right: calc(var(--space-3) / 2) !important;
   }
   .me-xl-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
   }
   .me-xl-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -4069,7 +4069,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .mb-xl-3 {
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .mb-xl-4 {
     margin-bottom: calc(var(--space-3) * 2) !important;
@@ -4090,7 +4090,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .ms-xl-3 {
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-left: var(--fs-md) !important;
   }
   .ms-xl-4 {
     margin-left: calc(var(--space-3) * 2) !important;
@@ -4111,7 +4111,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding: calc(var(--space-3) / 2) !important;
   }
   .p-xl-3 {
-    padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding: var(--fs-md) !important;
   }
   .p-xl-4 {
     padding: calc(var(--space-3) * 2) !important;
@@ -4132,8 +4132,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .px-xl-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
+    padding-left: var(--fs-md) !important;
   }
   .px-xl-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -4156,8 +4156,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .py-xl-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .py-xl-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -4177,7 +4177,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-top: calc(var(--space-3) / 2) !important;
   }
   .pt-xl-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
   }
   .pt-xl-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -4195,7 +4195,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-right: calc(var(--space-3) / 2) !important;
   }
   .pe-xl-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
   }
   .pe-xl-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -4213,7 +4213,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .pb-xl-3 {
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .pb-xl-4 {
     padding-bottom: calc(var(--space-3) * 2) !important;
@@ -4231,7 +4231,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .ps-xl-3 {
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-left: var(--fs-md) !important;
   }
   .ps-xl-4 {
     padding-left: calc(var(--space-3) * 2) !important;
@@ -4249,7 +4249,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     gap: calc(var(--space-3) / 2) !important;
   }
   .gap-xl-3 {
-    gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    gap: var(--fs-md) !important;
   }
   .gap-xl-4 {
     gap: calc(var(--space-3) * 2) !important;
@@ -4480,7 +4480,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin: calc(var(--space-3) / 2) !important;
   }
   .m-xxl-3 {
-    margin: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin: var(--fs-md) !important;
   }
   .m-xxl-4 {
     margin: calc(var(--space-3) * 2) !important;
@@ -4504,8 +4504,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .mx-xxl-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
+    margin-left: var(--fs-md) !important;
   }
   .mx-xxl-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -4532,8 +4532,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .my-xxl-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .my-xxl-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -4557,7 +4557,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-top: calc(var(--space-3) / 2) !important;
   }
   .mt-xxl-3 {
-    margin-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-top: var(--fs-md) !important;
   }
   .mt-xxl-4 {
     margin-top: calc(var(--space-3) * 2) !important;
@@ -4578,7 +4578,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-right: calc(var(--space-3) / 2) !important;
   }
   .me-xxl-3 {
-    margin-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-right: var(--fs-md) !important;
   }
   .me-xxl-4 {
     margin-right: calc(var(--space-3) * 2) !important;
@@ -4599,7 +4599,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-bottom: calc(var(--space-3) / 2) !important;
   }
   .mb-xxl-3 {
-    margin-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-bottom: var(--fs-md) !important;
   }
   .mb-xxl-4 {
     margin-bottom: calc(var(--space-3) * 2) !important;
@@ -4620,7 +4620,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     margin-left: calc(var(--space-3) / 2) !important;
   }
   .ms-xxl-3 {
-    margin-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    margin-left: var(--fs-md) !important;
   }
   .ms-xxl-4 {
     margin-left: calc(var(--space-3) * 2) !important;
@@ -4641,7 +4641,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding: calc(var(--space-3) / 2) !important;
   }
   .p-xxl-3 {
-    padding: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding: var(--fs-md) !important;
   }
   .p-xxl-4 {
     padding: calc(var(--space-3) * 2) !important;
@@ -4662,8 +4662,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .px-xxl-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
+    padding-left: var(--fs-md) !important;
   }
   .px-xxl-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -4686,8 +4686,8 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .py-xxl-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .py-xxl-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -4707,7 +4707,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-top: calc(var(--space-3) / 2) !important;
   }
   .pt-xxl-3 {
-    padding-top: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-top: var(--fs-md) !important;
   }
   .pt-xxl-4 {
     padding-top: calc(var(--space-3) * 2) !important;
@@ -4725,7 +4725,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-right: calc(var(--space-3) / 2) !important;
   }
   .pe-xxl-3 {
-    padding-right: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-right: var(--fs-md) !important;
   }
   .pe-xxl-4 {
     padding-right: calc(var(--space-3) * 2) !important;
@@ -4743,7 +4743,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-bottom: calc(var(--space-3) / 2) !important;
   }
   .pb-xxl-3 {
-    padding-bottom: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-bottom: var(--fs-md) !important;
   }
   .pb-xxl-4 {
     padding-bottom: calc(var(--space-3) * 2) !important;
@@ -4761,7 +4761,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     padding-left: calc(var(--space-3) / 2) !important;
   }
   .ps-xxl-3 {
-    padding-left: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    padding-left: var(--fs-md) !important;
   }
   .ps-xxl-4 {
     padding-left: calc(var(--space-3) * 2) !important;
@@ -4779,7 +4779,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
     gap: calc(var(--space-3) / 2) !important;
   }
   .gap-xxl-3 {
-    gap: clamp(0.875rem, 0.837rem + 0.17vw, 1rem) !important;
+    gap: var(--fs-md) !important;
   }
   .gap-xxl-4 {
     gap: calc(var(--space-3) * 2) !important;
@@ -5038,18 +5038,18 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  gap: var(--space-1);
+  gap: var(--space-2);
 }
 
 .swiper-button {
   cursor: pointer;
   min-width: auto !important;
-  padding: var(--space-inset-md) !important;
+  padding: var(--space-3) !important;
 }
 
 .swiper-button-disabled {
   --swiper-disabled-color: var(--color-primary-light);
-  background: var(--color-bg-primary) !important;
+  background: unset !important;
   border-color: var(--swiper-disabled-color) !important;
   cursor: unset;
 }
@@ -5141,30 +5141,30 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --color-primary-light: hsl(
   	var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + var(--lighten))
   );
+  --color-primary-light-1: hsl(var(--primary-hue) var(--primary-saturation) 97%);
   --color-primary-dark: hsl(
   	var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - var(--darken))
   );
-  --color-bg-primary: var(--color-white);
-  --color-bg-secondary: hsl(var(--primary-hue) var(--primary-saturation) 93%);
-  --color-bg-body: var(--color-bg-primary);
-  --color-bg-header: var(--color-bg-primary);
-  --color-bg-footer: var(--color-bg-primary);
+  --color-bg: var(--color-white);
+  --color-bg-body: var(--color-bg);
+  --color-bg-header: var(--color-bg);
+  --color-bg-footer: var(--color-primary-light-1);
   --color-text-primary: hsl(var(--primary-hue) 100% 15%);
   --color-text-secondary: hsl(var(--primary-hue) 20% 45%);
   --color-text-accent: var(--color-primary);
   --color-text-reverse: var(--color-white);
-  --color-error: hsl(4, 90%, 58%);
-  --color-success: hsl(147, 100%, 35%);
-  --color-warning: hsl(41, 100%, 80%);
+  --color-feedback-error: hsl(4, 90%, 58%);
+  --color-feedback-success: hsl(147, 100%, 35%);
+  --color-feedback-warning: hsl(39, 93%, 59%);
   /*
   |-------------------------------------------------------------------------|
   |	TYPOGRAPHY
   |-------------------------------------------------------------------------|
   */
-  --ff-primary: "Montserrat", Arial, sans-serif;
+  --ff-primary: "Poppins", Arial, sans-serif;
   --h1: clamp(2.5rem, 2.117rem + 1.701vw, 3.75rem);
-  --h2: clamp(1.625rem, 1.434rem + 0.85vw, 2.25rem);
-  --h3: clamp(1.25rem, 1.173rem + 0.34vw, 1.5rem);
+  --h2: clamp(1.75rem, 1.52rem + 1.02vw, 2.5rem);
+  --h3: clamp(1.25rem, 1.097rem + 0.68vw, 1.75rem);
   --h4: clamp(1.125rem, 1.087rem + 0.17vw, 1.25rem);
   --fs-sm: calc(var(--fs-md) * 0.875);
   --fs-md: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
@@ -5182,19 +5182,11 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --space-0: 0;
   --space-1: calc(var(--space-3) / 4);
   --space-2: calc(var(--space-3) / 2);
-  --space-3: clamp(0.875rem, 0.837rem + 0.17vw, 1rem);
+  --space-3: var(--fs-md);
   --space-4: calc(var(--space-3) * 2);
   --space-5: calc(var(--space-3) * 4);
   --container-space-x: var(--space-3);
-  --container-space-y: var(--space-5);
-  --space-inset-sm: var(--space-2);
-  --space-inset-md: var(--space-3);
-  --space-inset-lg: var(--space-4);
-  --space-inset-squish-sm: var(--space-1) var(--space-2);
-  --space-inset-squish-md: var(--space-2) var(--space-3);
-  --space-inset-squish-lg: var(--space-3) var(--space-4);
-  --space-inset-stretch-sm: calc(var(--space-2) * 1.5) var(--space-2);
-  --space-inset-stretch-md: calc(var(--space-3) * 1.5) var(--space-3);
+  --container-space-y: 0;
   --border-color: var(--color-black);
   --border-thickness: 1px;
   --border-radius: 1rem;
@@ -5232,6 +5224,9 @@ html {
 }
 
 body {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-md);
   font-family: var(--ff-primary);
   text-underline-offset: var(--underline-offset);
   color: var(--color-text-primary);
@@ -5251,11 +5246,6 @@ body {
           flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
-}
-
-footer {
-  background-color: var(--color-bg-footer);
-  margin-top: auto;
 }
 
 h1,
@@ -5288,6 +5278,22 @@ h6,
   font-size: var(--fs-sm);
 }
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: var(--lh-sm);
+  font-weight: var(--fw-bold);
+}
+
 hr {
   border: none;
   background-color: var(--color-primary);
@@ -5298,7 +5304,7 @@ hr {
 }
 
 blockquote {
-  padding: var(--space-2);
+  padding: var(--space-4);
   border-left: calc(var(--border-thickness) * 2) solid var(--color-primary);
 }
 
@@ -5406,29 +5412,7 @@ input[type=search]::-webkit-search-cancel-button {
 /*--------------------------------------------------------------
 # TEXT PRESETS
 --------------------------------------------------------------*/
-.text-preset-1, body {
-  font-size: var(--fs-md);
-  font-weight: var(--fw-regular);
-  line-height: var(--lh-md);
-}
-
-.text-preset-2, h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-  line-height: var(--lh-sm);
-  font-weight: var(--fw-bold);
-}
-
-.text-preset-3 {
+.text-preset-1 {
   font-size: var(--h2);
   line-height: var(--lh-sm);
   font-weight: var(--fw-bold);
@@ -5436,151 +5420,41 @@ h6,
   text-align: center;
 }
 
-.text-preset-4 {
-  font-size: var(--h3);
-  line-height: var(--lh-sm);
+.accordion__button, .footer-nav__title, .text-preset-2 {
+  font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
 }
 
-.contact-form__title, .accordion__button, .box-link, .footer-nav__title, .nav-menu__link, .text-preset-5 {
+.contact-form__label, .box-link, .nav-menu__link, .text-preset-3 {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
-  line-height: var(--lh-sm);
-  text-transform: uppercase;
 }
 
-.card__date, .footer-nav__copyright, .text-preset-7 {
+.card__date, .footer-nav__copyright, .text-preset-4 {
   font-size: var(--fs-sm);
   text-transform: uppercase;
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-display: swap;
-  src: url("../fonts/Montserrat-Black.woff2") format("woff2"), url("../fonts/Montserrat-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-BlackItalic.woff2") format("woff2"), url("../fonts/Montserrat-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-BoldItalic.woff") format("woff");
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBoldItalic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLightItalic.woff") format("woff");
-  font-weight: 200;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../fonts/Montserrat-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   font-display: swap;
-  src: url("../fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("../fonts/Montserrat-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../fonts/Montserrat-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
+.content-block {
+  position: relative;
+  padding: var(--space-5);
 }
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-Thin.woff2") format("woff2"), url("../fonts/Montserrat-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  font-display: swap;
-  src: url("../fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../fonts/Montserrat-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-}
+
 .container-fluid, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
   padding: var(--container-space-y) var(--container-space-x);
   margin-left: auto;
@@ -5609,15 +5483,6 @@ h6,
 /*--------------------------------------------------------------
 # GLOBAL SELECTORS. PLACE CUSTOM SELECTORS ON TOP
 --------------------------------------------------------------*/
-.color-primary {
-  color: var(--color-primary);
-}
-.color-primary-light {
-  color: var(--color-primary-light);
-}
-.color-primary-dark {
-  color: var(--color-primary-dark);
-}
 .color-text-primary {
   color: var(--color-text-primary);
 }
@@ -5630,6 +5495,15 @@ h6,
 .color-text-reverse {
   color: var(--color-text-reverse);
 }
+.color-feedback-error {
+  color: var(--color-feedback-error);
+}
+.color-feedback-success {
+  color: var(--color-feedback-success);
+}
+.color-feedback-warning {
+  color: var(--color-feedback-warning);
+}
 .color-current {
   color: currentColor;
 }
@@ -5637,26 +5511,20 @@ h6,
   color: transparent;
 }
 
-.bg-primary {
-  background-color: var(--color-primary);
+.bg {
+  background: var(--color-bg);
+}
+.bg-primary-light-1 {
+  background: var(--color-primary-light-1);
 }
 .bg-primary-light {
-  background-color: var(--color-primary-light);
+  background: var(--color-primary-light);
+}
+.bg-primary {
+  background: var(--color-primary);
 }
 .bg-primary-dark {
-  background-color: var(--color-primary-dark);
-}
-.bg-text-primary {
-  background-color: var(--color-text-primary);
-}
-.bg-text-secondary {
-  background-color: var(--color-text-secondary);
-}
-.bg-text-accent {
-  background-color: var(--color-text-accent);
-}
-.bg-text-reverse {
-  background-color: var(--color-text-reverse);
+  background: var(--color-primary-dark);
 }
 
 .fs-sm {
@@ -5674,31 +5542,6 @@ h6,
 }
 .fw-bold {
   font-weight: 600;
-}
-
-.space-inset-sm {
-  padding: var(--space-2);
-}
-.space-inset-md {
-  padding: var(--space-3);
-}
-.space-inset-lg {
-  padding: var(--space-4);
-}
-.space-inset-squish-sm {
-  padding: var(--space-1) var(--space-2);
-}
-.space-inset-squish-md {
-  padding: var(--space-2) var(--space-3);
-}
-.space-inset-squish-lg {
-  padding: var(--space-3) var(--space-4);
-}
-.space-inset-stretch-sm {
-  padding: calc(var(--space-2) * 1.5) var(--space-2);
-}
-.space-inset-stretch-md {
-  padding: calc(var(--space-3) * 1.5) var(--space-3);
 }
 
 .stretch-child > :first-child,
@@ -5869,20 +5712,19 @@ h6,
 }
 
 .hero__title {
-  font-size: clamp(2.5rem, 1.543rem + 4.252vw, 5.625rem);
+  font-size: clamp(2.5rem, 1.352rem + 5.102vw, 6.25rem);
   font-weight: var(--fw-bold);
   text-align: center;
   line-height: 1;
-  color: var(--color-primary-dark);
+  color: var(--color-text-reverse);
 }
 
 .hero__subtitle {
-  font-size: clamp(1.25rem, 0.867rem + 1.701vw, 2.5rem);
+  font-size: clamp(1.25rem, 0.676rem + 2.551vw, 3.125rem);
   margin-top: 0.5em;
   text-align: center;
-  text-transform: uppercase;
-  color: var(--color-primary);
-  line-height: 1.2;
+  color: var(--color-text-reverse);
+  line-height: var(--lh-sm);
 }
 
 .header-sticky-wrapper {
@@ -5962,7 +5804,7 @@ h6,
 
 .nav-toggler__icon {
   fill: currentColor;
-  width: 3.175em;
+  width: 2.825em;
   height: 2em;
 }
 
@@ -6008,7 +5850,7 @@ h6,
 }
 
 .nav-menu__list .nav-menu__link {
-  text-transform: unset;
+  font-size: var(--fs-xs);
 }
 
 @media (min-width: 1024px) {
@@ -6043,9 +5885,9 @@ h6,
           align-items: center;
   width: 100%;
   max-width: 10rem;
-  -webkit-transition: max-width var(--transition-duration) ease-in-out;
-  -o-transition: max-width var(--transition-duration) ease-in-out;
-  transition: max-width var(--transition-duration) ease-in-out;
+  -webkit-transition: max-width 0.3s ease-in-out;
+  -o-transition: max-width 0.3s ease-in-out;
+  transition: max-width 0.3s ease-in-out;
 }
 .search:focus-within {
   max-width: 100%;
@@ -6091,7 +5933,7 @@ h6,
   color: transparent;
 }
 .search__button {
-  padding: var(--space-inset-sm);
+  padding: var(--space-2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6131,8 +5973,8 @@ h6,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 1rem;
-  height: 1rem;
+  width: 1.575em;
+  height: 1.575em;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -6169,7 +6011,7 @@ h6,
         overscroll-behavior: contain;
     z-index: 1;
     padding: var(--header-space-y) var(--container-space-x);
-    background-color: var(--color-bg-primary);
+    background-color: var(--color-bg);
     translate: 100%;
     -webkit-transition: var(--transition);
     -o-transition: var(--transition);
@@ -6191,6 +6033,13 @@ h6,
   translate: none;
   -webkit-box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  background-color: var(--color-bg-footer);
+  margin-top: auto;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-4);
 }
 
 .footer-nav__group {
@@ -6261,7 +6110,7 @@ h6,
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: var(--color-text-secondary);
-  padding-top: var(--space-4);
+  margin-top: var(--space-4);
 }
 
 .banner {
@@ -6306,8 +6155,9 @@ h6,
       -ms-flex-direction: column;
           flex-direction: column;
   gap: var(--space-3);
-  padding: var(--space-inset-lg);
+  padding: var(--space-4);
   height: 100%;
+  background: var(--color-bg);
 }
 .card__content > :last-child:has(a),
 .card__content > a:last-child {
@@ -6322,7 +6172,7 @@ h6,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-2);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -6334,7 +6184,7 @@ h6,
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  padding: var(--space-inset-squish-sm);
+  padding: var(--space-1) var(--space-2);
   text-decoration: none;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -6426,6 +6276,7 @@ a:focus-visible,
 .button, .button--outline, .button--reverse, .button--circle {
   --button-bg: var(--color-primary);
   --button-bg-accent: var(--color-primary-dark);
+  padding: var(--space-2) var(--space-3);
   font-weight: var(--fw-bold);
   color: var(--color-text-reverse);
   background: var(--button-bg);
@@ -6433,8 +6284,6 @@ a:focus-visible,
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  padding: var(--space-inset-squish-lg);
-  line-height: var(--lh-sm);
   text-decoration: none;
   text-align: center;
   -webkit-box-pack: center;
@@ -6557,7 +6406,7 @@ a:focus-visible,
 }
 
 .accordion {
-  --accordion-space: var(--space-inset-lg);
+  --accordion-space: var(--space-3);
   --accordion-color: var(--color-text-accent);
   --accordion-accent-color: var(--color-text-reverse);
   --accordion-transition: 0.3s ease-in-out;
@@ -6589,7 +6438,7 @@ a:focus-visible,
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  background: var(--color-bg-primary);
+  background: var(--color-bg);
 }
 @media (hover: hover) and (pointer: fine) {
   .accordion__button:hover {
@@ -6759,7 +6608,7 @@ a:focus-visible,
   -o-transition: var(--transition-duration) ease-in-out;
   transition: var(--transition-duration) ease-in-out;
   overflow: hidden;
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-bg);
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
   translate: -50% -10px;
@@ -6844,13 +6693,13 @@ a:focus-visible,
 }
 @media (hover: hover) and (pointer: fine) {
   .brand-logo:hover {
-    -webkit-filter: invert(100%);
-            filter: invert(100%);
+    -webkit-filter: contrast(200%);
+            filter: contrast(200%);
   }
 }
 .brand-logo:focus-visible {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
+  -webkit-filter: contrast(200%);
+          filter: contrast(200%);
 }
 
 .brand-logo--large {
@@ -7039,7 +6888,7 @@ ul li::marker {
 
 input,
 textarea {
-  padding: var(--space-inset-stretch-sm);
+  padding: var(--space-2);
   border: var(--border);
   background: var(--color-bg-body);
   -webkit-transition: border-color var(--transition), -webkit-box-shadow var(--transition);
@@ -7056,8 +6905,6 @@ textarea:focus-visible {
 }
 
 .contact-form {
-  --contact-form-gap: 0.375rem;
-  gap: var(--space-2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7065,6 +6912,10 @@ textarea:focus-visible {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: var(--space-3);
+}
+.contact-form__input {
+  width: 100%;
 }
 .contact-form__item {
   display: -webkit-box;
@@ -7074,7 +6925,6 @@ textarea:focus-visible {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: var(--contact-form-gap);
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -7096,5 +6946,4 @@ textarea:focus-visible {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
-  gap: var(--contact-form-gap);
 }

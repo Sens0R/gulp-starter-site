@@ -1,14 +1,15 @@
+
+
 %button {
 	--button-bg: var(--color-primary);
 	--button-bg-accent: var(--color-primary-dark);
 
+	padding: var(--space-2) var(--space-3);
 	font-weight: var(--fw-bold);
 	color: var(--color-text-reverse);
 	background: var(--button-bg);
 	border: var(--border-thickness) solid var(--button-bg);
 	transition: var(--transition);
-	padding: var(--space-inset-squish-lg);
-	line-height: var(--lh-sm);
 	text-decoration: none;
 	text-align: center;
 	justify-content: center;

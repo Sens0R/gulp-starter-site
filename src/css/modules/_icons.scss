@@ -10,7 +10,7 @@
 	width: clamp-smart(44, 80);
 
 	@include hover(focus) {
-		filter: invert(100%);
+		filter: contrast(200%);
 	}
 }
 

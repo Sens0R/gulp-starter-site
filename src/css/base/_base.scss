@@ -18,7 +18,9 @@ html {
 }
 
 body {
-	@include text-preset(1);
+	font-size: var(--fs-md);
+	font-weight: var(--fw-regular);
+	line-height: var(--lh-md);
 	font-family: var(--ff-primary);
 	text-underline-offset: var(--underline-offset);
 	color: var(--color-text-primary);
@@ -33,11 +35,6 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	overflow: hidden;
-}
-
-footer {
-	background-color: var(--color-bg-footer);
-	margin-top: auto;
 }
 
 h1,
@@ -82,7 +79,8 @@ h5,
 .h5,
 h6,
 .h6 {
-	@include text-preset(2);
+	line-height: var(--lh-sm);
+	font-weight: var(--fw-bold);
 }
 
 hr {
@@ -95,7 +93,7 @@ hr {
 }
 
 blockquote {
-	padding: var(--space-2);
+	padding: var(--space-4);
 	border-left: calc(var(--border-thickness) * 2) solid var(--color-primary);
 }
 

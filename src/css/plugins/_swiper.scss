@@ -25,19 +25,19 @@
 .swiper-button-container {
 	display: flex;
 	justify-content: flex-end;
-	gap: var(--space-1);
+	gap: var(--space-2);
 }
 
 .swiper-button {
 	cursor: pointer;
 	min-width: auto !important;
-	padding: var(--space-inset-md) !important;
+	padding: var(--space-3) !important;
 }
 
 .swiper-button-disabled {
 	--swiper-disabled-color: var(--color-primary-light);
 
-	background: var(--color-bg-primary) !important;
+	background: unset !important;
 	border-color: var(--swiper-disabled-color) !important;
 	cursor: unset;
 }

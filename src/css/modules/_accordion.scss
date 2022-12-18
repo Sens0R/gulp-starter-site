@@ -9,7 +9,7 @@
 }
 
 .accordion {
-	--accordion-space: var(--space-inset-lg);
+	--accordion-space: var(--space-3);
 	--accordion-color: var(--color-text-accent);
 	--accordion-accent-color: var(--color-text-reverse);
 	--accordion-transition: 0.3s ease-in-out;
@@ -24,14 +24,14 @@
 }
 
 .accordion__button {
-	@include text-preset(5);
+	@include text-preset(2);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	padding: var(--accordion-space);
 	color: var(--accordion-color);
 	transition: var(--transition);
-	background: var(--color-bg-primary);
+	background: var(--color-bg);
 
 	@include hover(focus) {
 		background-color: var(--accordion-color);

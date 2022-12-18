@@ -17,7 +17,7 @@
 
 // background colors from sass map
 .bg {
-	@include modifiers($colors, 'background-color');
+	@include modifiers($backgrounds, 'background');
 }
 
 // font sizes from sass map
@@ -28,11 +28,6 @@
 // font weights from sass map
 .fw {
 	@include modifiers($font-weights, 'font-weight');
-}
-
-// space insets from sass map
-.space-inset {
-	@include modifiers($space-insets, 'padding');
 }
 
 .stretch-child > :first-child,
