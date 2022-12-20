@@ -23,6 +23,7 @@ a,
 }
 
 %link-box {
+	@extend %link-title;
 	@include target-size;
 	@include text-preset(3);
 	@include chevron;

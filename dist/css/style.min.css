@@ -5959,8 +5959,9 @@ input[type=search]::-webkit-search-cancel-button {
 }
 
 .footer-nav__link {
-  font-size: var(--fs-sm);
   position: relative;
+  text-decoration-color: transparent;
+  font-size: var(--fs-sm);
 }
 .footer-nav__link::before {
   content: "";
@@ -5973,6 +5974,9 @@ input[type=search]::-webkit-search-cancel-button {
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+}
+.footer-nav__link:focus-visible {
+  text-decoration-color: currentColor;
 }
 
 .footer-nav__copyright {
@@ -6082,7 +6086,7 @@ a:focus-visible,
   color: var(--link-color-hover);
 }
 
-.link-title, .link-box {
+.link-box, .link-title {
   --link-color: var(--color-accent);
   --link-color-hover: var(--color-primary-light);
   text-decoration: none;

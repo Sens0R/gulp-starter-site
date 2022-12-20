@@ -1,9 +1,30 @@
+@mixin underline($state: both) {
+	text-decoration-color: transparent;
+
+	@if $state == both {
+		@include hover(focus) {
+			text-decoration-color: currentColor;
+		}
+	}
+
+	@if $state == hover {
+		@include hover {
+			text-decoration-color: currentColor;
+		}
+	}
+
+	@if $state == focus {
+		&:focus-visible {
+			text-decoration-color: currentColor;
+		}
+	}
+}
+
 @mixin link-title {
 	@extend %link-title;
 }
 
 @mixin link-box {
-	@extend %link-title;
 	@extend %link-box;
 }
 
