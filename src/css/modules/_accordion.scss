@@ -1,3 +1,10 @@
+.accordion {
+	--accordion-space: var(--space-3);
+	--accordion-color: var(--color-accent);
+	--accordion-accent-color: var(--color-text-reverse);
+	--accordion-transition: var(--transition-lg);
+}
+
 [data-accordion-content] {
 	max-height: 0;
 	visibility: hidden;
@@ -9,11 +16,6 @@
 }
 
 .accordion {
-	--accordion-space: var(--space-3);
-	--accordion-color: var(--color-accent);
-	--accordion-accent-color: var(--color-text-reverse);
-	--accordion-transition: 0.3s ease-in-out;
-
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-3);
@@ -27,20 +29,20 @@
 	background: var(--color-primary-dark);
 	color: var(--accordion-accent-color);
 
-	.icon {
+	.accordion__icon {
 		fill: var(--accordion-accent-color);
 		rotate: 180deg;
 	}
 }
 
 .accordion__button {
-	@include text-preset(2);
+	@include text-preset(3);
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	padding: var(--accordion-space);
 	color: var(--accordion-color);
-	transition: var(--transition);
+	transition: var(--transition-sm);
 	background: var(--color-bg);
 
 	@include hover(focus) {

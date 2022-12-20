@@ -2,34 +2,40 @@
 	@extend %button;
 }
 
-@mixin button-outline {
-	@extend %button;
+@mixin button--outline {
 	@extend %button--outline;
 }
 
-@mixin button-reverse {
-	@extend %button;
-	@extend %button--reverse;
+@mixin button--disabled {
+	@extend %button--disabled;
 }
 
-@mixin button-circle {
-	@extend %button;
+@mixin button--box {
+	@extend %button--box;
+}
+
+@mixin button--circle {
 	@extend %button--circle;
 }
 
 // selectors
+
 .button {
 	@include button;
 }
 
 .button--outline {
-	@include button-outline;
+	@include button--outline;
 }
 
-.button--reverse {
-	@include button-reverse;
+.button--disabled {
+	@include button--disabled;
+}
+
+.button--box {
+	@include button--box;
 }
 
 .button--circle {
-	@include button-circle;
+	@include button--circle;
 }

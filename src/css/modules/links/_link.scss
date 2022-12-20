@@ -1,32 +1,30 @@
 a,
-[type='link'] {
-	--transition-link: 0.15s ease-in-out;
+[role='link'] {
+	--link-transition: var(--transition-sm);
+	--link-color: var(--color-text-primary);
+	--link-color-hover: var(--color-accent);
+}
 
-	color: var(--color-text-primary);
-	transition: var(--transition-link);
+a,
+[role='link'] {
+	color: var(--link-color);
+	transition: var(--link-transition);
 
 	@include hover(focus) {
-		color: var(--color-accent);
+		color: var(--link-color-hover);
 	}
 }
 
-.link-heading {
-	color: var(--color-accent);
+%link-title {
+	--link-color: var(--color-accent);
+	--link-color-hover: var(--color-primary-light);
+
 	text-decoration: none;
-
-	@include hover(focus) {
-		color: var(--color-primary-light);
-	}
 }
 
-.box-link {
+%link-box {
+	@include target-size;
 	@include text-preset(3);
-	color: var(--color-accent);
-	text-decoration: none;
-
-	@include chevron();
-
-	@include hover(focus) {
-		color: var(--color-primary-light);
-	}
+	@include chevron;
+	text-transform: uppercase;
 }

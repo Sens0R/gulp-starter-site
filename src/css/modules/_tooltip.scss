@@ -9,7 +9,7 @@
 }
 
 .tooltip.active {
-  transition: var(--transition) 0.6s;
+  transition: var(--transition-md) 0.6s;
   visibility: visible;
   opacity: 1;
 }

@@ -3,18 +3,17 @@
 	left: var(--space-container);
 	position: fixed;
 	z-index: 999;
-	background-color: var(--color-black);
+	background-color: var(--color-bg);
 	padding: var(--space-3);
 	font-weight: bold;
 	font-size: var(--fs-lg);
-	text-transform: uppercase;
-	opacity: 0;
-	translate: -200% 0;
-	transition: 0.25s ease;
+	outline: 2px solid currentColor;
+	translate: -150% 0;
+	translate: none;
+	color: var(--color-text-primary);
+	transition: var(--transition-md);
+}
 
-	&:focus-visible {
-		translate: none;
-		opacity: 1;
-		color: var(--color-white);
-	}
+.skip-link:not(:focus-visible) {
+	@include visually-hidden;
 }

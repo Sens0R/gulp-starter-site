@@ -61,12 +61,12 @@
 	@include visually-hidden();
 }
 
-.link-space {
-	@include link-space();
+.target-size {
+	@include target-size();
 }
 
 .transition {
-	transition: var(--transition) !important;
+	transition: var(--transition-md) !important;
 
 	&-stop {
 		transition: none !important;
@@ -80,16 +80,16 @@
 }
 
 .rotate {
-	&-right {
-		rotate: -90deg;
-	}
-
-	&-left {
+	&-90 {
 		rotate: 90deg;
 	}
 
-	&-top {
-		rotate: -180deg;
+	&-negative-90 {
+		rotate: -90deg;
+	}
+
+	&-180 {
+		rotate: 180deg;
 	}
 }
 
@@ -118,22 +118,6 @@
 
 	&-16-9 {
 		aspect-ratio: 16/9;
-	}
-}
-
-.underline {
-	text-decoration: underline !important;
-
-	&-none {
-		text-decoration: none !important;
-	}
-
-	&-hover {
-		@include underline-hover;
-	}
-
-	&-hover-reverse {
-		@include underline-hover(reverse);
 	}
 }
 

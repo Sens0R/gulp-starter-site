@@ -29,8 +29,7 @@
 
 .footer-nav__link {
 	font-size: var(--fs-sm);
-	@include link-space();
-	@include underline-hover(reverse);
+	@include target-size();
 }
 
 .footer-nav__copyright {

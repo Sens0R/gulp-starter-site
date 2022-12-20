@@ -81,7 +81,10 @@
 |--------------------------------------------------------------------------
 |	STRUCTURE
 |--------------------------------------------------------------------------
-*/
+*/	
+	--header-height: clamp-smart(2.75rem, 3.75rem);
+	// buttons, inputs;
+	--target-size-em: 2.75em;
 
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
@@ -89,7 +92,7 @@
 	--space-container: var(--space-3);
 
 	// borders
-	--border-color: var(--color-black);
+	--border-color: var(--color-primary-light);
 	--border-thickness: 1px;
 	--border-radius: 1rem;
 	--border: var(--border-thickness) solid var(--border-color);
@@ -97,13 +100,13 @@
 	// shadows
 	--shadow-alpha: 0.12;
 	--shadow-color: hsla(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / var(--shadow-alpha));
-	--shadow-spread: 15px;
+	--shadow-spread: 1rem;
 	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
 
 	// transitions
-	--transition-duration: 0.2s;
-	--transition-timing-function: ease-out;
-	--transition: var(--transition-duration) var(--transition-timing-function);
+	--transition-sm: 0.15s ease-in-out;
+	--transition-md: 0.225s ease-out;
+	--transition-lg: 0.3s ease-in-out;
 
 	// z-index
 	--z-tooltip: 500;

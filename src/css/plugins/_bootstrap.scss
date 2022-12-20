@@ -17,6 +17,7 @@ $utilities: map-get-multiple(
 		'position',
 		'visibility',
 		'text-transform',
+		'text-decoration',
 		'white-space',
 		'word-wrap',
 		'line-height',
@@ -60,6 +61,10 @@ $utilities: map-merge(
 					values: block flex inline-flex none,
 				)
 			),
+		'text-decoration': (
+			property: text-decoration,
+			values: none underline,
+		),
 	)
 );
 

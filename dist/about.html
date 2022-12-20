@@ -23,47 +23,44 @@
     
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="header-sticky-wrapper">
-    <header class="header container-fluid"><!-- ====================   LOGO   ==================== -->
+    <header class="header container row"><!-- ====================   LOGO   ==================== -->
 
-<div class="col-auto col-xl-3 d-flex align-items-center">
-	<a aria-label="Logo-name home. Logo-name logo." href="index.html">
-		<svg aria-hidden="true" class="brand-logo">
-			<use href="images/icons/sprite-multi.svg#logo" />
-		</svg>
-	</a>
-</div>
+<a aria-label="Logo-name home. Logo-name logo." class="col-auto" href="index.html">
+	<svg aria-hidden="true" class="brand-logo brand-logo--header">
+		<use href="images/icons/sprite-multi.svg#logo" />
+	</svg>
+</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
-<nav aria-label="Main" class="navigation" data-hamburger>
-	<div class="d-flex align-items-center">
-		<div class="d-md-none"><form class="search" role="search">
+<nav aria-label="Main" class="hamburger col-auto" data-hamburger>
+	<div class="hamburger__header">
+		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
+			<svg aria-hidden="true" class="hamburger__icon">
+				<use href="images/icons/sprite-mono.svg#cancel"></use>
+			</svg>
+		</button>
+	</div>
+	<div class="d-sm-none"><form class="search justify-content-end" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
 
 	<button aria-label="Submit search" class="search__button" type="submit">
-		<svg aria-hidden="true" class="search__icon">
+		<svg aria-hidden="true" class="icon">
 			<use href="images/icons/sprite-mono.svg#search" />
 		</svg>
 	</button>
 </form>
 </div>
-		<button class="nav-toggler nav-toggler--close" data-hamburger-button="close" type="button">
-			<svg aria-hidden="true" class="nav-toggler__icon">
-				<use href="images/icons/sprite-mono.svg#cancel"></use>
-			</svg>
-		</button>
-	</div>
-
-	<ul class="nav-menu">
-		<li class="nav-menu__item">
-			<a data-nav-page href="about.html" class="nav-menu__link">About</a>
+	<ul class="header-nav">
+		<li class="header-nav__item">
+			<a data-nav-page href="about.html" class="header-nav__link">About</a>
 		</li>
 
-		<li data-dropdown="hover" class="nav-menu__item dropdown">
+		<li data-dropdown="hover" class="header-nav__item dropdown">
 			<div class="dropdown__controls">
-				<a data-nav-page href="services.html" class="nav-menu__link">Services</a>
+				<a data-nav-page href="services.html" class="header-nav__link">Services</a>
 				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
 					<svg aria-hidden="true" class="icon">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
@@ -71,84 +68,79 @@
 				</button>
 			</div>
 			<div data-dropdown-content class="dropdown__content">
-				<ul class="nav-menu__list">
+				<ul class="header-nav__list">
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 				</ul>
 			</div>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="portfolio.html" class="nav-menu__link">Portfolio</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="portfolio.html" class="header-nav__link">Portfolio</a>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="blog.html" class="nav-menu__link">Blog</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="blog.html" class="header-nav__link">Blog</a>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="contact.html" class="nav-menu__link">Contact</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="contact.html" class="header-nav__link">Contact</a>
 		</li>
 	</ul>
 
 	<div class="d-lg-none"><ul class="social-icons">
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Linkedin">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Linkedin">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+			</svg>
+		</a>
+	</li>
 
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Facebook">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Facebook">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+			</svg>
+		</a>
+	</li>
 
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Instagram">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Instagram">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+			</svg>
+		</a>
+	</li>
 </ul>
 </div>
 </nav>
-
 <!-- ====================   SEARCH   ==================== -->
-
-<div class="col-auto col-md col-xl-2 col-xxl-3 d-flex align-items-center d-none d-md-flex justify-content-end">
-	<form class="search" role="search">
+<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end"><form class="search justify-content-end" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
 
 	<button aria-label="Submit search" class="search__button" type="submit">
-		<svg aria-hidden="true" class="search__icon">
+		<svg aria-hidden="true" class="icon">
 			<use href="images/icons/sprite-mono.svg#search" />
 		</svg>
 	</button>
 </form>
-
 </div>
 
-<!-- ====================   NAV-TOGGLER   ==================== -->
-
-<button class="nav-toggler nav-toggler col-auto" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="nav-toggler__icon">
+<!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
+<button class="hamburger__toggler hamburger__toggler col-auto" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
 	Menu
@@ -233,29 +225,29 @@
 
 					<li class="mt-auto">
 						<div class="footer-socials"><ul class="social-icons">
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Linkedin">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Linkedin">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--linkedin"></use>
+			</svg>
+		</a>
+	</li>
 
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Facebook">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--facebook"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Facebook">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--facebook"></use>
+			</svg>
+		</a>
+	</li>
 
-  <li>
-    <a href="#" class="button button--circle" data-tooltip aria-label="Instagram">
-      <svg aria-hidden="true" class="icon">
-        <use href="images/icons/sprite-mono.svg#socials--instagram"></use>
-      </svg>
-    </a>
-  </li>
+	<li>
+		<a href="#" data-tooltip aria-label="Instagram">
+			<svg aria-hidden="true" class="icon">
+				<use href="images/icons/sprite-mono.svg#socials--instagram"></use>
+			</svg>
+		</a>
+	</li>
 </ul>
 </div>
 					</li>
@@ -290,7 +282,7 @@
 	<div data-dialog="two" class="dialog dialog_small">
 		<div class="dialog__header">
 			<p class="dialog__title">Dialog lvl2 title</p>
-			<button data-dialog-close class="link-space" type="button" aria-label="close dialog">
+			<button data-dialog-close class="target-size" type="button" aria-label="close dialog">
 				<svg aria-hidden="true" class="cancel-icon">
 					<use href="images/icons/sprite-mono.svg#cancel"></use>
 				</svg>

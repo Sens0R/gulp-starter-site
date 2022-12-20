@@ -102,23 +102,24 @@ blockquote {
 }
 
 button,
-[type='button'] {
-	border: none;
-	background-color: transparent;
+[role='button'],
+input[type='submit'] {
+	cursor: pointer;
+	background: unset;
 	user-select: none;
 }
 
 a,
-[type='link'] {
-	cursor: pointer;
-}
-
-a,
+[role='link'],
 button,
+[role='button'],
 input,
+input[type='submit'],
 label,
 select,
 textarea {
+	border: none;
+	border-radius: 0;
 	display: inline-flex;
 }
 
@@ -138,15 +139,13 @@ dt {
 	list-style-position: inside;
 }
 
-::placeholder {
-	transition: var(--transition);
-	color: var(--color-text-secondary);
-	transition: var(--transition);
-	font-size: var(--fs-md);
-}
-
 input[type='search']::-webkit-search-cancel-button {
 	display: none;
+}
+
+::placeholder {
+	transition: var(--transition-md);
+	color: var(--color-text-secondary);
 }
 
 ::selection {

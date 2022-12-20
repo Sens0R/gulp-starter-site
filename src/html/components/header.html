@@ -1,33 +1,30 @@
 <!-- ====================   LOGO   ==================== -->
 
-<div class="col-auto col-xl-3 d-flex align-items-center">
-	<a aria-label="Logo-name home. Logo-name logo." href="index.html">
-		<svg aria-hidden="true" class="brand-logo">
-			<use href="images/icons/sprite-multi.svg#logo" />
-		</svg>
-	</a>
-</div>
+<a aria-label="Logo-name home. Logo-name logo." class="col-auto" href="index.html">
+	<svg aria-hidden="true" class="brand-logo brand-logo--header">
+		<use href="images/icons/sprite-multi.svg#logo" />
+	</svg>
+</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
-<nav aria-label="Main" class="navigation" data-hamburger>
-	<div class="d-flex align-items-center">
-		<div class="d-md-none">@@include('search.html',{})</div>
-		<button class="nav-toggler nav-toggler--close" data-hamburger-button="close" type="button">
-			<svg aria-hidden="true" class="nav-toggler__icon">
+<nav aria-label="Main" class="hamburger col-auto" data-hamburger>
+	<div class="hamburger__header">
+		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
+			<svg aria-hidden="true" class="hamburger__icon">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
 		</button>
 	</div>
-
-	<ul class="nav-menu">
-		<li class="nav-menu__item">
-			<a data-nav-page href="about.html" class="nav-menu__link">About</a>
+	<div class="d-sm-none">@@include('search.html',{})</div>
+	<ul class="header-nav">
+		<li class="header-nav__item">
+			<a data-nav-page href="about.html" class="header-nav__link">About</a>
 		</li>
 
-		<li data-dropdown="hover" class="nav-menu__item dropdown">
+		<li data-dropdown="hover" class="header-nav__item dropdown">
 			<div class="dropdown__controls">
-				<a data-nav-page href="services.html" class="nav-menu__link">Services</a>
+				<a data-nav-page href="services.html" class="header-nav__link">Services</a>
 				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
 					<svg aria-hidden="true" class="icon">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
@@ -35,48 +32,43 @@
 				</button>
 			</div>
 			<div data-dropdown-content class="dropdown__content">
-				<ul class="nav-menu__list">
+				<ul class="header-nav__list">
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 
 					<li>
-						<a href="index.html" class="nav-menu__link">Lorem ipsum dolor</a>
+						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
 					</li>
 				</ul>
 			</div>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="portfolio.html" class="nav-menu__link">Portfolio</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="portfolio.html" class="header-nav__link">Portfolio</a>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="blog.html" class="nav-menu__link">Blog</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="blog.html" class="header-nav__link">Blog</a>
 		</li>
 
-		<li class="nav-menu__item">
-			<a data-nav-page href="contact.html" class="nav-menu__link">Contact</a>
+		<li class="header-nav__item">
+			<a data-nav-page href="contact.html" class="header-nav__link">Contact</a>
 		</li>
 	</ul>
 
 	<div class="d-lg-none">@@include('social.html',{})</div>
 </nav>
-
 <!-- ====================   SEARCH   ==================== -->
+<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end">@@include('search.html',{})</div>
 
-<div class="col-auto col-md col-xl-2 col-xxl-3 d-flex align-items-center d-none d-md-flex justify-content-end">
-	@@include('search.html',{})
-</div>
-
-<!-- ====================   NAV-TOGGLER   ==================== -->
-
-<button class="nav-toggler nav-toggler col-auto" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="nav-toggler__icon">
+<!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
+<button class="hamburger__toggler hamburger__toggler col-auto" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
 	Menu

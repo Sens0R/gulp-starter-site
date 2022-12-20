@@ -4,6 +4,10 @@
 	height: 1em;
 }
 
+.brand-logo--large {
+	width: clamp-smart(5em, 7.5em);
+	height: clamp-smart(5em, 7.5em);
+}
 
 a {
 	@include hover(focus) {
@@ -13,20 +17,14 @@ a {
 	}
 }
 
-.brand-logo {
-	transition: var(--transition);
-	height: clamp-smart(44, 80);
-	width: clamp-smart(44, 80);
-}
-
-.brand-logo--large {
-	height: clamp-smart(80, 120);
-	width: clamp-smart(80, 120);
-}
-
 .social-icons {
 	gap: var(--space-2);
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+.social-icons a {
+	@include button;
+	@include button--box;
 }

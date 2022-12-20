@@ -4,28 +4,37 @@
 	left: 0;
 	z-index: 50;
 	box-shadow: none;
-	transition: var(--transition);
+	transition: var(--transition-md);
+	background: var(--color-bg-header);
 }
 
 .headroom_unpinned {
 }
 
 .headroom_not-top {
-	box-shadow: 0 0 1.5rem 0.5rem rgba(0 0 0 / 0.075);
+	box-shadow: var(--shadow);
 }
 
 .header {
+	--header-y-height: var(--space-container);
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: var(--space-3);
-	background: var(--color-bg-header);
-	padding: var(--space-container);
+	padding: var(--header-y-height) var(--space-container);
 }
 
-@import 'nav-toggler';
-@import 'nav-backdrop';
-@import 'nav-menu';
-@import 'search';
-@import 'navigation';
+// set header inner height with logo size
+.brand-logo--header {
+	@include header-height(44, 60);
+}
+
+// set hamburger header inner height equal to logo size
+.hamburger__toggler {
+	@include header-height(44, 60);
+}
+
+@import 'hamburger';
+@import 'header-nav';

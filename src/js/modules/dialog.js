@@ -25,23 +25,23 @@ const activeBackdrops = []
 const topLevelOpenButtons = []
 let topLevelDialog
 let topLevelBackdrop
-let topLevelOpenbutton
+let topLevelOpenButton
 
 document.addEventListener('keydown', e => {
   if (e.code === 'Escape') {
     closeDialog()
-    topLevelOpenbutton.focus()
+    topLevelOpenButton.focus()
     topLevelOpenButtons.pop()
-    topLevelOpenbutton = topLevelOpenButtons.at(-1)
+    topLevelOpenButton = topLevelOpenButtons.at(-1)
   }
 })
 
 // add dialog label
 export function dialog() {
-  openButtonsArr.forEach(openbuttonEl => {
-    const openButtonElAttrValue = openbuttonEl.dataset.dialogOpen
+  openButtonsArr.forEach(openButtonEl => {
+    const openButtonElAttrValue = openButtonEl.dataset.dialogOpen
     const dialogEl = document.querySelector(`[data-dialog="${openButtonElAttrValue}"]`)
-    const submitbuttonEl = dialogEl.querySelector(`[data-dialog-submit]`)
+    const submitButtonEl = dialogEl.querySelector(`[data-dialog-submit]`)
     const closeButtonsArr = dialogEl.querySelectorAll(`[data-dialog-close]`)
     const labelEl = dialogEl.querySelector(`[data-dialog-label]`)
     const descEl = dialogEl.querySelector(`[data-dialog-desc]`)
@@ -58,9 +58,9 @@ export function dialog() {
     const backdrop = dialogEl.previousElementSibling
     backdrop.addEventListener('click', closeDialog)
 
-    openbuttonEl.addEventListener('click', () => {
-      topLevelOpenButtons.push(openbuttonEl)
-      topLevelOpenbutton = topLevelOpenButtons.at(-1)
+    openButtonEl.addEventListener('click', () => {
+      topLevelOpenButtons.push(openButtonEl)
+      topLevelOpenButton = topLevelOpenButtons.at(-1)
 
       activeDialogs.push(dialogEl)
       topLevelDialog = activeDialogs.at(-1)
@@ -73,17 +73,17 @@ export function dialog() {
       if (manualFocusEl) dialogEl.addEventListener('transitionend', () => manualFocusEl.focus(), { once: true })
     })
 
-    closeButtonsArr.forEach(closebuttonEl => {
-      closebuttonEl.addEventListener('click', () => {
+    closeButtonsArr.forEach(closeButtonEl => {
+      closeButtonEl.addEventListener('click', () => {
         closeDialog()
-        topLevelOpenbutton.focus()
+        topLevelOpenButton.focus()
         topLevelOpenButtons.pop()
-        topLevelOpenbutton = topLevelOpenButtons.at(-1)
+        topLevelOpenButton = topLevelOpenButtons.at(-1)
       })
     })
 
-    if (submitbuttonEl)
-      submitbuttonEl.addEventListener('click', () => {
+    if (submitButtonEl)
+      submitButtonEl.addEventListener('click', () => {
         // add submit button functionality here
       })
 
@@ -107,7 +107,7 @@ export function dialog() {
 
     // focus
 
-    if (!manualFocusEl) openbuttonEl.addEventListener('keydown', e => setFocus(firstFocusableEl, e))
+    if (!manualFocusEl) openButtonEl.addEventListener('keydown', e => setFocus(firstFocusableEl, e))
 
     focusTrap()
 

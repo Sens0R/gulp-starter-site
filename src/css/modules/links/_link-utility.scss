@@ -1,0 +1,17 @@
+@mixin link-title {
+	@extend %link-title;
+}
+
+@mixin link-box {
+	@extend %link-title;
+	@extend %link-box;
+}
+
+// selectors
+.link-title {
+	@include link-title();
+}
+
+.link-box {
+	@include link-box();
+}

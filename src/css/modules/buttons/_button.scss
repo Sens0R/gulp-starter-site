@@ -1,53 +1,64 @@
-
+%button {
+	--button-height: var(--target-size-em);
+	--button-width: 7.5em;
+	--button-space-x: 1.75em;
+	--button-color: var(--color-text-reverse);
+	--button-color-hover: var(--color-text-reverse);
+	--button-bg: var(--color-primary);
+	--button-bg-hover: var(--color-primary-dark);
+	--button-border-color: var(--color-primary);
+	--button-border-thickness: var(--border-thickness);
+	--button-transition: var(--transition-md);
+}
 
 %button {
-	--button-bg: var(--color-primary);
-	--button-bg-accent: var(--color-primary-dark);
-
-	padding: var(--space-2) var(--space-3);
 	font-weight: var(--fw-bold);
-	color: var(--color-text-reverse);
+	line-height: var(--lh-sm);
+	min-height: var(--button-height);
+	min-width: var(--button-width);
+	padding: 0 var(--button-space-x);
+	color: var(--button-color);
 	background: var(--button-bg);
-	border: var(--border-thickness) solid var(--button-bg);
-	transition: var(--transition);
+	transition: var(--button-transition);
 	text-decoration: none;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
-	
+
 	@include hover(focus) {
-		background: var(--button-bg-accent);
-		border-color: var(--button-bg-accent);
-		color: var(--color-text-reverse);
+		background: var(--button-bg-hover);
+		color: var(--button-color-hover);
+	}
+
+	svg {
+		fill: currentColor;
 	}
 }
 
 %button--outline {
-	background: none;
-	color: var(--button-bg);
-	border-color: var(--button-bg);
-
-	@include hover(focus) {
-		background: var(--button-bg-accent);
-		color: var(--color-text-reverse);
-	}
-
-	@include chevron();
+	--button-bg: none;
+	--button-color: var(--button-border-color);
+	border: var(--button-border-thickness) solid var(--button-border-color);
 }
 
-%button--reverse {
-	background: var(--button-bg-accent);
-	border-color: var(--button-bg-accent);
+%button--disabled {
+	@extend %button--outline;
+	--button-color: var(--color-primary-light);
+	--button-color-hover: var(--button-color);
+	--button-border-color: var(--button-color);
+	--button-bg-hover: var(--button-bg);
+	cursor: default;
+}
 
-	@include hover(focus) {
-		background: var(--button-bg);
-		border-color: var(--button-bg);
-	}
+%button--box {
+	min-height: var(--button-height);
+	min-width: var(--button-height);
+	max-height: var(--button-height);
+	max-width: var(--button-height);
+	padding: unset;
 }
 
 %button--circle {
-	width: 2.75em;
-	height: 2.75em;
+	@extend %button--box;
 	border-radius: 50%;
-	padding: 0;
 }

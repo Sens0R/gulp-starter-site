@@ -3,6 +3,11 @@
 	@extend %text-preset-#{$value} !optional;
 }
 
+@mixin header-height($min, $max) {
+	width: clamp-smart($min, $max);
+	height: clamp-smart($min, $max);
+}
+
 // check for device input type
 @mixin device-input($type) {
 	@if $type == touch {
@@ -18,26 +23,26 @@
 	}
 }
 
-@mixin chevron($margin-left: 0.5em) {
+@mixin chevron($size: 0.5em, $margin-left: 0.3em) {
 	&:after {
 		--chevron-line: 2px solid currentColor;
-		--chevron-size: 0.5em;
 
 		content: '';
 		margin-left: $margin-left;
 		rotate: 135deg;
-		width: var(--chevron-size);
-		height: var(--chevron-size);
+		width: $size;
+		height: $size;
 		border-top: var(--chevron-line);
 		border-left: var(--chevron-line);
-		transition: translate var(--transition), scale var(--transition);
 		display: flex;
 		align-self: center;
+		justify-content: center;
+		transition: translate var(--transition-md), scale var(--transition-md);
 	}
 
 	@include hover(focus) {
 		&:after {
-			translate: 0.188rem;
+			translate: 2px;
 			scale: 1.15;
 		}
 	}
@@ -59,10 +64,10 @@
 }
 
 // Invisible space for better link and button selecting
-@mixin link-space($size: 44px, $width: 100%, $height: 100%) {
+@mixin target-size($size: 44px, $width: 100%, $height: 100%) {
 	position: relative;
 
-	&::after {
+	&::before {
 		content: '';
 		position: absolute;
 		display: block;

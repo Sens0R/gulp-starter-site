@@ -1,5 +1,7 @@
-export const sm = 576;
+export const sm = 640;
 export const md = 768;
-export const lg = 992;
-export const xl = 1200;
+export const lg = 1024;
+export const xl = 1280;
 export const xxl = 1400;
+export const xxxl = 1536;
+

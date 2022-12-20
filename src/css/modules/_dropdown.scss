@@ -7,10 +7,10 @@
 	left: 50%;
 	visibility: hidden;
 	opacity: 0;
-	transition: var(--transition-duration) ease-in-out;
+	transition: var(--transition-sm);
 	overflow: hidden;
 	background-color: var(--color-bg);
-	box-shadow: 0 0 10px 0 rgba(0 0 0 / 0.12);
+	box-shadow: var(--shadow);
 	translate: -50% -10px;
 }
 
@@ -28,11 +28,11 @@
 
 .dropdown__button {
 	align-items: center;
-	@include link-space();
+	@include target-size();
 }
 
 .dropdown__button:focus-visible {
-	transition: var(--transition);
+	transition: var(--transition-md);
 
 	.icon {
 		fill: var(--color-accent);
@@ -41,7 +41,7 @@
 }
 
 .dropdown .icon {
-	transition: var(--transition);
+	transition: var(--transition-md);
 	fill: var(--color-text-primary);
 }
 
@@ -51,7 +51,7 @@
 
 // a11y fix for desktop screen resize. TODO better solution possible?
 @include device-input(mouse) {
-	.navigation.active .dropdown__content {
+	.hamburger.active .dropdown__content {
 		visibility: visible;
 		opacity: 1;
 	}

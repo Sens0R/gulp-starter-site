@@ -1,5 +1,11 @@
 @import 'swiper/swiper.scss';
 
+:root {
+	--swiper-disabled-color: var(--color-primary-light);
+	--bullet-size: #{clamp-smart(3px, 5px)};
+	--bullet-gap: var(--space-3);
+}
+
 // optional for slides with shadows
 .swiper-shadow-container {
 	overflow: hidden;
@@ -29,21 +35,13 @@
 }
 
 .swiper-button {
-	cursor: pointer;
-	min-width: auto !important;
-	padding: var(--space-3) !important;
+	@include button;
+	@include button--box;
 }
+
 
 .swiper-button-disabled {
-	--swiper-disabled-color: var(--color-primary-light);
-
-	background: unset !important;
-	border-color: var(--swiper-disabled-color) !important;
-	cursor: unset;
-}
-
-.swiper-button-disabled .icon {
-	fill: var(--swiper-disabled-color);
+	@include button--disabled;
 }
 
 /* ====================		PAGINATION		==================== */
@@ -51,20 +49,18 @@
 .swiper-pagination-horizontal {
 	display: flex;
 	justify-content: center;
-	gap: var(--space-2);
+	gap: var(--bullet-gap);
 }
 
 .swiper-pagination-bullet {
-	width: 0.75rem;
-	height: 0.75rem;
+	@include target-size(calc(var(--bullet-size) + var(--bullet-gap)));
+	padding: var(--bullet-size);
 	border-radius: 50%;
-	background: var(--color-primary-light);
-	transition: var(--transition);
-	scale: 0.66;
+	background: var(--swiper-disabled-color);
+	transition: var(--transition-md);
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
-	@include link-space();
 	@include hover(focus) {
 		cursor: pointer;
 		scale: 1.33;
@@ -72,6 +68,7 @@
 }
 
 .swiper-pagination-bullet-active {
-	background: var(--color-primary);
+	background: var(--color-primary-dark);
 	scale: 1;
+	cursor: default;
 }

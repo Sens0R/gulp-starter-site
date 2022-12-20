@@ -1,111 +1,116 @@
 const defaultOptions = {
-  mainElement: '[data-hamburger]',
-  togglerOpen: '[data-hamburger-button="open"]',
-  togglerClose: '[data-hamburger-button="close"]',
-  aria: 'navigation',
-  breakpoint: 1200,
+	mainElement: '[data-hamburger]',
+	togglerOpen: '[data-hamburger-button="open"]',
+	togglerClose: '[data-hamburger-button="close"]',
+	aria: 'navigation',
+	breakpoint: 1024,
 }
 
 /*  ---------------------- RUN  -------------------------- */
 
 export function hamburger(userOptions) {
-  let options = defaultOptions
-  let mainElement
+	let options = defaultOptions
+	let mainElement
 
-  userOptions && 'mainElement' in userOptions
-    ? (mainElement = document.querySelector(userOptions.mainElement))
-    : (mainElement = document.querySelector(defaultOptions.mainElement))
+	userOptions && 'mainElement' in userOptions
+		? (mainElement = document.querySelector(userOptions.mainElement))
+		: (mainElement = document.querySelector(defaultOptions.mainElement))
 
-  if (userOptions) options = { ...defaultOptions, ...userOptions }
-  // destructor
-  let { togglerOpen, togglerClose, aria, breakpoint } = options
+	if (userOptions) options = { ...defaultOptions, ...userOptions }
 
-  const createBackdrop = document.createElement('div')
-  createBackdrop.classList.add('navigation__backdrop')
-  mainElement.after(createBackdrop)
-  const backdrop = document.querySelector('.navigation__backdrop')
+	let { togglerOpen, togglerClose, aria, breakpoint } = options
 
-  togglerOpen = document.querySelector(togglerOpen)
-  togglerClose = document.querySelector(togglerClose)
+	const createBackdrop = document.createElement('div')
+	createBackdrop.classList.add('hamburger__backdrop')
+	mainElement.after(createBackdrop)
+	const backdrop = document.querySelector('.hamburger__backdrop')
 
-  if (aria) {
-    mainElement.id = aria
-    togglerOpen.setAttribute('aria-label', `Open ${aria}`)
-    togglerOpen.setAttribute('aria-controls', aria)
-    togglerOpen.setAttribute('aria-haspopup', 'dialog')
-    togglerClose.setAttribute('aria-label', `Close ${aria}`)
-  }
+	togglerOpen = document.querySelector(togglerOpen)
+	togglerClose = document.querySelector(togglerClose)
 
-  const focusableElements = Array.from(
-    mainElement.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
-  )
+	if (aria) {
+		mainElement.id = aria
+		togglerOpen.setAttribute('aria-label', `Open ${aria}`)
+		togglerOpen.setAttribute('aria-controls', aria)
+		togglerOpen.setAttribute('aria-haspopup', 'dialog')
+		togglerClose.setAttribute('aria-label', `Close ${aria}`)
+	}
 
-  const firstFocusableElement = focusableElements.at(0)
-  const lastFocusableElement = focusableElements.at(-1)
+	const focusableElements = Array.from(
+		mainElement.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+	)
 
-  mainElement.classList.add('transition-stop')
-  togglerOpen.addEventListener('click', open)
-  togglerClose.addEventListener('click', close)
-  backdrop.addEventListener('click', close)
-  togglerOpen.addEventListener('keydown', focusTrap)
+	const firstFocusableElement = focusableElements.at(0)
+	const lastFocusableElement = focusableElements.at(-1)
 
-  // media
-  if (breakpoint) {
-    const watchBreakpoint = window.matchMedia(`(max-width: ${breakpoint}px)`)
-    watchBreakpoint.onchange = e => {
-      if (mainElement.classList.contains('active') && !e.matches) {
-        mainElement.classList.add('transition-stop')
-        backdrop.remove()
-        close()
-        return
-      }
+	mainElement.classList.add('transition-stop')
+	togglerOpen.addEventListener('click', open)
+	togglerClose.addEventListener('click', close)
+	backdrop.addEventListener('click', close)
+	togglerOpen.addEventListener('keydown', focusTrap)
 
-      mainElement.after(createBackdrop)
-    }
-  }
+	// media
+	if (breakpoint) {
+		const watchBreakpoint = window.matchMedia(`(max-width: ${breakpoint}px)`)
+		watchBreakpoint.onchange = e => {
+			if (mainElement.classList.contains('active') && !e.matches) {
+				mainElement.classList.add('transition-stop')
+				backdrop.remove()
+				close()
+				return
+			}
 
-  /* ====================   FUNCTIONS   ==================== */
+			mainElement.after(createBackdrop)
+		}
+	}
 
-  function open() {
-    document.addEventListener('keydown', closeWithEsc)
-    mainElement.classList.add('active')
-    mainElement.setAttribute('aria-modal', 'true')
-    mainElement.setAttribute('role', 'dialog')
-    mainElement.classList.remove('transition-stop')
-    backdrop.classList.add('active')
-  }
+	const breakpointValue = getComputedStyle(togglerOpen)
+	console.log(breakpointValue)
 
-  function close() {
-    document.removeEventListener('keydown', closeWithEsc)
-    mainElement.classList.remove('active')
-    mainElement.removeAttribute('aria-modal')
-    mainElement.removeAttribute('role')
-    mainElement.addEventListener('transitionend', () => mainElement.classList.add('transition-stop'), { once: true })
-    backdrop.classList.remove('active')
-  }
+	/* ====================   FUNCTIONS   ==================== */
 
-  function focusTrap() {
-    mainElement.addEventListener('transitionend', () => firstFocusableElement.focus(), {
-      once: true,
-    })
+	function open() {
+		document.addEventListener('keydown', closeWithEsc)
+		mainElement.classList.add('active')
+		mainElement.setAttribute('aria-modal', 'true')
+		mainElement.setAttribute('role', 'dialog')
+		mainElement.classList.remove('transition-stop')
+		backdrop.classList.add('active')
+		document.body.style.overflow = 'hidden'
+	}
 
-    mainElement.addEventListener('keydown', e => {
-      if (e.code === 'Tab') {
-        if (e.shiftKey && document.activeElement === firstFocusableElement) {
-          e.preventDefault()
-          lastFocusableElement.focus()
-        } else if (!e.shiftKey && document.activeElement === lastFocusableElement) {
-          e.preventDefault()
-          firstFocusableElement.focus()
-        }
-      }
-    })
-  }
+	function close() {
+		document.removeEventListener('keydown', closeWithEsc)
+		mainElement.classList.remove('active')
+		mainElement.removeAttribute('aria-modal')
+		mainElement.removeAttribute('role')
+		mainElement.addEventListener('transitionend', () => mainElement.classList.add('transition-stop'), { once: true })
+		backdrop.classList.remove('active')
+		document.body.style.overflow = null
+	}
 
-  function closeWithEsc(e) {
-    if (e.code === 'Escape') {
-      close()
-      togglerOpen.focus()
-    }
-  }
+	function focusTrap() {
+		mainElement.addEventListener('transitionend', () => firstFocusableElement.focus(), {
+			once: true,
+		})
+
+		mainElement.addEventListener('keydown', e => {
+			if (e.code === 'Tab') {
+				if (e.shiftKey && document.activeElement === firstFocusableElement) {
+					e.preventDefault()
+					lastFocusableElement.focus()
+				} else if (!e.shiftKey && document.activeElement === lastFocusableElement) {
+					e.preventDefault()
+					firstFocusableElement.focus()
+				}
+			}
+		})
+	}
+
+	function closeWithEsc(e) {
+		if (e.code === 'Escape') {
+			close()
+			togglerOpen.focus()
+		}
+	}
 }
