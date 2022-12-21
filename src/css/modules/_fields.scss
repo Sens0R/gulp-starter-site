@@ -1,5 +1,5 @@
 form {
-	--input-height: var(--target-size-em);
+	--input-height: var(--target-size);
 	--input-space: 0.75em;
 	--input-border-color-focus: var(--color-accent);
 	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
@@ -11,7 +11,7 @@ textarea {
 	border: var(--border);
 	background: var(--color-bg-body);
 	transition: border-color var(--transition-md), box-shadow var(--transition-md);
-	
+
 	&:focus-within {
 		border-color: var(--input-border-color-focus);
 		box-shadow: var(--input-focus-shadow);
@@ -34,11 +34,6 @@ textarea {
 	flex-direction: column;
 	gap: var(--space-3);
 
-	&__input {
-		margin-top: var(--space-1);
-		width: 100%;
-	}
-
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -48,27 +43,31 @@ textarea {
 	&__label {
 		@include text-preset(3);
 	}
+
+	&__input {
+		margin-top: var(--space-1);
+		width: 100%;
+	}
 }
 
 .search {
 	display: flex;
-	width: 100%;
 	gap: var(--space-2);
 }
 
-.search__input {
-	transition: max-width var(--transition-lg);
-	width: 100%;
+@include bp(sm) {
+	.search {
+		width: 100%;
+	}
 
-	@include bp(sm) {
+	.search__input {
+		transition: max-width var(--transition-lg);
 		max-width: 120px;
 	}
-}
 
-.search__input:focus-within {
-	--input-focus-shadow: unset;
-
-	max-width: clamp-smart(250px, 400px);
+	.search__input:focus-within {
+		max-width: clamp-smart(250px, 400px);
+	}
 }
 
 .search__input:focus-within::placeholder {
@@ -78,9 +77,4 @@ textarea {
 .search__button {
 	@include button;
 	@include button--box;
-	@include button--outline;
-}
-
-.search__button[disabled] {
-	@include button--disabled;
 }

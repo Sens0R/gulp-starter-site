@@ -64,9 +64,6 @@ export function hamburger(userOptions) {
 		}
 	}
 
-	const breakpointValue = getComputedStyle(togglerOpen)
-	console.log(breakpointValue)
-
 	/* ====================   FUNCTIONS   ==================== */
 
 	function open() {

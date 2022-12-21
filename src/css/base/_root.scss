@@ -11,7 +11,7 @@
 	--primary-hue: 201;
 	--primary-saturation: 100%;
 	--primary-lightness: 37%;
-	--lighten: 12%;
+	--lighten: 15%;
 	--darken: 8%;
 
 	// basic colors
@@ -84,7 +84,7 @@
 */	
 	--header-height: clamp-smart(2.75rem, 3.75rem);
 	// buttons, inputs;
-	--target-size-em: 2.75em;
+	--target-size: 2.75em;
 
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
@@ -92,7 +92,7 @@
 	--space-container: var(--space-3);
 
 	// borders
-	--border-color: var(--color-primary-light);
+	--border-color: var(--color-primary);
 	--border-thickness: 1px;
 	--border-radius: 1rem;
 	--border: var(--border-thickness) solid var(--border-color);

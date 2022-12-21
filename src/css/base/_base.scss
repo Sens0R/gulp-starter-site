@@ -109,6 +109,10 @@ input[type='submit'] {
 	user-select: none;
 }
 
+button[disabled] {
+	pointer-events: none !important;
+}
+
 a,
 [role='link'],
 button,
