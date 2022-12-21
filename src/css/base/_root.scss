@@ -8,9 +8,10 @@
 	// @include map-scss-vars-into-css-vars($colors, '--color');
 
 	// brand color (primary)
-	--primary-hue: 201;
-	--primary-saturation: 100%;
-	--primary-lightness: 37%;
+	--h: 201;
+	--s: 100%;
+	--l: 37%;
+	--hsl: var(--h) var(--s) var(--l);
 	--darken: 8%;
 
 	// basic colors
@@ -18,16 +19,13 @@
 	--color-black: hsl(0, 5%, 15%);
 
 	// color scheme light
-	--color-primary: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
+	--color-primary: hsl(var(--hsl));
 
-	--color-primary-dark: hsl(
-		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - var(--darken))
-	);
+	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
 
-	--color-surface: hsl(var(--primary-hue) var(--primary-saturation) 97%);
+	--color-surface: hsl(var(--h) var(--s) 97%);
 
 	--color-accent: var(--color-primary);
-	--color-disabled: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 0.65);
 
 	// background
 	--color-bg: var(--color-white);
@@ -36,8 +34,8 @@
 	--color-bg-footer: var(--color-surface);
 
 	// text
-	--color-text-primary: hsl(var(--primary-hue) 100% 15%);
-	--color-text-secondary: hsl(var(--primary-hue) 20% 45%);
+	--color-text-primary: hsl(var(--h) 100% 15%);
+	--color-text-secondary: hsl(var(--h) 20% 45%);
 	--color-text-reverse: var(--color-white);
 
 	// feedback
@@ -76,7 +74,7 @@
 |--------------------------------------------------------------------------
 |	STRUCTURE
 |--------------------------------------------------------------------------
-*/	
+*/
 	--header-height: clamp-smart(2.75rem, 3.75rem);
 	// buttons, inputs;
 	--target-size: 2.75em;
@@ -93,18 +91,11 @@
 	--border: var(--border-thickness) solid var(--border-color);
 
 	// shadows
-	--shadow-alpha: 0.12;
-	--shadow-color: hsla(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / var(--shadow-alpha));
-	--shadow-spread: 1rem;
-	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
+	--shadow-color: hsla(var(--hsl) / 0.12);
+	--shadow: 0 0 1rem var(--shadow-color);
 
 	// transitions
 	--transition-sm: 0.15s ease-in-out;
 	--transition-md: 0.225s ease-out;
 	--transition-lg: 0.3s ease-in-out;
-
-	// z-index
-	--z-tooltip: 500;
-	--z-dropdown: 400;
-	--z-dialog: 300;
 }

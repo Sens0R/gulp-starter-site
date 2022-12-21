@@ -1,63 +1,63 @@
 .tooltip {
-  position: absolute;
-  visibility: hidden;
-  padding: 0.375rem 0.625rem;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  z-index: var(--z-tooltip);
-  opacity: 0;
+	position: absolute;
+	visibility: hidden;
+	padding: 0.375rem 0.625rem;
+	color: var(--color-white);
+	background-color: var(--color-black);
+	z-index: 500;
+	opacity: 0;
 }
 
 .tooltip.active {
-  transition: var(--transition-md) 0.6s;
-  visibility: visible;
-  opacity: 1;
+	transition: var(--transition-md) 0.6s;
+	visibility: visible;
+	opacity: 1;
 }
 
 [data-tooltip='bottom'] .tooltip {
-  left: 50%;
-  bottom: -0.5rem;
-  translate: -50% 100%;
+	left: 50%;
+	bottom: -0.5rem;
+	translate: -50% 100%;
 }
 
 [data-tooltip='top'] .tooltip {
-  left: 50%;
-  top: -0.5rem;
-  translate: -50% -100%;
+	left: 50%;
+	top: -0.5rem;
+	translate: -50% -100%;
 }
 
 [data-tooltip='bottom-left'] .tooltip {
-  left: 0;
-  bottom: -0.5rem;
-  translate: 0 100%;
+	left: 0;
+	bottom: -0.5rem;
+	translate: 0 100%;
 }
 
 [data-tooltip='bottom-right'] .tooltip {
-  right: 0;
-  bottom: -0.5rem;
-  translate: 0 100%;
+	right: 0;
+	bottom: -0.5rem;
+	translate: 0 100%;
 }
 
 [data-tooltip='top-right'] .tooltip {
-  right: 0;
-  top: -0.5rem;
-  translate: 0 -100%;
+	right: 0;
+	top: -0.5rem;
+	translate: 0 -100%;
 }
 
 [data-tooltip='top-left'] .tooltip {
-  left: 0;
-  top: -0.5rem;
-  translate: 0 -100%;
+	left: 0;
+	top: -0.5rem;
+	translate: 0 -100%;
 }
 
 [data-tooltip='left'] .tooltip {
-  left: -0.5rem;
-  top: 50%;
-  translate: -100% -50%;
+	left: -0.5rem;
+	top: 50%;
+	translate: -100% -50%;
 }
 
 [data-tooltip='right'] .tooltip {
-  right: -0.5rem;
-  top: 50%;
-  translate: 100% -50%;
+	right: -0.5rem;
+	top: 50%;
+	translate: 100% -50%;
 }
