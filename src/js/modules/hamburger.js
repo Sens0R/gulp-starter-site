@@ -73,7 +73,7 @@ export function hamburger(userOptions) {
 		mainElement.setAttribute('role', 'dialog')
 		mainElement.classList.remove('transition-stop')
 		backdrop.classList.add('active')
-		//document.body.style.overflow = 'hidden'
+		document.body.style.overflow = 'hidden'
 	}
 
 	function close() {
@@ -83,7 +83,7 @@ export function hamburger(userOptions) {
 		mainElement.removeAttribute('role')
 		mainElement.addEventListener('transitionend', () => mainElement.classList.add('transition-stop'), { once: true })
 		backdrop.classList.remove('active')
-		//document.body.style.overflow = null
+		document.body.style.overflow = null
 	}
 
 	function focusTrap() {

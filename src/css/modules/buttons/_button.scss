@@ -44,13 +44,10 @@
 	border: var(--button-border-thickness) solid var(--button-color);
 }
 
-// button states - one per use
+// button states
 %button--disabled {
 	pointer-events: none;
-}
-
-.button.button--disabled.button--outline {
-	--button-color: var(--color-disabled);
+	filter: opacity(65%);
 }
 
 // button shapes - one per use

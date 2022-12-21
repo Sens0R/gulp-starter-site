@@ -27,7 +27,7 @@
 	--color-surface: hsl(var(--primary-hue) var(--primary-saturation) 97%);
 
 	--color-accent: var(--color-primary);
-	--color-disabled: hsl(var(--primary-hue) 40% 40%);
+	--color-disabled: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness) / 0.65);
 
 	// background
 	--color-bg: var(--color-white);
