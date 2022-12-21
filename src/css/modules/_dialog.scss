@@ -3,28 +3,28 @@
 }
 
 .dialog {
-	z-index: 400;
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	translate: -50% -50%;
+	visibility: hidden;
+	opacity: 0;
+	scale: 0;
+	overflow: auto;
+	overscroll-behavior: contain;
+	z-index: 400;
+
+	min-width: 280px;
+	max-width: 35rem;
+	max-height: 85vh;
+
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-3);
 	padding: var(--space-3);
-	border: var(--border-thickness) solid var(--color-black);;
+	border: var(--border-thickness) solid var(--color-black);
 	background: var(--color-bg);
 	box-shadow: var(--backdrop-shadow);
-	overflow: auto;
-	overscroll-behavior: contain;
-	visibility: hidden;
-	opacity: 0;
-
-	min-width: 300px;
-	max-width: 35rem;
-	max-height: 85vh;
-
-	scale: 0;
-	translate: -50% -50%;
 	transition: var(--dialog-transition);
 }
 
@@ -39,8 +39,6 @@
 	scale: 1;
 }
 
-
-
 .dialog__header {
 	display: flex;
 	align-items: center;
@@ -48,9 +46,7 @@
 }
 
 .dialog__title {
-	font-size: var(--fs-5);
-	color: var(--color-primary);
-	font-weight: var(--fw-bold);
+	@include text-preset(3);
 }
 
 .dialog__controls {
@@ -59,15 +55,7 @@
 	gap: var(--space-2);
 }
 
-.dialog__close-icon {
-	width: 1.25rem;
-	height: 1.25rem;
-}
-/* ====================   DIALOG BACKDROP   ==================== */
-
 .dialog__backdrop {
-	background: var(--backdrop);
-	transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
 	z-index: 400;
 	position: fixed;
 	top: 0;
@@ -76,9 +64,11 @@
 	height: 100%;
 	visibility: hidden;
 	opacity: 0;
+	background: var(--backdrop);
+	transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
 }
 
 .dialog__backdrop.active {
-	opacity: 1;
 	visibility: visible;
+	opacity: 1;
 }

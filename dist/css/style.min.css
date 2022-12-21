@@ -5434,7 +5434,7 @@ input[type=search]::-webkit-search-cancel-button {
   text-transform: uppercase;
 }
 
-.contact-form__label, .accordion__button, .link-box, .footer-nav__subtitle, .header-nav__link, .text-preset-3 {
+.contact-form__label, .dialog__title, .accordion__button, .link-box, .footer-nav__subtitle, .header-nav__link, .text-preset-3 {
   font-size: var(--fs-md);
   font-weight: var(--fw-bold);
   line-height: var(--lh-sm);
@@ -6366,10 +6366,20 @@ a:focus-visible,
 }
 
 .dialog {
-  z-index: 400;
   position: fixed;
   top: 50%;
   left: 50%;
+  translate: -50% -50%;
+  visibility: hidden;
+  opacity: 0;
+  scale: 0;
+  overflow: auto;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
+  z-index: 400;
+  min-width: 280px;
+  max-width: 35rem;
+  max-height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6383,16 +6393,6 @@ a:focus-visible,
   background: var(--color-bg);
   -webkit-box-shadow: var(--backdrop-shadow);
           box-shadow: var(--backdrop-shadow);
-  overflow: auto;
-  -ms-scroll-chaining: none;
-      overscroll-behavior: contain;
-  visibility: hidden;
-  opacity: 0;
-  min-width: 300px;
-  max-width: 35rem;
-  max-height: 85vh;
-  scale: 0;
-  translate: -50% -50%;
   -webkit-transition: var(--dialog-transition);
   -o-transition: var(--dialog-transition);
   transition: var(--dialog-transition);
@@ -6421,12 +6421,6 @@ a:focus-visible,
           justify-content: space-between;
 }
 
-.dialog__title {
-  font-size: var(--fs-5);
-  color: var(--color-primary);
-  font-weight: var(--fw-bold);
-}
-
 .dialog__controls {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6437,17 +6431,7 @@ a:focus-visible,
   gap: var(--space-2);
 }
 
-.dialog__close-icon {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-/* ====================   DIALOG BACKDROP   ==================== */
 .dialog__backdrop {
-  background: var(--backdrop);
-  -webkit-transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
-  -o-transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
-  transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
   z-index: 400;
   position: fixed;
   top: 0;
@@ -6456,11 +6440,15 @@ a:focus-visible,
   height: 100%;
   visibility: hidden;
   opacity: 0;
+  background: var(--backdrop);
+  -webkit-transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
+  -o-transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
+  transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
 }
 
 .dialog__backdrop.active {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 .dropdown {

@@ -81,7 +81,6 @@
 
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
-
 	--space-container: var(--space-3);
 
 	// backdrop 
