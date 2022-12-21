@@ -53,7 +53,7 @@ export function dialog() {
     const lastFocusableEl = focusableElArr.at(-1)
 
     const createBackdrop = document.createElement('div')
-    createBackdrop.classList.add('dialog-backdrop')
+    createBackdrop.classList.add('dialog__backdrop')
     dialogEl.before(createBackdrop)
     const backdrop = dialogEl.previousElementSibling
     backdrop.addEventListener('click', closeDialog)
