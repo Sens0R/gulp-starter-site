@@ -13,9 +13,9 @@
 		visibility: hidden;
 		min-width: 275px;
 		width: auto;
-		height: 100vh;
+		height: 100%;
 		z-index: 1;
-		padding: 0 var(--space-container);
+		padding: 0 var(--space-container) var(--space-container);
 		background-color: var(--color-bg);
 		translate: 100%;
 		transition: var(--transition-md);

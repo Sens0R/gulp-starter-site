@@ -8,13 +8,13 @@
 * <a href="#" data-tooltip="top-right" aria-label="Tooltip text"></a>
 */
 
-let mobileDevice
-if (window.matchMedia('(pointer: coarse)').matches) mobileDevice = true
+let touchDevice
+if (window.matchMedia('(pointer: coarse)').matches) touchDevice = true
 
 const tooltipsArr = document.querySelectorAll('[data-tooltip]')
 
 export function tooltip() {
-  if (mobileDevice) return
+  if (touchDevice) return
   tooltipsArr.forEach(tooltipTarget => {
     let tooltipEl
     const tooltipTargetHasValue = tooltipTarget.getAttribute('data-tooltip')

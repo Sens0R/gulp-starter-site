@@ -61,7 +61,7 @@ export function dialog() {
     openButtonEl.addEventListener('click', () => {
       topLevelOpenButtons.push(openButtonEl)
       topLevelOpenButton = topLevelOpenButtons.at(-1)
-
+		//document.body.style.overflow = 'hidden';
       activeDialogs.push(dialogEl)
       topLevelDialog = activeDialogs.at(-1)
       topLevelDialog.classList.add('active')

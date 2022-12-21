@@ -107,6 +107,7 @@ input[type='submit'] {
 	cursor: pointer;
 	background: unset;
 	user-select: none;
+	display: inline-flex;
 }
 
 button[disabled] {
@@ -124,7 +125,11 @@ select,
 textarea {
 	border: none;
 	border-radius: 0;
-	display: inline-flex;
+}
+
+a,
+[role='link'] {
+	display: inline-block;
 }
 
 img {
@@ -132,6 +137,7 @@ img {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	background: hsl(0, 0%, 50%);
 }
 
 ul,

@@ -11,7 +11,6 @@
 	--primary-hue: 201;
 	--primary-saturation: 100%;
 	--primary-lightness: 37%;
-	--lighten: 15%;
 	--darken: 8%;
 
 	// basic colors
@@ -21,28 +20,24 @@
 	// color scheme light
 	--color-primary: hsl(var(--primary-hue) var(--primary-saturation) var(--primary-lightness));
 
-	--color-primary-light: hsl(
-		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) + var(--lighten))
-	);
-
-	--color-primary-light-1: hsl(var(--primary-hue) var(--primary-saturation) 97%);
-
 	--color-primary-dark: hsl(
 		var(--primary-hue) var(--primary-saturation) calc(var(--primary-lightness) - var(--darken))
 	);
 
+	--color-surface: hsl(var(--primary-hue) var(--primary-saturation) 97%);
+
 	--color-accent: var(--color-primary);
+	--color-disabled: hsl(var(--primary-hue) 40% 40%);
 
 	// background
 	--color-bg: var(--color-white);
 	--color-bg-body: var(--color-bg);
 	--color-bg-header: var(--color-bg);
-	--color-bg-footer: var(--color-primary-light-1);
+	--color-bg-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--primary-hue) 100% 15%);
 	--color-text-secondary: hsl(var(--primary-hue) 20% 45%);
-
 	--color-text-reverse: var(--color-white);
 
 	// feedback

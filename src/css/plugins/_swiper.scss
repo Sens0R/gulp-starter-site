@@ -1,7 +1,7 @@
 @import 'swiper/swiper.scss';
 
 :root {
-	--swiper-disabled-color: var(--color-primary-light);
+	--swiper-disabled-color: var(--color-primary-dark);
 	--bullet-size: #{clamp-smart(3px, 5px)};
 	--bullet-gap: var(--space-3);
 }

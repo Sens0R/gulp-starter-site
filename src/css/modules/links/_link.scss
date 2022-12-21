@@ -17,7 +17,7 @@ a,
 
 %link-title {
 	--link-color: var(--color-accent);
-	--link-color-hover: var(--color-primary-light);
+	--link-color-hover: var(--color-primary-dark);
 
 	text-decoration: none;
 }
@@ -27,5 +27,6 @@ a,
 	@include target-size;
 	@include text-preset(3);
 	@include chevron;
+	display: inline-flex;
 	text-transform: uppercase;
 }

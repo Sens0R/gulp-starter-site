@@ -22,6 +22,7 @@
 	background: var(--button-bg);
 	transition: var(--button-transition);
 	text-decoration: none;
+	display: inline-flex;
 	text-align: center;
 	justify-content: center;
 	align-items: center;
@@ -40,14 +41,16 @@
 %button--outline {
 	--button-bg: none;
 	--button-color: var(--button-border-color);
-	border: var(--button-border-thickness) solid var(--button-border-color);
+	border: var(--button-border-thickness) solid var(--button-color);
 }
 
+// button states - one per use
 %button--disabled {
-	@extend %button--outline;
-	--button-color: var(--color-primary-light);
-	--button-border-color: var(--button-color);
 	pointer-events: none;
+}
+
+.button.button--disabled.button--outline {
+	--button-color: var(--color-disabled);
 }
 
 // button shapes - one per use

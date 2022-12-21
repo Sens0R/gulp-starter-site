@@ -14,8 +14,8 @@
 * </div>
 */
 
-let mobileDevice
-if (window.matchMedia('(pointer: coarse)').matches) mobileDevice = true
+let touchDevice
+if (window.matchMedia('(pointer: coarse)').matches) touchDevice = true
 
 const dropdownsArr = document.querySelectorAll('[data-dropdown]')
 
@@ -38,9 +38,9 @@ export function dropdown() {
 
 		dropdownButton.setAttribute('aria-expanded', 'false')
 
-		if (mobileDevice) dropdownContent.style.maxHeight = 0
+		if (touchDevice) dropdownContent.style.maxHeight = 0
 
-		if (dropdownEl.dataset.dropdown === 'hover' && !mobileDevice) {
+		if (dropdownEl.dataset.dropdown === 'hover' && !touchDevice) {
 			dropdownEl.addEventListener('mouseenter', toggle)
 			dropdownEl.addEventListener('mouseleave', close)
 		}
@@ -80,10 +80,10 @@ export function dropdown() {
 
 		function toggle() {
 			if (dropdownEl.classList.contains('active')) return close()
-			if (mobileDevice) dropdownContent.style.maxHeight = `${dropdownContent.scrollHeight}px`
+			if (touchDevice) dropdownContent.style.maxHeight = `${dropdownContent.scrollHeight}px`
 
 			//nested dropdown
-			if (parentContentEl & mobileDevice) {
+			if (parentContentEl & touchDevice) {
 				parentContentEl.style.maxHeight = `${dropdownContent.scrollHeight + parentContentEl.scrollHeight}px`
 				parentContentEl.style.overflow = 'visible'
 			}
@@ -99,7 +99,7 @@ export function dropdown() {
 		}
 
 		function close() {
-			if (mobileDevice) {
+			if (touchDevice) {
 				dropdownContent.style.maxHeight = 0
 				dropdownContent.style.overflow = null
 			}
