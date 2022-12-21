@@ -25,7 +25,7 @@
 		overflow: hidden auto;
 		visibility: visible;
 		translate: none;
-		box-shadow: 0 0 2rem 1rem rgba(0 0 0 / 0.1);
+		box-shadow: var(--backdrop-shadow);
 	}
 
 	.hamburger__header {
@@ -80,7 +80,7 @@
 	width: 100vw;
 	inset: 0;
 	position: fixed;
-	background: rgba(0 0 0 / 0.5);
+	background: var(--backdrop);
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity var(--transition-md), visibility var(--transition-md);

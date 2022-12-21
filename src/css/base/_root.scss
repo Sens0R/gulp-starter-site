@@ -84,6 +84,10 @@
 
 	--space-container: var(--space-3);
 
+	// backdrop 
+	--backdrop: rgb(0 0 0 / 0.5);
+	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
+
 	// borders
 	--border-color: var(--color-primary);
 	--border-thickness: 1px;
