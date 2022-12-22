@@ -1,7 +1,7 @@
 a,
 [role='link'] {
 	--link-transition: var(--transition-sm);
-	--link-color: var(--color-text-primary);
+	--link-color: var(--color-text-secondary);
 	--link-color-hover: var(--color-accent);
 }
 
@@ -17,16 +17,14 @@ a,
 
 %link-title {
 	--link-color: var(--color-accent);
-	--link-color-hover: var(--color-primary-dark);
-
 	text-decoration: none;
 }
 
 %link-box {
-	@extend %link-title;
-	@include target-size;
+	@include target-space;
 	@include text-preset(3);
 	@include chevron;
 	display: inline-flex;
 	text-transform: uppercase;
+	text-decoration: none;
 }

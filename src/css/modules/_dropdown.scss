@@ -4,20 +4,18 @@
 
 .dropdown__content {
 	position: absolute;
-	left: 50%;
 	visibility: hidden;
 	opacity: 0;
 	transition: var(--transition-sm);
 	overflow: hidden;
 	background-color: var(--color-bg);
 	box-shadow: var(--shadow);
-	translate: -50% -10px;
+	margin: auto;
 }
 
 .dropdown.active .dropdown__content {
 	visibility: visible;
 	opacity: 1;
-	translate: -50% 0;
 }
 
 .dropdown__controls {
@@ -28,7 +26,7 @@
 
 .dropdown__button {
 	align-items: center;
-	@include target-size();
+	@include target-space();
 }
 
 .dropdown__button:focus-visible {

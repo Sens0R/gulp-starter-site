@@ -23,7 +23,7 @@ body {
 	line-height: var(--lh-md);
 	font-family: var(--ff-primary);
 	text-underline-offset: var(--underline-offset);
-	color: var(--color-text-primary);
+	color: var(--color-text-secondary);
 	background: var(--color-bg-body);
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
@@ -81,6 +81,7 @@ h6,
 .h6 {
 	line-height: var(--lh-sm);
 	font-weight: var(--fw-bold);
+	color: var(--color-text-primary);
 }
 
 hr {
@@ -88,7 +89,6 @@ hr {
 	background-color: var(--color-primary);
 	width: 100%;
 	min-height: var(--border-thickness);
-	border-radius: 100vmax;
 	margin: 0 auto;
 }
 
@@ -126,6 +126,7 @@ textarea {
 	border: none;
 	border-radius: 0;
 }
+
 
 a,
 [role='link'] {

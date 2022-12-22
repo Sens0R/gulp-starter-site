@@ -4,7 +4,6 @@
 	left: 0;
 	z-index: 50;
 	box-shadow: none;
-	transition: var(--transition-md);
 	background: var(--color-bg-header);
 }
 
@@ -12,7 +11,7 @@
 }
 
 .headroom_not-top {
-	box-shadow: var(--shadow);
+	border-bottom: 1px solid hsl(var(--hsl) / 0.15);
 }
 
 .header {
@@ -28,12 +27,12 @@
 
 // set header inner height with logo size
 .brand-logo--header {
-	@include header-height(44, 60);
+	height: clamp-smart(44, 60);
 }
 
 // set hamburger header inner height equal to logo size
 .hamburger__toggler {
-	@include header-height(44, 60);
+	height: clamp-smart(44, 60);
 }
 
 @import 'hamburger';

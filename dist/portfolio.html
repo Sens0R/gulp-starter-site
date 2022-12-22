@@ -19,21 +19,17 @@
 </head>
 
 
-<body>
+<body data-theme="light">
     
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="header-sticky-wrapper">
-    <header class="header container row"><!-- ====================   LOGO   ==================== -->
+    <header class="header container"><!-- ====================   LOGO   ==================== -->
 
-<a aria-label="Logo-name home. Logo-name logo." class="col-auto" href="index.html">
-	<svg aria-hidden="true" class="brand-logo brand-logo--header">
-		<use href="images/icons/sprite-multi.svg#logo" />
-	</svg>
-</a>
+<a aria-label="Logo-name home. Logo-name logo." class="button brand-logo brand-logo--header" href="index.html">Brand</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
-<nav aria-label="Main" class="hamburger col-auto" data-hamburger>
+<nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
 		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
 			<svg aria-hidden="true" class="hamburger__icon">
@@ -60,8 +56,8 @@
 
 		<li data-dropdown="hover" class="header-nav__item dropdown">
 			<div class="dropdown__controls">
-				<a data-nav-page href="services.html" class="header-nav__link">Services</a>
-				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
+				<a data-nav-page href="headers.html" class="header-nav__link">Services</a>
+				<button type="button" class="dropdown__button" aria-label="Dropdown menu for headers">
 					<svg aria-hidden="true" class="icon">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
 					</svg>
@@ -139,7 +135,7 @@
 </div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
-<button class="hamburger__toggler hamburger__toggler col-auto" data-hamburger-button="open" type="button">
+<button class="hamburger__toggler hamburger__toggler" data-hamburger-button="open" type="button">
 	<svg aria-hidden="true" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
@@ -162,10 +158,11 @@
 			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>
-						<a href="index.html" aria-label="Logo-name home. Logo-name logo.">
-							<svg aria-hidden="true" class="brand-logo brand-logo--large">
-								<use href="images/icons/sprite-multi.svg#logo"></use>
-							</svg>
+						<a
+							href="index.html"
+							class="button brand-logo brand-logo--large"
+							aria-label="Logo-name home. Logo-name logo."
+							>Brand
 						</a>
 					</li>
 				</ul>
@@ -282,7 +279,7 @@
 	<div data-dialog="two" class="dialog dialog--small">
 		<div class="dialog__header">
 			<p class="dialog__title">Dialog title</p>
-			<button data-dialog-close class="target-size" type="button" aria-label="close dialog">
+			<button data-dialog-close class="target-space" type="button" aria-label="close dialog">
 				<svg aria-hidden="true" class="icon">
 					<use href="images/icons/sprite-mono.svg#cancel"></use>
 				</svg>

@@ -3,6 +3,7 @@
 	--accordion-color: var(--color-accent);
 	--accordion-accent-color: var(--color-text-reverse);
 	--accordion-transition: var(--transition-lg);
+	--accordion-bg: var(--color-bg-primary);
 }
 
 [data-accordion-content] {
@@ -22,17 +23,17 @@
 }
 
 .accordion__item {
-	box-shadow: var(--shadow);
+	background: var(--accordion-bg);
 }
 
 .accordion__button.active {
 	background: var(--color-primary-dark);
 	color: var(--accordion-accent-color);
+}
 
-	.accordion__icon {
-		fill: var(--accordion-accent-color);
-		rotate: 180deg;
-	}
+.accordion__button.active .accordion__icon {
+	fill: var(--accordion-accent-color);
+	rotate: 180deg;
 }
 
 .accordion__button {
@@ -43,7 +44,6 @@
 	padding: var(--accordion-space);
 	color: var(--accordion-color);
 	transition: var(--transition-sm);
-	background: var(--color-bg);
 
 	@include hover(focus) {
 		background: var(--accordion-color);
@@ -61,8 +61,7 @@
 	transition: var(--accordion-transition);
 	gap: var(--space-3);
 	padding: 0 var(--accordion-space);
-	background: var(--color-bg-body);
-
+	
 	> :first-child {
 		margin-top: var(--accordion-space);
 	}
@@ -75,5 +74,5 @@
 .accordion__icon {
 	display: flex;
 	align-self: center;
-	transition: var(--accordion-transition);
+	transition: rotate var(--accordion-transition);
 }

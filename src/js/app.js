@@ -20,3 +20,43 @@ tooltip()
 tabs()
 accordion()
 dialog()
+
+/* // function to set a given theme/color-scheme
+function setTheme(themeName) {
+	localStorage.setItem('theme', themeName)
+	document.documentElement.className = themeName
+}
+
+// function to toggle between light and dark theme
+function toggleTheme() {
+	if (localStorage.getItem('theme') === 'theme-dark') {
+		setTheme('theme-light')
+	} else {
+		setTheme('theme-dark')
+	}
+}
+
+// Immediately invoked function to set the theme on initial load
+;(function () {
+	if (localStorage.getItem('theme') === 'theme-dark') {
+		setTheme('theme-dark')
+	} else {
+		setTheme('theme-light')
+	}
+})() */
+
+document
+	.querySelector('[data-theme-toggler="light"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light'))
+document
+	.querySelector('[data-theme-toggler="dark"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark'))
+document
+	.querySelector('[data-theme-toggler="purple"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'purple'))
+document
+	.querySelector('[data-theme-toggler="purple-dark"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'purple-dark'))
+document
+	.querySelector('[data-theme-toggler="blue-purple"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'blue-purple'))

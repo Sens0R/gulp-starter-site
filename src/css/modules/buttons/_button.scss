@@ -6,7 +6,7 @@
 	--button-color-hover: var(--color-text-reverse);
 	--button-bg: var(--color-primary);
 	--button-bg-hover: var(--color-primary-dark);
-	--button-border-color: var(--border-color);
+	--button-border-color: var(--button-bg-hover);
 	--button-border-thickness: var(--border-thickness);
 	--button-transition: var(--transition-md);
 }
@@ -41,7 +41,7 @@
 %button--outline {
 	--button-bg: none;
 	--button-color: var(--button-border-color);
-	border: var(--button-border-thickness) solid var(--button-color);
+	border: var(--button-border-thickness) solid var(--button-border-color);
 }
 
 // button states

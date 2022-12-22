@@ -53,16 +53,12 @@
 	}
 }
 
-.shadow {
-	box-shadow: var(--shadow);
-}
-
 .visually-hidden {
 	@include visually-hidden();
 }
 
-.target-size {
-	@include target-size();
+.target-space {
+	@include target-space();
 }
 
 .transition {

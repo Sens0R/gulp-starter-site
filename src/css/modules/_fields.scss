@@ -1,15 +1,15 @@
-form {
+:root {
 	--input-height: var(--target-size);
 	--input-space: 0.75em;
-	--input-border-color-focus: var(--color-accent);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
+
 }
 
 input,
 textarea {
 	padding: 0 var(--input-space);
-	border: var(--border);
-	background: var(--color-bg-body);
+	border: var(--border-thickness) solid transparent;
+	border-bottom-color: var(--border-color);
+	background: var(--color-bg-primary);
 	transition: border-color var(--transition-md), box-shadow var(--transition-md);
 
 	&:focus-within {
@@ -18,7 +18,7 @@ textarea {
 	}
 }
 
-input {
+input:not([type='radio']) {
 	min-height: var(--input-height);
 }
 
@@ -27,6 +27,24 @@ textarea {
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 7.5em;
+}
+
+fieldset {
+	border: var(--border);
+}
+
+label:has(input[type='radio']) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--space-2);
+	user-select: none;
+	cursor: pointer;
+
+	@include hover(focus) {
+		color: var(--color-accent);
+		transition: var(--transition-sm);
+	}
 }
 
 .contact-form {

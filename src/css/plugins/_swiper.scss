@@ -1,20 +1,7 @@
 @import 'swiper/swiper.scss';
 
 :root {
-	--swiper-disabled-color: var(--color-primary-dark);
 	--bullet-size: #{clamp-smart(3px, 5px)};
-	--bullet-gap: var(--space-3);
-}
-
-// optional for slides with shadows
-.swiper-shadow-container {
-	overflow: hidden;
-	padding: var(--shadow-spread);
-	margin: calc(var(--shadow-spread) * -1);
-
-	.swiper {
-		overflow: unset;
-	}
 }
 
 .swiper {
@@ -26,7 +13,11 @@
 	height: auto; // all swiper slides same height
 }
 
-/* ====================		NAVIGATION		==================== */
+/*
+|--------------------------------------------------------------------------
+|	NAVIGATION
+|--------------------------------------------------------------------------
+*/
 
 .swiper-button-container {
 	display: flex;
@@ -44,19 +35,25 @@
 	@include button--disabled;
 }
 
-/* ====================		PAGINATION		==================== */
+/*
+|--------------------------------------------------------------------------
+|	PAGINATION
+|--------------------------------------------------------------------------
+*/
 
 .swiper-pagination-horizontal {
+	--bullet-gap: calc(var(--bullet-size) * 2.5);
+
 	display: flex;
 	justify-content: center;
 	gap: var(--bullet-gap);
 }
 
 .swiper-pagination-bullet {
-	@include target-size(calc(var(--bullet-size) + var(--bullet-gap)));
+	@include target-space(calc(var(--bullet-size) + var(--bullet-gap)));
 	padding: var(--bullet-size);
-	border-radius: 50%;
-	background: var(--swiper-disabled-color);
+	border-radius: 50% !important;
+	background: hsl(var(--hsl) / 0.5) !important;
 	transition: var(--transition-md);
 }
 
@@ -68,7 +65,25 @@
 }
 
 .swiper-pagination-bullet-active {
-	background: var(--color-primary-dark);
+	background: var(--color-accent) !important;
 	scale: 1;
 	cursor: default;
 }
+
+/*
+|--------------------------------------------------------------------------
+| WRAPPER FOR SLIDE SHADOWS (OPTIONAL)
+|--------------------------------------------------------------------------
+*/
+
+/*
+ .swiper-shadow-wrapper {
+	overflow: hidden;
+	padding: var(--shadow-spread);
+	margin: calc(var(--shadow-spread) * -1);
+
+	.swiper {
+		overflow: unset;
+	}
+} 
+*/

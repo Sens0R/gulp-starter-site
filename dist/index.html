@@ -19,21 +19,17 @@
 </head>
 
 
-<body>
+<body data-theme="light">
     
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="header-sticky-wrapper">
-    <header class="header container row"><!-- ====================   LOGO   ==================== -->
+    <header class="header container"><!-- ====================   LOGO   ==================== -->
 
-<a aria-label="Logo-name home. Logo-name logo." class="col-auto" href="index.html">
-	<svg aria-hidden="true" class="brand-logo brand-logo--header">
-		<use href="images/icons/sprite-multi.svg#logo" />
-	</svg>
-</a>
+<a aria-label="Logo-name home. Logo-name logo." class="button brand-logo brand-logo--header" href="index.html">Brand</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
 
-<nav aria-label="Main" class="hamburger col-auto" data-hamburger>
+<nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
 		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
 			<svg aria-hidden="true" class="hamburger__icon">
@@ -60,8 +56,8 @@
 
 		<li data-dropdown="hover" class="header-nav__item dropdown">
 			<div class="dropdown__controls">
-				<a data-nav-page href="services.html" class="header-nav__link">Services</a>
-				<button type="button" class="dropdown__button" aria-label="Dropdown menu for Services">
+				<a data-nav-page href="headers.html" class="header-nav__link">Services</a>
+				<button type="button" class="dropdown__button" aria-label="Dropdown menu for headers">
 					<svg aria-hidden="true" class="icon">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
 					</svg>
@@ -139,7 +135,7 @@
 </div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
-<button class="hamburger__toggler hamburger__toggler col-auto" data-hamburger-button="open" type="button">
+<button class="hamburger__toggler hamburger__toggler" data-hamburger-button="open" type="button">
 	<svg aria-hidden="true" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
@@ -204,6 +200,38 @@
 	<p class="hero__subtitle">Starter theme hero subtitle</p>
 </div>
 
+<div class="content-block">
+	<div class="container-sm">
+		<fieldset class="hstack p-2 gap-3 flex-wrap">
+			<legend class="px-3 text-preset-2 color-accent">Select color theme:</legend>
+
+			<label data-theme-toggler="light" class="p-3">
+				<input type="radio" name="drone" value="huey" checked />
+				Light
+			</label>
+
+			<label data-theme-toggler="dark" class="p-3">
+				<input type="radio" name="drone" value="dewey" />
+				Dark
+			</label>
+
+			<label data-theme-toggler="purple" class="p-3">
+				<input type="radio" name="drone" value="louie" />
+				Purple
+			</label>
+
+			<label data-theme-toggler="purple-dark" class="p-3">
+				<input type="radio" name="drone" value="louie" />
+				Purple-dark
+			</label>
+<!-- 			<label data-theme-toggler="blue-purple" class="p-3">
+				<input type="radio" name="drone" value="louie" />
+				blue-purple
+			</label> -->
+		</fieldset>
+	</div>
+</div>
+
 <!-- ====================   COLORS   ==================== -->
 
 <div class="content-block">
@@ -241,7 +269,7 @@
 </div>
 
 <!-- ====================		ACCORDION		==================== -->
-<div class="content-block bg-surface">
+<div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Accordion</h2>
 	<section class="container-lg">
 		<div data-accordion class="accordion">
@@ -525,7 +553,7 @@
 </div>
 
 <!-- ====================   Cards  ==================== -->
-<div class="content-block bg-surface">
+<div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Cards</h2>
 	<section class="container">
 		<div class="row row-cols-lg-3 g-4">
@@ -757,7 +785,7 @@
 	</section>
 </div>
 <!-- ====================   TABS   ==================== -->
-<div class="content-block">
+<!-- <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Tabs</h2>
 	<section class="container">
 		<div data-tabs class="tabbed-interface">
@@ -820,388 +848,386 @@
 			</div>
 		</div>
 	</section>
-</div>
+</div> -->
 
 <!--  ====================   SLIDER   ==================== -->
-<div class="content-block bg-surface">
+<div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Slider</h2>
 	<section class="container vstack gap-3">
-		<div class="swiper-shadow-container">
-			<div data-swiper class="swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+		<div data-swiper class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 1 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 1 </a>
+							</h3>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-									quam?
-								</p>
-							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+								quam?
+							</p>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 2 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 2 </a>
+							</h3>
 
-								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
-							</div>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 3 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 3 </a>
+							</h3>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-									quam?
-								</p>
-							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+								quam?
+							</p>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 4 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 4 </a>
+							</h3>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-									quam?
-								</p>
-							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+								quam?
+							</p>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 5 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 5 </a>
+							</h3>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-									quam?
-								</p>
-							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+								quam?
+							</p>
 						</div>
 					</div>
-					<div class="swiper-slide">
-						<div class="card">
-							<a class="card__img" href="index.html" tabindex="-1">
-								<picture>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.avif   320w,
-											images/test-image-640.avif   640w,
-											images/test-image-960.avif   960w,
-											images/test-image-1280.avif 1280w,
-											images/test-image-1920.avif 1920w,
-											images/test-image-2560.avif 2560w
-										"
-										type="image/avif"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.webp   320w,
-											images/test-image-640.webp   640w,
-											images/test-image-960.webp   960w,
-											images/test-image-1280.webp 1280w,
-											images/test-image-1920.webp 1920w,
-											images/test-image-2560.webp 2560w
-										"
-										type="image/webp"
-									/>
-									<source
-										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-										srcset="
-											images/test-image-320.jpg   320w,
-											images/test-image-640.jpg   640w,
-											images/test-image-960.jpg   960w,
-											images/test-image-1280.jpg 1280w,
-											images/test-image-1920.jpg 1920w,
-											images/test-image-2560.jpg 2560w
-										"
-										type="image/jpeg"
-									/>
-									<img
-										alt=""
-										draggable="false"
-										loading="lazy"
-										height="2560"
-										src="images/test-image-960.jpg"
-										width="2560"
-									/>
-								</picture>
-							</a>
+				</div>
+				<div class="swiper-slide">
+					<div class="card">
+						<a class="card__img" href="index.html" tabindex="-1">
+							<picture>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.avif   320w,
+										images/test-image-640.avif   640w,
+										images/test-image-960.avif   960w,
+										images/test-image-1280.avif 1280w,
+										images/test-image-1920.avif 1920w,
+										images/test-image-2560.avif 2560w
+									"
+									type="image/avif"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.webp   320w,
+										images/test-image-640.webp   640w,
+										images/test-image-960.webp   960w,
+										images/test-image-1280.webp 1280w,
+										images/test-image-1920.webp 1920w,
+										images/test-image-2560.webp 2560w
+									"
+									type="image/webp"
+								/>
+								<source
+									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+									srcset="
+										images/test-image-320.jpg   320w,
+										images/test-image-640.jpg   640w,
+										images/test-image-960.jpg   960w,
+										images/test-image-1280.jpg 1280w,
+										images/test-image-1920.jpg 1920w,
+										images/test-image-2560.jpg 2560w
+									"
+									type="image/jpeg"
+								/>
+								<img
+									alt=""
+									draggable="false"
+									loading="lazy"
+									height="2560"
+									src="images/test-image-960.jpg"
+									width="2560"
+								/>
+							</picture>
+						</a>
 
-							<div class="card__content">
-								<h3 class="card__title">
-									<a class="link-title" href="#"> Slide 6 </a>
-								</h3>
+						<div class="card__content">
+							<h3 class="card__title">
+								<a class="link-title" href="#"> Slide 6 </a>
+							</h3>
 
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-									quam?
-								</p>
-							</div>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+								quam?
+							</p>
 						</div>
 					</div>
 				</div>
@@ -1308,10 +1334,11 @@
 			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>
-						<a href="index.html" aria-label="Logo-name home. Logo-name logo.">
-							<svg aria-hidden="true" class="brand-logo brand-logo--large">
-								<use href="images/icons/sprite-multi.svg#logo"></use>
-							</svg>
+						<a
+							href="index.html"
+							class="button brand-logo brand-logo--large"
+							aria-label="Logo-name home. Logo-name logo."
+							>Brand
 						</a>
 					</li>
 				</ul>
@@ -1428,7 +1455,7 @@
 	<div data-dialog="two" class="dialog dialog--small">
 		<div class="dialog__header">
 			<p class="dialog__title">Dialog title</p>
-			<button data-dialog-close class="target-size" type="button" aria-label="close dialog">
+			<button data-dialog-close class="target-space" type="button" aria-label="close dialog">
 				<svg aria-hidden="true" class="icon">
 					<use href="images/icons/sprite-mono.svg#cancel"></use>
 				</svg>

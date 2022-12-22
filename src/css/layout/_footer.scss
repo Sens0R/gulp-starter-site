@@ -28,7 +28,7 @@
 }
 
 .footer-nav__link {
-	@include target-size;
+	@include target-space;
 	@include underline(focus);
 	font-size: var(--fs-sm);
 }

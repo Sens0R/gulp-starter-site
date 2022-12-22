@@ -2,11 +2,9 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	box-shadow: var(--shadow);
 
 	&__date {
 		@include text-preset(4);
-		color: var(--color-text-secondary);
 	}
 
 	img {
@@ -18,9 +16,13 @@
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-3);
-	padding: var(--space-4) var(--space-3);
+	padding: var(--space-3) 0;
 	height: 100%;
-	background: var(--color-bg);
+
+	@include bp(sm) {
+		padding: var(--space-4) var(--space-3);
+		background: var(--color-bg-primary);
+	}
 
 	> :last-child:has(a),
 	> a:last-child {
@@ -40,13 +42,13 @@
 .card__list a {
 	color: var(--card-list-text);
 	font-size: var(--fs-sm);
-	background: var(--color-primary);
+	background: var(--color-primary-dark);
 	transition: var(--transition-md);
 	padding: var(--space-1) var(--space-2);
 	text-decoration: none;
 
 	@include hover(focus) {
-		background: var(--color-primary-dark);
+		background: var(--color-primary);
 		color: var(--card-list-text);
 	}
 }

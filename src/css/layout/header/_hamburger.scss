@@ -21,13 +21,6 @@
 		transition: var(--transition-md);
 	}
 
-	.hamburger.active {
-		overflow: hidden auto;
-		visibility: visible;
-		translate: none;
-		box-shadow: var(--backdrop-shadow);
-	}
-
 	.hamburger__header {
 		padding: var(--header-y-height) 0;
 		display: flex;
@@ -35,6 +28,15 @@
 		justify-content: space-between;
 	}
 
+	// hamburger active state
+	.hamburger.active {
+		overflow: hidden auto;
+		visibility: visible;
+		translate: none;
+		box-shadow: var(--backdrop-shadow);
+	}
+
+	// hamburger toggler
 	.hamburger__toggler {
 		--toggler-size: 13.5px;
 
@@ -64,6 +66,7 @@
 		width: 1.75em;
 	}
 
+	// hamburger dropdowns
 	.hamburger .dropdown__content {
 		position: unset;
 		translate: unset;
@@ -74,6 +77,12 @@
 		translate: none;
 	}
 }
+
+/*
+|--------------------------------------------------------------------------
+| Hamburger backdrop
+|--------------------------------------------------------------------------
+*/
 
 .hamburger__backdrop {
 	height: 100vh;

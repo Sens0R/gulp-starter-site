@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,25 +19,29 @@
 </head>
 
 
-<body data-theme="light">
-    
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div class="header-sticky-wrapper">
-    <header class="header container"><!-- ====================   LOGO   ==================== -->
+	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<div class="header-sticky-wrapper">
+			<header class="header container row">
+				<!-- ====================   LOGO   ==================== -->
 
-<a aria-label="Logo-name home. Logo-name logo." class="button brand-logo brand-logo--header" href="index.html">Brand</a>
+				<a aria-label="Logo-name home. Logo-name logo." class="col-auto" href="index.html">
+					<svg aria-hidden="true" class="brand-logo brand-logo--header">
+						<use href="images/icons/sprite-multi.svg#logo" />
+					</svg>
+				</a>
 
-<!-- ====================   NAVIGATION   ==================== -->
+				<!-- ====================   NAVIGATION   ==================== -->
 
-<nav aria-label="Main" class="hamburger" data-hamburger>
-	<div class="hamburger__header">
-		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
-			<svg aria-hidden="true" class="hamburger__icon">
-				<use href="images/icons/sprite-mono.svg#cancel"></use>
-			</svg>
-		</button>
-	</div>
-	<div class="d-sm-none"><form class="search justify-content-end" role="search">
+				<nav aria-label="Main" class="hamburger col-auto" data-hamburger>
+					<div class="hamburger__header">
+						<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
+							<svg aria-hidden="true" class="hamburger__icon">
+								<use href="images/icons/sprite-mono.svg#cancel"></use>
+							</svg>
+						</button>
+					</div>
+					<div class="d-sm-none"><form class="search justify-content-end" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
@@ -49,51 +53,51 @@
 	</button>
 </form>
 </div>
-	<ul class="header-nav">
-		<li class="header-nav__item">
-			<a data-nav-page href="about.html" class="header-nav__link">About</a>
-		</li>
+					<ul class="header-nav">
+						<li class="header-nav__item">
+							<a data-nav-page href="about.html" class="header-nav__link">About</a>
+						</li>
 
-		<li data-dropdown="hover" class="header-nav__item dropdown">
-			<div class="dropdown__controls">
-				<a data-nav-page href="headers.html" class="header-nav__link">Services</a>
-				<button type="button" class="dropdown__button" aria-label="Dropdown menu for headers">
-					<svg aria-hidden="true" class="icon">
-						<use href="images/icons/sprite-mono.svg#arrow"></use>
-					</svg>
-				</button>
-			</div>
-			<div data-dropdown-content class="dropdown__content">
-				<ul class="header-nav__list">
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
+						<li data-dropdown="hover" class="header-nav__item dropdown">
+							<div class="dropdown__controls">
+								<a data-nav-page href="headers.html" class="header-nav__link">Headers</a>
+								<button type="button" class="dropdown__button" aria-label="Dropdown menu for headers">
+									<svg aria-hidden="true" class="icon">
+										<use href="images/icons/sprite-mono.svg#arrow"></use>
+									</svg>
+								</button>
+							</div>
+							<div data-dropdown-content class="dropdown__content">
+								<ul class="header-nav__list">
+									<li>
+										<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
+									</li>
 
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
+									<li>
+										<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
+									</li>
 
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
-				</ul>
-			</div>
-		</li>
+									<li>
+										<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 
-		<li class="header-nav__item">
-			<a data-nav-page href="portfolio.html" class="header-nav__link">Portfolio</a>
-		</li>
+						<li class="header-nav__item">
+							<a data-nav-page href="portfolio.html" class="header-nav__link">Portfolio</a>
+						</li>
 
-		<li class="header-nav__item">
-			<a data-nav-page href="blog.html" class="header-nav__link">Blog</a>
-		</li>
+						<li class="header-nav__item">
+							<a data-nav-page href="blog.html" class="header-nav__link">Blog</a>
+						</li>
 
-		<li class="header-nav__item">
-			<a data-nav-page href="contact.html" class="header-nav__link">Contact</a>
-		</li>
-	</ul>
+						<li class="header-nav__item">
+							<a data-nav-page href="contact.html" class="header-nav__link">Contact</a>
+						</li>
+					</ul>
 
-	<div class="d-lg-none"><ul class="social-icons">
+					<div class="d-lg-none"><ul class="social-icons">
 	<li>
 		<a href="#" data-tooltip aria-label="Linkedin">
 			<svg aria-hidden="true" class="icon">
@@ -119,9 +123,10 @@
 	</li>
 </ul>
 </div>
-</nav>
-<!-- ====================   SEARCH   ==================== -->
-<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end"><form class="search justify-content-end" role="search">
+				</nav>
+				<!-- ====================   SEARCH   ==================== -->
+				<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end">
+					<form class="search justify-content-end" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
@@ -132,24 +137,20 @@
 		</svg>
 	</button>
 </form>
-</div>
 
-<!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
-<button class="hamburger__toggler hamburger__toggler" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="hamburger__icon">
-		<use href="images/icons/sprite-mono.svg#hamburger" />
-	</svg>
-	Menu
-</button>
-</header>
-    </div>
-    <div class="body-wrapper">
-    <main id="main-content" tabindex="-1">
-   
-    
+				</div>
 
-
-</main>
+				<!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
+				<button class="hamburger__toggler hamburger__toggler col-auto" data-hamburger-button="open" type="button">
+					<svg aria-hidden="true" class="hamburger__icon">
+						<use href="images/icons/sprite-mono.svg#hamburger" />
+					</svg>
+					Menu
+				</button>
+			</header>
+		</div>
+		<div class="body-wrapper">
+			<main id="main-content" tabindex="-1"></main>
 
 <footer class="footer">
   <div class="container">
@@ -158,11 +159,10 @@
 			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>
-						<a
-							href="index.html"
-							class="button brand-logo brand-logo--large"
-							aria-label="Logo-name home. Logo-name logo."
-							>Brand
+						<a href="index.html" aria-label="Logo-name home. Logo-name logo.">
+							<svg aria-hidden="true" class="brand-logo brand-logo--large">
+								<use href="images/icons/sprite-multi.svg#logo"></use>
+							</svg>
 						</a>
 					</li>
 				</ul>
@@ -279,7 +279,7 @@
 	<div data-dialog="two" class="dialog dialog--small">
 		<div class="dialog__header">
 			<p class="dialog__title">Dialog title</p>
-			<button data-dialog-close class="target-space" type="button" aria-label="close dialog">
+			<button data-dialog-close class="target-size" type="button" aria-label="close dialog">
 				<svg aria-hidden="true" class="icon">
 					<use href="images/icons/sprite-mono.svg#cancel"></use>
 				</svg>
@@ -291,4 +291,7 @@
 
 </body>
 
+</html></main>
+		</div>
+	</body>
 </html>
