@@ -5559,7 +5559,7 @@ input[type=submit] {
 
 :is(button, input[type=radio], input[type=checkbox])[disabled] {
   pointer-events: none !important;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 a,
@@ -5676,7 +5676,7 @@ input[type=search]::-webkit-search-cancel-button {
 # TEXT PRESETS
 --------------------------------------------------------------*/
 .text-preset-1 {
-  font-size: var(--h2);
+  font-size: var(--h4);
   line-height: var(--lh-sm);
   font-weight: var(--fw-bold);
   text-transform: uppercase;
@@ -6452,7 +6452,7 @@ a:focus-visible,
 
 .button--disabled, .swiper-button-disabled {
   pointer-events: none;
-  opacity: 60%;
+  opacity: 50%;
 }
 
 .search__button, .social-icons a, .button--circle, .button--box, .swiper-button {

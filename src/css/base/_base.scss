@@ -112,7 +112,7 @@ input[type='submit'] {
 
 :is(button, input[type='radio'], input[type='checkbox'])[disabled] {
 	pointer-events: none !important;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 a,
