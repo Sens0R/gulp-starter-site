@@ -44,6 +44,14 @@
 	--backdrop: rgb(0 0 0 / 0.5);
 	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
 
+	// shadow
+	--shadow-color: hsla(var(--hsl) / 0.3);
+	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
+
+	// border
+	--border-color: hsl(var(--hsl) / 0.4);
+	--border: var(--border-thickness) solid var(--border-color);
+
 	/*
 	|-------------------------------------------------------------------------|
 	|	TYPOGRAPHY
@@ -89,17 +97,14 @@
 	--space-container: var(--space-3);
 
 	// borders
-	--border-color: hsl(var(--hsl) / 0.5);
+
 	--border-thickness: 1px;
 	--border-radius: ;
 	--input-border-color-focus: var(--color-accent);
-	--border: var(--border-thickness) solid var(--border-color);
 
 	// shadows
-	--shadow-color: hsla(var(--hsl) / 0.3);
 	--shadow-spread: 1px;
 	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
 
 	// transitions
 	--transition-sm: 0.15s ease-in-out;

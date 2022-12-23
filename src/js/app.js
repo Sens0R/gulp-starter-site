@@ -25,9 +25,27 @@ dialog()
 
 
 document
-	.querySelector('[data-theme-toggler="light"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light'))
+	.querySelector('[data-theme-toggler="colorless-light"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'colorless-light'))
 document
-	.querySelector('[data-theme-toggler="dark"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark'))
+	.querySelector('[data-theme-toggler="colorless-dark"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'colorless-dark'))
+document
+	.querySelector('[data-theme-toggler="light-1"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light-1'))
+document
+	.querySelector('[data-theme-toggler="dark-1"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark-1'))
+document
+	.querySelector('[data-theme-toggler="light-2"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light-2'))
+document
+	.querySelector('[data-theme-toggler="dark-2"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark-2'))
+document
+	.querySelector('[data-theme-toggler="light-3"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light-3'))
+document
+	.querySelector('[data-theme-toggler="dark-3"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark-3'))
 
