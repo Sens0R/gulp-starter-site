@@ -53,7 +53,7 @@
 <div class="content-block">
 	<div class="container-sm">
 		<fieldset class="hstack p-2 gap-3 flex-wrap">
-			<legend class="px-3 text-preset-2 color-accent">Select color theme:</legend>
+			<legend class="px-2 text-preset-2 color-accent">Select color theme</legend>
 
 			<label data-theme-toggler="light" class="p-3">
 				<input type="radio" name="drone" value="huey" checked />
@@ -64,20 +64,6 @@
 				<input type="radio" name="drone" value="dewey" />
 				Dark
 			</label>
-
-			<label data-theme-toggler="purple" class="p-3">
-				<input type="radio" name="drone" value="louie" />
-				Purple
-			</label>
-
-			<label data-theme-toggler="purple-dark" class="p-3">
-				<input type="radio" name="drone" value="louie" />
-				Purple-dark
-			</label>
-<!-- 			<label data-theme-toggler="blue-purple" class="p-3">
-				<input type="radio" name="drone" value="louie" />
-				blue-purple
-			</label> -->
 		</fieldset>
 	</div>
 </div>
@@ -87,18 +73,9 @@
 <div class="content-block">
 	<div class="container-fluid">
 		<h2 data-animate="section-header" class="text-preset-1 mb-4">Colors</h2>
-		<div class="row row-cols-md-2 row-cols-xl-3 text-center fw-xl g-4">
-			<div class="col-12">
-				<div class="py-4 bg-primary-light fs-lg">
-					<h3 class="color-text-reverse text-uppercase">Primary-light</h3>
-					<h3 class="color-text-primary text-uppercase">Primary-light</h3>
-					<p class="color-text-reverse">.color-primary-light</p>
-					<p class="color-text-primary">.bg-primary-light</p>
-				</div>
-			</div>
-
-			<div class="col-12">
-				<div class="py-4 bg-primary fs-lg">
+		<div class="hstack text-center fw-xl gap-4 flex-wrap">
+			<div class="flex-fill">
+				<div class="p-4 bg-primary fs-lg">
 					<h3 class="color-text-reverse text-uppercase">Primary</h3>
 					<h3 class="color-text-primary text-uppercase">Primary</h3>
 					<p class="color-text-reverse">.color-primary</p>
@@ -106,14 +83,15 @@
 				</div>
 			</div>
 
-			<div class="col-12">
-				<div class="py-4 bg-primary-dark fs-lg">
-					<h3 class="color-text-reverse text-uppercase">Primary-dark</h3>
-					<h3 class="color-text-primary text-uppercase">Primary-dark</h3>
-					<p class="color-text-reverse">.color-primary-dark</p>
-					<p class="color-text-primary">.bg-primary-dark</p>
+			<div class="flex-fill">
+				<div class="p-4 bg-accent fs-lg">
+					<h3 class="color-text-reverse text-uppercase">accent</h3>
+					<h3 class="color-text-primary text-uppercase">accent</h3>
+					<p class="color-text-reverse">.color-accent</p>
+					<p class="color-text-primary">.bg-accent</p>
 				</div>
 			</div>
+			
 		</div>
 	</div>
 </div>
@@ -406,9 +384,9 @@
 <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Cards</h2>
 	<section class="container">
-		<div class="row row-cols-lg-3 g-4">
-			<div class="col-12">
-				<div class="card">
+		<div class="row row-cols-sm-2 row-cols-lg-3 g-4">
+			<div class="col-12 flex-fill">
+				<div class="card ">
 					<a class="card__img" href="index.html" tabindex="-1">
 						<picture>
 							<source
@@ -481,7 +459,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12">
+			<div class="col-12 flex-fill">
 				<div class="card">
 					<a class="card__img" href="index.html" tabindex="-1">
 						<picture>
@@ -557,7 +535,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12">
+			<div class="col-12 flex-fill">
 				<div class="card">
 					<a class="card__img" href="index.html" tabindex="-1">
 						<picture>
@@ -634,6 +612,7 @@
 		</div>
 	</section>
 </div>
+
 <!-- ====================   TABS   ==================== -->
 <!-- <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-4">Tabs</h2>

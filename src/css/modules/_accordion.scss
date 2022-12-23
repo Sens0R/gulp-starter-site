@@ -1,6 +1,5 @@
 .accordion {
 	--accordion-space: var(--space-3);
-	--accordion-color: var(--color-accent);
 	--accordion-accent-color: var(--color-text-reverse);
 	--accordion-transition: var(--transition-lg);
 	--accordion-bg: var(--color-bg-primary);
@@ -27,7 +26,7 @@
 }
 
 .accordion__button.active {
-	background: var(--color-primary-dark);
+	background: var(--color-primary);
 	color: var(--accordion-accent-color);
 }
 
@@ -42,11 +41,11 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: var(--accordion-space);
-	color: var(--accordion-color);
+	color: var(--color-accent);
 	transition: var(--transition-sm);
 
 	@include hover(focus) {
-		background: var(--accordion-color);
+		background: var(--color-accent);
 		color: var(--accordion-accent-color);
 
 		.icon {

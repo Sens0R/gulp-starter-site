@@ -1,185 +1,38 @@
-/*
-|--------------------------------------------------------------------------
-| DARK
-|--------------------------------------------------------------------------
-*/
-
 [data-theme='dark'] {
 	color-scheme: dark;
 
+	img {
+		filter: brightness(0.8) contrast(1.2);
+	}
+
 	// brand color (primary)
-	--h: 201;
-	--s: 100%;
-	--l: 37%;
+	--h: 0;
+	--s: 0%;
+	--l: 34%;
 	--hsl: var(--h) var(--s) var(--l);
-	--darken: 10%;
 
 	// color scheme dark
 	--color-primary: hsl(var(--hsl));
-	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
-	--color-accent: hsl(var(--h) var(--s) calc(var(--l) + 7%));
+	--color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 20%));
+	
+	--color-accent: var(--color-primary-light);
 
 	// background
-	--color-bg: hsl(var(--h) 50% 10%);
-	--color-bg-primary: hsl(var(--h) 60% 11%);
+	--color-bg: hsl(var(--h) 0% 10%);
+	--color-bg-primary: hsl(var(--h) 0% 13%);
 
 	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg);
+	--color-bg-header: var(--color-bg-primary);
 	--color-bg-footer: var(--color-bg);
 
 	// text
-	--color-text-primary: hsl(var(--h) 100% 95%);
-	--color-text-secondary: hsl(var(--h) 25% 75%);
+	--color-text-primary: hsl(var(--h) 0% 95%);
+	--color-text-secondary: hsl(var(--h) 0% 75%);
 	--color-text-reverse: var(--color-white);
 
 	// borders
 	--border-color: hsl(var(--hsl) / 0.5);
 
 	// shadows
-	--shadow-color: hsla(var(--hsl) / 0.7);
-}
-
-/*
-|--------------------------------------------------------------------------
-| PURPLE
-|--------------------------------------------------------------------------
-*/
-
-[data-theme='purple'] {
-	color-theme: light;
-
-	// brand color (primary)
-	--h: 291;
-	--s: 100%;
-	--l: 37%;
-	--hsl: var(--h) var(--s) var(--l);
-	--darken: 10%;
-
-	// color scheme light
-	--color-primary: hsl(var(--hsl));
-	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
-	--color-accent: var(--color-primary);
-
-	// background
-	--color-bg: var(--color-white);
-	--color-bg-primary: hsl(var(--h) var(--s) 98%);
-
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg);
-	--color-bg-footer: var(--color-bg-primary);
-
-	// text
-	--color-text-primary: hsl(var(--h) 0% 25%);
-	--color-text-secondary: hsl(var(--h) 0% 35%);
-	--color-text-reverse: var(--color-white);
-
-	// borders
-	--border-color: hsl(var(--hsl) / 0.5);
-	--border-thickness: 1px;
-	--border-radius: ;
-	--border: var(--border-thickness) solid var(--border-color);
-
-	// shadows
-	--shadow-color: hsl(var(--hsl) / 0.3);
-	--shadow-spread: 1px;
-	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-
-	--input-border-color-focus: var(--color-accent);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
-}
-
-/*
-|--------------------------------------------------------------------------
-| PURPLE-DARK
-|--------------------------------------------------------------------------
-*/
-
-[data-theme='purple-dark'] {
-	color-theme: dark;
-	// brand color (primary)
-	--h: 291;
-	--s: 100%;
-	--l: 37%;
-	--hsl: var(--h) var(--s) var(--l);
-	--darken: 10%;
-
-	// color scheme dark
-	--color-primary: hsl(var(--hsl));
-	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
-	--color-accent: hsl(var(--h) var(--s) calc(var(--l) + 7%));
-
-	// background
-	--color-bg: hsl(var(--h) 50% 10%);
-	--color-bg-primary: hsl(var(--h) 60% 11%);
-
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg);
-	--color-bg-footer: var(--color-bg);
-
-	// text
-	--color-text-primary: hsl(var(--h) 100% 95%);
-	--color-text-secondary: hsl(var(--h) 25% 75%);
-	--color-text-reverse: var(--color-white);
-
-	// borders
-	--border-color: hsl(var(--hsl) / 0.5);
-	--border-thickness: 1px;
-	--border: var(--border-thickness) solid var(--border-color);
-
-	// shadows
-	--shadow-color: hsl(var(--hsl) / 0.3);
-	--shadow-spread: 1px;
-	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-
-	--input-border-color-focus: var(--color-accent);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
-}
-
-/*
-|--------------------------------------------------------------------------
-| BLUE-PURPLE
-|--------------------------------------------------------------------------
-*/
-
-[data-theme='blue-purple'] {
-	color-theme: light;
-
-	// brand color (primary)
-	--h: 201;
-	--s: 100%;
-	--l: 37%;
-	--hsl: var(--h) var(--s) var(--l);
-	--darken: 10%;
-
-	// color scheme light
-	--color-primary: hsl(var(--hsl));
-	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
-	--color-accent: hsl(calc(var(--h) + 90) var(--s) var(--l));
-
-	// background
-	--color-bg: var(--color-white);
-	--color-bg-primary: hsl(var(--h) var(--s) 98%);
-
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg);
-	--color-bg-footer: var(--color-bg-primary);
-
-	// text
-	--color-text-primary: hsl(var(--h) 0% 25%);
-	--color-text-secondary: hsl(var(--h) 0% 35%);
-	--color-text-reverse: var(--color-white);
-
-	// borders
-	--border-color: hsl(var(--hsl) / 0.5);
-	--border-thickness: 1px;
-	--border-radius: ;
-	--border: var(--border-thickness) solid var(--border-color);
-
-	// shadows
-	--shadow-color: hsl(var(--hsl) / 0.3);
-	--shadow-spread: 1px;
-	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
-
-	--input-border-color-focus: var(--color-accent);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
+	--shadow-color: hsla(var(--hsl) / 0.2);
 }

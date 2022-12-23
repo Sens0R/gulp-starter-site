@@ -5,7 +5,7 @@
 	--button-color: var(--color-text-reverse);
 	--button-color-hover: var(--color-text-reverse);
 	--button-bg: var(--color-primary);
-	--button-bg-hover: var(--color-primary-dark);
+	--button-bg-hover: var(--color-accent);
 	--button-border-color: var(--button-bg-hover);
 	--button-border-thickness: var(--border-thickness);
 	--button-transition: var(--transition-md);
@@ -39,15 +39,15 @@
 
 // button variants - one per use
 %button--outline {
-	--button-bg: none;
-	--button-color: var(--button-border-color);
-	border: var(--button-border-thickness) solid var(--button-border-color);
+	--button-color: var(--button-bg-hover);
+	background: none;
+	border: var(--button-border-thickness) solid var(--button-color);
 }
 
 // button states
 %button--disabled {
 	pointer-events: none;
-	filter: opacity(65%);
+	filter: opacity(70%);
 }
 
 // button shapes - one per use

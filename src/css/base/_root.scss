@@ -7,42 +7,42 @@
 	|--------------------------------------------------------------------------
 	*/
 
-	// variables from sass color map
-	// @include map-scss-vars-into-css-vars($colors, '--color');
-
-	// brand color (primary)
-	--h: 201;
-	--s: 100%;
-	--l: 37%;
-	--hsl: var(--h) var(--s) var(--l);
-	--darken: 10%;
-
-	// basic colors
+	// base colors
 	--color-white: hsl(0, 0%, 100%);
-	--color-black: hsl(0, 5%, 15%);
 
-	// color scheme light
+	// feedback
+	--color-feedback-error: hsl(4, 90%, 58%);
+	--color-feedback-success: hsl(147, 100%, 35%);
+	--color-feedback-warning: hsl(39, 93%, 59%);
+
+	// brand (primary) color HSL destructor
+	--h: 0;
+	--s: 0%;
+	--l: 34%;
+	--hsl: var(--h) var(--s) var(--l);
+
+	// brand colors
 	--color-primary: hsl(var(--hsl));
-	--color-primary-dark: hsl(var(--h) var(--s) calc(var(--l) - var(--darken)));
-	--color-accent: var(--color-primary);
+	--color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 10%));
 
-	// background
-	--color-bg: var(--color-white);
-	--color-bg-primary: hsl(var(--h) var(--s) 98%);
+	--color-accent: var(--color-primary-light);
+
+	// backgrounds
+	--color-bg: hsl(var(--h) var(--s) 96%);
+	--color-bg-primary: var(--color-white);
 
 	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg);
-	--color-bg-footer: var(--color-bg-primary);
+	--color-bg-header: var(--color-bg-primary);
+	--color-bg-footer: var(--color-bg);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 25%);
 	--color-text-secondary: hsl(var(--h) 0% 35%);
 	--color-text-reverse: var(--color-white);
 
-	// feedback
-	--color-feedback-error: hsl(4, 90%, 58%);
-	--color-feedback-success: hsl(147, 100%, 35%);
-	--color-feedback-warning: hsl(39, 93%, 59%);
+	// backdrop
+	--backdrop: rgb(0 0 0 / 0.5);
+	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
 
 	/*
 	|-------------------------------------------------------------------------|
@@ -87,10 +87,6 @@
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
 	--space-container: var(--space-3);
-
-	// backdrop
-	--backdrop: rgb(0 0 0 / 0.5);
-	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
 
 	// borders
 	--border-color: hsl(var(--hsl) / 0.5);

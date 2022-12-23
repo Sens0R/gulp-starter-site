@@ -42,13 +42,13 @@
 .card__list a {
 	color: var(--card-list-text);
 	font-size: var(--fs-sm);
-	background: var(--color-primary-dark);
+	background: var(--color-primary);
 	transition: var(--transition-md);
 	padding: var(--space-1) var(--space-2);
 	text-decoration: none;
 
 	@include hover(focus) {
-		background: var(--color-primary);
+		background: var(--color-accent);
 		color: var(--card-list-text);
 	}
 }

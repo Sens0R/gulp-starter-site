@@ -61,11 +61,12 @@
 	@include hover(focus) {
 		cursor: pointer;
 		scale: 1.33;
+		background: var(--color-accent) !important;
 	}
 }
 
 .swiper-pagination-bullet-active {
-	background: var(--color-accent) !important;
+	background: var(--color-primary) !important;
 	scale: 1;
 	cursor: default;
 }
