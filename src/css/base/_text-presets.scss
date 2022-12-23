@@ -8,6 +8,7 @@
 	line-height: var(--lh-sm);
 	font-weight: var(--fw-bold);
 	text-transform: uppercase;
+	letter-spacing: 0.025em;
 	text-align: center;
 }
 
@@ -16,6 +17,7 @@
 	font-size: var(--fs-lg);
 	font-weight: var(--fw-bold);
 	text-transform: uppercase;
+	letter-spacing: 0.025em;
 }
 
 // list subtitle/card link/tab title/dropdown items
@@ -24,12 +26,14 @@
 	font-weight: var(--fw-bold);
 	color: var(--color-text-primary);
 	line-height: var(--lh-md);
+	
 }
 
 // data text, copyright text
 %text-preset-4 {
 	font-size: var(--fs-sm);
 	text-transform: uppercase;
+	letter-spacing: 0.025em;
 }
 
 // making real classes from silent classes

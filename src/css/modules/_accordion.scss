@@ -41,7 +41,6 @@
 	justify-content: space-between;
 	width: 100%;
 	padding: var(--accordion-space);
-	color: var(--color-accent);
 	transition: var(--transition-sm);
 
 	@include hover(focus) {

@@ -16,8 +16,8 @@ a,
 }
 
 %link-title {
-	--link-color: var(--color-accent);
-	--link-color-hover: var(--color-primary);
+	--link-color: var(--color-text-primary);
+	--link-color-hover: var(--color-accent);
 	text-decoration: none;
 }
 
@@ -26,6 +26,6 @@ a,
 	@include text-preset(3);
 	@include chevron;
 	display: inline-flex;
-	text-transform: uppercase;
 	text-decoration: none;
+	color: var(--color-accent);
 }
