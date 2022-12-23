@@ -7,6 +7,7 @@
 	--button-bg: var(--color-primary);
 	--button-bg-hover: var(--color-accent);
 	--button-border-color: var(--button-bg-hover);
+	--button-border-color-hover: var(--button-bg-hover);
 	--button-border-thickness: var(--border-thickness);
 	--button-transition: var(--transition-md);
 }
@@ -39,9 +40,13 @@
 
 // button variants - one per use
 %button--outline {
-	--button-color: var(--button-bg-hover);
+	--button-color: var(--button-bg);
 	background: none;
 	border: var(--button-border-thickness) solid var(--button-color);
+
+	@include hover(focus) {
+		border-color: var(--button-border-color-hover);
+	}
 }
 
 // button states

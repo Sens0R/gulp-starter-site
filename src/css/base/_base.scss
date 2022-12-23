@@ -127,7 +127,8 @@ input,
 input[type='submit'],
 label,
 select,
-textarea {
+textarea,
+fieldset {
 	border: none;
 	border-radius: 0;
 }

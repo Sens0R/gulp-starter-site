@@ -45,13 +45,13 @@
 	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
 
 	// shadow
-	--shadow-color: hsla(var(--hsl) / 0.3);
+	--shadow-color: hsla(var(--hsl) / 0.2);
 	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
 
 	// border
-	--border-color: hsl(var(--hsl) / 0.4);
+	--border-color: hsl(var(--hsl) / 0.5);
 	--border: var(--border-thickness) solid var(--border-color);
-	--input-border-color-focus: var(--color-accent);
+	--input-border-color-focus: var(--color-primary);
 
 	/*
 	|-------------------------------------------------------------------------|

@@ -31,8 +31,9 @@ input[type='checkbox'] {
 	position: relative;
 	cursor: pointer;
 	margin-right: var(--space-1);
+	@include target-space();
 
-	&::before {
+	&::after {
 		content: '';
 		position: absolute;
 		margin: auto;
@@ -45,12 +46,12 @@ input[type='checkbox'] {
 	}
 }
 
-input[type='radio']::before {
+input[type='radio']::after {
 	height: 0;
 	width: 0;
 }
 
-input[type='radio']:checked::before {
+input[type='radio']:checked::after {
 	border: 6px solid transparent;
 	border-radius: 100%;
 	background: var(--color-accent);
@@ -65,7 +66,7 @@ input[type='radio'] {
 	border-radius: 100%;
 }
 
-input[type='checkbox']:checked::before {
+input[type='checkbox']:checked::after {
 	border-right: 3px solid var(--color-accent);
 	border-bottom: 3px solid var(--color-accent);
 	height: 50%;
@@ -81,7 +82,13 @@ textarea {
 }
 
 fieldset {
-	border: var(--border);
+	background: var(--color-bg-primary);
+	padding: var(--space-5);
+}
+
+legend {
+	float: left;
+	width: 100%;
 }
 
 .contact-form {

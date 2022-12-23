@@ -4,9 +4,19 @@
 	height: 1em;
 }
 
+.brand-logo {
+	font-size: var(--h2);
+	font-weight: var(--fw-bold);
+	color: var(--color-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .brand-logo--large {
 	width: clamp-smart(5em, 7.5em);
 	height: clamp-smart(5em, 7.5em);
+	color: var(--color-text-reverse);
 }
 
 .social-icons {

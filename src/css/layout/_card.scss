@@ -3,9 +3,6 @@
 	flex-direction: column;
 	height: 100%;
 
-	&__date {
-		@include text-preset(4);
-	}
 
 	img {
 		aspect-ratio: 2/1;
@@ -26,25 +23,6 @@
 	}
 }
 
-.card__list {
-	--card-list-text: var(--color-text-reverse);
 
-	display: flex;
-	align-items: center;
-	gap: var(--space-3);
-	flex-wrap: wrap;
-}
 
-.card__list a {
-	color: var(--card-list-text);
-	font-size: var(--fs-sm);
-	background: var(--color-primary);
-	transition: var(--transition-md);
-	padding: var(--space-1) var(--space-3);
-	text-decoration: none;
 
-	@include hover(focus) {
-		background: var(--color-accent);
-		color: var(--card-list-text);
-	}
-}
