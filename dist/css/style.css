@@ -5161,7 +5161,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --color-primary: hsl(var(--hsl));
   --color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 10%));
   --color-accent: var(--color-primary-light);
-  --color-bg: hsl(var(--h) var(--s) 96%);
+  --color-bg: hsl(var(--h) var(--s) 97%);
   --color-bg-primary: var(--color-white);
   --color-bg-body: var(--color-bg);
   --color-bg-header: var(--color-bg-primary);
@@ -5231,7 +5231,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --color-bg-body: var(--color-bg);
   --color-bg-header: var(--color-bg-primary);
   --color-bg-footer: var(--color-bg);
-  --color-text-primary: hsl(var(--h) 0% 95%);
+  --color-text-primary: hsl(var(--h) 0% 85%);
   --color-text-secondary: hsl(var(--h) 0% 75%);
   --color-text-reverse: var(--color-white);
   --border-color: hsl(var(--hsl) / 0.5);
@@ -5365,8 +5365,9 @@ input[type=submit] {
   display: inline-flex;
 }
 
-button[disabled] {
+:is(button, input[type=radio], input[type=checkbox])[disabled] {
   pointer-events: none !important;
+  opacity: 0.6;
 }
 
 a,
@@ -5382,12 +5383,22 @@ textarea {
   border-radius: 0;
 }
 
-input, textarea {
+input,
+textarea {
   color: inherit;
 }
 
+input[type=radio],
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 a,
-[role=link] {
+[role=link],
+input[type=radio],
+input[type=checkbox] {
   display: inline-block;
 }
 
@@ -6249,8 +6260,7 @@ a:focus-visible,
 
 .button--disabled, .swiper-button-disabled {
   pointer-events: none;
-  -webkit-filter: opacity(70%);
-          filter: opacity(70%);
+  opacity: 60%;
 }
 
 .search__button, .social-icons a, .button--circle, .button--box, .swiper-button {
@@ -6768,7 +6778,6 @@ ul li::marker {
 
 input,
 textarea {
-  padding: 0 var(--input-space);
   border: var(--border-thickness) solid transparent;
   border-bottom-color: var(--border-color);
   background: var(--color-bg-primary);
@@ -6785,8 +6794,60 @@ textarea:focus-within {
           box-shadow: var(--input-focus-shadow);
 }
 
-input:not([type=radio]) {
+input:not([type=radio], [type=checkbox]) {
   min-height: var(--input-height);
+  padding: 0 var(--input-space);
+}
+
+input[type=radio],
+input[type=checkbox] {
+  background: var(--color-bg-primary);
+  border: var(--border);
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: text-bottom;
+  position: relative;
+  cursor: pointer;
+  margin-right: var(--space-1);
+}
+input[type=radio]::before,
+input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  top: 0;
+  -webkit-transition: var(--transition-sm), rotate none;
+  -o-transition: var(--transition-sm), rotate none;
+  transition: var(--transition-sm), rotate none;
+}
+
+input[type=radio]::before {
+  height: 0;
+  width: 0;
+}
+
+input[type=radio]:checked::before {
+  border: 6px solid transparent;
+  border-radius: 100%;
+  background: var(--color-accent);
+}
+
+input[type=radio] {
+  border-radius: 100%;
+}
+
+input[type=checkbox]:checked::before {
+  border-right: 3px solid var(--color-accent);
+  border-bottom: 3px solid var(--color-accent);
+  height: 50%;
+  width: 30%;
+  -webkit-transform: rotate(45deg) translateY(-20%) translateX(-10%);
+      -ms-transform: rotate(45deg) translateY(-20%) translateX(-10%);
+          transform: rotate(45deg) translateY(-20%) translateX(-10%);
 }
 
 textarea {
@@ -6798,38 +6859,6 @@ textarea {
 
 fieldset {
   border: var(--border);
-}
-
-label:has(input[type=radio]) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: var(--space-2);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-}
-@media (hover: hover) and (pointer: fine) {
-  label:has(input[type=radio]):hover {
-    color: var(--color-accent);
-    -webkit-transition: var(--transition-sm);
-    -o-transition: var(--transition-sm);
-    transition: var(--transition-sm);
-  }
-}
-label:has(input[type=radio]):focus-visible {
-  color: var(--color-accent);
-  -webkit-transition: var(--transition-sm);
-  -o-transition: var(--transition-sm);
-  transition: var(--transition-sm);
 }
 
 .contact-form {
@@ -6899,4 +6928,8 @@ label:has(input[type=radio]):focus-visible {
 }
 .search__input:focus-within::placeholder {
   color: transparent;
+}
+
+.search__button {
+  opacity: unset !important;
 }

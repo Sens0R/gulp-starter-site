@@ -5,7 +5,6 @@
 
 input,
 textarea {
-	padding: 0 var(--input-space);
 	border: var(--border-thickness) solid transparent;
 	border-bottom-color: var(--border-color);
 	background: var(--color-bg-primary);
@@ -17,8 +16,56 @@ textarea {
 	}
 }
 
-input:not([type='radio']) {
+input:not([type='radio'], [type='checkbox']) {
 	min-height: var(--input-height);
+	padding: 0 var(--input-space);
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	background: var(--color-bg-primary);
+	border: var(--border);
+	width: 1.5em;
+	height: 1.5em;
+	vertical-align: text-bottom;
+	position: relative;
+	cursor: pointer;
+	margin-right: var(--space-1);
+
+	&::before {
+		content: '';
+		position: absolute;
+		margin: auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+		top: 0;
+		transition: var(--transition-sm), rotate none;
+	}
+}
+
+input[type='radio']::before {
+	height: 0;
+	width: 0;
+}
+
+input[type='radio']:checked::before {
+	border: 6px solid transparent;
+	border-radius: 100%;
+	background: var(--color-accent);
+}
+
+input[type='radio'] {
+	border-radius: 100%;
+}
+
+input[type='checkbox']:checked::before {
+	border-right: 3px solid var(--color-accent);
+	border-bottom: 3px solid var(--color-accent);
+	height: 50%;
+	width: 30%;
+	transform: rotate(45deg) translateY(-20%) translateX(-10%);
 }
 
 textarea {
@@ -30,21 +77,6 @@ textarea {
 
 fieldset {
 	border: var(--border);
-	
-}
-
-label:has(input[type='radio']) {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: var(--space-2);
-	user-select: none;
-	cursor: pointer;
-
-	@include hover(focus) {
-		color: var(--color-accent);
-		transition: var(--transition-sm);
-	}
 }
 
 .contact-form {
@@ -100,4 +132,5 @@ label:has(input[type='radio']) {
 .search__button {
 	@include button;
 	@include button--box;
+	opacity: unset !important;
 }

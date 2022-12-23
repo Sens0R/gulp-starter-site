@@ -47,7 +47,7 @@
 // button states
 %button--disabled {
 	pointer-events: none;
-	filter: opacity(70%);
+	opacity: 60%;
 }
 
 // button shapes - one per use

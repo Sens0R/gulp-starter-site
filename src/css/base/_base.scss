@@ -110,8 +110,9 @@ input[type='submit'] {
 	display: inline-flex;
 }
 
-button[disabled] {
+:is(button, input[type='radio'], input[type='checkbox'])[disabled] {
 	pointer-events: none !important;
+	opacity: 0.6;
 }
 
 a,
@@ -127,12 +128,20 @@ textarea {
 	border-radius: 0;
 }
 
-input, textarea {
+input,
+textarea {
 	color: inherit;
 }
 
+input[type='radio'],
+input[type='checkbox'] {
+	appearance: none;
+}
+
 a,
-[role='link'] {
+[role='link'],
+input[type='radio'],
+input[type='checkbox'] {
 	display: inline-block;
 }
 

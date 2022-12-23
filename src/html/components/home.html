@@ -56,13 +56,37 @@
 			<legend class="px-2 text-preset-2 color-accent">Select color theme</legend>
 
 			<label data-theme-toggler="light" class="p-3">
-				<input type="radio" name="drone" value="huey" checked />
+				<input type="radio" name="theme" value="light" checked />
 				Light
 			</label>
 
 			<label data-theme-toggler="dark" class="p-3">
-				<input type="radio" name="drone" value="dewey" />
+				<input type="radio" name="theme" value="dark" />
 				Dark
+			</label>
+
+			<label data-theme-toggler="dark" class="p-3">
+				<input type="radio" disabled />
+				Disabled
+			</label>
+		</fieldset>
+
+		<fieldset class="hstack p-2 gap-3 flex-wrap">
+			<legend class="px-2 text-preset-2 color-accent">Checkboxes</legend>
+
+			<label class="p-3">
+				<input type="checkbox" name="checkbox" checked />
+				Checkbox
+			</label>
+
+			<label class="p-3">
+				<input type="checkbox" name="checkbox" />
+				Checkbox
+			</label>
+
+			<label class="p-3">
+				<input type="checkbox" name="checkbox" disabled />
+				Disabled
 			</label>
 		</fieldset>
 	</div>
@@ -91,7 +115,6 @@
 					<p class="color-text-primary">.bg-accent</p>
 				</div>
 			</div>
-			
 		</div>
 	</div>
 </div>
@@ -386,7 +409,7 @@
 	<section class="container">
 		<div class="row row-cols-sm-2 row-cols-lg-3 g-4">
 			<div class="col-12 flex-fill">
-				<div class="card ">
+				<div class="card">
 					<a class="card__img" href="index.html" tabindex="-1">
 						<picture>
 							<source
