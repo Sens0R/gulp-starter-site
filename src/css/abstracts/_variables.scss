@@ -36,11 +36,14 @@ $font-weights: (
 
 $spacers: (
 	0: 0,
-	1: calc(var(--space-3) / 4),
-	2: calc(var(--space-3) / 2),
-	3: var(--fs-md),
-	4: calc(var(--space-3) * 2),
-	5: calc(var(--space-3) * 4),
+	1: calc(var(--space-3) * 0.25),
+	2: calc(var(--space-3) * 0.5),
+	3: calc(var(--space-3) * 0.75),
+	4: var(--fs-md),
+	5: calc(var(--space-3) * 1.5),
+	6: calc(var(--space-3) * 2),
+	7: calc(var(--space-3) * 3),
+	8: calc(var(--space-3) * 4),
 );
 
 $grid-breakpoints: (
