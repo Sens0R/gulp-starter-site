@@ -51,6 +51,7 @@
 	// border
 	--border-color: hsl(var(--hsl) / 0.4);
 	--border: var(--border-thickness) solid var(--border-color);
+	--input-border-color-focus: var(--color-accent);
 
 	/*
 	|-------------------------------------------------------------------------|
@@ -100,7 +101,6 @@
 
 	--border-thickness: 1px;
 	--border-radius: ;
-	--input-border-color-focus: var(--color-accent);
 
 	// shadows
 	--shadow-spread: 1px;
