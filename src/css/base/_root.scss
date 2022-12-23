@@ -64,9 +64,8 @@
 
 	// heading sizes
 	--h1: #{clamp-smart(40, 60)};
-	--h2: #{clamp-smart(26, 36)};
-	--h3: #{clamp-smart(20, 28)};
-	--h4: #{clamp-smart(18, 20)};
+	--h2: #{clamp-smart(20, 24)};
+	--h3: #{clamp-smart(18, 20)};
 
 	// font sizes
 	@include map-scss-vars-into-css-vars($font-sizes, '--fs');
@@ -95,7 +94,7 @@
 
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
-	--space-container: var(--space-3);
+	--space-container: var(--space-4);
 
 	// borders
 

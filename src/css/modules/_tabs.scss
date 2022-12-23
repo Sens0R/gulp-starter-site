@@ -15,7 +15,7 @@
   }
 
   &__content-area {
-    padding: var(--space-2);
+    padding: var(--space-3);
     border: var(--border);
     margin-top: -1px;
 
@@ -27,7 +27,7 @@
 }
 
 .tab {
-  padding: var(--space-2);
+  padding: var(--space-3);
   border: var(--border);
   background-color: var(--color-white);
 
@@ -62,7 +62,7 @@
 .tabpanel {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-3);
   visibility: hidden;
   overflow: hidden;
   height: 0;

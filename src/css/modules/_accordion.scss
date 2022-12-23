@@ -1,5 +1,5 @@
 .accordion {
-	--accordion-space: var(--space-3);
+	--accordion-space: var(--space-4);
 	--accordion-accent-color: var(--color-text-reverse);
 	--accordion-transition: var(--transition-lg);
 	--accordion-bg: var(--color-bg-primary);
@@ -18,7 +18,7 @@
 .accordion {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-3);
+	
 }
 
 .accordion__item {
@@ -58,7 +58,7 @@
 	display: flex;
 	flex-direction: column;
 	transition: var(--accordion-transition);
-	gap: var(--space-3);
+	gap: var(--space-4);
 	padding: 0 var(--accordion-space);
 	
 	> :first-child {

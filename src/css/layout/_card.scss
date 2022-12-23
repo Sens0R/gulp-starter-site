@@ -15,14 +15,10 @@
 .card__content {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-3);
-	padding: var(--space-3) 0;
+	gap: var(--space-5);
+	padding: var(--space-6) var(--space-5);
 	height: 100%;
-
-	@include bp(sm) {
-		padding: var(--space-4) var(--space-3);
-		background: var(--color-bg-primary);
-	}
+	background: var(--color-bg-primary);
 
 	> :last-child:has(a),
 	> a:last-child {
@@ -35,7 +31,7 @@
 
 	display: flex;
 	align-items: center;
-	gap: var(--space-2);
+	gap: var(--space-3);
 	flex-wrap: wrap;
 }
 
@@ -44,7 +40,7 @@
 	font-size: var(--fs-sm);
 	background: var(--color-primary);
 	transition: var(--transition-md);
-	padding: var(--space-1) var(--space-2);
+	padding: var(--space-1) var(--space-3);
 	text-decoration: none;
 
 	@include hover(focus) {
