@@ -5402,24 +5402,24 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
 
 [data-theme=dark-3] {
   color-scheme: dark;
-  --h: 221;
-  --s: 51%;
-  --l: 36%;
+  --h: 19;
+  --s: 97%;
+  --l: 51%;
   --hsl: var(--h) var(--s) var(--l);
   --color-primary: hsl(var(--hsl));
-  --color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 20%));
-  --color-accent: hsl(19, 97%, 48%);
-  --color-bg: hsl(var(--h) 25% 10%);
-  --color-bg-primary: hsl(var(--h) 15% 14%);
+  --color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 5%));
+  --color-accent: var(--color-primary-light);
+  --color-bg: hsl(221 51% 12%);
+  --color-bg-primary: hsl(221 41% 15%);
   --color-bg-body: var(--color-bg);
   --color-bg-header: var(--color-bg-primary);
   --color-bg-footer: var(--color-bg);
   --color-text-primary: hsl(var(--h) 0% 85%);
   --color-text-secondary: hsl(var(--h) 0% 75%);
   --color-text-reverse: var(--color-white);
-  --shadow-color: hsla(var(--hsl) / 0.3);
+  --shadow-color: hsl(221 51% 46% / 0.3);
   --input-focus-shadow: 0 0 0 4px var(--shadow-color);
-  --border-color: hsl(var(--hsl) / 0.4);
+  --border-color: hsl(var(--hsl) / 0.3);
   --border: var(--border-thickness) solid var(--border-color);
 }
 [data-theme=dark-3] img {
