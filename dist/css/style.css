@@ -6335,7 +6335,7 @@ px-to-em   -  padding: clamp-smart(16px, 32px, "em");  //output 1em  < 2em
   --color-primary-light: hsl(var(--h) 30% calc(var(--l) + 30%));
   --color-accent: hsl(355 78% 56%);
   --color-bg: hsl(182 43% 76%);
-  --color-bg-primary: hsl(105 55% 93%);
+  --color-bg-primary: hsl(105 60% 95%);
   --color-bg-body: var(--color-bg);
   --color-bg-header: var(--color-bg-primary);
   --color-bg-footer: var(--color-bg);
@@ -8139,6 +8139,7 @@ fieldset {
 legend {
   float: left;
   width: 100%;
+  color: var(--color-text-primary);
 }
 
 .contact-form {
