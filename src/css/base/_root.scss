@@ -28,12 +28,12 @@
 	--color-accent: var(--color-primary-light);
 
 	// backgrounds
-	--color-bg: hsl(var(--h) var(--s) 97%);
-	--color-bg-primary: var(--color-white);
+	--color-surface: hsl(var(--h) var(--s) 97%);
+	--color-surface-1: var(--color-white);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 25%);

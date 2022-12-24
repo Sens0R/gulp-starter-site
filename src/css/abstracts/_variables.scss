@@ -17,10 +17,10 @@ $colors: (
 );
 
 $backgrounds: (
-	null: var(--color-bg),
+	null: var(--color-surface),
 	primary: var(--color-primary),
 	accent: var(--color-accent),
-	surface: var(--color-bg-primary),
+	surface: var(--color-surface-1),
 );
 
 $font-sizes: (

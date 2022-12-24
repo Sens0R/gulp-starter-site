@@ -18,12 +18,12 @@
 	--color-accent: var(--color-primary-light);
 
 	// background
-	--color-bg: hsl(var(--h) 0% 10%);
-	--color-bg-primary: hsl(var(--h) 0% 13%);
+	--color-surface: hsl(var(--h) 0% 10%);
+	--color-surface-1: hsl(var(--h) 0% 13%);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 85%);
@@ -59,12 +59,12 @@
 	--color-accent: hsl(355 78% 56%);
 
 	// backgrounds
-	--color-bg: hsl(182 43% 76%);
-	--color-bg-primary: hsl(105 60% 95%);
+	--color-surface: hsl(182 43% 76%);
+	--color-surface-1: hsl(105 60% 95%);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(215 50% 15%);
@@ -114,12 +114,12 @@
 	--color-accent: hsl(355 78% 56%);
 
 	// backgrounds
-	--color-bg: hsl(182 13% 13%);
-	--color-bg-primary:  hsl(182 13% 16%);
+	--color-surface: hsl(182 13% 13%);
+	--color-surface-1:  hsl(182 13% 16%);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(105 35% 96%);
@@ -159,12 +159,12 @@
 	--color-accent: var(--color-primary-light);
 
 	// backgrounds
-	--color-bg: hsl(var(--h) var(--s) 97%);
-	--color-bg-primary: var(--color-white);
+	--color-surface: hsl(var(--h) var(--s) 97%);
+	--color-surface-1: var(--color-white);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 25%);
@@ -205,12 +205,12 @@
 	--color-accent: var(--color-primary-light);
 
 	// background
-	--color-bg: hsl(var(--h) 0% 10%);
-	--color-bg-primary: hsl(var(--h) 0% 13%);
+	--color-surface: hsl(var(--h) 0% 10%);
+	--color-surface-1: hsl(var(--h) 0% 13%);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 85%);
@@ -246,12 +246,12 @@
 	--color-accent: hsl(19, 97%, 51%);
 
 	// backgrounds
-	--color-bg: hsl(var(--h) var(--s) 97%);
-	--color-bg-primary: var(--color-white);
+	--color-surface: hsl(var(--h) var(--s) 97%);
+	--color-surface-1: var(--color-white);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 25%);
@@ -297,12 +297,12 @@
 	--color-accent: hsl(19, 97%, 51%);
 
 	// backgrounds
-	--color-bg: hsl(221 21% 10%);
-	--color-bg-primary: hsl(221 51% 16%);
+	--color-surface: hsl(221 21% 10%);
+	--color-surface-1: hsl(221 51% 16%);
 
-	--color-bg-body: var(--color-bg);
-	--color-bg-header: var(--color-bg-primary);
-	--color-bg-footer: var(--color-bg);
+	--color-surface-body: var(--color-surface);
+	--color-surface-header: var(--color-surface-1);
+	--color-surface-footer: var(--color-surface);
 
 	// text
 	--color-text-primary: hsl(var(--h) 0% 80%);

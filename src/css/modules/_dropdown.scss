@@ -8,8 +8,8 @@
 	opacity: 0;
 	transition: var(--transition-sm);
 	overflow: hidden;
-	background-color: var(--color-bg-primary);
-	box-shadow: var(--shadow);
+	background-color: var(--color-surface-1);
+	@include depth(3);
 	margin: auto;
 }
 

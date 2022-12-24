@@ -3,13 +3,12 @@
 	left: var(--space-container);
 	position: fixed;
 	z-index: 999;
-	background-color: var(--color-bg);
+	background-color: var(--color-surface);
 	padding: var(--space-1);
 	font-weight: bold;
 	outline: 2px solid currentColor;
 	translate: -150% 0;
 	translate: none;
-	color: var(--color-text-primary);
 	transition: var(--transition-md);
 }
 

@@ -7,7 +7,7 @@ input,
 textarea {
 	border: var(--border-thickness) solid transparent;
 	border-bottom-color: var(--border-color);
-	background: var(--color-bg-primary);
+	background: var(--color-surface-1);
 	transition: border-color var(--transition-md), box-shadow var(--transition-md);
 
 	&:focus-within {
@@ -23,7 +23,7 @@ input:not([type='radio'], [type='checkbox']) {
 
 input[type='radio'],
 input[type='checkbox'] {
-	background: var(--color-bg-primary);
+	background: var(--color-surface-1);
 	border: var(--border);
 	width: 1.5em;
 	height: 1.5em;
@@ -82,14 +82,13 @@ textarea {
 }
 
 fieldset {
-	background: var(--color-bg-primary);
+	background: var(--color-surface-1);
 	padding: var(--space-5);
 }
 
 legend {
 	float: left;
 	width: 100%;
-	color: var(--color-text-primary);
 }
 
 .contact-form {

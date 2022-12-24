@@ -1,7 +1,7 @@
 a,
 [role='link'] {
 	--link-transition: var(--transition-sm);
-	--link-color: var(--color-text-secondary);
+	--link-color: var(--color-text-primary);
 	--link-color-hover: var(--color-accent);
 }
 
@@ -13,12 +13,6 @@ a,
 	@include hover(focus) {
 		color: var(--link-color-hover);
 	}
-}
-
-%link-title {
-	--link-color: var(--color-text-primary);
-	--link-color-hover: var(--color-accent);
-	text-decoration: none;
 }
 
 %link-box {

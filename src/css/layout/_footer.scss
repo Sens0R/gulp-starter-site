@@ -1,5 +1,5 @@
 .footer {
-	background-color: var(--color-bg-footer);
+	background-color: var(--color-surface-footer);
 	margin-top: auto;
 	padding-top: var(--space-8);
 	padding-bottom: var(--space-4);
@@ -33,9 +33,8 @@
 }
 
 .footer-nav__copyright {
-	@include text-preset(4);
 	display: flex;
 	justify-content: space-between;
-	color: var(--color-text-secondary);
 	margin-top: var(--space-8);
+	
 }
