@@ -18,6 +18,14 @@
 	@extend %button--circle;
 }
 
+@mixin button--lg {
+	@extend %button--lg;
+}
+
+@mixin button--sm {
+	@extend %button--sm;
+}
+
 // selectors
 
 .button {
@@ -38,4 +46,12 @@
 
 .button--circle {
 	@include button--circle;
+}
+
+.button--lg {
+	@include button--lg;
+}
+
+.button--sm {
+	@include button--sm;
 }

@@ -5,9 +5,9 @@ $container-max-width: 1536px;
 $colors: (
 	accent: var(--color-accent),
 	text: (
-		primary: var(--color-text-primary),
-		secondary: var(--color-text-secondary),
-		reverse: var(--color-text-reverse),
+		primary: var(--color-text),
+		secondary: var(--color-text-muted),
+		reverse: var(--color-text-white),
 	),
 	feedback: (
 		error: var(--color-feedback-error),
@@ -17,10 +17,10 @@ $colors: (
 );
 
 $backgrounds: (
-	null: var(--color-surface),
+	null: var(--color-surface1),
 	primary: var(--color-primary),
 	accent: var(--color-accent),
-	surface: var(--color-surface-1),
+	surface: var(--color-surface2),
 );
 
 $font-sizes: (

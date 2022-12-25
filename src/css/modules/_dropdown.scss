@@ -8,9 +8,9 @@
 	opacity: 0;
 	transition: var(--transition-sm);
 	overflow: hidden;
-	background-color: var(--color-surface-1);
-	@include depth(3);
+	background-color: var(--color-surface2);
 	margin: auto;
+	box-shadow: var(--bs-md);
 }
 
 .dropdown.active .dropdown__content {
@@ -40,7 +40,7 @@
 
 .dropdown .icon {
 	transition: var(--transition-md);
-	fill: var(--color-text-primary);
+	fill: var(--color-text);
 }
 
 .dropdown.active .icon {

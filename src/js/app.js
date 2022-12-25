@@ -25,11 +25,11 @@ dialog()
 
 
 document
-	.querySelector('[data-theme-toggler="colorless-light"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'colorless-light'))
+	.querySelector('[data-theme-toggler="light"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light'))
 document
-	.querySelector('[data-theme-toggler="colorless-dark"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'colorless-dark'))
+	.querySelector('[data-theme-toggler="dark"]')
+	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark'))
 document
 	.querySelector('[data-theme-toggler="light-1"]')
 	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light-1'))

@@ -3,55 +3,59 @@
 
 	/*
 	|--------------------------------------------------------------------------
+	|	COLOR PALETTE
+	|--------------------------------------------------------------------------
+	*/
+
+	--white-hsl: 0 0% 100%;
+	--white: hsl(var(--white-hsl));
+
+	--black-hsl: 0 0% 10%;
+	--black: hsl(var(--black-hsl));
+
+	--primary-hsl: 215 50% 23%;
+
+	--primary-900: hsl(219 35% 10%);
+	--primary-800: hsl(var(--primary-hsl));
+	--primary-400: hsl(203 39% 44%);
+	--primary-300: hsl(182 43% 76%);
+	--primary-100: hsl(105 55% 96%);
+
+	--accent-hsl: 355 78% 56%;
+	--accent-500: hsl(var(--accent-hsl));
+
+	/*
+	|--------------------------------------------------------------------------
 	|	COLORS
 	|--------------------------------------------------------------------------
 	*/
 
-	// base colors
-	--color-white: hsl(0, 0%, 100%);
+	--color-primary: hsl(var(--primary-hsl));
+	--color-accent: var(--accent-500);
+
+	// text
+	--color-text: var(--primary-900);
+	--color-text-muted: var(--primary-800);
+	--color-text-white: var(--white);
+
+	// shadows
+	--bs-color: var(--black);
+	--input-focus-shadow: 0 0 0 4px hsl(var(--primary-hsl) / 0.2);
+
+	// borders
+	--border-color: hsl(var(--primary-hsl) / 0.5);
+	--border-color-accent: var(--color-primary);
+
+	// backgrounds
+	--color-bg: var(--white);
+	--color-surface1: var(--primary-100);
+	--color-surface2: var(--white);
+	--backdrop-color: hsl(var(--black-hsl) / 0.4);
 
 	// feedback
 	--color-feedback-error: hsl(4, 90%, 58%);
 	--color-feedback-success: hsl(147, 100%, 35%);
 	--color-feedback-warning: hsl(39, 93%, 59%);
-
-	// brand (primary) color HSL destructor
-	--h: 0;
-	--s: 0%;
-	--l: 34%;
-	--hsl: var(--h) var(--s) var(--l);
-
-	// brand colors
-	--color-primary: hsl(var(--hsl));
-	--color-primary-light: hsl(var(--h) var(--s) calc(var(--l) + 10%));
-
-	--color-accent: var(--color-primary-light);
-
-	// backgrounds
-	--color-surface: hsl(var(--h) var(--s) 97%);
-	--color-surface-1: var(--color-white);
-
-	--color-surface-body: var(--color-surface);
-	--color-surface-header: var(--color-surface-1);
-	--color-surface-footer: var(--color-surface);
-
-	// text
-	--color-text-primary: hsl(var(--h) 0% 25%);
-	--color-text-secondary: hsl(var(--h) 0% 35%);
-	--color-text-reverse: var(--color-white);
-
-	// backdrop
-	--backdrop: rgb(0 0 0 / 0.5);
-	--backdrop-shadow: 0 0 40px 15px rgba(0 0 0 / 0.1);
-
-	// shadow
-	--shadow-color: hsla(var(--hsl) / 0.2);
-	--input-focus-shadow: 0 0 0 4px var(--shadow-color);
-
-	// border
-	--border-color: hsl(var(--hsl) / 0.5);
-	--border: var(--border-thickness) solid var(--border-color);
-	--input-border-color-focus: var(--color-primary);
 
 	/*
 	|-------------------------------------------------------------------------|
@@ -97,16 +101,24 @@
 	--space-container: var(--space-4);
 
 	// borders
-
 	--border-thickness: 1px;
-	--border-radius: ;
+	--border: var(--border-thickness) solid var(--border-color);
 
-	// shadows
-	--shadow-spread: 1px;
-	--shadow: 0 0 var(--shadow-spread) var(--shadow-color);
+	// border-radius
+	--rounded-full: 9999px;
 
 	// transitions
-	--transition-sm: 0.15s ease-in-out;
-	--transition-md: 0.225s ease-out;
+	--transition-sm: 0.1s ease-in-out;
+	--transition-md: 0.2s ease-in-out;
 	--transition-lg: 0.3s ease-in-out;
+
+	// shadows
+	--bs-sm: 0 1px 2px hsl(var(--bs-color) / 0.05), 0 1px 4px hsl(var(--bs-color) / 0.05),
+		0 2px 8px hsl(var(--bs-color) / 0.05);
+	--bs-md: 0 1px 3px hsl(var(--bs-color) / 0.06), 0 2px 6px hsl(var(--bs-color) / 0.06),
+		0 3px 8px hsl(var(--bs-color) / 0.09);
+	--bs-lg: 0 1px 4px hsl(var(--bs-color) / 0.09), 0 3px 8px hsl(var(--bs-color) / 0.09),
+		0 4px 13px hsl(var(--bs-color) / 0.13);
+	--bs-xl: 0 10px 24px hsl(var(--bs-color) / 0.05), 0 20px 48px hsl(var(--bs-color) / 0.05),
+		0 1px 4px hsl(var(--bs-color) / 0.1);
 }

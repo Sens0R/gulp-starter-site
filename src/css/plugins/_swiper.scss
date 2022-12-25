@@ -52,9 +52,10 @@
 .swiper-pagination-bullet {
 	@include target-space(calc(var(--bullet-size) + var(--bullet-gap)));
 	padding: var(--bullet-size);
-	border-radius: 50% !important;
-	background: hsl(var(--hsl) / 0.5) !important;
+	border-radius: var(--rounded-full) !important;
+	background: var(--color-primary) !important;
 	transition: var(--transition-md);
+	opacity: 0.6;
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
@@ -68,6 +69,7 @@
 .swiper-pagination-bullet-active {
 	background: var(--color-primary) !important;
 	scale: 1;
+	opacity: 1;
 	cursor: default;
 }
 
@@ -77,14 +79,14 @@
 |--------------------------------------------------------------------------
 */
 
-/*
- .swiper-shadow-wrapper {
+.swiper-shadow-wrapper {
 	overflow: hidden;
-	padding: var(--shadow-spread);
-	margin: calc(var(--shadow-spread) * -1);
+
+	// should be half from spaceBetween number in JS and shadow blur must be in that range
+	padding: 15px;
+	margin: -15px;
 
 	.swiper {
 		overflow: unset;
 	}
-} 
-*/
+}

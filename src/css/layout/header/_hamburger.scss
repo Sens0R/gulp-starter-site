@@ -16,7 +16,7 @@
 		height: 100%;
 		z-index: 1;
 		padding: 0 var(--space-container) var(--space-container);
-		background-color: var(--color-surface);
+		background-color: var(--color-surface1);
 		translate: 100%;
 		transition: var(--transition-md);
 	}
@@ -33,7 +33,7 @@
 		overflow: hidden auto;
 		visibility: visible;
 		translate: none;
-		box-shadow: var(--backdrop-shadow);
+		box-shadow: var(--backdrop-shadow-color);
 	}
 
 	// hamburger toggler
@@ -89,7 +89,7 @@
 	width: 100vw;
 	inset: 0;
 	position: fixed;
-	background: var(--backdrop);
+	background: var(--backdrop-color);
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity var(--transition-md), visibility var(--transition-md);

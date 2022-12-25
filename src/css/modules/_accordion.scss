@@ -1,8 +1,8 @@
 .accordion {
 	--accordion-space: var(--space-4);
-	--accordion-accent-color: var(--color-text-reverse);
+	--accordion-accent-color: var(--color-text-white);
 	--accordion-transition: var(--transition-lg);
-	--accordion-bg: var(--color-surface-1);
+	--accordion-bg: var(--color-surface2);
 }
 
 [data-accordion-content] {
@@ -18,11 +18,11 @@
 .accordion {
 	display: flex;
 	flex-direction: column;
-	
 }
 
 .accordion__item {
 	background: var(--accordion-bg);
+	box-shadow: var(--bs-sm);
 }
 
 .accordion__button.active {
@@ -59,7 +59,7 @@
 	transition: var(--accordion-transition);
 	gap: var(--space-4);
 	padding: 0 var(--accordion-space);
-	
+
 	> :first-child {
 		margin-top: var(--accordion-space);
 	}

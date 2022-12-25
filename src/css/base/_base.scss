@@ -23,15 +23,15 @@ body {
 	line-height: var(--lh-md);
 	font-family: var(--ff-primary);
 	text-underline-offset: var(--underline-offset);
-	color: var(--color-text-primary);
-	background: var(--color-surface-body);
+	color: var(--color-text);
+	background: var(--color-bg);
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
 
 p {
-	color: var(--color-text-secondary);
+	color: var(--color-text-muted);
 }
 
 .body-wrapper {
@@ -180,7 +180,7 @@ input[type='search']::-webkit-search-cancel-button {
 
 ::selection {
 	background-color: var(--color-primary);
-	color: var(--color-text-reverse);
+	color: var(--color-text-white);
 }
 
 @media (prefers-reduced-motion: reduce) {

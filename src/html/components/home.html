@@ -56,14 +56,14 @@
 			<legend class="text-preset-2">Select color theme</legend>
 
 			<div class="vstack gap-3">
-				<label data-theme-toggler="colorless-light">
+				<label data-theme-toggler="light">
 					<input type="radio" name="theme" value="light" />
-					Colorless Light
+					Light
 				</label>
 
-				<label data-theme-toggler="colorless-dark">
+				<label data-theme-toggler="dark">
 					<input type="radio" name="theme" value="dark" />
-					Colorless Dark
+					Dark
 				</label>
 			</div>
 
@@ -399,30 +399,80 @@
 <!-- ====================   BUTTONS   ==================== -->
 <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-7">Buttons</h2>
-	<section class="container vstack">
-		<div class="vstack gap-6 flex-wrap mx-auto">
-			<div class="hstack gap-2">
+	<section class="row row-cols-md-3 g-4 container flex-wrap">
+		<div class="col vstack gap-6 flex-wrap">
+			<div class="hstack gap-2 justify-content-center">
+				<button data-dialog-open type="button" class="button button--lg">Dialog</button>
+				<button type="button" class="button button--lg button--box">Box</button>
+				<button type="button" class="button button--lg button--circle">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--lg button--disabled">Button</button>
+				<button type="button" class="button button--lg button--box button--disabled">Box</button>
+				<button type="button" class="button button--lg button--circle button--disabled">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--lg button--outline">Outline</button>
+				<button type="button" class="button button--lg button--box button--outline">Box</button>
+				<button type="button" class="button button--lg button--circle button--outline">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--lg button--outline button--disabled">Outline</button>
+				<button type="button" class="button button--lg button--box button--outline button--disabled">Box</button>
+				<button type="button" class="button button--lg button--circle button--outline button--disabled">S</button>
+			</div>
+		</div>
+		<div class="col vstack gap-6 flex-wrap">
+			<div class="hstack gap-2 justify-content-center">
 				<button data-dialog-open type="button" class="button">Dialog</button>
 				<button type="button" class="button button--box">Box</button>
 				<button type="button" class="button button--circle">S</button>
 			</div>
 
-			<div class="hstack gap-2">
+			<div class="hstack gap-2 justify-content-center">
 				<button type="button" class="button button--disabled">Button</button>
 				<button type="button" class="button button--box button--disabled">Box</button>
 				<button type="button" class="button button--circle button--disabled">S</button>
 			</div>
 
-			<div class="hstack gap-2">
+			<div class="hstack gap-2 justify-content-center">
 				<button type="button" class="button button--outline">Outline</button>
 				<button type="button" class="button button--box button--outline">Box</button>
 				<button type="button" class="button button--circle button--outline">S</button>
 			</div>
 
-			<div class="hstack gap-2">
+			<div class="hstack gap-2 justify-content-center">
 				<button type="button" class="button button--outline button--disabled">Outline</button>
 				<button type="button" class="button button--box button--outline button--disabled">Box</button>
 				<button type="button" class="button button--circle button--outline button--disabled">S</button>
+			</div>
+		</div>
+		<div class="col vstack gap-6 flex-wrap">
+			<div class="hstack gap-2 justify-content-center">
+				<button data-dialog-open type="button" class="button button--sm">Dialog</button>
+				<button type="button" class="button button--sm button--box">Box</button>
+				<button type="button" class="button button--sm button--circle">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--sm button--disabled">Button</button>
+				<button type="button" class="button button--sm button--box button--disabled">Box</button>
+				<button type="button" class="button button--sm button--circle button--disabled">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--sm button--outline">Outline</button>
+				<button type="button" class="button button--sm button--box button--outline">Box</button>
+				<button type="button" class="button button--sm button--circle button--outline">S</button>
+			</div>
+
+			<div class="hstack gap-2 justify-content-center">
+				<button type="button" class="button button--sm button--outline button--disabled">Outline</button>
+				<button type="button" class="button button--sm button--box button--outline button--disabled">Box</button>
+				<button type="button" class="button button--sm button--circle button--outline button--disabled">S</button>
 			</div>
 		</div>
 	</section>
@@ -683,380 +733,382 @@
 <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-7">Slider</h2>
 	<section class="container vstack gap-5">
-		<div data-swiper class="swiper">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+		<div class="swiper-shadow-wrapper">
+			<div data-swiper class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 1 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 1 </a>
+								</h3>
 
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 2 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 2 </a>
+								</h3>
 
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt aepe quam?</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 3 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 3 </a>
+								</h3>
 
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 4 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 4 </a>
+								</h3>
 
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 5 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 5 </a>
+								</h3>
 
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="swiper-slide">
-					<div class="card">
-						<a class="card__img" href="index.html" tabindex="-1">
-							<picture>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.avif   320w,
-										images/test-image-640.avif   640w,
-										images/test-image-960.avif   960w,
-										images/test-image-1280.avif 1280w,
-										images/test-image-1920.avif 1920w,
-										images/test-image-2560.avif 2560w
-									"
-									type="image/avif"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.webp   320w,
-										images/test-image-640.webp   640w,
-										images/test-image-960.webp   960w,
-										images/test-image-1280.webp 1280w,
-										images/test-image-1920.webp 1920w,
-										images/test-image-2560.webp 2560w
-									"
-									type="image/webp"
-								/>
-								<source
-									sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
-									srcset="
-										images/test-image-520.jpg   320w,
-										images/test-image-640.jpg   640w,
-										images/test-image-960.jpg   960w,
-										images/test-image-1280.jpg 1280w,
-										images/test-image-1920.jpg 1920w,
-										images/test-image-2560.jpg 2560w
-									"
-									type="image/jpeg"
-								/>
-								<img
-									alt=""
-									draggable="false"
-									loading="lazy"
-									height="2560"
-									src="images/test-image-960.jpg"
-									width="2560"
-								/>
-							</picture>
-						</a>
+					<div class="swiper-slide">
+						<div class="card">
+							<a class="card__img" href="index.html" tabindex="-1">
+								<picture>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.avif   320w,
+											images/test-image-640.avif   640w,
+											images/test-image-960.avif   960w,
+											images/test-image-1280.avif 1280w,
+											images/test-image-1920.avif 1920w,
+											images/test-image-2560.avif 2560w
+										"
+										type="image/avif"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.webp   320w,
+											images/test-image-640.webp   640w,
+											images/test-image-960.webp   960w,
+											images/test-image-1280.webp 1280w,
+											images/test-image-1920.webp 1920w,
+											images/test-image-2560.webp 2560w
+										"
+										type="image/webp"
+									/>
+									<source
+										sizes="(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+										srcset="
+											images/test-image-520.jpg   320w,
+											images/test-image-640.jpg   640w,
+											images/test-image-960.jpg   960w,
+											images/test-image-1280.jpg 1280w,
+											images/test-image-1920.jpg 1920w,
+											images/test-image-2560.jpg 2560w
+										"
+										type="image/jpeg"
+									/>
+									<img
+										alt=""
+										draggable="false"
+										loading="lazy"
+										height="2560"
+										src="images/test-image-960.jpg"
+										width="2560"
+									/>
+								</picture>
+							</a>
 
-						<div class="card__content">
-							<h3 class="card__title">
-								<a class="" href="#"> Slide 6 </a>
-							</h3>
+							<div class="card__content">
+								<h3 class="card__title">
+									<a class="" href="#"> Slide 6 </a>
+								</h3>
 
-							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
-								quam?
-							</p>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt ipsum harum accusamus saepe
+									quam?
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>

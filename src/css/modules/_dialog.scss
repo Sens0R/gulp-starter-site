@@ -1,5 +1,5 @@
 :root {
-	--dialog-transition: var(--transition-md);
+	--dialog-transition: 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .dialog {
@@ -23,8 +23,8 @@
 	gap: var(--space-4);
 	padding: var(--space-4);
 	border: var(--border);
-	background: var(--color-surface);
-	box-shadow: var(--backdrop-shadow);
+	background: var(--color-surface2);
+	box-shadow: var(--bs-xl);
 	transition: var(--dialog-transition);
 }
 
@@ -64,7 +64,8 @@
 	height: 100%;
 	visibility: hidden;
 	opacity: 0;
-	background: var(--backdrop);
+	background: var(--backdrop-color);
+	backdrop-filter: blur(4px);
 	transition: opacity var(--dialog-transition), visibility var(--dialog-transition);
 }
 

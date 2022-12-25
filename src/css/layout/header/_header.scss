@@ -1,21 +1,21 @@
-.header-sticky-wrapper {
+.header {
 	position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 50;
 	box-shadow: none;
-	background: var(--color-surface-header);
+	background: var(--color-bg);
 }
 
-.headroom_unpinned {
+.header--unpinned {
 }
 
-.headroom_not-top {
-	@include depth(5);
+.header--not-top {
+	box-shadow: var(--bs-sm);
 }
 
-.header {
-	--header-y-height: var(--space-container);
+.header__inner {
+	--header-y-height: var(--space-1);
 
 	display: flex;
 	align-items: center;

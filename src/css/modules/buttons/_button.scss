@@ -1,9 +1,16 @@
+$button-min-width-value: 7.5em;
+$button-space-x-value: 1.75em;
+
 %button {
+	--button-min-width-value: 7.5em;
+	--button-space-x-value: 1.75em;
+	--button-min-width: var(--button-min-width-value);
+	--button-space-x: var(--button-space-x-value);
+
+	--button-fs: var(--fs-md);
 	--button-height: var(--target-size);
-	--button-min-width: 7.5em;
-	--button-space-x: 1.75em;
-	--button-color: var(--color-text-reverse);
-	--button-color-hover: var(--color-text-reverse);
+	--button-color: var(--color-text-white);
+	--button-color-hover: var(--color-text-white);
 	--button-bg: var(--color-primary);
 	--button-bg-hover: var(--color-accent);
 	--button-border-color: var(--button-bg-hover);
@@ -14,6 +21,7 @@
 
 // primary button
 %button {
+	font-size: var(--button-fs);
 	font-weight: var(--fw-bold);
 	line-height: var(--lh-sm);
 	min-height: var(--button-height);
@@ -45,7 +53,7 @@
 	border: var(--button-border-thickness) solid var(--button-color);
 
 	@include hover(focus) {
-		border-color: var(--button-border-color-hover);
+		background: var(--button-color);
 	}
 }
 
@@ -66,5 +74,21 @@
 
 %button--circle {
 	@extend %button--box;
-	border-radius: 50%;
+	border-radius: var(--rounded-full);
+}
+
+// button sizes - one per use
+%button--lg {
+	--button-fs: var(--fs-lg);
+	--button-height: calc(var(--target-size) * 1.1);
+	--button-min-width: calc(var(--button-min-width-value) * 1.2);
+	--button-space-x: calc(var(--button-space-x-value) * 2.5);
+	--button-border-thickness: 1px;
+}
+
+%button--sm {
+	--button-fs: var(--fs-sm);
+	--button-height: calc(var(--target-size) * 0.9);
+	--button-min-width: calc(var(--button-min-width-value) * 0.7);
+	--button-space-x: calc(var(--button-space-x-value) * 0.4);
 }

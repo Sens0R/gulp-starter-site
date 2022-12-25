@@ -2,11 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	box-shadow: var(--bs-sm);
+}
 
-
-	img {
-		aspect-ratio: 2/1;
-	}
+.card img {
+	aspect-ratio: 2/1;
 }
 
 .card__content {
@@ -15,14 +15,11 @@
 	gap: var(--space-5);
 	padding: var(--space-6) var(--space-5);
 	height: 100%;
-	background: var(--color-surface-1);
-
-	> :last-child:has(a),
-	> a:last-child {
-		margin-top: auto;
-	}
+	background: var(--color-surface2);
 }
 
-
-
-
+// sticky link at bottom
+.card__content > :last-child:has(a),
+.card__content > a:last-child {
+	margin-top: auto;
+}

@@ -10,11 +10,11 @@
 .hero__title {
 	font-size: clamp-smart(40px, 100px);
 	font-weight: var(--fw-bold);
-	color: var(--color-text-reverse);
+	color: var(--color-text-white);
 }
 
 .hero__subtitle {
 	font-size: clamp-smart(20px, 50px);
 	margin-top: 0.5em;
-	color: var(--color-text-reverse);
+	color: var(--color-text-white);
 }
