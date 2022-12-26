@@ -2,7 +2,7 @@
 	--accordion-space: var(--space-4);
 	--accordion-accent-color: var(--color-text-white);
 	--accordion-transition: var(--transition-lg);
-	--accordion-bg: var(--color-surface2);
+	--accordion-bg: var(--color-surface);
 }
 
 [data-accordion-content] {
@@ -22,7 +22,7 @@
 
 .accordion__item {
 	background: var(--accordion-bg);
-	box-shadow: var(--bs-sm);
+	box-shadow: var(--shadow-sm);
 }
 
 .accordion__button.active {

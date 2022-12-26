@@ -1,5 +1,7 @@
-.hamburger__toggler {
-	display: none;
+@include bp(lg) {
+	.hamburger__toggler {
+		display: none !important;
+	}
 }
 
 @include bp(lg, max) {
@@ -16,7 +18,7 @@
 		height: 100%;
 		z-index: 1;
 		padding: 0 var(--space-container) var(--space-container);
-		background-color: var(--color-surface1);
+		background-color: var(--color-bg-header);
 		translate: 100%;
 		transition: var(--transition-md);
 	}
@@ -36,36 +38,6 @@
 		box-shadow: var(--backdrop-shadow-color);
 	}
 
-	// hamburger toggler
-	.hamburger__toggler {
-		--toggler-size: 13.5px;
-
-		display: flex;
-		align-items: flex-end;
-		justify-content: center;
-		flex-direction: column;
-		margin-left: auto;
-		font-size: var(--toggler-size);
-		font-weight: var(--fw-bold);
-		text-transform: uppercase;
-		transition: var(--transition-md);
-
-		@include hover(focus) {
-			color: var(--color-accent);
-		}
-	}
-
-	.hamburger__icon {
-		fill: currentColor;
-		width: 2.825em;
-		height: 2em;
-	}
-
-	.hamburger__toggler--close .hamburger__icon {
-		height: 1.75em;
-		width: 1.75em;
-	}
-
 	// hamburger dropdowns
 	.hamburger .dropdown__content {
 		position: unset;
@@ -75,6 +47,32 @@
 
 	.hamburger .dropdown.active .dropdown__content {
 		translate: none;
+	}
+
+	.hamburger__toggler {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		flex-direction: column;
+		margin-left: auto;
+		transition: var(--transition-sm);
+		width: var(--target-size);
+		height: var(--target-size);
+	
+		@include hover(focus) {
+			fill: var(--color-accent);
+		}
+	}
+
+	.hamburger__icon {
+		--toggler-icon-height: 1.5rem;
+
+		height: var(--toggler-icon-height);
+		width: var(--target-size);
+	}
+
+	.hamburger____icon--close {
+		width: var(--toggler-icon-height);
 	}
 }
 

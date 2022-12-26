@@ -1,94 +1,28 @@
-$button-min-width-value: 7.5em;
-$button-space-x-value: 1.75em;
-
-%button {
-	--button-min-width-value: 7.5em;
-	--button-space-x-value: 1.75em;
-	--button-min-width: var(--button-min-width-value);
-	--button-space-x: var(--button-space-x-value);
-
-	--button-fs: var(--fs-md);
-	--button-height: var(--target-size);
-	--button-color: var(--color-text-white);
-	--button-color-hover: var(--color-text-white);
-	--button-bg: var(--color-primary);
-	--button-bg-hover: var(--color-accent);
-	--button-border-color: var(--button-bg-hover);
-	--button-border-color-hover: var(--button-bg-hover);
-	--button-border-thickness: var(--border-thickness);
-	--button-transition: var(--transition-md);
-}
-
 // primary button
-%button {
-	font-size: var(--button-fs);
-	font-weight: var(--fw-bold);
-	line-height: var(--lh-sm);
-	min-height: var(--button-height);
-	min-width: var(--button-min-width);
-	padding: 0 var(--button-space-x);
-	color: var(--button-color);
-	background: var(--button-bg);
-	transition: var(--button-transition);
-	text-decoration: none;
-	display: inline-flex;
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-
-	@include hover(focus) {
-		background: var(--button-bg-hover);
-		color: var(--button-color-hover);
-	}
-
-	svg {
-		fill: currentColor;
-	}
+.button {
+	@include button;
 }
 
 // button variants - one per use
-%button--outline {
-	--button-color: var(--button-bg);
-	background: none;
-	border: var(--button-border-thickness) solid var(--button-color);
-
-	@include hover(focus) {
-		background: var(--button-color);
-	}
+.button--outline {
+	@include button--outline;
 }
 
-// button states
-%button--disabled {
-	pointer-events: none;
-	opacity: 50%;
+// button shapes
+.button--box {
+	@include button--box;
 }
 
-// button shapes - one per use
-%button--box {
-	min-height: var(--button-height);
-	min-width: var(--button-height);
-	max-height: var(--button-height);
-	max-width: var(--button-height);
-	padding: unset;
+.button--circle {
+	@include button--circle;
 }
 
-%button--circle {
-	@extend %button--box;
-	border-radius: var(--rounded-full);
+// button sizes
+.button--lg {
+	@include button--lg;
 }
 
-// button sizes - one per use
-%button--lg {
-	--button-fs: var(--fs-lg);
-	--button-height: calc(var(--target-size) * 1.1);
-	--button-min-width: calc(var(--button-min-width-value) * 1.2);
-	--button-space-x: calc(var(--button-space-x-value) * 2.5);
-	--button-border-thickness: 1px;
+.button--sm {
+	@include button--sm;
 }
 
-%button--sm {
-	--button-fs: var(--fs-sm);
-	--button-height: calc(var(--target-size) * 0.9);
-	--button-min-width: calc(var(--button-min-width-value) * 0.7);
-	--button-space-x: calc(var(--button-space-x-value) * 0.4);
-}

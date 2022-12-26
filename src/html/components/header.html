@@ -6,8 +6,8 @@
 
 <nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
-		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
-			<svg aria-hidden="true" class="hamburger__icon">
+		<button aria-label="Close navigation menu" class="hamburger__toggler" data-hamburger-button="close" type="button">
+			<svg aria-hidden="true" class="hamburger__icon hamburger__icon--close">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
 		</button>
@@ -63,9 +63,8 @@
 <div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end">@@include('search.html',{})</div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
-<button class="hamburger__toggler hamburger__toggler" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="hamburger__icon">
+<button class="hamburger__toggler" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" aria-label="Open navigation menu" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
-	Menu
 </button>

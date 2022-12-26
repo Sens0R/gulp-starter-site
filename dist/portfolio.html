@@ -31,8 +31,8 @@
 
 <nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
-		<button class="hamburger__toggler hamburger__toggler--close" data-hamburger-button="close" type="button">
-			<svg aria-hidden="true" class="hamburger__icon">
+		<button aria-label="Close navigation menu" class="hamburger__toggler" data-hamburger-button="close" type="button">
+			<svg aria-hidden="true" class="hamburger__icon hamburger__icon--close">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
 		</button>
@@ -135,11 +135,10 @@
 </div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
-<button class="hamburger__toggler hamburger__toggler" data-hamburger-button="open" type="button">
-	<svg aria-hidden="true" class="hamburger__icon">
+<button class="hamburger__toggler" data-hamburger-button="open" type="button">
+	<svg aria-hidden="true" aria-label="Open navigation menu" class="hamburger__icon">
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
-	Menu
 </button>
 </header>
     </div>
@@ -272,14 +271,14 @@
 
 		<menu class="dialog__controls">
 			<li><button class="button" data-dialog-open="two" type="button">Dialog</button></li>
-			<li><button data-dialog-focus class="button" data-dialog-close type="button">Close</button></li>
+			<li><button class="button button--outline" data-dialog-close type="button">Close</button></li>
 		</menu>
 	</div>
 
 	<div data-dialog="two" class="dialog dialog--small">
 		<div class="dialog__header">
 			<p class="dialog__title">Dialog title</p>
-			<button data-dialog-close class="target-space" type="button" aria-label="close dialog">
+			<button data-dialog-close type="button" aria-label="close dialog">
 				<svg aria-hidden="true" class="icon">
 					<use href="images/icons/sprite-mono.svg#cancel"></use>
 				</svg>

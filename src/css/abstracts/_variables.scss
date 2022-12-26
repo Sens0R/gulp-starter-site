@@ -17,10 +17,9 @@ $colors: (
 );
 
 $backgrounds: (
-	null: var(--color-surface1),
 	primary: var(--color-primary),
 	accent: var(--color-accent),
-	surface: var(--color-surface2),
+	surface: var(--color-surface),
 );
 
 $font-sizes: (

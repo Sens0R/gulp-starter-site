@@ -13,16 +13,15 @@
 	--black-hsl: 0 0% 10%;
 	--black: hsl(var(--black-hsl));
 
-	--primary-hsl: 215 50% 23%;
+	--primary-hsl: 221 51% 16%;
+	--primary: hsl(var(--primary-hsl));
 
-	--primary-900: hsl(219 35% 10%);
-	--primary-800: hsl(var(--primary-hsl));
-	--primary-400: hsl(203 39% 44%);
-	--primary-300: hsl(182 43% 76%);
-	--primary-100: hsl(105 55% 96%);
+	--primary-text: hsl(221 35% 10%);
+	--primary-text-muted: hsl(221 35% 25%);
+	--primary-bg: hsl(221 51% 98%);
 
-	--accent-hsl: 355 78% 56%;
-	--accent-500: hsl(var(--accent-hsl));
+	--accent-hsl: 19 97% 51%;
+	--accent: hsl(var(--accent-hsl));
 
 	/*
 	|--------------------------------------------------------------------------
@@ -31,15 +30,15 @@
 	*/
 
 	--color-primary: hsl(var(--primary-hsl));
-	--color-accent: var(--accent-500);
+	--color-accent: var(--accent);
 
 	// text
-	--color-text: var(--primary-900);
-	--color-text-muted: var(--primary-800);
+	--color-text: var(--primary-text);
+	--color-text-muted: var(--primary-text-muted);
 	--color-text-white: var(--white);
 
 	// shadows
-	--bs-color: var(--black);
+	--shadow-color-hsl: var(--primary-hsl);
 	--input-focus-shadow: 0 0 0 4px hsl(var(--primary-hsl) / 0.2);
 
 	// borders
@@ -47,9 +46,10 @@
 	--border-color-accent: var(--color-primary);
 
 	// backgrounds
-	--color-bg: var(--white);
-	--color-surface1: var(--primary-100);
-	--color-surface2: var(--white);
+	--color-surface: var(--white);
+	--color-bg: var(--primary-bg);
+	--color-bg-header: var(--color-surface);
+	--color-bg-footer: var(--color-bg);
 	--backdrop-color: hsl(var(--black-hsl) / 0.4);
 
 	// feedback
@@ -94,7 +94,7 @@
 	--header-height: clamp-smart(2.75rem, 3.75rem);
 
 	// buttons, inputs;
-	--target-size: 2.75em;
+	--target-size: 2.75rem;
 
 	// spacers
 	@include map-scss-vars-into-css-vars($spacers, '--space');
@@ -113,12 +113,11 @@
 	--transition-lg: 0.3s ease-in-out;
 
 	// shadows
-	--bs-sm: 0 1px 2px hsl(var(--bs-color) / 0.05), 0 1px 4px hsl(var(--bs-color) / 0.05),
-		0 2px 8px hsl(var(--bs-color) / 0.05);
-	--bs-md: 0 1px 3px hsl(var(--bs-color) / 0.06), 0 2px 6px hsl(var(--bs-color) / 0.06),
-		0 3px 8px hsl(var(--bs-color) / 0.09);
-	--bs-lg: 0 1px 4px hsl(var(--bs-color) / 0.09), 0 3px 8px hsl(var(--bs-color) / 0.09),
-		0 4px 13px hsl(var(--bs-color) / 0.13);
-	--bs-xl: 0 10px 24px hsl(var(--bs-color) / 0.05), 0 20px 48px hsl(var(--bs-color) / 0.05),
-		0 1px 4px hsl(var(--bs-color) / 0.1);
+
+	--shadow-sm: 0 0 1px hsl(var(--shadow-color-hsl) / 0.03), 0 0 2px hsl(var(--shadow-color-hsl) / 0.03),
+		0 0 4px hsl(var(--shadow-color-hsl) / 0.03);
+	--shadow-md: 0 3px 3px hsl(var(--shadow-color-hsl) / 0.03), 0 6px 6px hsl(var(--shadow-color-hsl) / 0.03),
+		0 12px 12px hsl(var(--shadow-color-hsl) / 0.03);
+	--shadow-lg: 0 9px 9px hsl(var(--shadow-color-hsl) / 0.01), 0 18px 18px hsl(var(--shadow-color-hsl) / 0.01),
+		0 36px 36px hsl(var(--shadow-color-hsl) / 0.01);
 }

@@ -28,122 +28,121 @@ let topLevelBackdrop
 let topLevelOpenButton
 
 document.addEventListener('keydown', e => {
-  if (e.code === 'Escape') {
-    closeDialog()
-    topLevelOpenButton.focus()
-    topLevelOpenButtons.pop()
-    topLevelOpenButton = topLevelOpenButtons.at(-1)
-  }
+	if (e.code === 'Escape') {
+		closeDialog()
+		topLevelOpenButton.focus()
+		topLevelOpenButtons.pop()
+		topLevelOpenButton = topLevelOpenButtons.at(-1)
+	}
 })
 
 // add dialog label
 export function dialog() {
-  openButtonsArr.forEach(openButtonEl => {
-    const openButtonElAttrValue = openButtonEl.dataset.dialogOpen
-    const dialogEl = document.querySelector(`[data-dialog="${openButtonElAttrValue}"]`)
-    const submitButtonEl = dialogEl.querySelector(`[data-dialog-submit]`)
-    const closeButtonsArr = dialogEl.querySelectorAll(`[data-dialog-close]`)
-    const labelEl = dialogEl.querySelector(`[data-dialog-label]`)
-    const descEl = dialogEl.querySelector(`[data-dialog-desc]`)
-    const manualFocusEl = dialogEl.querySelector(`[data-dialog-focus]`)
-    const focusableElArr = Array.from(
-      dialogEl.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
-    )
-    const firstFocusableEl = focusableElArr.at(0)
-    const lastFocusableEl = focusableElArr.at(-1)
+	openButtonsArr.forEach(openButtonEl => {
+		const openButtonElAttrValue = openButtonEl.dataset.dialogOpen
+		const dialogEl = document.querySelector(`[data-dialog="${openButtonElAttrValue}"]`)
+		const submitButtonEl = dialogEl.querySelector(`[data-dialog-submit]`)
+		const closeButtonsArr = dialogEl.querySelectorAll(`[data-dialog-close]`)
+		const labelEl = dialogEl.querySelector(`[data-dialog-label]`)
+		const descEl = dialogEl.querySelector(`[data-dialog-desc]`)
+		const manualFocusEl = dialogEl.querySelector(`[data-dialog-focus]`)
+		const focusableElArr = Array.from(
+			dialogEl.querySelectorAll('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+		)
+		const firstFocusableEl = focusableElArr.at(0)
+		const lastFocusableEl = focusableElArr.at(-1)
 
-    const createBackdrop = document.createElement('div')
-    createBackdrop.classList.add('dialog__backdrop')
-    dialogEl.before(createBackdrop)
-    const backdrop = dialogEl.previousElementSibling
-    backdrop.addEventListener('click', closeDialog)
+		const createBackdrop = document.createElement('div')
+		createBackdrop.classList.add('dialog__backdrop')
+		dialogEl.before(createBackdrop)
+		const backdrop = dialogEl.previousElementSibling
+		backdrop.addEventListener('click', closeDialog)
 
-    openButtonEl.addEventListener('click', () => {
-      topLevelOpenButtons.push(openButtonEl)
-      topLevelOpenButton = topLevelOpenButtons.at(-1)
-		//document.body.style.overflow = 'hidden';
-      activeDialogs.push(dialogEl)
-      topLevelDialog = activeDialogs.at(-1)
-      topLevelDialog.classList.add('active')
+		openButtonEl.addEventListener('click', () => {
+			topLevelOpenButtons.push(openButtonEl)
+			topLevelOpenButton = topLevelOpenButtons.at(-1)
+			activeDialogs.push(dialogEl)
+			topLevelDialog = activeDialogs.at(-1)
+			topLevelDialog.classList.add('active')
 
-      activeBackdrops.push(backdrop)
-      topLevelBackdrop = activeBackdrops.at(-1)
-      topLevelBackdrop.classList.add('active')
+			activeBackdrops.push(backdrop)
+			topLevelBackdrop = activeBackdrops.at(-1)
+			topLevelBackdrop.classList.add('active')
 
-      if (manualFocusEl) dialogEl.addEventListener('transitionend', () => manualFocusEl.focus(), { once: true })
-    })
+			if (manualFocusEl) dialogEl.addEventListener('transitionend', () => manualFocusEl.focus(), { once: true })
+		})
 
-    closeButtonsArr.forEach(closeButtonEl => {
-      closeButtonEl.addEventListener('click', () => {
-        closeDialog()
-        topLevelOpenButton.focus()
-        topLevelOpenButtons.pop()
-        topLevelOpenButton = topLevelOpenButtons.at(-1)
-      })
-    })
+		closeButtonsArr.forEach(closeButtonEl => {
+			closeButtonEl.addEventListener('click', () => {
+				closeDialog()
+				if (topLevelOpenButton) topLevelOpenButton.focus()
+				topLevelOpenButtons.pop()
+				topLevelOpenButton = topLevelOpenButtons.at(-1)
+			})
+		})
 
-    if (submitButtonEl)
-      submitButtonEl.addEventListener('click', () => {
-        // add submit button functionality here
-      })
+		if (submitButtonEl)
+			submitButtonEl.addEventListener('click', () => {
+				// add submit button functionality here
+			})
 
-    /* ====================   A11Y   ==================== */
+		/* ====================   A11Y   ==================== */
 
-    // aria
-    dialogEl.setAttribute('role', 'dialog')
-    dialogEl.setAttribute('aria-modal', 'true')
+		// aria
+		dialogEl.setAttribute('role', 'dialog')
+		dialogEl.setAttribute('aria-modal', 'true')
 
-    if (labelEl) {
-      const labelElId = `dialog-label${openButtonElAttrValue}`
-      labelEl.id = labelElId
-      dialogEl.setAttribute('aria-labelledby', labelElId)
-    }
+		if (labelEl) {
+			const labelElId = `dialog-label${openButtonElAttrValue}`
+			labelEl.id = labelElId
+			dialogEl.setAttribute('aria-labelledby', labelElId)
+		}
 
-    if (descEl) {
-      const descElId = `dialog-desc${openButtonElAttrValue}`
-      descEl.id = descElId
-      dialogEl.setAttribute('aria-describedby', descElId)
-    }
+		if (descEl) {
+			const descElId = `dialog-desc${openButtonElAttrValue}`
+			descEl.id = descElId
+			dialogEl.setAttribute('aria-describedby', descElId)
+		}
 
-    // focus
+		// focus
 
-    if (!manualFocusEl) openButtonEl.addEventListener('keydown', e => setFocus(firstFocusableEl, e))
+		if (!manualFocusEl) openButtonEl.addEventListener('keydown', e => setFocus(firstFocusableEl, e))
 
-    focusTrap()
+		focusTrap()
 
-    /* ====================   FUNCTIONS   ==================== */
+		/* ====================   FUNCTIONS   ==================== */
 
-    function setFocus(focusableElement, e) {
-      if (e.code === 'Enter' || e.code === 'Space')
-        dialogEl.addEventListener('transitionend', () => focusableElement.focus(), { once: true })
-    }
+		function setFocus(focusableElement, e) {
+			if (e.code === 'Enter' || e.code === 'Space')
+				dialogEl.addEventListener('transitionend', () => focusableElement.focus(), { once: true })
+		}
 
-    function focusTrap() {
-      firstFocusableEl.addEventListener('keydown', e => {
-        if (e.code === 'Tab' && e.shiftKey && document.activeElement === firstFocusableEl) {
-          e.preventDefault()
-          lastFocusableEl.focus()
-        }
-      })
+		function focusTrap() {
+			firstFocusableEl.addEventListener('keydown', e => {
+				if (e.code === 'Tab' && e.shiftKey && document.activeElement === firstFocusableEl) {
+					e.preventDefault()
+					lastFocusableEl.focus()
+				}
+			})
 
-      lastFocusableEl.addEventListener('keydown', e => {
-        if (e.code === 'Tab' && !e.shiftKey && document.activeElement === lastFocusableEl) {
-          e.preventDefault()
-          firstFocusableEl.focus()
-        }
-      })
-    }
-  })
+			lastFocusableEl.addEventListener('keydown', e => {
+				if (e.code === 'Tab' && !e.shiftKey && document.activeElement === lastFocusableEl) {
+					e.preventDefault()
+					firstFocusableEl.focus()
+				}
+			})
+		}
+	})
 }
 
 function closeDialog() {
-  if (activeDialogs.length === 0 || activeBackdrops.length === 0) return
+	if (activeDialogs.length === 0 || activeBackdrops.length === 0) return
 
-  topLevelDialog.classList.remove('active')
-  topLevelBackdrop.classList.remove('active')
+	topLevelDialog.classList.remove('active')
+	topLevelBackdrop.classList.remove('active')
 
-  activeDialogs.pop()
-  topLevelDialog = activeDialogs.at(-1)
-  activeBackdrops.pop()
-  topLevelBackdrop = activeBackdrops.at(-1)
+	activeDialogs.pop()
+	topLevelDialog = activeDialogs.at(-1)
+	activeBackdrops.pop()
+	topLevelBackdrop = activeBackdrops.at(-1)
 }

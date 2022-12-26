@@ -7,7 +7,7 @@
 * 6. Active tab and corresponding content (tabpanel) have 'active' class for CSS styling.
 
 *  OPTIONAL A11Y IMPROVEMENTS:
-* 1. Add data-tabs-manual attribute to tab container element (tabbed interface) if you need manual tab selection (activating tab with * enter or space key). Default behavior: tab is automatically selected when receives focus.
+* 1. Add data-tashadow-manual attribute to tab container element (tabbed interface) if you need manual tab selection (activating tab with * enter or space key). Default behavior: tab is automatically selected when receives focus.
 * 2. Add aria-orientation="vertical" attribute to tab container element (tabbed interface) if you have vertically ordered tabs in tablist. This will change tab keyboard selection to ArrowUp and ArrowDown. Default behavior: ArrowLeft and ArrowRight. 
 
 * EXAMPLE: 
@@ -33,7 +33,7 @@ export function tabs() {
     const firstTabEl = tablistArr.at(0)
     const lastTabEl = tablistArr.at(-1)
 
-    const interfaceIsManual = tabbedInterface.hasAttribute('data-tabs-manual')
+    const interfaceIsManual = tabbedInterface.hasAttribute('data-tashadow-manual')
     const tablistIsVertical = tabbedInterface.hasAttribute('aria-orientation', 'vertical')
 
     tabPanelsArr.forEach((tabPanel, tabPanelNum) => {

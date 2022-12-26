@@ -28,6 +28,9 @@ body {
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 p {
@@ -35,10 +38,8 @@ p {
 }
 
 .body-wrapper {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
 	overflow: hidden;
+	margin-top: auto;
 }
 
 h1,
@@ -117,9 +118,8 @@ input[type='submit'] {
 	display: inline-flex;
 }
 
-:is(button, input[type='radio'], input[type='checkbox'])[disabled] {
+[disabled] {
 	pointer-events: none !important;
-	opacity: 0.5;
 }
 
 a,

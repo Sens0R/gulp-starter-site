@@ -1,13 +1,14 @@
-:root {
+input,
+textarea {
 	--input-height: var(--target-size);
-	--input-space: 0.75em;
+	--input-space: 0.75rem;
 }
 
 input,
 textarea {
 	border: var(--border-thickness) solid transparent;
 	border-bottom-color: var(--border-color);
-	background: var(--color-surface2);
+	background: var(--color-surface);
 	transition: border-color var(--transition-md), box-shadow var(--transition-md);
 
 	&:focus-within {
@@ -17,21 +18,25 @@ textarea {
 }
 
 input:not([type='radio'], [type='checkbox']) {
-	min-height: var(--input-height);
+	height: var(--input-height);
 	padding: 0 var(--input-space);
 }
 
 input[type='radio'],
 input[type='checkbox'] {
-	background: var(--color-surface2);
+	background: var(--color-surface);
 	border: var(--border);
-	width: 1.5em;
-	height: 1.5em;
+	width: 1.5rem;
+	height: 1.5rem;
 	vertical-align: text-bottom;
 	position: relative;
 	cursor: pointer;
 	margin-right: var(--space-1);
 	@include target-space();
+
+	&[disabled] {
+		opacity: 0.4;
+	}
 
 	&::after {
 		content: '';
@@ -82,9 +87,9 @@ textarea {
 }
 
 fieldset {
-	background: var(--color-surface2);
+	background: var(--color-surface);
 	padding: var(--space-5);
-	box-shadow: var(--bs-sm);
+	box-shadow: var(--shadow-sm);
 }
 
 legend {
@@ -145,5 +150,4 @@ legend {
 .search__button {
 	@include button;
 	@include button--box;
-	opacity: unset !important;
 }

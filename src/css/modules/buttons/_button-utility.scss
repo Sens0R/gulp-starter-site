@@ -1,57 +1,82 @@
+button,
+a {
+	--button-min-width-value: 6rem;
+	--button-space-x-value: 1.75rem;
+	--button-min-width: var(--button-min-width-value);
+	--button-space-x: var(--button-space-x-value);
+
+	--button-fs: var(--fs-md);
+	--button-height: var(--target-size);
+	--button-color: var(--color-text-white);
+	--button-color-hover: var(--color-text-white);
+	--button-bg: var(--color-primary);
+	--button-bg-hover: var(--color-accent);
+	--button-border-color: var(--button-bg-hover);
+	--button-border-color-hover: var(--button-bg-hover);
+	--button-border-thickness: var(--border-thickness);
+	--button-transition: var(--transition-md);
+}
+
 @mixin button {
-	@extend %button;
+	font-size: var(--button-fs);
+	font-weight: var(--fw-bold);
+	line-height: var(--lh-sm);
+	height: var(--button-height);
+	min-width: var(--button-min-width);
+	padding: 0 var(--button-space-x);
+	color: var(--button-color);
+	background: var(--button-bg);
+	transition: var(--button-transition);
+	text-decoration: none;
+	display: inline-flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	@include hover(focus) {
+		background: var(--button-bg-hover);
+		color: var(--button-color-hover);
+	}
+
+	svg {
+		fill: currentColor;
+	}
 }
 
 @mixin button--outline {
-	@extend %button--outline;
+	--button-color: var(--button-bg);
+
+	background: none;
+	border: var(--button-border-thickness) solid var(--button-color);
+
+	@include hover(focus) {
+		background: var(--button-color);
+	}
 }
 
-@mixin button--disabled {
-	@extend %button--disabled;
-}
 
 @mixin button--box {
-	@extend %button--box;
+	height: var(--button-height);
+	width: var(--button-height);
+	min-width: var(--button-height);
+	padding: unset;
 }
 
 @mixin button--circle {
-	@extend %button--circle;
+	@include button--box();
+	border-radius: var(--rounded-full);
 }
 
 @mixin button--lg {
-	@extend %button--lg;
+	--button-fs: var(--fs-lg);
+	--button-height: calc(var(--target-size) * 1.2);
+	--button-space-x: calc(var(--button-space-x-value) * 2.5);
+	--button-border-thickness: 1px;
 }
 
 @mixin button--sm {
-	@extend %button--sm;
-}
-
-// selectors
-
-.button {
-	@include button;
-}
-
-.button--outline {
-	@include button--outline;
-}
-
-.button--disabled {
-	@include button--disabled;
-}
-
-.button--box {
-	@include button--box;
-}
-
-.button--circle {
-	@include button--circle;
-}
-
-.button--lg {
-	@include button--lg;
-}
-
-.button--sm {
-	@include button--sm;
+	--button-fs: var(--fs-sm);
+	--button-height: calc(var(--target-size) * 0.8);
+	--button-min-width: calc(var(--button-min-width-value) * 0.7);
+	--button-space-x: calc(var(--button-space-x-value) * 0.5);
 }

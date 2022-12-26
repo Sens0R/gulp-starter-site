@@ -32,7 +32,8 @@
 }
 
 .swiper-button-disabled {
-	@include button--disabled;
+	@include button--outline;
+	opacity: 0.5;
 }
 
 /*
@@ -62,6 +63,7 @@
 	@include hover(focus) {
 		cursor: pointer;
 		scale: 1.33;
+		opacity: 1;
 		background: var(--color-accent) !important;
 	}
 }
