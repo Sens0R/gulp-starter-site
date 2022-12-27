@@ -43,7 +43,7 @@
 */
 
 .swiper-pagination-horizontal {
-	--bullet-gap: calc(var(--bullet-size) * 2.5);
+	--bullet-gap: calc(var(--bullet-size) * 3);
 
 	display: flex;
 	justify-content: center;
@@ -55,23 +55,21 @@
 	padding: var(--bullet-size);
 	border-radius: var(--rounded-full) !important;
 	background: var(--color-primary) !important;
-	transition: var(--transition-md);
-	opacity: 0.6;
+	transition: var(--transition-sm);
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
 	@include hover(focus) {
 		cursor: pointer;
 		scale: 1.33;
-		opacity: 1;
 		background: var(--color-accent) !important;
 	}
 }
 
 .swiper-pagination-bullet-active {
-	background: var(--color-primary) !important;
+	background: var(--color-accent) !important;
 	scale: 1;
-	opacity: 1;
+
 	cursor: default;
 }
 

@@ -13,6 +13,11 @@
 	justify-content: center;
 }
 
+// set header inner height with logo size
+.brand-logo--header {
+	height: var(--header-height);
+}
+
 .brand-logo--large {
 	width: clamp-smart(5em, 7.5em);
 	height: clamp-smart(5em, 7.5em);

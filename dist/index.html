@@ -288,23 +288,23 @@
 
 <div class="content-block">
 	<div class="container-fluid">
-		<h2 data-animate="section-header" class="text-preset-1 mb-7">Colors</h2>
+		<h2 data-animate="section-header" class="text-preset-1 mb-6">Colors</h2>
 		<div class="hstack text-center fw-xl gap-6 flex-wrap">
 			<div class="flex-fill">
 				<div class="p-6 bg-primary fs-lg">
-					<h3 class="color-text-reverse text-uppercase">Primary</h3>
-					<h3 class="color-text-primary text-uppercase">Primary</h3>
-					<p class="color-text-reverse">.color-primary</p>
-					<p class="color-text-primary">.bg-primary</p>
+					<h3 class="color-text-white text-uppercase">Primary</h3>
+					<h3 class="color-text text-uppercase">Primary</h3>
+					<p class="color-text-white">.color-primary</p>
+					<p class="color-text">.bg-primary</p>
 				</div>
 			</div>
 
 			<div class="flex-fill">
 				<div class="p-6 bg-accent fs-lg">
-					<h3 class="color-text-reverse text-uppercase">accent</h3>
-					<h3 class="color-text-primary text-uppercase">accent</h3>
-					<p class="color-text-reverse">.color-accent</p>
-					<p class="color-text-primary">.bg-accent</p>
+					<h3 class="color-text-white text-uppercase">accent</h3>
+					<h3 class="color-text text-uppercase">accent</h3>
+					<p class="color-text-white">.color-accent</p>
+					<p class="color-text">.bg-accent</p>
 				</div>
 			</div>
 		</div>
@@ -313,9 +313,9 @@
 
 <!-- ====================		ACCORDION		==================== -->
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Accordion</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Accordion</h2>
 	<section class="container-lg">
-		<div data-accordion class="accordion gap-5">
+		<div data-accordion class="accordion">
 			<!-- ====================   HEADINGS   ==================== -->
 
 			<div class="accordion__item">
@@ -367,45 +367,29 @@
 					</button>
 				</h2>
 				<section data-accordion-content class="accordion__content">
-					<h3 class="color-feedback-error">fw-regular</h3>
-					<div class="fw-regular vstack gap-5">
-						<div class="color-text-primary">
-							color-text-primary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-secondary">
-							color-text-secondary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-reverse p-1 bg-primary">
-							color-text-reverse
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="fw-regular vstack">
+						<h3>fw-regular</h3>
+						<p class="color-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="py-1 bg-primary">
+							<p class="color-text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="color-text-white text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						</div>
 					</div>
+
 					<hr />
-					<h3 class="color-feedback-error">fw-bold</h3>
-					<div class="fw-bold vstack gap-5">
-						<div class="color-text-primary">
-							color-text-primary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
 
-						<div class="color-text-secondary">
-							color-text-secondary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-reverse p-1 bg-primary">
-							color-text-reverse
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-							<p class="text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="fw-bold vstack">
+						<h3>fw-bold</h3>
+						<p class="color-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="py-1 bg-primary">
+							<p class="color-text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+							<p class="color-text-white text-uppercase">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						</div>
 					</div>
 				</section>
@@ -423,60 +407,34 @@
 					</button>
 				</h2>
 				<section data-accordion-content class="accordion__content">
-					<h3 class="color-feedback-error">text-preset-1 @include text-preset(1)</h3>
-					<div class="text-preset-1 vstack gap-5">
-						<div class="color-text-primary">
-							color-text-primary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-secondary">
-							color-text-secondary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-reverse p-1 bg-primary">
-							color-text-reverse
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="text-preset-1 vstack">
+						<p class="color-text">text-preset-1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted">text-preset-1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="py-1 bg-primary">
+							<p class="color-text-white">text-preset-1 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						</div>
 					</div>
+
 					<hr />
-					<h3 class="color-feedback-error">text-preset-2 @include text-preset(2)</h3>
-					<div class="text-preset-2 vstack gap-5">
-						<div class="color-text-primary">
-							color-text-primary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
 
-						<div class="color-text-secondary">
-							color-text-secondary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-reverse p-1 bg-primary">
-							color-text-reverse
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="text-preset-2 vstack">
+						<p class="color-text">text-preset-2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted">text-preset-2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="py-1 bg-primary">
+							<p class="color-text-white">text-preset-2 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						</div>
 					</div>
+
 					<hr />
-					<h3 class="color-feedback-error">text-preset-5 @include text-preset(3)</h3>
-					<div class="text-preset-3 vstack gap-5">
-						<div class="color-text-primary">
-							color-text-primary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
 
-						<div class="color-text-secondary">
-							color-text-secondary
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-						</div>
-
-						<div class="color-text-reverse p-1 bg-primary">
-							color-text-reverse
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+					<div class="text-preset-3 vstack">
+						<p class="color-text">text-preset-3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<p class="color-text-muted">text-preset-3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+						<div class="py-1 bg-primary">
+							<p class="color-text-white">text-preset-3 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						</div>
 					</div>
-					<hr />
+					
 				</section>
 			</div>
 
@@ -547,47 +505,47 @@
 
 <!-- ====================   BUTTONS   ==================== -->
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Buttons</h2>
-	<section class="row row-cols-lg-3 g-6 container flex-wrap">
-		<div class="col vstack gap-6 flex-wrap">
-			<div class="hstack gap-2 justify-content-center">
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Buttons</h2>
+	<section class="row g-6 container">
+		<div class="col-12 col-sm-5 vstack gap-6">
+			<div class="hstack flex-wrap gap-2">
 				<button data-dialog-open type="button" class="button button--lg">Dialog</button>
 				<a href="#" class="button button--lg">A</a>
 				<button type="button" class="button button--lg button--box">Box</button>
 				<button type="button" class="button button--lg button--circle">S</button>
 			</div>
 
-			<div class="hstack gap-2 justify-content-center">
+			<div class="hstack flex-wrap gap-2">
 				<button type="button" class="button button--lg button--outline">Outline</button>
 				<a href="#" class="button button--lg button--outline">O</a>
 				<button type="button" class="button button--lg button--box button--outline">Box</button>
 				<button type="button" class="button button--lg button--circle button--outline">S</button>
 			</div>
 		</div>
-		<div class="col vstack gap-6 flex-wrap">
-			<div class="hstack gap-2 justify-content-center">
+		<div class="col-12 col-sm-4 vstack gap-6">
+			<div class="hstack flex-wrap gap-2">
 				<button data-dialog-open type="button" class="button">Dialog</button>
 				<a href="#" class="button">A</a>
 				<button type="button" class="button button--box">Box</button>
 				<button type="button" class="button button--circle">S</button>
 			</div>
 
-			<div class="hstack gap-2 justify-content-center">
+			<div class="hstack flex-wrap gap-2">
 				<button type="button" class="button button--outline">Outline</button>
 				<a href="#" class="button button--outline">O</a>
 				<button type="button" class="button button--box button--outline">Box</button>
 				<button type="button" class="button button--circle button--outline">S</button>
 			</div>
 		</div>
-		<div class="col vstack gap-6 flex-wrap">
-			<div class="hstack gap-2 justify-content-center">
+		<div class="col-12 col-sm-3 vstack gap-6">
+			<div class="hstack flex-wrap gap-2">
 				<button data-dialog-open type="button" class="button button--sm">Dialog</button>
 				<a href="#" class="button button--sm">A</a>
 				<button type="button" class="button button--sm button--box">Box</button>
 				<button type="button" class="button button--sm button--circle">S</button>
 			</div>
 
-			<div class="hstack gap-2 justify-content-center">
+			<div class="hstack flex-wrap gap-2">
 				<button type="button" class="button button--sm button--outline">Outline</button>
 				<a href="#" class="button button--sm button--outline">O</a>
 				<button type="button" class="button button--sm button--box button--outline">Box</button>
@@ -599,7 +557,7 @@
 
 <!-- ====================   Cards  ==================== -->
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Cards</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Cards</h2>
 	<section class="container">
 		<div class="row row-cols-sm-2 row-cols-lg-5 g-6">
 			<div class="col-12 flex-fill">
@@ -784,7 +742,7 @@
 
 <!-- ====================   TABS   ==================== -->
 <!-- <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Tabs</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Tabs</h2>
 	<section class="container">
 		<div data-tabs class="tabbed-interface">
 			<div class="tabbed-interface__body">
@@ -850,7 +808,7 @@
 
 <!--  ====================   SLIDER   ==================== -->
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Slider</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Slider</h2>
 	<section class="container vstack gap-5">
 		<div class="swiper-shadow-wrapper">
 			<div data-swiper class="swiper">
@@ -1255,7 +1213,7 @@
 <!-- ====================		FIELDS		==================== -->
 
 <div class="content-block">
-	<h2 data-animate="section-header" class="text-preset-1 mb-7">Contact form</h2>
+	<h2 data-animate="section-header" class="text-preset-1 mb-6">Contact form</h2>
 	<div class="container">
 		<div class="row row-cols-lg-2">
 			<div class="col-12 vstack">

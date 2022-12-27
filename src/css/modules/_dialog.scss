@@ -46,7 +46,7 @@
 }
 
 .dialog__title {
-	@include text-preset(3);
+	@include text-preset-3;
 }
 
 .dialog__controls {

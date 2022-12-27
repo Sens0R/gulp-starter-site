@@ -39,18 +39,8 @@
 	z-index: -1;
 }
 
-.lh {
-	&-sm {
-		line-height: var(--lh-sm);
-	}
-
-	&-md {
-		line-height: var(--lh-md);
-	}
-
-	&-none {
-		line-height: 1;
-	}
+.lh-none {
+	line-height: 1;
 }
 
 .visually-hidden {

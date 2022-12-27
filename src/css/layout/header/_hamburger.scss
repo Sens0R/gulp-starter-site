@@ -24,10 +24,11 @@
 	}
 
 	.hamburger__header {
-		padding: var(--header-y-height) 0;
+		padding: var(--header-y-space) 0;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		height: var(--header-height);
 	}
 
 	// hamburger active state
@@ -58,7 +59,7 @@
 		transition: var(--transition-sm);
 		width: var(--target-size);
 		height: var(--target-size);
-	
+
 		@include hover(focus) {
 			fill: var(--color-accent);
 		}

@@ -2,12 +2,13 @@ input,
 textarea {
 	--input-height: var(--target-size);
 	--input-space: 0.75rem;
+	--input-focus-shadow-color: var(--primary-hsl);
+	--input-focus-shadow: 0 0 0 4px hsl(var(--input-focus-shadow-color) / 0.15);
 }
 
 input,
 textarea {
-	border: var(--border-thickness) solid transparent;
-	border-bottom-color: var(--border-color);
+	border: var(--border);
 	background: var(--color-surface);
 	transition: border-color var(--transition-md), box-shadow var(--transition-md);
 
@@ -48,6 +49,10 @@ input[type='checkbox'] {
 		overflow: hidden;
 		top: 0;
 		transition: var(--transition-sm), rotate none;
+	}
+
+	&:focus-within {
+		--input-focus-shadow-color: var(--accent-hsl);
 	}
 }
 
@@ -109,7 +114,7 @@ legend {
 	}
 
 	&__label {
-		@include text-preset(3);
+		@include text-preset-3;
 	}
 
 	&__input {
@@ -124,7 +129,6 @@ legend {
 }
 
 .search__input {
-	border-bottom-color: var(--color-primary);
 	width: 100%;
 }
 

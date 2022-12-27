@@ -17,7 +17,7 @@
 	--primary: hsl(var(--primary-hsl));
 
 	--primary-text: hsl(221 35% 10%);
-	--primary-text-muted: hsl(221 35% 25%);
+	--primary-text-muted: hsl(221 25% 35%);
 	--primary-bg: hsl(221 51% 98%);
 
 	--accent-hsl: 19 97% 51%;
@@ -36,14 +36,6 @@
 	--color-text: var(--primary-text);
 	--color-text-muted: var(--primary-text-muted);
 	--color-text-white: var(--white);
-
-	// shadows
-	--shadow-color-hsl: var(--primary-hsl);
-	--input-focus-shadow: 0 0 0 4px hsl(var(--primary-hsl) / 0.2);
-
-	// borders
-	--border-color: hsl(var(--primary-hsl) / 0.5);
-	--border-color-accent: var(--color-primary);
 
 	// backgrounds
 	--color-surface: var(--white);
@@ -90,8 +82,8 @@
 	|--------------------------------------------------------------------------
 	*/
 
-	// default: used for logo as leading header size
-	--header-height: clamp-smart(2.75rem, 3.75rem);
+	// default: brand logo used as leading header size
+	--header-height: #{clamp-smart(44px, 60px)};
 
 	// buttons, inputs;
 	--target-size: 2.75rem;
@@ -101,6 +93,8 @@
 	--space-container: var(--space-4);
 
 	// borders
+	--border-color: hsl(var(--primary-hsl) / 0.3);
+	--border-color-accent: var(--color-primary);
 	--border-thickness: 1px;
 	--border: var(--border-thickness) solid var(--border-color);
 
@@ -113,11 +107,17 @@
 	--transition-lg: 0.3s ease-in-out;
 
 	// shadows
-
+	--shadow-color-hsl: var(--primary-hsl);
 	--shadow-sm: 0 0 1px hsl(var(--shadow-color-hsl) / 0.03), 0 0 2px hsl(var(--shadow-color-hsl) / 0.03),
 		0 0 4px hsl(var(--shadow-color-hsl) / 0.03);
 	--shadow-md: 0 3px 3px hsl(var(--shadow-color-hsl) / 0.03), 0 6px 6px hsl(var(--shadow-color-hsl) / 0.03),
 		0 12px 12px hsl(var(--shadow-color-hsl) / 0.03);
 	--shadow-lg: 0 9px 9px hsl(var(--shadow-color-hsl) / 0.01), 0 18px 18px hsl(var(--shadow-color-hsl) / 0.01),
 		0 36px 36px hsl(var(--shadow-color-hsl) / 0.01);
+
+	/*
+	|--------------------------------------------------------------------------
+	|	ELEMENTS
+	|--------------------------------------------------------------------------
+	*/
 }

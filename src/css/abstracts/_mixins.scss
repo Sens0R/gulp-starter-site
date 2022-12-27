@@ -1,8 +1,3 @@
-// text presets from _text-presets.scss
-@mixin text-preset($value) {
-	@extend %text-preset-#{$value} !optional;
-}
-
 // check for device input type
 @mixin device-input($type) {
 	@if $type == touch {
@@ -142,4 +137,3 @@
 	white-space: nowrap !important;
 	border: 0 !important;
 }
-

@@ -76,7 +76,7 @@ a {
 
 @mixin button--sm {
 	--button-fs: var(--fs-sm);
-	--button-height: calc(var(--target-size) * 0.8);
+	--button-height: calc(var(--target-size) * 0.7);
 	--button-min-width: calc(var(--button-min-width-value) * 0.7);
 	--button-space-x: calc(var(--button-space-x-value) * 0.5);
 }

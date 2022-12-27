@@ -10,12 +10,12 @@
 }
 
 .footer-nav__title {
-	@include text-preset(2);
+	@include text-preset-2;
 	margin-bottom: var(--space-4);
 }
 
 .footer-nav__subtitle {
-	@include text-preset(3);
+	@include text-preset-3;
 }
 
 .footer-nav__list {

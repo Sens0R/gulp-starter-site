@@ -1,18 +1,12 @@
 $grid-gutter-width: 0; // default bootstrap x gutter
 $container-max-width: 1536px;
 
-// add button disabled class [disabled] use swiper styles
 $colors: (
 	accent: var(--color-accent),
 	text: (
-		primary: var(--color-text),
-		secondary: var(--color-text-muted),
-		reverse: var(--color-text-white),
-	),
-	feedback: (
-		error: var(--color-feedback-error),
-		success: var(--color-feedback-success),
-		warning: var(--color-feedback-warning),
+		null: var(--color-text),
+		muted: var(--color-text-muted),
+		white: var(--color-text-white),
 	),
 );
 

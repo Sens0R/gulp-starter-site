@@ -8,6 +8,7 @@
 @import 'abstracts/mixins';
 
 // component mixins
+@import 'base/text-presets';
 @import 'modules/buttons/button-utility';
 @import 'modules/links/link-utility';
 
@@ -20,8 +21,6 @@
 @import 'base/root';
 @import 'base/themes';
 @import 'base/base';
-@import 'base/text-presets';
-@import 'base/dark';
 @import 'base/fonts';
 @import 'base/containers';
 @import 'base/selectors';

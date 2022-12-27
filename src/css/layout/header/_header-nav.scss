@@ -6,7 +6,7 @@
 }
 
 .header-nav__link {
-	@include text-preset(3);
+	@include text-preset-3;
 	padding: var(--nav-space) 0;
 	text-decoration: none;
 }

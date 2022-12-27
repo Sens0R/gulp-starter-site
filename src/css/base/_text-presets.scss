@@ -1,8 +1,4 @@
-/*--------------------------------------------------------------
-# TEXT PRESETS
---------------------------------------------------------------*/
-
-%text-preset-1 {
+@mixin text-preset-1 {
 	font-size: var(--h2);
 	line-height: var(--lh-sm);
 	font-weight: var(--fw-bold);
@@ -11,23 +7,25 @@
 	text-align: center;
 }
 
-%text-preset-2 {
+@mixin text-preset-2 {
 	font-size: var(--fs-lg);
 	font-weight: var(--fw-bold);
 	text-transform: uppercase;
 	letter-spacing: 0.025em;
 }
 
-%text-preset-3 {
+@mixin text-preset-3 {
 	font-size: var(--fs-md);
 	font-weight: var(--fw-bold);
 	line-height: var(--lh-md);
 }
 
-
-// making real classes from silent classes
-@for $i from 1 through 10 {
-	.text-preset-#{$i} {
-		@include text-preset($i);
-	}
+.text-preset-1 {
+	@include text-preset-1;
+}
+.text-preset-2 {
+	@include text-preset-2;
+}
+.text-preset-3 {
+	@include text-preset-3;
 }
