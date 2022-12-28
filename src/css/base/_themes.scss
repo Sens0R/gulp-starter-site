@@ -5,12 +5,67 @@
 		filter: brightness(0.8) contrast(1.2);
 	}
 
-	--white: 0 0% 100%;
-	--black: 0 0% 10%;
-	--primary-900: 219 35% 90%;
-	--primary-800: 215 50% 83%;
-	--primary-400: 203 39% 44%;
-	--primary-300: 182 43% 26%;
-	--primary-100: 105 55% 16%;
-	--accent: 355 78% 56%;
+	/*
+	|--------------------------------------------------------------------------
+	|	COLOR PALETTE
+	|--------------------------------------------------------------------------
+	*/
+
+	--white-hsl: 0 0% 100%;
+	--white: hsl(var(--white-hsl));
+
+	--black-hsl: 0 0% 10%;
+	--black: hsl(var(--black-hsl));
+
+	--primary-hsl: 195 100% 40%;
+	--primary: hsl(var(--primary-hsl));
+
+	--primary-text: hsl(210, 17%, 98%);
+	--primary-text-muted: hsl(228, 6%, 83%);
+	--primary-bg: hsl(225, 6%, 13%);
+	--surface: hsl(230, 6%, 20%);
+	
+	--accent-hsl:  195 100% 50%;
+	--accent: hsl(var(--accent-hsl));
+
+	/*
+	|--------------------------------------------------------------------------
+	|	COLORS
+	|--------------------------------------------------------------------------
+	*/
+
+	--color-primary: hsl(var(--primary-hsl));
+	--color-accent: var(--accent);
+
+	// text
+	--color-text: var(--primary-text);
+	--color-text-muted: var(--primary-text-muted);
+	--color-text-white: var(--white);
+
+	// backgrounds
+	--color-surface: var(--surface);
+	--color-bg: var(--primary-bg);
+	--color-bg-header: var(--color-bg);
+	--color-bg-footer: var(--color-bg);
+	--backdrop-color: hsl(var(--black-hsl) / 0.4);
+
+	/*
+	|--------------------------------------------------------------------------
+	|	STRUCTURE
+	|--------------------------------------------------------------------------
+	*/
+
+	// borders
+	--border-color: hsl(224, 6%, 37%);
+	--border-color-accent: var(--color-primary);
+	--border: var(--border-thickness) solid var(--border-color);
+
+	// shadows
+	--shadow-color-hsl: var(--black-hsl);
+	--shadow-sm: 0 0 1px hsl(var(--shadow-color-hsl) / 0.83), 0 0 2px hsl(var(--shadow-color-hsl) / 0.83),
+		0 0 4px hsl(var(--shadow-color-hsl) / 0.83);
+	--shadow-md: 0 3px 3px hsl(var(--shadow-color-hsl) / 0.83), 0 6px 6px hsl(var(--shadow-color-hsl) / 0.83),
+		0 12px 12px hsl(var(--shadow-color-hsl) / 0.83);
+	--shadow-lg: 0 9px 9px hsl(var(--shadow-color-hsl) / 0.31), 0 18px 18px hsl(var(--shadow-color-hsl) / 0.31),
+		0 36px 36px hsl(var(--shadow-color-hsl) / 0.31);
 }

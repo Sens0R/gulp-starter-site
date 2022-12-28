@@ -1,26 +1,29 @@
-.dropdown {
+[data-dropdown] {
 	position: relative;
 }
 
-.dropdown__content {
+[data-dropdown-content] {
 	position: absolute;
 	visibility: hidden;
-	opacity: 0;
-	transition: var(--transition-sm);
 	overflow: hidden;
+	opacity: 0;
+
+	min-width: 7.5rem;
+	transition: var(--transition-sm);
 	background: var(--color-surface);
-	margin: auto;
 	box-shadow: var(--shadow-md);
 }
 
-.dropdown.active .dropdown__content {
+[data-dropdown].active [data-dropdown-content] {
 	visibility: visible;
 	opacity: 1;
 }
 
+.dropdown__content {
+}
+
 .dropdown__controls {
 	display: flex;
-	align-items: stretch;
 	justify-content: space-between;
 }
 

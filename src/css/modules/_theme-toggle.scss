@@ -1,0 +1,55 @@
+.theme-toggle {
+	fill: var(--color-text-muted);
+}
+
+.theme-toggle__menu {
+}
+
+.theme-toggle__icon {
+	width: 1.75em;
+	height: 1.75em;
+}
+
+.theme-toggle__button {
+	padding: var(--space-3);
+	width: 100%;
+	align-items: center;
+	gap: var(--space-2);
+
+	@include hover(focus) {
+		color: var(--color-accent);
+	}
+}
+
+.theme-toggle__button.active {
+	color: var(--color-accent);
+}
+
+.theme-toggle:has([data-theme-toggler='dark'].active) {
+}
+
+.theme-toggle__icon--light {
+	display: none;
+}
+
+.theme-toggle:has([data-theme-toggler='light'].active) {
+	.theme-toggle__icon--light {
+		display: inline-flex;
+	}
+
+	.theme-toggle__icon--dark {
+		display: none;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.theme-toggle:has([data-theme-toggler='system'].active) {
+		.theme-toggle__icon--light {
+			display: inline-flex;
+		}
+
+		.theme-toggle__icon--dark {
+			display: none;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,7 @@
   <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
 
   <link rel="shortcut icon" type="image/svg+xml" href="images/icons/favicon.svg" />
-
+  
   <link rel="stylesheet" href="css/style.min.css" />
   <script defer src="js/app.min.js"></script>
 
@@ -19,11 +19,10 @@
 </head>
 
 
-<body>
-    
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <div data-header>
-    <header class="header__inner container"><!-- ====================   LOGO   ==================== -->
+	<body>
+		<a class="skip-link" href="#main-content">Skip to main content</a>
+		<div data-header>
+			<header class="header__inner container"><!-- ====================   LOGO   ==================== -->
 
 <a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
 
@@ -63,21 +62,19 @@
 					</svg>
 				</button>
 			</div>
-			<div data-dropdown-content class="dropdown__content">
-				<ul class="header-nav__list">
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
+			<ul data-dropdown-content class="dropdown__content header-nav__list">
+				<li>
+					<a href="about.html" class="header-nav__link">Lorem ipsum dolor</a>
+				</li>
 
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
+				<li>
+					<a href="blog.html" class="header-nav__link">Lorem ipsum dolor</a>
+				</li>
 
-					<li>
-						<a href="index.html" class="header-nav__link">Lorem ipsum dolor</a>
-					</li>
-				</ul>
-			</div>
+				<li>
+					<a href="portfolio.html" class="header-nav__link">Lorem ipsum dolor</a>
+				</li>
+			</ul>
 		</li>
 
 		<li class="header-nav__item">
@@ -133,7 +130,42 @@
 	</button>
 </form>
 </div>
-
+<div><div data-dropdown class="theme-toggle">
+	<button type="button" class="theme-toggle__button">
+		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--dark">
+			<use href="images/icons/sprite-mono.svg#moon"></use>
+		</svg>
+		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--light">
+			<use href="images/icons/sprite-mono.svg#sun"></use>
+		</svg>
+	</button>
+	<menu data-dropdown-content class="theme-toggle__menu">
+		<li>
+			<button data-theme-toggler="dark" type="button" class="theme-toggle__button">
+				<svg aria-hidden="true" class="icon">
+					<use href="images/icons/sprite-mono.svg#moon"></use>
+				</svg>
+				Dark
+			</button>
+		</li>
+		<li>
+			<button data-theme-toggler="light" type="button" class="theme-toggle__button">
+				<svg aria-hidden="true" class="icon">
+					<use href="images/icons/sprite-mono.svg#sun"></use>
+				</svg>
+				Light
+			</button>
+		</li>
+		<li>
+			<button data-theme-toggler="system" type="button" class="theme-toggle__button active">
+				<svg aria-hidden="true" class="icon">
+					<use href="images/icons/sprite-mono.svg#system"></use>
+				</svg>
+				System
+			</button>
+		</li>
+	</menu>
+</div></div>
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
 <button class="hamburger__toggler" data-hamburger-button="open" type="button">
 	<svg aria-hidden="true" aria-label="Open navigation menu" class="hamburger__icon">
@@ -141,11 +173,12 @@
 	</svg>
 </button>
 </header>
-    </div>
-    <div class="body-wrapper">
-    <main id="main-content" tabindex="-1">
-   
-    
+		</div>
+		<div class="body-wrapper">
+			<main id="main-content" tabindex="-1"></main>
+		</div>
+	</body>
+</html>
 
 
 </main>
@@ -153,7 +186,7 @@
 <footer class="footer">
   <div class="container">
 	<nav aria-label="Footer" class="footer-nav">
-		<div class="row row-cols-sm-2 row-cols-lg-4 gy-4">
+		<div class="row row-cols-sm-2 row-cols-lg-4 g-7">
 			<div class="col-12 footer-nav__group">
 				<ul class="footer-nav__list">
 					<li>

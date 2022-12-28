@@ -9,6 +9,7 @@ import { animateOnScroll } from './modules/animate-on-scroll.js'
 import { search } from './modules/search.js'
 import { tooltip } from './modules/tooltip.js'
 import { dialog } from './modules/dialog.js'
+import { themeToggle } from './modules/theme-toggle.js'
 
 activePageHighlight()
 animateOnScroll()
@@ -20,15 +21,4 @@ tooltip()
 tabs()
 accordion()
 dialog()
-
-
-
-
-document
-	.querySelector('[data-theme-toggler="light"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'light'))
-document
-	.querySelector('[data-theme-toggler="dark"]')
-	.addEventListener('click', () => document.body.setAttribute('data-theme', 'dark'))
-
-
+themeToggle()

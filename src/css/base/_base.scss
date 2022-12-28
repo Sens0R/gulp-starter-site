@@ -9,6 +9,7 @@
 	padding: 0;
 	font-family: inherit;
 	font-size: inherit;
+	color: inherit;
 }
 
 html {
@@ -38,7 +39,6 @@ p {
 }
 
 .body-wrapper {
-	overflow: hidden;
 	margin-top: auto;
 }
 
@@ -158,7 +158,7 @@ img {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	background: hsl(0, 0%, 50%);
+	background: hsl(var(--color-primary-hsl) / 0.5);
 }
 
 ul,

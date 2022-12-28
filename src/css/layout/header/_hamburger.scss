@@ -29,6 +29,7 @@
 		align-items: center;
 		justify-content: space-between;
 		height: var(--header-height);
+		margin-bottom: var(--space-6);
 	}
 
 	// hamburger active state
@@ -68,12 +69,13 @@
 	.hamburger__icon {
 		--toggler-icon-height: 1.5rem;
 
+		fill: currentColor;
 		height: var(--toggler-icon-height);
 		width: var(--target-size);
 	}
 
-	.hamburger____icon--close {
-		width: var(--toggler-icon-height);
+	.hamburger__icon--close {
+		--toggler-icon-height: 1rem;
 	}
 }
 

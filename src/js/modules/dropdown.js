@@ -76,6 +76,8 @@ export function dropdown() {
 					lastLink.focus()
 				}
 			})
+
+			dropdownContentLink.addEventListener('click', close)
 		})
 
 		function toggle() {
