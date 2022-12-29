@@ -6,59 +6,66 @@ const lightButton = document.querySelector('[data-theme-toggler="light"]')
 const systemButton = document.querySelector('[data-theme-toggler="system"]')
 const themeMq = window.matchMedia('(prefers-color-scheme: dark)')
 const storageTheme = localStorage.getItem('theme')
+const darkTheme = localStorage.theme === 'dark'
+const lightTheme = localStorage.theme === 'light'
+const systemTheme = localStorage.theme === 'system'
 
 export function themeToggle() {
-	localStorage.setItem('theme', 'system')
-	body.setAttribute('data-theme', storageTheme)
-
-	if (localStorage.theme === 'system') {
-		console.log('system theme startup')
-		systemTheme()
+	console.log(themeMq)
+	if (!storageTheme || systemTheme) {
+		systemThemeLoad()
+		systemThemeWatch()
 	}
+
+	if (darkTheme) goDark()
+	if (lightTheme) goLight()
 
 	// Button Event Handlers
 	darkButton.onclick = () => {
-		body.setAttribute('data-theme', 'dark')
 		localStorage.setItem('theme', 'dark')
-		clearActiveThemes()
-		darkButton.classList.add('active')
-		console.log('onclick dark')
+		goDark()
 	}
 
 	lightButton.onclick = () => {
-		body.setAttribute('data-theme', 'light')
 		localStorage.setItem('theme', 'light')
-		clearActiveThemes()
-		lightButton.classList.add('active')
-		console.log('onclick light')
+		goLight()
 	}
 
 	systemButton.onclick = () => {
 		localStorage.setItem('theme', 'system')
 		clearActiveThemes()
 		systemButton.classList.add('active')
-		systemTheme()
+		systemThemeLoad()
+		systemThemeWatch()
 	}
 }
 
-function systemTheme() {
+function goDark() {
+	body.setAttribute('data-theme', 'dark')
+	clearActiveThemes()
+	darkButton.classList.add('active')
+}
+
+function goLight() {
+	body.setAttribute('data-theme', 'light')
+	clearActiveThemes()
+	lightButton.classList.add('active')
+}
+
+function systemThemeLoad() {
 	if (themeMq.matches) {
 		body.setAttribute('data-theme', 'dark')
-		console.log('dark')
 	} else {
 		body.setAttribute('data-theme', 'light')
-		console.log('light')
 	}
+}
 
+function systemThemeWatch() {
 	themeMq.onchange = e => {
-		if (!localStorage.theme === 'system') return
-
 		if (e.matches) {
 			body.setAttribute('data-theme', 'dark')
-			console.log('onchange dark')
 		} else {
 			body.setAttribute('data-theme', 'light')
-			console.log('onchange light')
 		}
 	}
 }

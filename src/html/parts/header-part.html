@@ -3,12 +3,26 @@
 	@@include('head-part.html')
 
 	<body>
+		<script>
+			const body = document.body
+			const themeMq = window.matchMedia('(prefers-color-scheme: dark)')
+			const storageTheme = localStorage.getItem('theme')
+			
+			if (!storageTheme || localStorage.theme === 'system') {
+				if (themeMq.matches) {
+					body.setAttribute('data-theme', 'dark')
+				} else {
+					body.setAttribute('data-theme', 'light')
+				}
+			}
+
+			if (localStorage.theme === 'dark') body.setAttribute('data-theme', 'dark')
+			if (localStorage.theme === 'light') body.setAttribute('data-theme', 'light')
+		</script>
+
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<div data-header>
 			<header class="header__inner container">@@include('../components/header.html',{})</header>
 		</div>
 		<div class="body-wrapper">
-			<main id="main-content" tabindex="-1"></main>
-		</div>
-	</body>
-</html>
+			<main id="main-content" tabindex="-1">

@@ -28,7 +28,7 @@ body {
 	background: var(--color-bg);
 	text-rendering: optimizeSpeed;
 	-webkit-font-smoothing: antialiased;
-	overflow-x: hidden;
+
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -39,6 +39,7 @@ p {
 }
 
 .body-wrapper {
+	overflow-x: hidden;
 	margin-top: auto;
 }
 

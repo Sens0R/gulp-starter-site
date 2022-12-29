@@ -6201,7 +6201,6 @@ body {
   background: var(--color-bg);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6217,6 +6216,7 @@ p {
 }
 
 .body-wrapper {
+  overflow-x: hidden;
   margin-top: auto;
 }
 
@@ -6686,7 +6686,7 @@ strong {
 }
 
 .header__inner {
-  --header-y-space: var(--space-1);
+  --header-y-space: var(--space-container);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7987,11 +7987,6 @@ legend {
   fill: var(--color-text-muted);
 }
 
-.theme-toggle__icon {
-  width: 1.75em;
-  height: 1.75em;
-}
-
 .theme-toggle__button {
   padding: var(--space-3);
   width: 100%;
@@ -8009,12 +8004,17 @@ legend {
   color: var(--color-accent);
 }
 
-.theme-toggle__button.active {
-  color: var(--color-accent);
+.theme-toggle__icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .theme-toggle__icon--light {
   display: none;
+}
+
+.theme-toggle__button.active {
+  color: var(--color-accent);
 }
 
 .theme-toggle:has([data-theme-toggler=light].active) .theme-toggle__icon--light {
@@ -8024,15 +8024,4 @@ legend {
 }
 .theme-toggle:has([data-theme-toggler=light].active) .theme-toggle__icon--dark {
   display: none;
-}
-
-@media (prefers-color-scheme: light) {
-  .theme-toggle:has([data-theme-toggler=system].active) .theme-toggle__icon--light {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
-  .theme-toggle:has([data-theme-toggler=system].active) .theme-toggle__icon--dark {
-    display: none;
-  }
 }

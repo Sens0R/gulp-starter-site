@@ -17,8 +17,8 @@
 }
 
 .header__inner {
-	--header-y-space: var(--space-1);
-	
+	--header-y-space: var(--space-container);
+		
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
