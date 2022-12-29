@@ -20,34 +20,22 @@
 
 
 	<body>
-		<script>
-			const body = document.body
-			const themeMq = window.matchMedia('(prefers-color-scheme: dark)')
-			const storageTheme = localStorage.getItem('theme')
-			
-			if (!storageTheme || localStorage.theme === 'system') {
-				if (themeMq.matches) {
-					body.setAttribute('data-theme', 'dark')
-				} else {
-					body.setAttribute('data-theme', 'light')
-				}
-			}
-
-			if (localStorage.theme === 'dark') body.setAttribute('data-theme', 'dark')
-			if (localStorage.theme === 'light') body.setAttribute('data-theme', 'light')
-		</script>
+		<script src="js/theme-load.min.js"></script>
 
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<div data-header>
 			<header class="header__inner container"><!-- ====================   LOGO   ==================== -->
-
 <a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
-
 <nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
-		<button aria-label="Close navigation menu" class="hamburger__toggler" data-hamburger-button="close" type="button">
+		<button
+			aria-label="Close navigation menu"
+			class="hamburger__toggler hamburger__toggler--close"
+			data-hamburger-button="close"
+			type="button"
+		>
 			<svg aria-hidden="true" class="hamburger__icon hamburger__icon--close">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
@@ -134,8 +122,9 @@
 </ul>
 </div>
 </nav>
+
 <!-- ====================   SEARCH   ==================== -->
-<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end"><form class="search justify-content-end" role="search">
+<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto"><form class="search justify-content-end" role="search">
 	<label class="visually-hidden">Search</label>
 
 	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
@@ -147,7 +136,8 @@
 	</button>
 </form>
 </div>
-<div><div data-dropdown class="theme-toggle">
+
+<div data-dropdown="hover" class="theme-toggle">
 	<button type="button" class="theme-toggle__button">
 		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--dark">
 			<use href="images/icons/sprite-mono.svg#moon"></use>
@@ -155,7 +145,9 @@
 		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--light">
 			<use href="images/icons/sprite-mono.svg#sun"></use>
 		</svg>
+	
 	</button>
+	
 	<menu data-dropdown-content class="theme-toggle__menu">
 		<li>
 			<button data-theme-toggler="dark" type="button" class="theme-toggle__button">
@@ -182,7 +174,9 @@
 			</button>
 		</li>
 	</menu>
-</div></div>
+</div>
+
+
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
 <button class="hamburger__toggler" data-hamburger-button="open" type="button">
 	<svg aria-hidden="true" aria-label="Open navigation menu" class="hamburger__icon">

@@ -5,9 +5,7 @@
 	z-index: 50;
 	box-shadow: none;
 	background: var(--color-bg-header);
-	
 }
-
 
 .header--unpinned {
 }
@@ -18,7 +16,7 @@
 
 .header__inner {
 	--header-y-space: var(--space-container);
-		
+
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -34,7 +32,6 @@
 .header .search__input {
 	background: var(--color-bg-header);
 }
-
 
 @import 'hamburger';
 @import 'header-nav';

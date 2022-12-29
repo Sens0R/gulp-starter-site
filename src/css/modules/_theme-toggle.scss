@@ -1,5 +1,9 @@
 .theme-toggle {
 	fill: var(--color-text-muted);
+	margin-left: auto;
+	@include bp(lg) {
+		margin-left: unset;
+	}
 }
 
 .theme-toggle__menu {
@@ -38,4 +42,3 @@
 		display: none;
 	}
 }
-

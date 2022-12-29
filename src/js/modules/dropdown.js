@@ -78,6 +78,7 @@ export function dropdown() {
 			})
 
 			dropdownContentLink.addEventListener('click', close)
+			checkBoundingBox()
 		})
 
 		function toggle() {
@@ -93,11 +94,12 @@ export function dropdown() {
 			dropdownEl.classList.add('active')
 			document.addEventListener('keydown', closeWithEsc)
 			dropdownButton.setAttribute('aria-expanded', 'true')
-			checkBoundingBox()
+
 			setTimeout(() => {
 				document.addEventListener('click', clickOutside)
 			}, 1)
 			dropdownButton.addEventListener('keydown', selectFirstLink)
+			checkBoundingBox()
 		}
 
 		function close() {
@@ -109,7 +111,6 @@ export function dropdown() {
 			document.removeEventListener('keydown', closeWithEsc)
 			dropdownButton.setAttribute('aria-expanded', 'false')
 			document.removeEventListener('click', clickOutside)
-			resetBoundingBox()
 			dropdownButton.removeEventListener('keydown', selectFirstLink)
 			dropdownEl.classList.remove('active')
 		}
@@ -147,11 +148,11 @@ export function dropdown() {
 				dropdownContent.style.translate = '0'
 			}
 		}
-
-		function resetBoundingBox() {
-			dropdownContent.style.right = null
-			dropdownContent.style.left = null
-			dropdownContent.style.translate = null
-		}
 	})
+}
+
+function resetBoundingBox() {
+	dropdownContent.style.right = null
+	dropdownContent.style.left = null
+	dropdownContent.style.translate = null
 }

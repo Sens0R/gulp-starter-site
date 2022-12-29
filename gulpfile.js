@@ -17,7 +17,7 @@ import { copy, copyRegularSvg } from './gulp/tasks/copy.js'
 import { html } from './gulp/tasks/html.js'
 import { server } from './gulp/tasks/server.js'
 import { scss } from './gulp/tasks/scss.js'
-import { js} from './gulp/tasks/js.js'
+import { js, themeJs } from './gulp/tasks/js.js'
 import { images, thumbnail } from './gulp/tasks/images.js'
 import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js'
 import { spriteMono, spriteMulti } from './gulp/tasks/svgSprites.js'
@@ -43,7 +43,7 @@ const imageTasks = gulp.parallel(images, thumbnail)
 const svgSprites = gulp.parallel(spriteMono, spriteMulti, copyRegularSvg)
 
 // Основной сценарий
-const mainTasks = gulp.series(gulp.parallel(html, scss, js, svgSprites))
+const mainTasks = gulp.series(gulp.parallel(html, scss, themeJs, js, svgSprites))
 
 // Построение сценариев выполнения задач
 const dev = gulp.series(copy, mainTasks, gulp.parallel(watcher, server))

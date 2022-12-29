@@ -1,12 +1,15 @@
 <!-- ====================   LOGO   ==================== -->
-
 <a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
-
 <nav aria-label="Main" class="hamburger" data-hamburger>
 	<div class="hamburger__header">
-		<button aria-label="Close navigation menu" class="hamburger__toggler" data-hamburger-button="close" type="button">
+		<button
+			aria-label="Close navigation menu"
+			class="hamburger__toggler hamburger__toggler--close"
+			data-hamburger-button="close"
+			type="button"
+		>
 			<svg aria-hidden="true" class="hamburger__icon hamburger__icon--close">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
@@ -57,9 +60,12 @@
 
 	<div class="d-lg-none">@@include('social.html',{})</div>
 </nav>
+
 <!-- ====================   SEARCH   ==================== -->
-<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end">@@include('search.html',{})</div>
-<div>@@include('theme-toggle.html',{})</div>
+<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto">@@include('search.html',{})</div>
+
+@@include('theme-toggle.html',{})
+
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
 <button class="hamburger__toggler" data-hamburger-button="open" type="button">
 	<svg aria-hidden="true" aria-label="Open navigation menu" class="hamburger__icon">

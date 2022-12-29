@@ -7,7 +7,7 @@
 @include bp(lg, max) {
 	.hamburger {
 		display: flex;
-		gap: var(--space-4);
+		gap: var(--space-8);
 		position: fixed;
 		right: 0;
 		top: 0;
@@ -28,8 +28,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		height: var(--header-height);
-		margin-bottom: var(--space-6);
+		min-height: var(--header-height);
 	}
 
 	// hamburger active state
@@ -37,7 +36,6 @@
 		overflow: hidden auto;
 		visibility: visible;
 		translate: none;
-		box-shadow: var(--backdrop-shadow-color);
 	}
 
 	// hamburger dropdowns
@@ -56,7 +54,6 @@
 		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
-		margin-left: auto;
 		transition: var(--transition-sm);
 		width: var(--target-size);
 		height: var(--target-size);
@@ -66,11 +63,16 @@
 		}
 	}
 
+	.hamburger__toggler--close {
+		margin-left: auto;
+	}
+
 	.hamburger__icon {
 		--toggler-icon-height: 1.5rem;
 
 		fill: currentColor;
 		height: var(--toggler-icon-height);
+
 		width: var(--target-size);
 	}
 

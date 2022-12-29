@@ -18,6 +18,7 @@ export const path = {
   src: {
     files: `${srcFolder}/files/**/*.*`,
     js: `${srcFolder}/js/app.js`,
+    themeJs: `${srcFolder}/js/theme-load.js`,
     images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp}`,
     thumbnail: `${srcFolder}/assets/thumbnail/**/*.{jpg,jpeg,png,gif,webp}`,
     scss: `${srcFolder}/css/style.scss`,
