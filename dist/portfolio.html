@@ -25,36 +25,18 @@
 		<a class="skip-link" href="#main-content">Skip to main content</a>
 		<header data-header>
 			<nav aria-label="main" class="header__belt container"><!-- ====================   LOGO   ==================== -->
-<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header me-auto" href="index.html"
-	>Brand</a
->
+<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
 
 <!-- ====================   NAVIGATION   ==================== -->
 <div class="hamburger" data-hamburger>
 	<div class="hamburger__header">
-		<button
-			aria-label="Close navigation menu"
-			class="hamburger__toggler hamburger__toggler--close"
-			data-hamburger-button="close"
-			type="button"
-		>
+		<button aria-label="Close navigation menu" class="hamburger__toggler" data-hamburger-button="close" type="button">
 			<svg aria-hidden="true" class="hamburger__icon hamburger__icon--close">
 				<use href="images/icons/sprite-mono.svg#cancel"></use>
 			</svg>
 		</button>
 	</div>
-	<div class="d-sm-none"><form class="search justify-content-end" role="search">
-	<label class="visually-hidden">Search</label>
 
-	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
-
-	<button aria-label="Submit search" class="search__button" type="submit">
-		<svg aria-hidden="true" class="icon">
-			<use href="images/icons/sprite-mono.svg#search" />
-		</svg>
-	</button>
-</form>
-</div>
 	<ul class="header-nav">
 		<li class="header-nav__item">
 			<a data-nav-page href="about.html" class="header-nav__link">About</a>
@@ -64,22 +46,23 @@
 			<div class="dropdown__controls">
 				<a data-nav-page href="headers.html" class="header-nav__link">Services</a>
 				<button type="button" class="dropdown__button" aria-label="Dropdown menu for headers">
-					<svg aria-hidden="true" class="icon">
+					<svg aria-hidden="true" class="icon icon--arrow">
 						<use href="images/icons/sprite-mono.svg#arrow"></use>
 					</svg>
 				</button>
 			</div>
-			<ul data-dropdown-content class="dropdown__content header-nav__list">
+
+			<ul data-dropdown-content class="dropdown__content">
 				<li>
-					<a href="about.html" class="header-nav__link">Lorem ipsum dolor</a>
+					<a href="about.html" class="dropdown__item">Lorem ipsum dolor</a>
 				</li>
 
 				<li>
-					<a href="blog.html" class="header-nav__link">Lorem ipsum dolor</a>
+					<a href="blog.html" class="dropdown__item">Lorem ipsum dolor</a>
 				</li>
 
 				<li>
-					<a href="portfolio.html" class="header-nav__link">Lorem ipsum dolor</a>
+					<a href="portfolio.html" class="dropdown__item">Lorem ipsum dolor</a>
 				</li>
 			</ul>
 		</li>
@@ -96,6 +79,45 @@
 			<a data-nav-page href="contact.html" class="header-nav__link">Contact</a>
 		</li>
 	</ul>
+
+	<div data-dropdown class="theme-toggle dropdown">
+		<button type="button" class="dropdown__button header-nav__link">
+			<div class="d-lg-none me-3">Change theme</div>
+			<svg aria-hidden="true" class="icon icon--moon">
+				<use href="images/icons/sprite-mono.svg#moon"></use>
+			</svg>
+			<svg aria-hidden="true" class="icon icon--sun">
+				<use href="images/icons/sprite-mono.svg#sun"></use>
+			</svg>
+		</button>
+
+		<menu data-dropdown-content class="dropdown__content">
+			<li>
+				<button data-theme-toggler="dark" type="button" class="dropdown__item">
+					<svg aria-hidden="true" class="icon">
+						<use href="images/icons/sprite-mono.svg#moon"></use>
+					</svg>
+					Dark
+				</button>
+			</li>
+			<li>
+				<button data-theme-toggler="light" type="button" class="dropdown__item">
+					<svg aria-hidden="true" class="icon">
+						<use href="images/icons/sprite-mono.svg#sun"></use>
+					</svg>
+					Light
+				</button>
+			</li>
+			<li>
+				<button data-theme-toggler="system" type="button" class="dropdown__item active">
+					<svg aria-hidden="true" class="icon">
+						<use href="images/icons/sprite-mono.svg#system"></use>
+					</svg>
+					System
+				</button>
+			</li>
+		</menu>
+	</div>
 
 	<div class="d-lg-none"><ul class="social-icons">
 	<li>
@@ -123,60 +145,6 @@
 	</li>
 </ul>
 </div>
-
-	<div data-dropdown="hover" class="theme-toggle">
-	<button type="button" class="theme-toggle__button">
-		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--dark">
-			<use href="images/icons/sprite-mono.svg#moon"></use>
-		</svg>
-		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--light">
-			<use href="images/icons/sprite-mono.svg#sun"></use>
-		</svg>
-	
-	</button>
-	
-	<menu data-dropdown-content class="theme-toggle__menu">
-		<li>
-			<button data-theme-toggler="dark" type="button" class="theme-toggle__button">
-				<svg aria-hidden="true" class="icon">
-					<use href="images/icons/sprite-mono.svg#moon"></use>
-				</svg>
-				Dark
-			</button>
-		</li>
-		<li>
-			<button data-theme-toggler="light" type="button" class="theme-toggle__button">
-				<svg aria-hidden="true" class="icon">
-					<use href="images/icons/sprite-mono.svg#sun"></use>
-				</svg>
-				Light
-			</button>
-		</li>
-		<li>
-			<button data-theme-toggler="system" type="button" class="theme-toggle__button active">
-				<svg aria-hidden="true" class="icon">
-					<use href="images/icons/sprite-mono.svg#system"></use>
-				</svg>
-				System
-			</button>
-		</li>
-	</menu>
-</div>
-
-</div>
-
-<!-- ====================   SEARCH   ==================== -->
-<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto"><form class="search justify-content-end" role="search">
-	<label class="visually-hidden">Search</label>
-
-	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
-
-	<button aria-label="Submit search" class="search__button" type="submit">
-		<svg aria-hidden="true" class="icon">
-			<use href="images/icons/sprite-mono.svg#search" />
-		</svg>
-	</button>
-</form>
 </div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->

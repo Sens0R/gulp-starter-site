@@ -7,20 +7,48 @@
 	visibility: hidden;
 	overflow: hidden;
 	opacity: 0;
-
-	min-width: 7.5rem;
-	translate: 0 15px;
-	transition: var(--transition-md);
+	min-width: 8rem;
+	left: 50%;
+	translate: -50% -16px;
 	background: var(--color-surface);
 	box-shadow: var(--shadow-md);
+	z-index: 500;
+	transition: var(--transition-lg);
 }
 
 [data-dropdown].active [data-dropdown-content] {
 	visibility: visible;
 	opacity: 1;
-	translate: none;
+	translate: -50% 0;
 }
 
+.dropdown__content {
+}
+
+.dropdown__item {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: var(--space-2);
+	padding: var(--space-2) var(--space-3);
+	white-space: nowrap;
+	text-decoration: none;
+	font-size: var(--fs-sm);
+
+	@include hover(focus) {
+		background: hsl(var(--accent-hsl) / 0.15);
+		color: inherit;
+	}
+}
+
+.dropdown__item.active {
+	background: var(--color-primary);
+	color: var(--color-text-white);
+}
+
+.dropdown__item.active .icon {
+	fill: var(--color-text-white);
+}
 
 .dropdown__controls {
 	display: flex;
@@ -46,13 +74,13 @@
 	fill: var(--color-text);
 }
 
-.dropdown.active .icon {
+.dropdown.active .icon--arrow {
 	rotate: 90deg;
 }
 
 // a11y fix for desktop screen resize. TODO better solution possible?
 @include device-input(mouse) {
-	.hamburger.active .dropdown__content {
+	.hamburger.active [data-dropdown-content] {
 		visibility: visible;
 		opacity: 1;
 	}

@@ -12,17 +12,15 @@ export function themeToggle() {
 	if (!lightTheme && !darkTheme) systemTheme()
 	if (darkTheme) goDark()
 	if (lightTheme) goLight()
-	
+
 	// Button Event Handlers
 	darkButton.onclick = () => {
-		console.log('dark')
 		localStorage.setItem('theme', 'dark')
 		goDark()
 		themeMq.onchange = null
 	}
 
 	lightButton.onclick = () => {
-		console.log('light')
 		localStorage.setItem('theme', 'light')
 		goLight()
 		themeMq.onchange = null

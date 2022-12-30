@@ -979,41 +979,58 @@
 
 <div class="content-block">
 	<h2 data-animate="section-header" class="text-preset-1 mb-6">Contact form</h2>
+
 	<div class="container">
 		<div class="row g-7">
 			<div class="col-12 col-sm-5 col-lg-6">
-				<ul class="contact-form gap-7">
-					<li class="contact-form__item">
-						<h3 class="contact-form__label">Email</h3>
+				<ul class="contact gap-7">
+					<li class="contact__item">
+						<h3 class="contact__label">Email</h3>
 						<a href="mailto:service@skinclinica.com.au" target="_blank">service@skinclinica.com.au </a>
 					</li>
 
-					<li class="contact-form__item">
-						<h3 class="contact-form__label">Phone</h3>
+					<li class="contact__item">
+						<h3 class="contact__label">Phone</h3>
 						<a href="tel:+61251347278">61 2 5134 7278</a>
 					</li>
 
-					<li class="contact-form__item">
+					<li class="contact__item">
 						<div>@@include('social.html',{})</div>
 					</li>
 				</ul>
 			</div>
 
-			<div class="col-12 col-sm-7 col-lg-6">
-				<form class="contact-form">
-					<label class="contact-form__label contact-form__item">
-						Name:
-						<input autocomplete="off" type="text" name="name" class="contact-form__input" />
-					</label>
+			<div class="col-12 col-sm-7 col-lg-6 d-flex flex-column gap-6">
+				<form class="contact" role="search">
+					<div class="hstack gap-2 flex-wrap">
+						<label class="contact__label contact__item flex-fill">
+							Search:
+							<input autocomplete="off" class="contact__input" required type="search" />
+						</label>
+						<button aria-label="Submit search" class="button button--box mt-auto" type="submit">
+							<svg aria-hidden="true" class="icon">
+								<use href="images/icons/sprite-mono.svg#search" />
+							</svg>
+						</button>
+					</div>
+				</form>
 
-					<label class="contact-form__label contact-form__item">
-						Email address (required):
-						<input type="email" name="email" class="contact-form__input" required />
-					</label>
+				<form class="contact">
+					<div class="hstack gap-4 flex-wrap">
+						<label class="contact__label contact__item flex-fill">
+							Name:
+							<input autocomplete="off" type="text" name="name" class="contact__input" />
+						</label>
 
-					<label class="contact-form__label contact-form__item">
-						Message (required):
-						<textarea name="message" rows="4" cols="50" class="contact-form__input" required></textarea>
+						<label class="contact__label contact__item flex-fill">
+							Email address:
+							<input type="email" name="email" class="contact__input" required />
+						</label>
+					</div>
+
+					<label class="contact__label contact__item">
+						Message:
+						<textarea name="message" rows="4" cols="50" class="contact__input" required></textarea>
 					</label>
 
 					<button class="button" type="submit">Submit</button>
@@ -1024,7 +1041,7 @@
 </div>
 <div class="content-block">
 	<div class="container hstack gap-6 justify-content-between">
-		<fieldset class="hstack gap-6 flex-wrap ">
+		<fieldset class="hstack gap-6 flex-wrap">
 			<legend class="text-preset-2">Radio buttons</legend>
 
 			<label>
@@ -1048,7 +1065,7 @@
 			</label>
 		</fieldset>
 
-		<fieldset class="hstack gap-5 flex-wrap ">
+		<fieldset class="hstack gap-5 flex-wrap">
 			<legend class="text-preset-2">Checkboxes</legend>
 
 			<label>

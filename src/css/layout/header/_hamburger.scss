@@ -1,13 +1,27 @@
 @include bp(lg) {
+	.hamburger {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--space-5);
+		flex: 1;
+		justify-content: space-between;
+	}
+
 	.hamburger__toggler {
 		display: none !important;
 	}
+
+	.hamburger__header {
+		display: none;
+	}
+
 }
 
 @include bp(lg, max) {
 	.hamburger {
 		display: flex;
-		gap: var(--space-8);
+		gap: var(--space-6);
 		position: fixed;
 		right: 0;
 		top: 0;
@@ -39,13 +53,13 @@
 	}
 
 	// hamburger dropdowns
-	.hamburger .dropdown__content {
+	.hamburger [data-dropdown-content] {
 		position: unset;
 		translate: unset;
 		box-shadow: unset;
 	}
 
-	.hamburger .dropdown.active .dropdown__content {
+	.hamburger .dropdown.active [data-dropdown-content] {
 		translate: none;
 	}
 
@@ -54,6 +68,7 @@
 		align-items: flex-end;
 		justify-content: center;
 		flex-direction: column;
+		margin-left: auto;
 		transition: var(--transition-sm);
 		width: var(--target-size);
 		height: var(--target-size);
@@ -63,9 +78,6 @@
 		}
 	}
 
-	.hamburger__toggler--close {
-		margin-left: auto;
-	}
 
 	.hamburger__icon {
 		--toggler-icon-height: 1.5rem;

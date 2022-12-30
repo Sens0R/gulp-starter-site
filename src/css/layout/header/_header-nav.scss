@@ -1,6 +1,8 @@
-.header-nav {
+.hamburger {
 	--nav-space: var(--space-4);
+}
 
+.header-nav {
 	display: flex;
 	flex-direction: column;
 }
@@ -8,10 +10,6 @@
 .header-nav__link {
 	padding: var(--nav-space) 0;
 	text-decoration: none;
-}
-
-.header-nav__list .header-nav__link {
-	font-size: var(--fs-sm);
 }
 
 @include bp(lg) {
@@ -22,7 +20,6 @@
 	}
 
 	.header-nav__link {
-		white-space: nowrap;
 		padding: var(--nav-space);
 	}
 
@@ -34,10 +31,6 @@
 	.header-nav .dropdown .icon {
 		width: 0.75em;
 		height: 0.75em;
-	}
-
-	.dropdown .header-nav__link {
-		padding: var(--space-3) var(--nav-space);
 	}
 }
 

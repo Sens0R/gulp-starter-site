@@ -8,7 +8,7 @@ a,
 a,
 [role='link'] {
 	color: var(--link-color);
-	transition: var(--link-transition);
+	transition: color var(--link-transition);
 
 	@include hover(focus) {
 		color: var(--link-color-hover);

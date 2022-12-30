@@ -77,11 +77,17 @@ export function dropdown() {
 				}
 			})
 
-			dropdownContentLink.addEventListener('click', close)
+			dropdownContentLink.addEventListener('click', () => {
+				dropdownContent.classList.add('transition-stop')
+				close()
+			})
+
 			checkBoundingBox()
 		})
 
 		function toggle() {
+			dropdownContent.classList.remove('transition-stop')
+
 			if (dropdownEl.classList.contains('active')) return close()
 			if (touchDevice) dropdownContent.style.maxHeight = `${dropdownContent.scrollHeight}px`
 

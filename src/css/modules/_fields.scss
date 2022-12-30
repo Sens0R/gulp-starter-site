@@ -102,56 +102,22 @@ legend {
 	width: 100%;
 }
 
-.contact-form {
+.contact {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-6);
-
-	&__item {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	&__label {
-		@include text-preset-3;
-	}
-
-	&__input {
-		margin-top: var(--space-1);
-		width: 100%;
-	}
 }
 
-.search {
+.contact__item {
 	display: flex;
-	gap: var(--space-2);
+	flex-direction: column;
+	align-items: flex-start;
 }
 
-.search__input {
+.contact__label {
+	@include text-preset-3;
+}
+
+.contact__input {
 	width: 100%;
-}
-
-@include bp(sm) {
-	.search {
-		width: 100%;
-	}
-
-	.search__input {
-		transition: max-width var(--transition-lg);
-		max-width: clamp-smart(80px, 120px);
-	}
-
-	.search__input:focus-within {
-		max-width: clamp-smart(250px, 400px);
-	}
-}
-
-.search__input:focus-within::placeholder {
-	color: transparent;
-}
-
-.search__button {
-	@include button;
-	@include button--box;
 }

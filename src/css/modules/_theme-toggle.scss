@@ -1,44 +1,13 @@
-.theme-toggle {
-	fill: var(--color-text-muted);
-	margin-left: auto;
-	@include bp(lg) {
-		margin-left: unset;
-	}
-}
-
-.theme-toggle__menu {
-}
-
-.theme-toggle__button {
-	padding: var(--space-3);
-	width: 100%;
-	align-items: center;
-	gap: var(--space-2);
-
-	@include hover(focus) {
-		color: var(--color-accent);
-	}
-}
-
-.theme-toggle__icon {
-	width: 1.25rem;
-	height: 1.25rem;
-}
-
-.theme-toggle__icon--light {
+.icon--sun {
 	display: none;
 }
 
-.theme-toggle__button.active {
-	color: var(--color-accent);
-}
-
 .theme-toggle:has([data-theme-toggler='light'].active) {
-	.theme-toggle__icon--light {
+	.icon--sun {
 		display: inline-flex;
 	}
 
-	.theme-toggle__icon--dark {
+	.icon--moon {
 		display: none;
 	}
 }
