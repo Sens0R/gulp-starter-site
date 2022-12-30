@@ -54,8 +54,8 @@
 	@include target-space(calc(var(--bullet-size) + var(--bullet-gap)));
 	padding: var(--bullet-size);
 	border-radius: var(--rounded-full) !important;
-	background: var(--color-primary) !important;
-	transition: var(--transition-sm);
+	background: hsl(var(--accent-hsl) / 0.4) !important;
+	transition: var(--transition-md);
 }
 
 .swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {

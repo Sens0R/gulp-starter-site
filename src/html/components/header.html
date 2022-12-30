@@ -1,8 +1,10 @@
 <!-- ====================   LOGO   ==================== -->
-<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
+<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header me-auto" href="index.html"
+	>Brand</a
+>
 
 <!-- ====================   NAVIGATION   ==================== -->
-<nav aria-label="Main" class="hamburger" data-hamburger>
+<div class="hamburger" data-hamburger>
 	<div class="hamburger__header">
 		<button
 			aria-label="Close navigation menu"
@@ -59,12 +61,12 @@
 	</ul>
 
 	<div class="d-lg-none">@@include('social.html',{})</div>
-</nav>
+
+	@@include('theme-toggle.html',{})
+</div>
 
 <!-- ====================   SEARCH   ==================== -->
 <div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto">@@include('search.html',{})</div>
-
-@@include('theme-toggle.html',{})
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
 <button class="hamburger__toggler" data-hamburger-button="open" type="button">

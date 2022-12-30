@@ -17,7 +17,11 @@
 	--black-hsl: 0 0% 10%;
 	--black: hsl(var(--black-hsl));
 
-	--primary-hsl: 195 100% 40%;
+	--primary-h: 237;
+	--primary-s: 65%;
+	--primary-l: 58%;
+	--primary-hs: var(--primary-h) var(--primary-s);
+	--primary-hsl: var(--primary-hs) var(--primary-l);
 	--primary: hsl(var(--primary-hsl));
 
 	--primary-text: hsl(210, 17%, 98%);
@@ -25,7 +29,7 @@
 	--primary-bg: hsl(225, 6%, 13%);
 	--surface: hsl(230, 6%, 20%);
 
-	--accent-hsl: 195 100% 50%;
+	--accent-hsl: 237 85% 70%;
 	--accent: hsl(var(--accent-hsl));
 
 	/*
@@ -56,7 +60,7 @@
 	*/
 
 	// borders
-	--border-color: hsl(224, 6%, 37%);
+	--border-color: hsl(var(--white-hsl) / 0.15);
 	--border-color-accent: var(--color-primary);
 	--border: var(--border-thickness) solid var(--border-color);
 
@@ -68,4 +72,12 @@
 		0 12px 12px hsl(var(--shadow-color-hsl) / 0.83);
 	--shadow-lg: 0 9px 9px hsl(var(--shadow-color-hsl) / 0.31), 0 18px 18px hsl(var(--shadow-color-hsl) / 0.31),
 		0 36px 36px hsl(var(--shadow-color-hsl) / 0.31);
+
+	.header {
+		box-shadow: none;
+	}
+
+	.header--not-top {
+		border-bottom: 1px solid hsl(var(--white-hsl) / 0.075);
+	}
 }

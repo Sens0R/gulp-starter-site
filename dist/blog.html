@@ -23,12 +23,14 @@
 		<script src="js/theme-load.min.js"></script>
 
 		<a class="skip-link" href="#main-content">Skip to main content</a>
-		<div data-header>
-			<header class="header__inner container"><!-- ====================   LOGO   ==================== -->
-<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header" href="index.html">Brand</a>
+		<header data-header>
+			<nav aria-label="main" class="header__belt container"><!-- ====================   LOGO   ==================== -->
+<a aria-label="Logo-name home. Logo-name logo." class="brand-logo brand-logo--header me-auto" href="index.html"
+	>Brand</a
+>
 
 <!-- ====================   NAVIGATION   ==================== -->
-<nav aria-label="Main" class="hamburger" data-hamburger>
+<div class="hamburger" data-hamburger>
 	<div class="hamburger__header">
 		<button
 			aria-label="Close navigation menu"
@@ -121,23 +123,8 @@
 	</li>
 </ul>
 </div>
-</nav>
 
-<!-- ====================   SEARCH   ==================== -->
-<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto"><form class="search justify-content-end" role="search">
-	<label class="visually-hidden">Search</label>
-
-	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
-
-	<button aria-label="Submit search" class="search__button" type="submit">
-		<svg aria-hidden="true" class="icon">
-			<use href="images/icons/sprite-mono.svg#search" />
-		</svg>
-	</button>
-</form>
-</div>
-
-<div data-dropdown="hover" class="theme-toggle">
+	<div data-dropdown="hover" class="theme-toggle">
 	<button type="button" class="theme-toggle__button">
 		<svg aria-hidden="true" class="theme-toggle__icon theme-toggle__icon--dark">
 			<use href="images/icons/sprite-mono.svg#moon"></use>
@@ -176,6 +163,21 @@
 	</menu>
 </div>
 
+</div>
+
+<!-- ====================   SEARCH   ==================== -->
+<div class="d-none d-sm-flex col col-lg-4 justify-content-lg-end ms-auto"><form class="search justify-content-end" role="search">
+	<label class="visually-hidden">Search</label>
+
+	<input autocomplete="off" class="search__input" placeholder="Search" required type="search" />
+
+	<button aria-label="Submit search" class="search__button" type="submit">
+		<svg aria-hidden="true" class="icon">
+			<use href="images/icons/sprite-mono.svg#search" />
+		</svg>
+	</button>
+</form>
+</div>
 
 <!-- ====================   HAMBURGER-TOGGLER OPEN   ==================== -->
 <button class="hamburger__toggler" data-hamburger-button="open" type="button">
@@ -183,8 +185,8 @@
 		<use href="images/icons/sprite-mono.svg#hamburger" />
 	</svg>
 </button>
-</header>
-		</div>
+</nav>
+		</header>
 		<div class="body-wrapper">
 			<main id="main-content" tabindex="-1">
 

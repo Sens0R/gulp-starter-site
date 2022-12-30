@@ -19,7 +19,6 @@
 
 // BASE
 @import 'base/root';
-@import 'base/themes';
 @import 'base/base';
 @import 'base/fonts';
 @import 'base/containers';
@@ -47,3 +46,6 @@
 
 // PAGES
 @import 'pages/home';
+
+// THEMES 
+@import 'themes/dark';

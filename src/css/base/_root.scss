@@ -13,9 +13,12 @@
 	--black-hsl: 0 0% 10%;
 	--black: hsl(var(--black-hsl));
 
-	--primary-hsl: 237 100% 61%;
-	--primary: hsl(var(--primary-hsl));
-
+	--primary-h: 237;
+	--primary-s: 100%;
+	--primary-l: 61%;
+	--primary-hs: var(--primary-h) var(--primary-s);
+	--primary-hsl: var(--primary-hs) var(--primary-l);
+	
 	--primary-text: hsl(237 35% 10%);
 	--primary-text-muted: hsl(237 25% 35%);
 	--primary-bg: hsl(237 51% 97%);

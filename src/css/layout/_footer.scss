@@ -29,6 +29,7 @@
 	@include target-space;
 	@include underline(focus);
 	font-size: var(--fs-sm);
+	color: var(--color-text-muted);
 }
 
 .footer-nav__copyright {

@@ -3,7 +3,7 @@ textarea {
 	--input-height: var(--target-size);
 	--input-space: 0.75rem;
 	--input-focus-shadow-color: var(--primary-hsl);
-	--input-focus-shadow: 0 0 0 4px hsl(var(--input-focus-shadow-color) / 0.15);
+	--input-focus-shadow: 0 0 0 4px hsl(var(--input-focus-shadow-color) / 0.3);
 }
 
 input,
@@ -139,7 +139,7 @@ legend {
 
 	.search__input {
 		transition: max-width var(--transition-lg);
-		max-width: 120px;
+		max-width: clamp-smart(80px, 120px);
 	}
 
 	.search__input:focus-within {
